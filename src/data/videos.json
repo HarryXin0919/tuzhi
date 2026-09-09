@@ -1,0 +1,1309 @@
+{
+  "articles": {
+    "suan-hua": {
+      "bvid": "BV1jT6TYXEjx",
+      "biliTitle": "如何调理土壤酸化问题？",
+      "youtube": "cjWneDQVyV8",
+      "why": "MSU Extension Soil Fertility: soil acidification causes and management. Strong match to acid soil / lime. Rejected 94-onHuhBFM (wrongly says lime lowers pH).",
+      "queries": [
+        "soil acidification lime extension",
+        "MSU soil acidification video"
+      ]
+    },
+    "yan-jian": {
+      "bvid": "BV1zU4y1b7eg",
+      "biliTitle": "土壤盐渍化",
+      "youtube": "tkKzf9MFz54",
+      "why": "Paul Verburg, University of Nevada: white salt crust on fields, sodic structure, management. Strong visual match to 土发白. Rejected houseplant salt-crust clips and soda-lake geology talks.",
+      "queries": [
+        "soil salinity white crust agriculture extension"
+      ]
+    },
+    "ban-jie": {
+      "bvid": "BV1po4y1W7Fv",
+      "biliTitle": "农田土壤板结的原因（二）",
+      "youtube": "JcwQr-bQrKI",
+      "why": "Teagasc David Wall: identify compacted layer, subsoil only when dry enough to crack not smear. Strong match.",
+      "queries": [
+        "soil compaction subsoiler do's don'ts Teagasc"
+      ]
+    },
+    "you-ji-zhi": {
+      "bvid": "BV1Si421h7bY",
+      "biliTitle": "如何给土壤加有机质",
+      "youtube": "UK_L6xVAw_A",
+      "why": "Illinois extension: organic matter, pH, CEC on a soil test. Strong on ‘what the number means’, not a compost how-to.",
+      "queries": [
+        "soil organic matter soil test youtube"
+      ]
+    },
+    "que-dan": {
+      "bvid": "BV1hV4y1o7NV",
+      "biliTitle": "常见作物的缺素症（一）",
+      "youtube": null,
+      "why": "Searched nitrogen deficiency old leaves yellow field crops. Most hits are generic ‘yellow leaves’ houseplant videos or product ads. No strong extension clip that separates N from iron/waterlog.",
+      "queries": [
+        "nitrogen deficiency maize old leaves yellow extension youtube"
+      ]
+    },
+    "que-jia": {
+      "bvid": "BV1aV4y1o7r9",
+      "biliTitle": "常见作物的缺素症（二）",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺钾” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que jia"
+      ]
+    },
+    "que-lin": {
+      "bvid": "BV1jvtK6DE43",
+      "biliTitle": "如何判断你的植物需要施肥？植物营养缺乏识别基本指南",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺磷” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que lin"
+      ]
+    },
+    "que-tie": {
+      "bvid": "BV1cN4y1g742",
+      "biliTitle": "叶片发黄，叶脉深绿，缺铁or缺镁？",
+      "youtube": "HYrkcfE62Pg",
+      "why": "The soil-test film explicitly: iron chlorosis can be a pH lock, not missing iron. Stronger than a foliar-spray advert. Dedicated iron-chlorosis field film not found at equal quality.",
+      "queries": [
+        "iron chlorosis high pH soil youtube extension"
+      ]
+    },
+    "que-xin": {
+      "bvid": "BV1uCedeDEFn",
+      "biliTitle": "植物缺锌症状与锌肥补充",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺锌” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que xin"
+      ]
+    },
+    "lian-zuo": {
+      "bvid": "BV1Xo4y1H7W5",
+      "biliTitle": "土壤连作障碍的定义及危害",
+      "youtube": null,
+      "why": "Searched English extension lectures for “连作障碍” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "lian zuo"
+      ]
+    },
+    "dashe-yanzhi": {
+      "bvid": "BV1QY4y1d7CR",
+      "biliTitle": "设施蔬菜生产中土壤盐渍化、重金属污染及农药残留的危害",
+      "youtube": "1xJ3hz4zXZw",
+      "why": "White salt crust from fertiliser and evaporation. Greenhouse-specific English lecture not found; this is the closest honest visual of white crust. Marked as related-not-greenhouse-only.",
+      "queries": [
+        "greenhouse soil salinity white crust youtube"
+      ]
+    },
+    "shao-gen": {
+      "bvid": "BV1yB4y1Y74z",
+      "biliTitle": "到底什么是肥害和烧根？一个视频全讲清！",
+      "youtube": null,
+      "why": "Searched English extension lectures for “过量施肥烧根” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "shao gen"
+      ]
+    },
+    "lao-hai": {
+      "bvid": "BV16P411r738",
+      "biliTitle": "地理小知识——水稻土",
+      "youtube": null,
+      "why": "Searched waterlogging / poor drainage / oxygen in root zone farm extension. Hits were either wetland ecology, flood news, or garden-pot overwatering. No strong field-crop waterlogging English lecture to embed.",
+      "queries": [
+        "waterlogged soil crop roots youtube extension",
+        "soil oxygen waterlogging farming"
+      ]
+    },
+    "wei-sheng-wu": {
+      "bvid": "BV1PQ4y1i7eD",
+      "biliTitle": "【实验】土壤微生物的分离与观察",
+      "youtube": null,
+      "why": "Searched English extension lectures for “土壤微生物失衡” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "wei sheng wu"
+      ]
+    },
+    "ce-tu-bao-gao": {
+      "bvid": "BV13E421M7Ly",
+      "biliTitle": "测土配方，科学施肥",
+      "youtube": "HYrkcfE62Pg",
+      "why": "University extension: how to interpret a soil test — pH, organic matter, P, K, texture. Strong.",
+      "queries": [
+        "how to interpret soil test results youtube extension"
+      ]
+    },
+    "ce-tu-qu-yang": {
+      "bvid": "BV1kZfsBdEBc",
+      "biliTitle": "土壤采样技术规范及要点",
+      "youtube": "HYrkcfE62Pg",
+      "why": "Same film frames why the number depends on how you sampled. Dedicated sampling-only English film not stronger.",
+      "queries": [
+        "how to sample soil for testing youtube"
+      ]
+    },
+    "que-gai": {
+      "bvid": "BV1YT411b7bA",
+      "biliTitle": "想要瓜果长得好 钙肥硼肥不能少 缺硼缺钙容易落花落果 裂果",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺钙” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que gai"
+      ]
+    },
+    "que-mei": {
+      "bvid": "BV1mHaMekEkU",
+      "biliTitle": "作物缺镁的症状及解决方法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺镁” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que mei"
+      ]
+    },
+    "que-peng": {
+      "bvid": "BV1mfYYe7EKH",
+      "biliTitle": "植物缺素，硼元素，硼肥缺失，硼肥补充",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺硼” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que peng"
+      ]
+    },
+    "que-meng": {
+      "bvid": "BV1z1eoeMEHR",
+      "biliTitle": "植物缺素的症状，缺锰的症状与锰肥补充",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺锰” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que meng"
+      ]
+    },
+    "que-liu": {
+      "bvid": "BV1hV4y1o7NV",
+      "biliTitle": "常见作物的缺素症（一）",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺硫” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que liu"
+      ]
+    },
+    "que-tong": {
+      "bvid": "BV1YNhueJEBd",
+      "biliTitle": "钼肥的重要性",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺铜” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que tong"
+      ]
+    },
+    "que-mu": {
+      "bvid": "BV1YNhueJEBd",
+      "biliTitle": "钼肥的重要性",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺钼” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que mu"
+      ]
+    },
+    "yang-fen-kang-kang": {
+      "bvid": "BV14G4y1x79n",
+      "biliTitle": "测土配方施肥技术",
+      "youtube": null,
+      "why": "Searched English extension lectures for “养分互相打架” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "yang fen kang kang"
+      ]
+    },
+    "yao-hai": {
+      "bvid": "BV1dH4y1j7TG",
+      "biliTitle": "作物出现药害怎么办？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “药害” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "yao hai"
+      ]
+    },
+    "miao-qi-fei-hai": {
+      "bvid": "BV1yB4y1Y74z",
+      "biliTitle": "到底什么是肥害和烧根？一个视频全讲清！",
+      "youtube": null,
+      "why": "Searched English extension lectures for “苗期肥害” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "miao qi fei hai"
+      ]
+    },
+    "an-hai": {
+      "bvid": "BV1Tm411z78B",
+      "biliTitle": "尿素与氨",
+      "youtube": null,
+      "why": "Searched English extension lectures for “氨气烧叶烧根” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "an hai"
+      ]
+    },
+    "lv-hai": {
+      "bvid": "BV1aV4y1o7r9",
+      "biliTitle": "常见作物的缺素症（二）",
+      "youtube": null,
+      "why": "Searched English extension lectures for “氯害” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "lv hai"
+      ]
+    },
+    "di-guan-nong-du": {
+      "bvid": "BV1EkeaePEzk",
+      "biliTitle": "揭秘水肥一体化工作原理",
+      "youtube": null,
+      "why": "Searched English extension lectures for “滴灌肥水太浓” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "di guan nong du"
+      ]
+    },
+    "wei-fu-shu-you-ji-fei": {
+      "bvid": "BV1i3411m7vT",
+      "biliTitle": "鸡粪如何快速腐熟？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “未腐熟有机肥” / 肥害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "fertilizer burn seedlings youtube extension",
+        "wei fu shu you ji fei"
+      ]
+    },
+    "fan-yan": {
+      "bvid": "BV1Cs4y1i7gU",
+      "biliTitle": "地理小知识——土壤盐渍化",
+      "youtube": "tkKzf9MFz54",
+      "why": "Same salinity lecture covers evaporation bringing salt to the surface.",
+      "queries": [
+        "salt accumulation soil surface irrigation"
+      ]
+    },
+    "shi-hui-xing-tu": {
+      "bvid": "BV1cN4y1g742",
+      "biliTitle": "叶片发黄，叶脉深绿，缺铁or缺镁？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “石灰性土壤” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "shi hui xing tu"
+      ]
+    },
+    "shi-gao-gai-jian": {
+      "bvid": "BV1eF4m1c79o",
+      "biliTitle": "央视《盐碱地上的生机》盐碱化的治理措施",
+      "youtube": null,
+      "why": "Searched English extension lectures for “石膏改碱和洗盐” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "shi gao gai jian"
+      ]
+    },
+    "sha-tu-lou-fei": {
+      "bvid": "BV12bbaz9EcV",
+      "biliTitle": "改良土壤排水透气，不容易板结烂根",
+      "youtube": null,
+      "why": "Searched English extension lectures for “沙土漏肥漏水” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "sha tu lou fei"
+      ]
+    },
+    "nian-tu-nan-geng": {
+      "bvid": "BV1su4y1f73T",
+      "biliTitle": "堆肥后土太黏，怎么办？土壤改良万用公式",
+      "youtube": null,
+      "why": "Searched English extension lectures for “黏土难耕又易裂” / 板结. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil compaction hardpan subsoiling youtube",
+        "nian tu nan geng"
+      ]
+    },
+    "li-di-ceng": {
+      "bvid": "BV1kB4y1y7Rh",
+      "biliTitle": "有效打破犁底层可以助作物防涝抗旱",
+      "youtube": "JcwQr-bQrKI",
+      "why": "Same film is about the pan below the plough layer.",
+      "queries": [
+        "plough pan subsoiling youtube"
+      ]
+    },
+    "hei-tu-tui-hua": {
+      "bvid": "BV1HP411L7FE",
+      "biliTitle": "世界上仅有的3块黑土地",
+      "youtube": null,
+      "why": "Searched English extension lectures for “东北黑土变瘦变硬” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "hei tu tui hua"
+      ]
+    },
+    "jie-gan-huan-tian": {
+      "bvid": "BV15z4y1Y7fx",
+      "biliTitle": "秸秆还田的方法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “秸秆还田” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "jie gan huan tian"
+      ]
+    },
+    "shi-hui-yong-liang": {
+      "bvid": "BV1jT6TYXEjx",
+      "biliTitle": "如何调理土壤酸化问题？",
+      "youtube": "cjWneDQVyV8",
+      "why": "MSU extension how-to on acid soils and lime. Strong on ‘test then lime’, not a rate table — matches our ‘don’t copy bags’.",
+      "queries": [
+        "liming acidic soil extension"
+      ]
+    },
+    "xiu-shui-tian": {
+      "bvid": "BV1w24y1s7V4",
+      "biliTitle": "青岗泥，冷浸田",
+      "youtube": null,
+      "why": "Searched English extension lectures for “锈水田、亚铁毒” / 酸化. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil acidification lime youtube extension",
+        "aluminum toxicity soil roots youtube",
+        "xiu shui tian"
+      ]
+    },
+    "qian-yu-tian": {
+      "bvid": "BV1w24y1s7V4",
+      "biliTitle": "青岗泥，冷浸田",
+      "youtube": null,
+      "why": "Searched English extension lectures for “冷浸田、潜育化” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "qian yu tian"
+      ]
+    },
+    "shui-tian-huan-yuan": {
+      "bvid": "BV16GrdYqECv",
+      "biliTitle": "水稻土，对土壤的改良",
+      "youtube": null,
+      "why": "Searched English extension lectures for “水田还原障碍” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "shui tian huan yuan"
+      ]
+    },
+    "gen-fu-jian-bie": {
+      "bvid": "BV1fQgE61EQz",
+      "biliTitle": "作物莫名蔫棵死棵？分不清根腐还是枯萎？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “根腐还是土问题” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "gen fu jian bie"
+      ]
+    },
+    "huang-ye-jian-bie": {
+      "bvid": "BV118411T7F1",
+      "biliTitle": "农作物缺素图谱大全",
+      "youtube": null,
+      "why": "Searched English extension lectures for “黄叶鉴别” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "huang ye jian bie"
+      ]
+    },
+    "han-yan-jian-bie": {
+      "bvid": "BV18N411N7ce",
+      "biliTitle": "土壤盐渍化形成的自然原因",
+      "youtube": null,
+      "why": "Searched English extension lectures for “旱了还是咸了” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "han yan jian bie"
+      ]
+    },
+    "cha-yuan-guo-suan": {
+      "bvid": "BV1Az4y157io",
+      "biliTitle": "土壤为什么会酸化？如何判断？",
+      "youtube": "wHq_qJceRiY",
+      "why": "Mechanism of acidification and Al; tea-specific English lecture not found. Used the mechanism film, not a tea-to-neutral recipe.",
+      "queries": [
+        "tea plantation soil pH lime",
+        "soil acidification aluminum"
+      ]
+    },
+    "ma-ling-shu-tu": {
+      "bvid": "BV1Vj411H7xm",
+      "biliTitle": "马铃薯疮痂病粉痂病全流程防治方案",
+      "youtube": null,
+      "why": "Searched English extension lectures for “马铃薯疮痂和偏碱土壤” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "ma ling shu tu"
+      ]
+    },
+    "sheng-wu-you-ji-fei": {
+      "bvid": "BV1f1tA6jEEe",
+      "biliTitle": "畜禽粪便无害化处理：有机肥堆肥技术",
+      "youtube": null,
+      "why": "Searched English extension lectures for “生物有机肥怎么用才不是安慰剂” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "sheng wu you ji fei"
+      ]
+    },
+    "guo-yuan-tu-rang": {
+      "bvid": "BV1fa4y1G7RR",
+      "biliTitle": "绿肥：大面积改良土壤的简单有效的方法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “果园土壤培肥” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "guo yuan tu rang"
+      ]
+    },
+    "da-peng-lian-zuo-zong-he": {
+      "bvid": "BV1QmXdBGESj",
+      "biliTitle": "连作障碍有三怪",
+      "youtube": null,
+      "why": "Searched English extension lectures for “大棚越种越差” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "da peng lian zuo zong he"
+      ]
+    },
+    "hong-huang-rang-gai-suan": {
+      "bvid": "BV12a411M7yK",
+      "biliTitle": "中国近30年土壤酸化堪比过去1000年",
+      "youtube": "cjWneDQVyV8",
+      "why": "Same MSU acid-soil / liming extension piece; red-yellow earth chapter is still acidification + lime.",
+      "queries": [
+        "acidic soils liming extension"
+      ]
+    },
+    "lv-du-shang-gen": {
+      "bvid": "BV1G2cJeTELe",
+      "biliTitle": "酸性土壤条件下，根际细菌群可有效提高水稻铝毒及低磷耐受性",
+      "youtube": "wHq_qJceRiY",
+      "why": "Oregon State Soil Science — Acidification: H ions, toxic Al, lime as carbonate. Strong match to aluminium toxicity.",
+      "queries": [
+        "soil science acidification aluminum toxicity lime"
+      ]
+    },
+    "suan-yu-que-gai": {
+      "bvid": "BV1oe4y1r7rb",
+      "biliTitle": "3分钟弄懂糖醇钙、EDTA螯合钙",
+      "youtube": null,
+      "why": "Searched English extension lectures for “土酸和缺钙一起到” / 酸化. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil acidification lime youtube extension",
+        "aluminum toxicity soil roots youtube",
+        "suan yu que gai"
+      ]
+    },
+    "suan-tu-shi-lin": {
+      "bvid": "BV1MK4y1X7AS",
+      "biliTitle": "测土配方精准施肥",
+      "youtube": null,
+      "why": "Searched English extension lectures for “酸性土磷被锁” / 酸化. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil acidification lime youtube extension",
+        "aluminum toxicity soil roots youtube",
+        "suan tu shi lin"
+      ]
+    },
+    "sheng-li-suan-xing-fei": {
+      "bvid": "BV1hM411z71g",
+      "biliTitle": "土壤酸化是如何形成的？（农业土壤）",
+      "youtube": "cjWneDQVyV8",
+      "why": "MSU piece covers fertiliser-driven acidification.",
+      "queries": [
+        "ammonium fertilizer soil acidification"
+      ]
+    },
+    "cha-yuan-shi-hui-jin-ji": {
+      "bvid": "BV1Az4y157io",
+      "biliTitle": "怎么防止土壤酸化",
+      "youtube": null,
+      "why": "Searched English extension lectures for “茶园石灰禁忌” / 酸化. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil acidification lime youtube extension",
+        "aluminum toxicity soil roots youtube",
+        "cha yuan shi hui jin ji"
+      ]
+    },
+    "su-da-yan-jian": {
+      "bvid": "BV1gL4y1u718",
+      "biliTitle": "盐碱地，如何形成的？我国竟有近15亿亩",
+      "youtube": "tkKzf9MFz54",
+      "why": "Lecture separates saline (white crust) vs sodic (structure). Strong.",
+      "queries": [
+        "sodic vs saline soil youtube"
+      ]
+    },
+    "bin-hai-yan-tu": {
+      "bvid": "BV1GoDtYKE4B",
+      "biliTitle": "垦利滨海盐碱地治理与利用",
+      "youtube": "tkKzf9MFz54",
+      "why": "Coastal/arid salinity management in the same lecture. No stronger coastal-China English film found.",
+      "queries": [
+        "coastal saline soil reclamation youtube"
+      ]
+    },
+    "wei-xian-shui-guan-gai": {
+      "bvid": "BV13MrQBPEuq",
+      "biliTitle": "盐碱地治理 / 咸水结冰灌溉法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “微咸水灌溉” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "wei xian shui guan gai"
+      ]
+    },
+    "di-biao-fu-yan": {
+      "bvid": "BV1Cs4y1i7gU",
+      "biliTitle": "地理小知识——土壤盐渍化",
+      "youtube": null,
+      "why": "Searched English extension lectures for “地表覆膜返盐” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "di biao fu yan"
+      ]
+    },
+    "yan-jian-di-xuan-zuo": {
+      "bvid": "BV1z2SRBVEJK",
+      "biliTitle": "盐碱地长不出丰硕的果实",
+      "youtube": null,
+      "why": "Searched English extension lectures for “盐碱地适种什么” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "yan jian di xuan zuo"
+      ]
+    },
+    "xi-yan-pai-shui": {
+      "bvid": "BV1eF4m1c79o",
+      "biliTitle": "盐碱化的治理措施",
+      "youtube": "tkKzf9MFz54",
+      "why": "Leaching requires drainage — stated in this lecture.",
+      "queries": [
+        "leaching saline soil drainage youtube"
+      ]
+    },
+    "da-peng-huan-tu-xi-yan": {
+      "bvid": "BV1QY4y1d7CR",
+      "biliTitle": "设施蔬菜土壤盐渍化",
+      "youtube": null,
+      "why": "Searched English extension lectures for “大棚换土还是洗盐” / 盐碱. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "saline alkali soil white crust youtube",
+        "gypsum sodic soil youtube",
+        "da peng huan tu xi yan"
+      ]
+    },
+    "xuan-geng-bian-qian": {
+      "bvid": "BV15J4m1A7d4",
+      "biliTitle": "土壤板结都是怎么形成的?",
+      "youtube": "iwpbenKur8U",
+      "why": "Plough pan from repeated tillage at one depth.",
+      "queries": [
+        "rotary tillage hardpan youtube"
+      ]
+    },
+    "shen-song-shi-ji": {
+      "bvid": "BV13x411E7VU",
+      "biliTitle": "深松翻转犁",
+      "youtube": "JcwQr-bQrKI",
+      "why": "Sets depth just below the pan, dry window.",
+      "queries": [
+        "when to subsoil compacted soil"
+      ]
+    },
+    "tu-rang-tuan-ju-ti": {
+      "bvid": "BV1184y1z7LV",
+      "biliTitle": "土壤板结硬邦邦，怎么办？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “团聚体碎了” / 板结. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil compaction hardpan subsoiling youtube",
+        "tu rang tuan ju ti"
+      ]
+    },
+    "ji-ya-che-zhe": {
+      "bvid": "BV1po4y1W7Fv",
+      "biliTitle": "农田土壤板结的原因（二）",
+      "youtube": "iwpbenKur8U",
+      "why": "Lecture 16 soil compaction identification: traffic pans, machinery passes. Strong.",
+      "queries": [
+        "soil compaction traffic pan machinery youtube"
+      ]
+    },
+    "ban-jie-yu-gen-xi": {
+      "bvid": "BV1oUVG6NEmF",
+      "biliTitle": "一分钟了解土壤板结",
+      "youtube": null,
+      "why": "Searched English extension lectures for “板结和浅根互相反馈” / 板结. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil compaction hardpan subsoiling youtube",
+        "ban jie yu gen xi"
+      ]
+    },
+    "fu-gai-gai-zhi-di": {
+      "bvid": "BV12bbaz9EcV",
+      "biliTitle": "配土提高排水透气性，不容易板结",
+      "youtube": null,
+      "why": "Searched English extension lectures for “地膜/秸秆覆盖能不能把板结土养松” / 板结. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil compaction hardpan subsoiling youtube",
+        "fu gai gai zhi di"
+      ]
+    },
+    "lv-fei-fan-ya": {
+      "bvid": "BV1fa4y1G7RR",
+      "biliTitle": "绿肥：大面积改良土壤",
+      "youtube": null,
+      "why": "Searched English extension lectures for “绿肥翻压” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "lv fei fan ya"
+      ]
+    },
+    "sheng-wu-tan": {
+      "bvid": "BV1V94y1a73M",
+      "biliTitle": "三分钟了解什么是生物炭",
+      "youtube": null,
+      "why": "Searched English extension lectures for “生物炭” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "sheng wu tan"
+      ]
+    },
+    "you-ji-fei-ru-he-xuan": {
+      "bvid": "BV1GY4y1D7kf",
+      "biliTitle": "教你怎么发酵鸡粪有机肥",
+      "youtube": null,
+      "why": "Searched English extension lectures for “有机肥怎么选” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "you ji fei ru he xuan"
+      ]
+    },
+    "jie-gan-bu-dan": {
+      "bvid": "BV1R2LwzXEVu",
+      "biliTitle": "秸秆还田的意义",
+      "youtube": null,
+      "why": "Searched English extension lectures for “秸秆还田必须补氮的账怎么算” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "jie gan bu dan"
+      ]
+    },
+    "hei-tu-you-ji-zhi-shou-hu": {
+      "bvid": "BV1e44y1h7Mh",
+      "biliTitle": "秸秆生物炭的制备、性能及其在黑土资源保护中的应用",
+      "youtube": null,
+      "why": "Searched English extension lectures for “黑土有机质掉得快，怎么守” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "hei tu you ji zhi shou hu"
+      ]
+    },
+    "sha-tu-zeng-you-ji-zhi": {
+      "bvid": "BV1sA411r7Ts",
+      "biliTitle": "增加土壤有机质，快速有效的好方法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “沙土增有机质” / 有机质低. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil organic matter compost field youtube extension",
+        "sha tu zeng you ji zhi"
+      ]
+    },
+    "que-xin-yu-lin": {
+      "bvid": "BV1uCedeDEFn",
+      "biliTitle": "植物缺锌症状与锌肥补充",
+      "youtube": null,
+      "why": "Searched English extension lectures for “缺锌常被高磷掩盖” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que xin yu lin"
+      ]
+    },
+    "que-peng-hua-er-bu-shi": {
+      "bvid": "BV1gQgHzWEEr",
+      "biliTitle": "番茄缺硼症的识别与防治",
+      "youtube": null,
+      "why": "Searched English extension lectures for “花而不实先查硼，也要查旱和盐” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "que peng hua er bu shi"
+      ]
+    },
+    "qi-zi-huang-hua": {
+      "bvid": "BV1haJAzoEvS",
+      "biliTitle": "葡萄叶片黄化原因知多少",
+      "youtube": null,
+      "why": "Searched English extension lectures for “柑橘黄化” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "qi zi huang hua"
+      ]
+    },
+    "pu-tao-shi-hui-tu-que-tie": {
+      "bvid": "BV1haJAzoEvS",
+      "biliTitle": "葡萄叶片黄化原因知多少",
+      "youtube": null,
+      "why": "Searched English extension lectures for “葡萄石灰土黄叶” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "pu tao shi hui tu que tie"
+      ]
+    },
+    "hua-sheng-kong-jia": {
+      "bvid": "BV1YT411b7bA",
+      "biliTitle": "缺硼缺钙容易落花落果 裂果",
+      "youtube": null,
+      "why": "Searched English extension lectures for “花生空荚” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "hua sheng kong jia"
+      ]
+    },
+    "ye-cai-xiao-xing-yuan-su": {
+      "bvid": "BV1544tzXEL4",
+      "biliTitle": "植物缺各类元素判断与补充方法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “叶菜微量元素” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "ye cai xiao xing yuan su"
+      ]
+    },
+    "shui-dao-jiang-miao": {
+      "bvid": "BV1CP4y1L7o8",
+      "biliTitle": "什么是僵苗？植物僵苗了怎么办？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “水稻僵苗” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "shui dao jiang miao"
+      ]
+    },
+    "yu-mi-miao-huang": {
+      "bvid": "BV1zGSqYPEGf",
+      "biliTitle": "绿植养护小课堂｜看叶子识病变",
+      "youtube": null,
+      "why": "Searched English extension lectures for “玉米苗黄” / 缺素. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "crop nutrient deficiency identification youtube extension",
+        "yu mi miao huang"
+      ]
+    },
+    "gen-jie-xian-chong": {
+      "bvid": "BV1RtBsB9EqN",
+      "biliTitle": "根瘤！根节！根结线虫！应对方法最全最简",
+      "youtube": null,
+      "why": "Searched English extension lectures for “根结线虫” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "gen jie xian chong"
+      ]
+    },
+    "tu-chuan-ku-wei": {
+      "bvid": "BV1vx4y1p7QJ",
+      "biliTitle": "什么是土传病害?土传病害的解决方案",
+      "youtube": null,
+      "why": "Searched English extension lectures for “土传枯萎” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "tu chuan ku wei"
+      ]
+    },
+    "qing-ku-bing-tu": {
+      "bvid": "BV1et42157fX",
+      "biliTitle": "番茄的青枯病，是最严重的致死性病害",
+      "youtube": null,
+      "why": "Searched English extension lectures for “青枯病土” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "qing ku bing tu"
+      ]
+    },
+    "cao-mei-lian-zuo": {
+      "bvid": "BV1oZo4B2Efh",
+      "biliTitle": "草莓根腐病的症状、原因和解决办法",
+      "youtube": null,
+      "why": "Searched English extension lectures for “草莓连作” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "cao mei lian zuo"
+      ]
+    },
+    "ping-guo-zai-zhi": {
+      "bvid": "BV13t4y1B7UA",
+      "biliTitle": "连作障碍，导致不能常年种植一种作物",
+      "youtube": null,
+      "why": "Searched English extension lectures for “苹果再植障碍” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "ping guo zai zhi"
+      ]
+    },
+    "gao-wen-men-peng": {
+      "bvid": "BV1LG8MzGEa8",
+      "biliTitle": "高温闷棚这些细节不注意白花钱",
+      "youtube": null,
+      "why": "Searched English extension lectures for “高温闷棚” / 连作障碍. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "replant disease soil sickness youtube extension",
+        "gao wen men peng"
+      ]
+    },
+    "han-lao-ji-zhuan": {
+      "bvid": "BV1kB4y1y7Rh",
+      "biliTitle": "有效打破犁底层可以助作物防涝抗旱",
+      "youtube": null,
+      "why": "Searched English extension lectures for “旱涝急转” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "han lao ji zhuan"
+      ]
+    },
+    "di-xia-shui-wei-gao": {
+      "bvid": "BV16GrdYqECv",
+      "biliTitle": "水稻土，对土壤的改良",
+      "youtube": null,
+      "why": "Searched English extension lectures for “地下水位高” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "di xia shui wei gao"
+      ]
+    },
+    "yu-hou-ban-jie-kai-lie": {
+      "bvid": "BV1QE466iEFF",
+      "biliTitle": "土壤板结开裂这样做",
+      "youtube": null,
+      "why": "Searched English extension lectures for “雨后板结开裂” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "yu hou ban jie kai lie"
+      ]
+    },
+    "leng-shui-guan-miao": {
+      "bvid": "BV1CP4y1L7o8",
+      "biliTitle": "什么是僵苗？植物僵苗了怎么办？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “冷水灌苗” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "leng shui guan miao"
+      ]
+    },
+    "yan-jiang-qi-hou-tu": {
+      "bvid": "BV124hGz3EHn",
+      "biliTitle": "地理老师摩旅日记:水稻土形成的底层逻辑",
+      "youtube": null,
+      "why": "Searched English extension lectures for “沿江湿地土” / 涝害. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "waterlogged soil crop youtube extension",
+        "yan jiang qi hou tu"
+      ]
+    },
+    "shui-fei-yi-ti-hua-ec": {
+      "bvid": "BV14U4y1o7bN",
+      "biliTitle": "水肥一体化系统介绍",
+      "youtube": null,
+      "why": "Searched English extension lectures for “水肥一体化” / 其他. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil test how to read youtube extension",
+        "shui fei yi ti hua ec"
+      ]
+    },
+    "ji-zhi-yu-tu-rang": {
+      "bvid": "BV1LafAYRE2m",
+      "biliTitle": "基质蓝莓滴灌施肥各阶段最佳EC值范围",
+      "youtube": null,
+      "why": "Searched English extension lectures for “基质栽培和土壤不是同一套方子” / 其他. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil test how to read youtube extension",
+        "ji zhi yu tu rang"
+      ]
+    },
+    "tu-rang-xiao-du-bian-jie": {
+      "bvid": "BV19Au16gExA",
+      "biliTitle": "土壤消毒该怎么做？",
+      "youtube": null,
+      "why": "Searched English extension lectures for “土壤消毒的边界” / 其他. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil test how to read youtube extension",
+        "tu rang xiao du bian jie"
+      ]
+    },
+    "jian-yi-ph-ec": {
+      "bvid": "BV1nu4y1Y7mH",
+      "biliTitle": "如何用pH试纸测试土壤酸碱度",
+      "youtube": "C9WVGcU8m5M",
+      "why": "NRCS/soil science: soil pH definition, methods (1:1 water), EC and ECe not comparable across extracts. Strong for the ruler.",
+      "queries": [
+        "soil pH EC measurement methods youtube"
+      ]
+    },
+    "shi-fei-tiao-tu-rang": {
+      "bvid": "BV14G4y1x79n",
+      "biliTitle": "测土配方施肥技术",
+      "youtube": null,
+      "why": "Searched English extension lectures for “看叶片能猜肥，不能代替测土” / 其他. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil test how to read youtube extension",
+        "shi fei tiao tu rang"
+      ]
+    },
+    "nan-fang-shui-tian-yang-fen": {
+      "bvid": "BV124hGz3EHn",
+      "biliTitle": "水稻土形成的底层逻辑",
+      "youtube": null,
+      "why": "Searched English extension lectures for “南方水田养分” / 其他. Hits were weak (ads, houseplants, unrelated geology) or repeated the same few university films already mapped to closer chapters. Honest empty rather than a weak ID.",
+      "queries": [
+        "soil test how to read youtube extension",
+        "nan fang shui tian yang fen"
+      ]
+    }
+  },
+  "wiki": {
+    "ph": {
+      "bvid": "BV1nu4y1Y7mH",
+      "biliTitle": "如何用pH试纸测试土壤酸碱度",
+      "youtube": "C9WVGcU8m5M",
+      "why": "NRCS soil pH definition and methods. Strong.",
+      "queries": [
+        "soil pH measurement youtube"
+      ]
+    },
+    "om": {
+      "bvid": "BV1Si421h7bY",
+      "biliTitle": "如何给土壤加有机质",
+      "youtube": "UK_L6xVAw_A",
+      "why": "OM on a soil-test sheet. Strong.",
+      "queries": [
+        "soil organic matter test youtube"
+      ]
+    },
+    "cec": {
+      "bvid": "BV1sA411r7Ts",
+      "biliTitle": "增加土壤有机质，快速有效的好方法",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "cec soil test youtube extension",
+        "CEC（阳离子交换量）"
+      ]
+    },
+    "texture": {
+      "bvid": "BV12bbaz9EcV",
+      "biliTitle": "改良土壤排水透气",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "texture soil test youtube extension",
+        "质地"
+      ]
+    },
+    "aggregate": {
+      "bvid": "BV1184y1z7LV",
+      "biliTitle": "土壤板结硬邦邦，怎么办？",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "aggregate soil test youtube extension",
+        "团粒结构"
+      ]
+    },
+    "n": {
+      "bvid": "BV1hV4y1o7NV",
+      "biliTitle": "常见作物的缺素症（一）",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "n soil test youtube extension",
+        "氮（N）"
+      ]
+    },
+    "alkn": {
+      "bvid": "BV14G4y1x79n",
+      "biliTitle": "测土配方施肥技术",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "alkn soil test youtube extension",
+        "碱解氮"
+      ]
+    },
+    "p": {
+      "bvid": "BV1jvtK6DE43",
+      "biliTitle": "植物营养缺乏识别基本指南",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "p soil test youtube extension",
+        "磷（P）"
+      ]
+    },
+    "avp": {
+      "bvid": "BV1MK4y1X7AS",
+      "biliTitle": "测土配方精准施肥",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "avp soil test youtube extension",
+        "有效磷"
+      ]
+    },
+    "k": {
+      "bvid": "BV1aV4y1o7r9",
+      "biliTitle": "常见作物的缺素症（二）",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "k soil test youtube extension",
+        "钾（K）"
+      ]
+    },
+    "avk": {
+      "bvid": "BV15z4y1Y7fx",
+      "biliTitle": "秸秆还田的方法",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "avk soil test youtube extension",
+        "速效钾"
+      ]
+    },
+    "ca": {
+      "bvid": "BV1YT411b7bA",
+      "biliTitle": "缺硼缺钙容易落花落果 裂果",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "ca soil test youtube extension",
+        "交换性钙"
+      ]
+    },
+    "al": {
+      "bvid": "BV1G2cJeTELe",
+      "biliTitle": "酸性土壤条件下水稻铝毒",
+      "youtube": "wHq_qJceRiY",
+      "why": "OSU acidification / toxic Al. Strong.",
+      "queries": [
+        "exchangeable aluminum soil youtube"
+      ]
+    },
+    "zn": {
+      "bvid": "BV1uCedeDEFn",
+      "biliTitle": "植物缺锌症状与锌肥补充",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "zn soil test youtube extension",
+        "有效锌"
+      ]
+    },
+    "b": {
+      "bvid": "BV1mfYYe7EKH",
+      "biliTitle": "植物缺素，硼元素",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "b soil test youtube extension",
+        "有效硼"
+      ]
+    },
+    "ec": {
+      "bvid": "BV1zU4y1b7eg",
+      "biliTitle": "土壤盐渍化",
+      "youtube": "C9WVGcU8m5M",
+      "why": "Same film covers EC vs ECe. Strong.",
+      "queries": [
+        "soil electrical conductivity ECe youtube"
+      ]
+    },
+    "salt": {
+      "bvid": "BV1Cs4y1i7gU",
+      "biliTitle": "地理小知识——土壤盐渍化",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "salt soil test youtube extension",
+        "全盐"
+      ]
+    },
+    "bulk": {
+      "bvid": "BV1kB4y1y7Rh",
+      "biliTitle": "有效打破犁底层可以助作物防涝抗旱",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "bulk soil test youtube extension",
+        "容重"
+      ]
+    },
+    "test": {
+      "bvid": "BV13E421M7Ly",
+      "biliTitle": "测土配方，科学施肥",
+      "youtube": "HYrkcfE62Pg",
+      "why": "How to interpret a soil test. Strong.",
+      "queries": [
+        "interpret soil test report youtube"
+      ]
+    },
+    "saline": {
+      "bvid": "BV1gL4y1u718",
+      "biliTitle": "盐碱地，如何形成的？",
+      "youtube": "tkKzf9MFz54",
+      "why": "Nevada salinity lecture. Strong.",
+      "queries": [
+        "soil salinity youtube"
+      ]
+    },
+    "acid": {
+      "bvid": "BV1jT6TYXEjx",
+      "biliTitle": "如何调理土壤酸化问题？",
+      "youtube": "cjWneDQVyV8",
+      "why": "MSU acidification. Strong.",
+      "queries": [
+        "soil acidification youtube"
+      ]
+    },
+    "compaction": {
+      "bvid": "BV1po4y1W7Fv",
+      "biliTitle": "农田土壤板结的原因（二）",
+      "youtube": "JcwQr-bQrKI",
+      "why": "Teagasc compaction. Strong.",
+      "queries": [
+        "soil compaction youtube"
+      ]
+    },
+    "mg": {
+      "bvid": "BV1mHaMekEkU",
+      "biliTitle": "作物缺镁的症状及解决方法",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "mg soil test youtube extension",
+        "交换性镁"
+      ]
+    },
+    "fe": {
+      "bvid": "BV1cN4y1g742",
+      "biliTitle": "叶片发黄，叶脉深绿，缺铁or缺镁？",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "fe soil test youtube extension",
+        "有效铁"
+      ]
+    },
+    "mn": {
+      "bvid": "BV1z1eoeMEHR",
+      "biliTitle": "植物缺素的症状，缺锰的症状与锰肥补充",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "mn soil test youtube extension",
+        "有效锰"
+      ]
+    },
+    "s": {
+      "bvid": "BV1544tzXEL4",
+      "biliTitle": "植物缺各类元素判断与补充方法",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "s soil test youtube extension",
+        "有效硫"
+      ]
+    },
+    "cu": {
+      "bvid": "BV118411T7F1",
+      "biliTitle": "农作物缺素图谱大全",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "cu soil test youtube extension",
+        "有效铜"
+      ]
+    },
+    "mo": {
+      "bvid": "BV1YNhueJEBd",
+      "biliTitle": "钼肥的重要性",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "mo soil test youtube extension",
+        "有效钼"
+      ]
+    },
+    "porosity": {
+      "bvid": "BV1su4y1f73T",
+      "biliTitle": "堆肥后土太黏，怎么办？",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "porosity soil test youtube extension",
+        "孔隙度"
+      ]
+    },
+    "fc": {
+      "bvid": "BV1kZfsBdEBc",
+      "biliTitle": "测土配方施肥技术",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "fc soil test youtube extension",
+        "田间持水量"
+      ]
+    },
+    "gley": {
+      "bvid": "BV1w24y1s7V4",
+      "biliTitle": "青岗泥，冷浸田",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "gley soil test youtube extension",
+        "潜育化"
+      ]
+    },
+    "replant": {
+      "bvid": "BV1Xo4y1H7W5",
+      "biliTitle": "土壤连作障碍的定义及危害",
+      "youtube": null,
+      "why": "Searched lab-term English lectures (unit, how to read the cell). Most hits were full agronomy courses or ads. Honest empty.",
+      "queries": [
+        "replant soil test youtube extension",
+        "连作障碍"
+      ]
+    }
+  }
+}

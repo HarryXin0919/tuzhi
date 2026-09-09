@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: "Songti SC", "Noto Serif SC", "STSong", "SimSun", serif;
+  --color-bg: #f4efe6;
+  --color-surface: #fffdf8;
+  --color-surface-2: #ebe4d8;
+  --color-ink: #1c1612;
+  --color-muted: #5c534a;
+  --color-subtle: #8a8178;
+  --color-line: #c9bba6;
+  --color-forest: #1f6b4a;
+  --color-forest-dark: #155338;
+  --color-forest-fg: #f4efe6;
+  --color-clay: #6b4f3a;
+  --color-danger: #9b2c2c;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background: var(--color-bg);
+    min-height: 100dvh;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    line-height: 1.28;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 3px solid color-mix(in oklab, var(--color-forest) 70%, white);
+    outline-offset: 2px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
