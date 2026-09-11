@@ -1,0 +1,79 @@
+export type Photo = { src: string; alt: string; caption: string };
+export type Confuse = { lookalike: string; difference: string; photoHint?: string };
+export type Dose = { name: string; range: string; note: string };
+export type Indicator = { name: string; meaning: string; typical: string };
+export type VideoRef = { platform: string; title: string; url: string };
+
+export type Article = {
+  slug: string;
+  title: string;
+  subtitle: string;
+  summary: string;
+  crops: string[];
+  problems: string[];
+  regions: string[];
+  seasons: string[];
+  tags: string[];
+  coverCrop?: string | null;
+  coverType?: string;
+  photos: Photo[];
+  phenomenon: { appearance: string; conditions: string; commonCrops: string };
+  confuse: Confuse[];
+  causes: { natural: string[]; human: string[]; plainExplain: string };
+  solutions: { steps: string[]; videos: VideoRef[] };
+  dosage: Dose[];
+  prevention: string[];
+  indicators: Indicator[];
+  relatedSlugs: string[];
+  featured?: boolean;
+  hot?: boolean;
+  fieldCheck: string;
+  dontDo: string[];
+  whenToTest: string;
+  updatedAt: string;
+  reviewer: string;
+  longform: string[];
+};
+
+export type WikiPack = {
+  id: string;
+  relatedSlugs: string[];
+  bvid?: string;
+  videoTitle?: string;
+  problem: string;
+  group: string;
+  photos: Photo[];
+  zh: WikiCopy;
+  en: WikiCopy;
+};
+
+export type WikiCopy = {
+  title: string;
+  subtitle: string;
+  summary: string;
+  appearance: string;
+  conditions: string;
+  commonCrops: string;
+  fieldCheck: string;
+  longform: string[];
+  confuse: Confuse[];
+  plainExplain: string;
+  natural: string[];
+  human: string[];
+  steps: string[];
+  dosage: Dose[];
+  dontDo: string[];
+  whenToTest: string;
+  prevention: string[];
+  indicators: Indicator[];
+  aka?: string;
+};
+
+export type SearchQuery = {
+  q?: string;
+  crop?: string;
+  problem?: string;
+  region?: string;
+  season?: string;
+  lang?: "zh" | "en";
+};

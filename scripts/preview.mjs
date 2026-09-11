@@ -22,6 +22,7 @@ import {
 } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { copyPglitePreviewAssets } from "./copy-pglite-preview.mjs";
 
 const PREVIEW_PORT = 8081;
 const PREVIEW_URL = `http://127.0.0.1:${PREVIEW_PORT}/`;
@@ -294,6 +295,8 @@ async function waitForReady(failure) {
 
 async function restart() {
   if (!(await stop())) return 1;
+
+  copyPglitePreviewAssets();
 
   mkdirSync(dirname(LOG_FILE), { recursive: true });
   const log = openSync(LOG_FILE, "a");

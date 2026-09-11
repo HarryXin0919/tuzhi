@@ -7,8 +7,8 @@
   --color-surface: #fffdf8;
   --color-surface-2: #ebe4d8;
   --color-ink: #1c1612;
-  --color-muted: #5c534a;
-  --color-subtle: #8a8178;
+  --color-muted: #4a433c;
+  --color-subtle: #746b62;
   --color-line: #c9bba6;
   --color-forest: #1f6b4a;
   --color-forest-dark: #155338;
@@ -30,6 +30,7 @@
     font-family: var(--font-sans);
     font-size: 1.125rem;
     line-height: 1.7;
+    overflow-x: hidden;
   }
   h1, h2, h3 {
     text-wrap: balance;

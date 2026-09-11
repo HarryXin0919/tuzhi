@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "土知",
+      "hasCanvas": false,
+      "bodyTextLen": 817,
+      "bodyTextHash": "c3a0ae7698806730a6231ea0e201e077d32055c4f1a3094865e957460a9f0e87",
+      "bodyTextPrefix": "土知 看懂土地，种好地 首页 拍照识别 农业知识 化验知识 问答区 我的 English 土知 看懂土地，种好地 土发白、发酸、",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "土知",
+      "hasCanvas": false,
+      "bodyTextLen": 817,
+      "bodyTextHash": "722f5c6aed32f31abd138937f80ff06b160e83418726e14eaa65e1115e1fcfa8",
+      "bodyTextPrefix": "土知 看懂土地，种好地 English 土知 看懂土地，种好地 土发白、发酸、板结、苗黄？先拍三张，对照农业知识。化验单上的词去",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

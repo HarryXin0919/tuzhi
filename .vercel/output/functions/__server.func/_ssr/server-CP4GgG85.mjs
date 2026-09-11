@@ -1,0 +1,197 @@
+import { r as createServerFn } from "./ssr.mjs";
+import { t as createServerRpc } from "./createServerRpc-CcvdN_gc.mjs";
+import { t as authMiddleware } from "./middleware-DkjgCcjW.mjs";
+import { r as getSql } from "./db-BfKlIUFI.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/server-CP4GgG85.js
+async function translateToEn(text) {
+	const apiKey = process.env.XAI_API_KEY;
+	if (!apiKey || !text.trim()) return null;
+	try {
+		const res = await fetch("https://api.x.ai/v1/chat/completions", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: `Bearer ${apiKey}`
+			},
+			body: JSON.stringify({
+				model: "grok-4.5",
+				max_tokens: 400,
+				messages: [{
+					role: "system",
+					content: "Translate the farmer's Chinese into clear spoken English. Keep numbers, rates, crop names, pH, EC. Keep metaphors (next county's lime recipe, salt's calling card, meat in the soil). Do not soften warnings. Do not use: It is recommended that, Please kindly, users should conduct a comprehensive, pedological, Knowledge Base, soil organic carbon pool, indiscriminately, may consider contacting. Return ONLY the English."
+				}, {
+					role: "user",
+					content: text
+				}]
+			})
+		});
+		if (!res.ok) return null;
+		return ((await res.json()).choices?.[0]?.message?.content?.trim() ?? "") || null;
+	} catch {
+		return null;
+	}
+}
+var posts_default = /*#__PURE__*/ JSON.parse("[{\"id\":\"p01\",\"author\":\"农户1832\",\"createdAt\":\"2026-03-12\",\"problem\":\"酸化\",\"crop\":\"水稻\",\"region\":\"华南\",\"title\":\"秧苗发僵，浇水有点锈\",\"body\":\"一块水稻田，邻垄绿、这块僵。拔起来根尖发褐，白尖很少。有人说缺肥，有人说土酸。想问先看根还是先追尿素。\",\"bodyEn\":\"Rice seedlings are stalling. The next ridge is green. Root tips came up brown with few white tips. Some neighbours say feed it, some say the soil is acid. Do I look at the root first or chase urea?\",\"photo\":\"/images/articles/suan-hua.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"先洗手洗根。褐秃、少白尖，才像铝在咬，锈水只是加分项。别抄邻县石灰账。0～20 厘米测 pH，低于 5.5 才谈农用石灰，常见每亩 50–150 公斤、分两次，沙土按下限。茶园别按粮田改到中性。根秃时不要猛尿素。\",\"bodyEn\":\"Wash the roots first. Brown and bald tips look like aluminium; rusty water is extra evidence. Don’t copy the next county’s lime recipe. Test 0–20 cm pH; lime only below 5.5. Farm lime is often 50–150 kg per mu, split, sandy soils at the low end. Don’t push tea to neutrality. Don’t pour urea on bald roots.\"}],\"titleEn\":\"Seedlings are stalling, and the water looks a bit rusty\"},{\"id\":\"p02\",\"author\":\"农户2046\",\"createdAt\":\"2026-03-21\",\"problem\":\"盐碱\",\"crop\":\"小麦\",\"region\":\"华北\",\"title\":\"土面发白，出苗一块有一块没有\",\"body\":\"河北这边麦田，土面一层白粉，浇完一小水更蔫。有人说旱了，有人说咸了。\",\"bodyEn\":\"Wheat in Hebei. A white powder on the soil. After a light watering they wilt more. Drought or salt?\",\"photo\":\"/images/articles/yan-jian.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"白霜当盐的名片。小水浇完更蔫，不要当成旱了猛灌。没沟别大水漫灌。先停高盐肥，测电导、pH、全盐，分清是咸还是涩。见白霜别一律撒石膏。\",\"bodyEn\":\"Treat the white film as salt’s calling card. Worse wilt after a light watering is not a reason to flood. No drain, no flood. Stop high-salt fertiliser. Read EC, pH and total salt — saline and alkali are different jobs. Don’t spread gypsum on every white crust.\"}],\"titleEn\":\"The soil surface is white; seedlings come up in patches\"},{\"id\":\"p03\",\"author\":\"农户1175\",\"createdAt\":\"2026-03-28\",\"problem\":\"板结\",\"crop\":\"玉米\",\"region\":\"黄淮海\",\"title\":\"雨后土面像戴了帽子，锄不动\",\"body\":\"玉米还没出齐，雨一停土面结一层硬壳，锄下去弹回来。\",\"bodyEn\":\"Maize hasn’t fully come up. After rain the surface sets like a cap and the hoe bounces.\",\"photo\":\"/images/articles/ban-jie.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"帽子是雨滴砸的，犁底下那层硬盖是另一回事。土干到能裂再松，湿着松是抹一层新泥。先破那层帽子让苗出来，底下那层拿锹探了再决定松多深。\",\"bodyEn\":\"The cap is raindrop smash. The pan under the plough is a different lid. Loosen when the soil is dry enough to crack; wet loosening smears a new lid. Break the cap so the seedling can come out, then probe the pan with a spade before you pick a depth.\"}],\"titleEn\":\"After rain the soil wears a cap, and the hoe bounces\"},{\"id\":\"p04\",\"author\":\"农户3301\",\"createdAt\":\"2026-04-05\",\"problem\":\"缺素\",\"crop\":\"花生\",\"region\":\"黄淮海\",\"title\":\"新叶黄、叶脉还绿，底下叶子还绿着\",\"body\":\"花生新叶发黄，叶脉绿，老叶还行。有人让我追氮。\",\"bodyEn\":\"Peanut new leaves are yellow with green veins; old leaves still look fine. Neighbours said more nitrogen.\",\"photo\":\"/images/articles/que-tie.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"缺氮黄老叶，缺铁黄新叶且叶脉还绿。你这像铁被锁住，不是氮不够。石灰性土、灌大水都爱这样。先问 pH，不要只撒氮。\",\"bodyEn\":\"Nitrogen yellows the old leaves. Iron lock yellows the new ones and leaves the veins green. This looks like iron locked, not a nitrogen gap. Limey soil and a heavy watering do this. Ask pH. Don’t only pour nitrogen.\"}],\"titleEn\":\"New leaves yellow, veins still green, old leaves still green\"},{\"id\":\"p05\",\"author\":\"农户4418\",\"createdAt\":\"2026-04-11\",\"problem\":\"缺素\",\"crop\":\"玉米\",\"region\":\"东北\",\"title\":\"底下叶子先黄，植株瘦高\",\"body\":\"玉米下部老叶匀黄，新叶还绿，秆细。\",\"bodyEn\":\"Maize: lower old leaves evenly yellow, new leaves still green, stalks thin.\",\"photo\":\"/images/articles/que-dan.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"老叶匀黄、新叶还绿，才像缺氮。新叶黄、脉还绿是铁。白天蔫晚上缓还积水，是涝。你这像氮。先看根是不是白的，再按测土补，宁少勿多。\",\"bodyEn\":\"Even yellow on old leaves with greener new leaves is the nitrogen pattern. New leaves yellow with green veins is iron. Wilt by day, recover at night plus standing water is waterlog. Yours looks like nitrogen. Check the roots are still white, then feed from a test — better too little than too much.\"}],\"titleEn\":\"Old leaves yellow first, the plant is thin and tall\"},{\"id\":\"p06\",\"author\":\"农户2560\",\"createdAt\":\"2026-04-19\",\"problem\":\"涝害\",\"crop\":\"蔬菜\",\"region\":\"长江中下游\",\"title\":\"叶蔫，土却是湿的\",\"body\":\"菜地白天打蔫，晚上又能起来一点，根有点臭。家里有人当旱了浇。\",\"bodyEn\":\"Vegetables wilt by day, recover a little at night, roots smell. Someone at home watered as if it were drought.\",\"photo\":\"/images/articles/lao-hai.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"白天蔫、晚上缓、根臭，是涝不是旱。再浇等于捂死。先排水透气，等新白根再薄肥。湿根上猛肥是二次伤。\",\"bodyEn\":\"Wilt by day, a little recovery at night, smelly roots — that is drowning, not drought. Another watering finishes them. Drain, let air in, wait for new white roots, then a light feed. Fertiliser on a wet root is a second injury.\"}],\"titleEn\":\"Leaves wilt, but the soil is wet\"},{\"id\":\"p07\",\"author\":\"农户1789\",\"createdAt\":\"2026-04-27\",\"problem\":\"有机质低\",\"crop\":\"小麦\",\"region\":\"华北\",\"title\":\"土越种越馋，肥效短\",\"body\":\"同样的复合肥，这两年撑的日子短了，土色也淡。\",\"bodyEn\":\"The same compound fertiliser doesn’t last as many days. The soil colour is paler.\",\"photo\":\"/images/articles/you-ji-zhi.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"有机质是土里的肉。只追氮磷钾，肉会越来越薄。腐熟有机肥、秸秆、绿肥是在补肉，不是当年的产量按钮。沙土更要少量多次，别一次堆山。\",\"bodyEn\":\"Organic matter is the meat in the soil. NPK alone lets that meat thin out. Rotted manure, straw and green manure are feeding the meat, not a yield button for this week. On sand, little and often — don’t dump a mountain.\"}],\"titleEn\":\"The soil gets hungrier every year, fertiliser fades fast\"},{\"id\":\"p08\",\"author\":\"农户5622\",\"createdAt\":\"2026-05-03\",\"problem\":\"肥害\",\"crop\":\"蔬菜\",\"region\":\"华南\",\"title\":\"刚施完肥苗就烧\",\"body\":\"苗刚出来追了一把，第二天根尖发黑。\",\"bodyEn\":\"Seedlings just came up, I dressed them, next day root tips were black.\",\"photo\":\"/images/articles/miao-qi-fei-hai.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"出苗就烧、根尖发黑，是肥害不是饿。先浇水稀释，不要再补一把。苗期宁少勿多，水溶肥按说明书再稀一档。\",\"bodyEn\":\"Burn at emergence and black root tips are a fertiliser burn, not hunger. Water to dilute. Don’t add another bag. On seedlings, better too little. If you use a soluble feed, dilute one step weaker than the label.\"}],\"titleEn\":\"The seedlings burned right after I fertilised\"},{\"id\":\"p09\",\"author\":\"农户3904\",\"createdAt\":\"2026-05-09\",\"problem\":\"连作障碍\",\"crop\":\"设施蔬菜\",\"region\":\"黄淮海\",\"title\":\"大棚越种越差，膜下有白霜\",\"body\":\"同一茬菜种了四年，今年死棵多，膜边一层白。\",\"bodyEn\":\"Same greenhouse vegetables for four years. More dead plants this year, a white film at the mulch edge.\",\"photo\":\"/images/articles/dashe-yanzhi.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"盐、病、肥害会一起到。膜是伞不是镐，盐没出路。先测电导。有排水再洗，没沟别大水漫灌。换土是最后一步，不是第一反应。轮作比再消一次毒更像办法。\",\"bodyEn\":\"Salt, disease and burn arrive together. The film is an umbrella, not a pickaxe — salt has nowhere to go. Read EC. Flush only if water can leave. Replacing the soil is the last step, not the first. Rotation beats another sterilisation.\"}],\"titleEn\":\"The greenhouse gets worse; white frost under the film\"},{\"id\":\"p10\",\"author\":\"农户2217\",\"createdAt\":\"2026-05-16\",\"problem\":\"酸化\",\"crop\":\"茶叶\",\"region\":\"西南\",\"title\":\"茶园有人让我把土改到中性\",\"body\":\"测了 pH 四点九，邻县粮田都在撒石灰，有人让茶园也改到七。\",\"bodyEn\":\"pH 4.9. The next county’s grain fields are liming. Someone told me to take the tea garden to 7.\",\"photo\":\"/images/articles/cha-yuan-guo-suan.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"茶树耐酸，粮田不是越酸越好，这两句话要分开。茶园不要按粮田改到中性。根已经褐秃再猛石灰会伤树。小剂量、离根颈远、改完再测。\",\"bodyEn\":\"Tea tolerates acid; grain is not ‘the more acid the better’. Those are two sentences. Don’t push tea to neutrality. Heavy lime on already-bald roots hurts the bush. Small dose, away from the collar, retest.\"}],\"titleEn\":\"Someone told me to take the tea soil to neutral\"},{\"id\":\"p11\",\"author\":\"农户6088\",\"createdAt\":\"2026-05-24\",\"problem\":\"盐碱\",\"crop\":\"玉米\",\"region\":\"西北\",\"title\":\"井水也咸，土更白\",\"body\":\"井水喝着发涩，浇完地更白。石膏买了还没撒。\",\"bodyEn\":\"The well water tastes bitter. After irrigation the soil is whiter. I bought gypsum and haven’t spread it.\",\"photo\":\"/images/articles/wei-xian-shui-guan-gai.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"井水咸是账单。能浇但不能连浇。有淡水就轮着来，有排水才洗。石膏对付的是钠把土弄滑、弄硬，不是见白霜就撒。先分清是咸还是涩。\",\"bodyEn\":\"Salty well water is a bill. You can irrigate, you cannot irrigate the same way every time. Alternate with fresher water if you have it; leach only if it can leave. Gypsum is for sodium that makes the soil slick and hard — not for every white film. Separate salt from alkali first.\"}],\"titleEn\":\"The well water is salty too, the soil is even whiter\"},{\"id\":\"p12\",\"author\":\"农户1443\",\"createdAt\":\"2026-06-02\",\"problem\":\"板结\",\"crop\":\"小麦\",\"region\":\"华北\",\"title\":\"旋耕下面一层硬盖\",\"body\":\"上面松，铁锹再往下就顶住。年年旋。\",\"bodyEn\":\"The top is fluffy. A spade hits a floor. We rotary-till every year.\",\"photo\":\"/images/articles/li-di-ceng.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"犁底层是旋耕留下的盖。土干到能裂再松，只松过那层盖一点点。湿着松是抹新泥。松完少碾，别当天再开重车。\",\"bodyEn\":\"That’s a plough pan from the rotor. Loosen when it can crack, only just through the pan. Wet loosening smears a new lid. Keep heavy wheels off afterwards.\"}],\"titleEn\":\"A hard lid sits under the rotary-tilled layer\"},{\"id\":\"p13\",\"author\":\"农户4770\",\"createdAt\":\"2026-06-10\",\"problem\":\"缺素\",\"crop\":\"果树\",\"region\":\"华北\",\"title\":\"脐腐、裂果，叶面钙喷了两回\",\"body\":\"番茄脐腐，喷了叶面钙还是裂。土有点酸。\",\"bodyEn\":\"Blossom-end rot on tomato. Two foliar calcium sprays, still splitting. Soil a bit acid.\",\"photo\":\"/images/articles/suan-yu-que-gai.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"钙在土里走不进果，水要均匀，根还得在。土酸、铝咬根尖，叶面钙只是拖延。先测 pH 和这块地的水。根秃时不要只喷果。\",\"bodyEn\":\"Calcium in the soil does not walk into the fruit by itself — water flow and a living root carry it. If acid aluminium is biting the tip, foliar calcium is a delay. Test pH and how you water. Don’t only spray the fruit while the root is bald.\"}],\"titleEn\":\"Blossom-end rot and splitting after two foliar calcium sprays\"},{\"id\":\"p14\",\"author\":\"农户3156\",\"createdAt\":\"2026-06-18\",\"problem\":\"涝害\",\"crop\":\"水稻\",\"region\":\"长江中下游\",\"title\":\"根黑、臭，不发新根\",\"body\":\"水稻根摸着黑，有气味，新白根几乎没有。\",\"bodyEn\":\"Rice roots feel black, they smell, almost no new white tips.\",\"photo\":\"/images/articles/shui-tian-huan-yuan.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"水田还原，根喝饱了水却没气。先晒田透气，等新白根。黑臭根上再追肥，肥也进不去。锈水、冷浸、肥害要分开看。\",\"bodyEn\":\"That’s paddy reduction — roots full of water, empty of air. Drain and air the field, wait for new white tips. Fertiliser on black smelly roots doesn’t go in. Separate rusty water, cold gleying and burn.\"}],\"titleEn\":\"Roots black and smelly, no new white roots\"},{\"id\":\"p15\",\"author\":\"农户2891\",\"createdAt\":\"2026-06-26\",\"problem\":\"有机质低\",\"crop\":\"玉米\",\"region\":\"东北\",\"title\":\"黑土颜色淡了，坷垃多\",\"body\":\"老家黑土没有以前攥得住，雨后更散。\",\"bodyEn\":\"The black soil at home doesn’t hold a squeeze like it used to. After rain it falls apart more.\",\"photo\":\"/images/articles/hei-tu-tui-hua.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"黑土不是取款机。秸秆还田、过冬别光板、少只拿不还。有机质掉是几年的账，一袋肥补不回来。还田要记得碳氮那笔小账，别让苗黄在秸秆上。\",\"bodyEn\":\"Black soil is not a cash machine. Return straw, don’t leave it bare all winter, stop only taking. Organic matter is a multi-year bill; one bag doesn’t pay it. When you return straw, remember the small nitrogen bill so the seedling doesn’t yellow on the residue.\"}],\"titleEn\":\"The black soil is paler, more clods\"},{\"id\":\"p16\",\"author\":\"农户7012\",\"createdAt\":\"2026-07-04\",\"problem\":\"肥害\",\"crop\":\"设施蔬菜\",\"region\":\"黄淮海\",\"title\":\"滴灌越浇叶尖越焦\",\"body\":\"大棚滴灌，配方没改，叶尖焦、孔边有白。\",\"bodyEn\":\"Greenhouse drip. Recipe unchanged, leaf tips burn, white around the emitters.\",\"photo\":\"/images/articles/shui-fei-yi-ti-hua-ec.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"EC 超了就是在腌根。先稀一档，有出路再冲洗。不要因为叶黄把开关拧更大。尾水测一测电导，比再加肥明白。\",\"bodyEn\":\"When EC is over the line you are pickling the root. Dilute one step; flush only if water can leave. Don’t turn the tap stronger because the leaf is pale. A meter on the tail-water tells you more than another bag.\"}],\"titleEn\":\"The more I drip, the more the leaf tips scorch\"},{\"id\":\"p17\",\"author\":\"农户1930\",\"createdAt\":\"2026-07-13\",\"problem\":\"缺素\",\"crop\":\"小麦\",\"region\":\"黄淮海\",\"title\":\"苗紫、发僵，磷肥已经撒过\",\"body\":\"麦苗暗绿带紫，根少。底肥磷已经用了。地偏酸。\",\"bodyEn\":\"Wheat dark green with purple, few roots. Basal P already applied. Field a bit acid.\",\"photo\":\"/images/articles/suan-tu-shi-lin.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"酸土里磷会被铁铝抓住。再撒同样的磷，根还是摸不到。先认 pH，酸了先谈改酸，磷集中放到根旁。苗期叶面可以救急，不是代替改土。\",\"bodyEn\":\"In acid soil, iron and aluminium grab phosphate. The same broadcast again still doesn’t reach the root. Read pH. If it’s acid, talk lime first, and band P next to the root. A foliar can buy days; it does not replace fixing the soil.\"}],\"titleEn\":\"Seedlings purple and stalled, phosphorus already spread\"},{\"id\":\"p18\",\"author\":\"农户5544\",\"createdAt\":\"2026-07-21\",\"problem\":\"连作障碍\",\"crop\":\"果树\",\"region\":\"华北\",\"title\":\"老苹果树刨了，新苗还是不长\",\"body\":\"原坑又栽下去，新苗发僵。菌剂用了。\",\"bodyEn\":\"Old apple out, new tree in the same hole, stalling. I used an inoculant.\",\"photo\":\"/images/articles/ping-guo-zai-zhi.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"刨了老树坑还是老土。菌剂没有标准单位能替代换坑或轮作。挪行、换坑土，比再倒一瓶更像办法。\",\"bodyEn\":\"The old pit is still the old soil. A microbe bottle has no unit that replaces moving the row or changing the pit. Move the line, replace the hole — that is more of a method than another bottle.\"}],\"titleEn\":\"Old apple trees gone, the new ones still stall\"},{\"id\":\"p19\",\"author\":\"农户8126\",\"createdAt\":\"2026-07-29\",\"problem\":\"其他\",\"crop\":\"蔬菜\",\"region\":\"长江中下游\",\"title\":\"化验单上 pH、EC 看不懂\",\"body\":\"单子来了，pH 五点二，EC 也有个数字，不知道先圈哪个。\",\"bodyEn\":\"The sheet arrived. pH 5.2, and an EC number. Which cell do I circle first?\",\"photo\":\"/images/articles/ce-tu-bao-gao.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"pH 是尺子不是病名。EC 是咸。有机质是肉。先把这三格圈死，再看氮磷钾。水土比不同，数字不能抄邻县实验室。改土用量去农业知识，单子这页不给袋数。\",\"bodyEn\":\"pH is a ruler, not a disease name. EC is salt. Organic matter is the meat. Circle those three first, then NPK. Different soil:water ratios are not the same number as the next county’s lab. Rates live in the field guides — this sheet page does not hand you a bag count.\"}],\"titleEn\":\"I can't read pH and EC on the sheet\"},{\"id\":\"p20\",\"author\":\"农户4365\",\"createdAt\":\"2026-08-06\",\"problem\":\"盐碱\",\"crop\":\"棉花\",\"region\":\"西北\",\"title\":\"想大水压盐，地里没有沟\",\"body\":\"土白，听人说大水压盐。地是平的，没有排水沟。\",\"bodyEn\":\"White soil. People said flood to push the salt down. The field is flat, no drain.\",\"photo\":\"/images/articles/xi-yan-pai-shui.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"有灌没排等于把盐赶上来。先问沟通不通。没沟别大水漫灌。覆盖能减返盐。石膏不是见白就撒的药。\",\"bodyEn\":\"Irrigation without drainage just drives the salt up. Ask whether the ditch actually empties. No drain, no flood. Cover cuts the return. Gypsum is not a medicine you spread on every white patch.\"}],\"titleEn\":\"I want to flush the salt, but there is no ditch\"},{\"id\":\"p21\",\"author\":\"农户2677\",\"createdAt\":\"2026-08-14\",\"problem\":\"缺素\",\"crop\":\"果树\",\"region\":\"华南\",\"title\":\"柑橘黄化，有人说黄龙病\",\"body\":\"新叶黄、脉绿，也有人说是缺铁。\",\"bodyEn\":\"Citrus: new leaves yellow, veins green. Someone said huanglongbing, someone said iron.\",\"photo\":\"/images/articles/qi-zi-huang-hua.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"缺铁、根腐、黄龙病先分清。新叶黄、脉绿，先看根和 pH，石灰性土铁常被锁。黄龙病的斑驳和整株走势不一样。不要只对着叶子买一瓶铁。\",\"bodyEn\":\"Separate iron lock, root rot and huanglongbing. New leaves yellow with green veins: look at the root and pH first — limey soil often locks iron. HLB blotch and the way the whole tree moves are different. Don’t only buy a bottle of iron for the leaf.\"}],\"titleEn\":\"Citrus yellowing; someone said huanglongbing\"},{\"id\":\"p22\",\"author\":\"农户9901\",\"createdAt\":\"2026-08-20\",\"problem\":\"板结\",\"crop\":\"玉米\",\"region\":\"东北\",\"title\":\"车辙里不出苗\",\"body\":\"春涝之后轧了一趟，辙里空着。\",\"bodyEn\":\"After a wet spring we drove across. The ruts came up empty.\",\"photo\":\"/images/articles/ji-ya-che-zhe.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"湿土上一趟车，比干季做一年功更结实。辙里积水又没气。以后湿着别下重车，能固定辙就固定。已经轧实的，干到能裂再松那一层。\",\"bodyEn\":\"One wet pass packs more than a dry season of work. Ruts hold water and starve air. Keep heavy wheels off wet ground; use the same tracks if you must. For what’s already packed, wait until it can crack, then loosen that layer.\"}],\"titleEn\":\"Nothing comes up in the wheel tracks\"},{\"id\":\"p23\",\"author\":\"农户1288\",\"createdAt\":\"2026-08-28\",\"problem\":\"其他\",\"crop\":\"水稻\",\"region\":\"华南\",\"title\":\"测土怎么取样才不准\",\"body\":\"去年送了一袋土，配方跟地里对不上。我是田边挖的。\",\"bodyEn\":\"Last year’s bag of soil didn’t match what the field did. I dug it at the edge.\",\"photo\":\"/images/articles/ce-tu-qu-yang.jpg\",\"answers\":[{\"author\":\"李泽宇\",\"body\":\"田边、粪堆边、水坑边，最会骗人。耕作层 8 到 15 个点混合装一袋，深度写在袋子上。一铲不能代表这块地。数字不准，后面的配方都是邻县的账。\",\"bodyEn\":\"The headland, the manure heap and the wet corner all lie. Mix 8–15 spots of the tilled layer, write the depth on the bag. One spadeful is not this field. If the number is wrong, every recipe after it is the next county’s ledger.\"}],\"titleEn\":\"How not to take soil for a test\"}]");
+var seeded = false;
+function asIso(d) {
+	if (d instanceof Date) return d.toISOString();
+	const s = String(d ?? "");
+	if (/^\d{4}-\d{2}-\d{2}/.test(s)) return s;
+	const parsed = new Date(s);
+	return Number.isNaN(parsed.getTime()) ? s : parsed.toISOString();
+}
+async function ensureCommunitySchema(sql) {
+	await sql.query(`create table if not exists posts (
+    id text primary key,
+    user_id text,
+    author text not null,
+    title text not null,
+    title_en text,
+    body text not null,
+    body_en text,
+    problem text not null default '其他',
+    crop text,
+    region text,
+    photo text,
+    created_at timestamptz not null default now()
+  )`);
+	await sql.query(`create table if not exists replies (
+    id text primary key,
+    post_id text not null references posts(id) on delete cascade,
+    user_id text,
+    author text not null,
+    body text not null,
+    body_en text,
+    created_at timestamptz not null default now()
+  )`);
+	await sql.query(`alter table if exists posts add column if not exists title_en text`);
+}
+async function seedIfEmpty() {
+	if (seeded) return;
+	try {
+		const sql = await getSql();
+		await ensureCommunitySchema(sql);
+		if (((await sql`select count(*)::int as c from posts`)[0]?.c ?? 0) > 0) {
+			for (const p of posts_default) {
+				if (!p.titleEn) continue;
+				try {
+					await sql`update posts set title_en = ${p.titleEn} where id = ${p.id} and (title_en is null or title_en = '')`;
+				} catch {}
+			}
+			seeded = true;
+			return;
+		}
+		for (const p of posts_default) {
+			await sql`
+        insert into posts (id, author, title, title_en, body, body_en, problem, crop, region, photo, created_at)
+        values (${p.id}, ${p.author}, ${p.title}, ${p.titleEn ?? null}, ${p.body}, ${p.bodyEn}, ${p.problem}, ${p.crop}, ${p.region}, ${p.photo}, ${p.createdAt}::timestamptz)
+        on conflict (id) do nothing
+      `;
+			for (let i = 0; i < p.answers.length; i++) {
+				const a = p.answers[i];
+				await sql`
+          insert into replies (id, post_id, author, body, body_en, created_at)
+          values (${p.id + "-a" + i}, ${p.id}, ${a.author}, ${a.body}, ${a.bodyEn}, ${p.createdAt}::timestamptz)
+          on conflict (id) do nothing
+        `;
+			}
+		}
+		seeded = true;
+	} catch (err) {
+		console.error("[community] seed skipped:", err instanceof Error ? err.message : err);
+	}
+}
+async function loadPosts(problem) {
+	await seedIfEmpty();
+	try {
+		const sql = await getSql();
+		const posts = problem ? await sql`select id, author, title, title_en, body, body_en, problem, crop, region, photo, created_at from posts where problem = ${problem} order by created_at desc` : await sql`select id, author, title, title_en, body, body_en, problem, crop, region, photo, created_at from posts order by created_at desc`;
+		const replies = await sql`select id, post_id, author, body, body_en, created_at from replies order by created_at`;
+		const byPost = /* @__PURE__ */ new Map();
+		for (const r of replies) {
+			const list = byPost.get(r.post_id) ?? [];
+			list.push({
+				id: r.id,
+				author: r.author,
+				body: r.body,
+				bodyEn: r.body_en,
+				createdAt: asIso(r.created_at)
+			});
+			byPost.set(r.post_id, list);
+		}
+		return posts.map((p) => ({
+			id: p.id,
+			author: p.author,
+			title: p.title,
+			titleEn: p.title_en,
+			body: p.body,
+			bodyEn: p.body_en,
+			problem: p.problem,
+			crop: p.crop,
+			region: p.region,
+			photo: p.photo,
+			createdAt: asIso(p.created_at),
+			answers: byPost.get(p.id) ?? []
+		}));
+	} catch (err) {
+		console.error("[community] load skipped:", err instanceof Error ? err.message : err);
+		return [];
+	}
+}
+var listPosts_createServerFn_handler = createServerRpc({
+	id: "04e67d7f6357f36871f5b682b8c29ef050f05772ff57b40eb7fb50b9e90cecc1",
+	name: "listPosts",
+	filename: "src/lib/community/server.ts"
+}, (opts) => listPosts.__executeServer(opts));
+var listPosts = createServerFn({ method: "GET" }).validator((input) => input).handler(listPosts_createServerFn_handler, async ({ data }) => loadPosts(data.problem));
+var getPost_createServerFn_handler = createServerRpc({
+	id: "96cba498bb5177c3acab66991e358bfd8ed5f4d542ad0da54c3455b07cc30dcb",
+	name: "getPost",
+	filename: "src/lib/community/server.ts"
+}, (opts) => getPost.__executeServer(opts));
+var getPost = createServerFn({ method: "GET" }).validator((input) => input).handler(getPost_createServerFn_handler, async ({ data }) => {
+	return (await loadPosts()).find((p) => p.id === data.id) ?? null;
+});
+function farmerName(email, userId) {
+	return `农户${(userId.replace(/\D/g, "").slice(-4) || email?.replace(/\D/g, "").slice(-4) || "0000").padStart(4, "0").slice(-4)}`;
+}
+var createPost_createServerFn_handler = createServerRpc({
+	id: "1e9d4cadd619017d0384b415fbbef9e8ff2e5b45ab2279f91be8edae2a528e91",
+	name: "createPost",
+	filename: "src/lib/community/server.ts"
+}, (opts) => createPost.__executeServer(opts));
+var createPost = createServerFn({ method: "POST" }).middleware([authMiddleware]).validator((input) => input).handler(createPost_createServerFn_handler, async ({ data, context }) => {
+	const title = data.title.trim();
+	const body = data.body.trim();
+	if (title.length < 4 || body.length < 8) throw new Error("short");
+	const sql = await getSql();
+	const id = `u${Date.now()}`;
+	const author = farmerName(void 0, context.userId);
+	const titleEn = await translateToEn(title);
+	const bodyEn = await translateToEn(body);
+	await sql`
+      insert into posts (id, user_id, author, title, title_en, body, body_en, problem, crop, region, photo)
+      values (${id}, ${context.userId}, ${author}, ${title}, ${titleEn}, ${body}, ${bodyEn}, ${data.problem || "其他"}, ${data.crop ?? null}, ${data.region ?? null}, ${data.photo ?? null})
+    `;
+	return { id };
+});
+var addReply_createServerFn_handler = createServerRpc({
+	id: "523c93b342ee2a4a6a375a1610c7bbff6dc82bb85195ab08150afe1f41141711",
+	name: "addReply",
+	filename: "src/lib/community/server.ts"
+}, (opts) => addReply.__executeServer(opts));
+var addReply = createServerFn({ method: "POST" }).middleware([authMiddleware]).validator((input) => input).handler(addReply_createServerFn_handler, async ({ data, context }) => {
+	const body = data.body.trim();
+	if (body.length < 2) throw new Error("short");
+	const sql = await getSql();
+	const id = `r${Date.now()}`;
+	const author = farmerName(void 0, context.userId);
+	const bodyEn = await translateToEn(body);
+	await sql`
+      insert into replies (id, post_id, user_id, author, body, body_en)
+      values (${id}, ${data.postId}, ${context.userId}, ${author}, ${body}, ${bodyEn})
+    `;
+	return { id };
+});
+//#endregion
+export { addReply_createServerFn_handler, createPost_createServerFn_handler, getPost_createServerFn_handler, listPosts_createServerFn_handler };

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="土知">
+  <rect width="128" height="128" rx="22" fill="#1F6B4A"/>
+  <!-- 土 -->
+  <g fill="#F4EFE6">
+    <rect x="38" y="28" width="52" height="9" rx="1.5"/>
+    <rect x="59.5" y="28" width="9" height="58" rx="1.5"/>
+    <rect x="30" y="54" width="68" height="9" rx="1.5"/>
+    <rect x="24" y="78" width="80" height="10" rx="1.5"/>
+  </g>
+  <!-- soil horizons -->
+  <rect x="18" y="100" width="92" height="6" fill="#C4A36A"/>
+  <rect x="18" y="106" width="92" height="6" fill="#8A5A36"/>
+  <rect x="18" y="112" width="92" height="8" rx="0" fill="#4A2C18"/>
+  <path d="M18 118h92v2.5A8 8 0 0 1 110 122H18z" fill="#4A2C18"/>
+</svg>
