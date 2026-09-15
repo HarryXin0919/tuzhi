@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="待补田间照片">
+  <rect fill="#F4EFE6" width="360" height="240"/>
+  <rect fill="none" stroke="#1F6B4A" stroke-width="2" x="24" y="24" width="312" height="192" rx="12"/>
+  <text x="180" y="116" text-anchor="middle" fill="#1C1612" font-size="20" font-family="serif">待补田间照片</text>
+  <text x="180" y="148" text-anchor="middle" fill="#5c5348" font-size="14" font-family="sans-serif">请拍整垄 / 根尖 / 土面</text>
+</svg>

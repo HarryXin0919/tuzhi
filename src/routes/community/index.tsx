@@ -1,9 +1,12 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { PROBLEMS } from "@/lib/constants";
 import { listPosts } from "@/lib/community/server";
-import { useLang } from "@/lib/i18n/lang";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
 import { displayName, lex } from "@/lib/i18n/lexicon";
+import { seo } from "@/lib/seo";
+import { LangLink } from "@/components/LangLink";
+import { useAnyLoaderData, useAnyNavigate, useAnySearch } from "@/lib/i18n/route-data";
 
 type Search = { problem?: string };
 
@@ -13,16 +16,22 @@ export const Route = createFileRoute("/community/")({
   }),
   loaderDeps: ({ search }) => ({ problem: search.problem }),
   loader: async ({ deps }) => ({ posts: await listPosts({ data: { problem: deps.problem } }) }),
+  head: () =>
+    seo({
+      title: "问答区｜土知",
+      description: "把自家地里的照片和现象发出来。作物、地区、你看见的样子写清，互相看。",
+      path: "/community",
+    }),
   component: Community,
 });
 
-function Community() {
-  const lang = useLang((s) => s.lang);
+export function Community() {
+  const lang = usePathLang();
   const t = messages[lang];
   const r = t.community;
-  const { posts } = Route.useLoaderData();
-  const search = Route.useSearch();
-  const nav = Route.useNavigate();
+  const { posts } = useAnyLoaderData<{ posts: Awaited<ReturnType<typeof listPosts>> }>();
+  const search = useAnySearch<Search>();
+  const nav = useAnyNavigate();
   return (
     <div className="space-y-5">
       <header>
@@ -48,32 +57,32 @@ function Community() {
           </button>
         ))}
       </div>
-      <Link to="/community/new" className="flex min-h-14 items-center justify-center rounded-xl bg-forest text-lg text-forest-fg">
+      <LangLink to="/community/new" className="flex min-h-14 items-center justify-center rounded-xl bg-forest text-lg text-forest-fg">
         {r.ask}
-      </Link>
+      </LangLink>
       <div className="space-y-3">
         {posts.length === 0 ? (
           <p className="rounded-xl border border-line bg-surface p-6 text-muted">
             {r.empty}
             <span className="mt-3 flex gap-3">
-              <Link to="/diagnose" className="text-forest underline">
+              <LangLink to="/diagnose" className="text-forest underline">
                 {t.nav.diagnose}
-              </Link>
-              <Link to="/knowledge" className="text-forest underline">
+              </LangLink>
+              <LangLink to="/knowledge" className="text-forest underline">
                 {t.nav.knowledge}
-              </Link>
+              </LangLink>
             </span>
           </p>
         ) : (
           posts.map((p) => (
-            <Link key={p.id} to="/community/$id" params={{ id: p.id }} className="block rounded-2xl border border-line bg-surface p-4">
-              <p className="font-medium">{p.title}</p>
-              <p className="mt-1 line-clamp-2 text-muted">{p.body}</p>
+            <LangLink key={p.id} to="/community/$id" params={{ id: p.id }} className="block rounded-2xl border border-line bg-surface p-4">
+              <p className="font-medium">{lang === "en" && p.titleEn && !/[\u4e00-\u9fff]/.test(p.titleEn) ? p.titleEn : p.title}</p>
+              <p className="mt-1 line-clamp-2 text-muted">{lang === "en" && p.bodyEn && !/[\u4e00-\u9fff]/.test(p.bodyEn) ? p.bodyEn : p.body}</p>
               <p className="mt-2 text-sm text-subtle">
                 {displayName(p.author, lang)} · {String(p.createdAt).slice(0, 10)} · {lex(p.problem, lang)} ·{" "}
                 {p.answers.length ? r.answered : r.waiting}
               </p>
-            </Link>
+            </LangLink>
           ))
         )}
       </div>

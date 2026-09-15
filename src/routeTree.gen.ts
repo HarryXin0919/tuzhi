@@ -13,17 +13,34 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DiagnoseRouteImport } from './routes/diagnose'
+import { Route as EnRouteImport } from './routes/en'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MeRouteImport } from './routes/me'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SearchRouteImport } from './routes/search'
 import { Route as CommunityIndexRouteImport } from './routes/community/index'
 import { Route as CommunityIdRouteImport } from './routes/community/$id'
 import { Route as CommunityNewRouteImport } from './routes/community/new'
+import { Route as EnIndexRouteImport } from './routes/en/index'
+import { Route as EnAboutRouteImport } from './routes/en/about'
+import { Route as EnContactRouteImport } from './routes/en/contact'
+import { Route as EnDiagnoseRouteImport } from './routes/en/diagnose'
+import { Route as EnLoginRouteImport } from './routes/en/login'
+import { Route as EnMeRouteImport } from './routes/en/me'
+import { Route as EnPrivacyRouteImport } from './routes/en/privacy'
+import { Route as EnSearchRouteImport } from './routes/en/search'
 import { Route as EncyclopediaIndexRouteImport } from './routes/encyclopedia/index'
 import { Route as EncyclopediaIdRouteImport } from './routes/encyclopedia/$id'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge/index'
 import { Route as KnowledgeSlugRouteImport } from './routes/knowledge/$slug'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as EnCommunityIndexRouteImport } from './routes/en/community/index'
+import { Route as EnCommunityIdRouteImport } from './routes/en/community/$id'
+import { Route as EnCommunityNewRouteImport } from './routes/en/community/new'
+import { Route as EnEncyclopediaIndexRouteImport } from './routes/en/encyclopedia/index'
+import { Route as EnEncyclopediaIdRouteImport } from './routes/en/encyclopedia/$id'
+import { Route as EnKnowledgeIndexRouteImport } from './routes/en/knowledge/index'
+import { Route as EnKnowledgeSlugRouteImport } from './routes/en/knowledge/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -45,6 +62,11 @@ const DiagnoseRoute = DiagnoseRouteImport.update({
   path: '/diagnose',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnRoute = EnRouteImport.update({
+  id: '/en',
+  path: '/en',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
@@ -58,6 +80,11 @@ const MeRoute = MeRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CommunityIndexRoute = CommunityIndexRouteImport.update({
@@ -74,6 +101,46 @@ const CommunityNewRoute = CommunityNewRouteImport.update({
   id: '/community/new',
   path: '/community/new',
   getParentRoute: () => rootRouteImport,
+} as any)
+const EnIndexRoute = EnIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnAboutRoute = EnAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnContactRoute = EnContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnDiagnoseRoute = EnDiagnoseRouteImport.update({
+  id: '/diagnose',
+  path: '/diagnose',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnLoginRoute = EnLoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnMeRoute = EnMeRouteImport.update({
+  id: '/me',
+  path: '/me',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnPrivacyRoute = EnPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnSearchRoute = EnSearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => EnRoute,
 } as any)
 const EncyclopediaIndexRoute = EncyclopediaIndexRouteImport.update({
   id: '/encyclopedia/',
@@ -100,23 +167,75 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EnCommunityIndexRoute = EnCommunityIndexRouteImport.update({
+  id: '/community/',
+  path: '/community/',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCommunityIdRoute = EnCommunityIdRouteImport.update({
+  id: '/community/$id',
+  path: '/community/$id',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnCommunityNewRoute = EnCommunityNewRouteImport.update({
+  id: '/community/new',
+  path: '/community/new',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnEncyclopediaIndexRoute = EnEncyclopediaIndexRouteImport.update({
+  id: '/encyclopedia/',
+  path: '/encyclopedia/',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnEncyclopediaIdRoute = EnEncyclopediaIdRouteImport.update({
+  id: '/encyclopedia/$id',
+  path: '/encyclopedia/$id',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnKnowledgeIndexRoute = EnKnowledgeIndexRouteImport.update({
+  id: '/knowledge/',
+  path: '/knowledge/',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnKnowledgeSlugRoute = EnKnowledgeSlugRouteImport.update({
+  id: '/knowledge/$slug',
+  path: '/knowledge/$slug',
+  getParentRoute: () => EnRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/diagnose': typeof DiagnoseRoute
+  '/en': typeof EnRouteWithChildren
   '/login': typeof LoginRoute
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
+  '/search': typeof SearchRoute
   '/community/$id': typeof CommunityIdRoute
   '/community/new': typeof CommunityNewRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/diagnose': typeof EnDiagnoseRoute
+  '/en/login': typeof EnLoginRoute
+  '/en/me': typeof EnMeRoute
+  '/en/privacy': typeof EnPrivacyRoute
+  '/en/search': typeof EnSearchRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
   '/knowledge/$slug': typeof KnowledgeSlugRoute
   '/community/': typeof CommunityIndexRoute
+  '/en/': typeof EnIndexRoute
   '/encyclopedia/': typeof EncyclopediaIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/en/community/$id': typeof EnCommunityIdRoute
+  '/en/community/new': typeof EnCommunityNewRoute
+  '/en/encyclopedia/$id': typeof EnEncyclopediaIdRoute
+  '/en/knowledge/$slug': typeof EnKnowledgeSlugRoute
+  '/en/community/': typeof EnCommunityIndexRoute
+  '/en/encyclopedia/': typeof EnEncyclopediaIndexRoute
+  '/en/knowledge/': typeof EnKnowledgeIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -126,14 +245,30 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
+  '/search': typeof SearchRoute
   '/community/$id': typeof CommunityIdRoute
   '/community/new': typeof CommunityNewRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/diagnose': typeof EnDiagnoseRoute
+  '/en/login': typeof EnLoginRoute
+  '/en/me': typeof EnMeRoute
+  '/en/privacy': typeof EnPrivacyRoute
+  '/en/search': typeof EnSearchRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
   '/knowledge/$slug': typeof KnowledgeSlugRoute
   '/community': typeof CommunityIndexRoute
+  '/en': typeof EnIndexRoute
   '/encyclopedia': typeof EncyclopediaIndexRoute
   '/knowledge': typeof KnowledgeIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/en/community/$id': typeof EnCommunityIdRoute
+  '/en/community/new': typeof EnCommunityNewRoute
+  '/en/encyclopedia/$id': typeof EnEncyclopediaIdRoute
+  '/en/knowledge/$slug': typeof EnKnowledgeSlugRoute
+  '/en/community': typeof EnCommunityIndexRoute
+  '/en/encyclopedia': typeof EnEncyclopediaIndexRoute
+  '/en/knowledge': typeof EnKnowledgeIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -141,17 +276,34 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/diagnose': typeof DiagnoseRoute
+  '/en': typeof EnRouteWithChildren
   '/login': typeof LoginRoute
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
+  '/search': typeof SearchRoute
   '/community/$id': typeof CommunityIdRoute
   '/community/new': typeof CommunityNewRoute
+  '/en/about': typeof EnAboutRoute
+  '/en/contact': typeof EnContactRoute
+  '/en/diagnose': typeof EnDiagnoseRoute
+  '/en/login': typeof EnLoginRoute
+  '/en/me': typeof EnMeRoute
+  '/en/privacy': typeof EnPrivacyRoute
+  '/en/search': typeof EnSearchRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
   '/knowledge/$slug': typeof KnowledgeSlugRoute
   '/community/': typeof CommunityIndexRoute
+  '/en/': typeof EnIndexRoute
   '/encyclopedia/': typeof EncyclopediaIndexRoute
   '/knowledge/': typeof KnowledgeIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/en/community/$id': typeof EnCommunityIdRoute
+  '/en/community/new': typeof EnCommunityNewRoute
+  '/en/encyclopedia/$id': typeof EnEncyclopediaIdRoute
+  '/en/knowledge/$slug': typeof EnKnowledgeSlugRoute
+  '/en/community/': typeof EnCommunityIndexRoute
+  '/en/encyclopedia/': typeof EnEncyclopediaIndexRoute
+  '/en/knowledge/': typeof EnKnowledgeIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -160,17 +312,34 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/diagnose'
+    | '/en'
     | '/login'
     | '/me'
     | '/privacy'
+    | '/search'
     | '/community/$id'
     | '/community/new'
+    | '/en/about'
+    | '/en/contact'
+    | '/en/diagnose'
+    | '/en/login'
+    | '/en/me'
+    | '/en/privacy'
+    | '/en/search'
     | '/encyclopedia/$id'
     | '/knowledge/$slug'
     | '/community/'
+    | '/en/'
     | '/encyclopedia/'
     | '/knowledge/'
     | '/api/auth/$'
+    | '/en/community/$id'
+    | '/en/community/new'
+    | '/en/encyclopedia/$id'
+    | '/en/knowledge/$slug'
+    | '/en/community/'
+    | '/en/encyclopedia/'
+    | '/en/knowledge/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -180,31 +349,64 @@ export interface FileRouteTypes {
     | '/login'
     | '/me'
     | '/privacy'
+    | '/search'
     | '/community/$id'
     | '/community/new'
+    | '/en/about'
+    | '/en/contact'
+    | '/en/diagnose'
+    | '/en/login'
+    | '/en/me'
+    | '/en/privacy'
+    | '/en/search'
     | '/encyclopedia/$id'
     | '/knowledge/$slug'
     | '/community'
+    | '/en'
     | '/encyclopedia'
     | '/knowledge'
     | '/api/auth/$'
+    | '/en/community/$id'
+    | '/en/community/new'
+    | '/en/encyclopedia/$id'
+    | '/en/knowledge/$slug'
+    | '/en/community'
+    | '/en/encyclopedia'
+    | '/en/knowledge'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
     | '/diagnose'
+    | '/en'
     | '/login'
     | '/me'
     | '/privacy'
+    | '/search'
     | '/community/$id'
     | '/community/new'
+    | '/en/about'
+    | '/en/contact'
+    | '/en/diagnose'
+    | '/en/login'
+    | '/en/me'
+    | '/en/privacy'
+    | '/en/search'
     | '/encyclopedia/$id'
     | '/knowledge/$slug'
     | '/community/'
+    | '/en/'
     | '/encyclopedia/'
     | '/knowledge/'
     | '/api/auth/$'
+    | '/en/community/$id'
+    | '/en/community/new'
+    | '/en/encyclopedia/$id'
+    | '/en/knowledge/$slug'
+    | '/en/community/'
+    | '/en/encyclopedia/'
+    | '/en/knowledge/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -212,9 +414,11 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   DiagnoseRoute: typeof DiagnoseRoute
+  EnRoute: typeof EnRouteWithChildren
   LoginRoute: typeof LoginRoute
   MeRoute: typeof MeRoute
   PrivacyRoute: typeof PrivacyRoute
+  SearchRoute: typeof SearchRoute
   CommunityIdRoute: typeof CommunityIdRoute
   CommunityNewRoute: typeof CommunityNewRoute
   EncyclopediaIdRoute: typeof EncyclopediaIdRoute
@@ -255,6 +459,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DiagnoseRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/en': {
+      id: '/en'
+      path: '/en'
+      fullPath: '/en'
+      preLoaderRoute: typeof EnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/login': {
       id: '/login'
       path: '/login'
@@ -274,6 +485,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/community/': {
@@ -296,6 +514,62 @@ declare module '@tanstack/react-router' {
       fullPath: '/community/new'
       preLoaderRoute: typeof CommunityNewRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/en/': {
+      id: '/en/'
+      path: '/'
+      fullPath: '/en/'
+      preLoaderRoute: typeof EnIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/about': {
+      id: '/en/about'
+      path: '/about'
+      fullPath: '/en/about'
+      preLoaderRoute: typeof EnAboutRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/contact': {
+      id: '/en/contact'
+      path: '/contact'
+      fullPath: '/en/contact'
+      preLoaderRoute: typeof EnContactRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/diagnose': {
+      id: '/en/diagnose'
+      path: '/diagnose'
+      fullPath: '/en/diagnose'
+      preLoaderRoute: typeof EnDiagnoseRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/login': {
+      id: '/en/login'
+      path: '/login'
+      fullPath: '/en/login'
+      preLoaderRoute: typeof EnLoginRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/me': {
+      id: '/en/me'
+      path: '/me'
+      fullPath: '/en/me'
+      preLoaderRoute: typeof EnMeRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/privacy': {
+      id: '/en/privacy'
+      path: '/privacy'
+      fullPath: '/en/privacy'
+      preLoaderRoute: typeof EnPrivacyRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/search': {
+      id: '/en/search'
+      path: '/search'
+      fullPath: '/en/search'
+      preLoaderRoute: typeof EnSearchRouteImport
+      parentRoute: typeof EnRoute
     }
     '/encyclopedia/': {
       id: '/encyclopedia/'
@@ -332,17 +606,106 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/en/community/': {
+      id: '/en/community/'
+      path: '/community'
+      fullPath: '/en/community/'
+      preLoaderRoute: typeof EnCommunityIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/community/$id': {
+      id: '/en/community/$id'
+      path: '/community/$id'
+      fullPath: '/en/community/$id'
+      preLoaderRoute: typeof EnCommunityIdRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/community/new': {
+      id: '/en/community/new'
+      path: '/community/new'
+      fullPath: '/en/community/new'
+      preLoaderRoute: typeof EnCommunityNewRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/encyclopedia/': {
+      id: '/en/encyclopedia/'
+      path: '/encyclopedia'
+      fullPath: '/en/encyclopedia/'
+      preLoaderRoute: typeof EnEncyclopediaIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/encyclopedia/$id': {
+      id: '/en/encyclopedia/$id'
+      path: '/encyclopedia/$id'
+      fullPath: '/en/encyclopedia/$id'
+      preLoaderRoute: typeof EnEncyclopediaIdRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/knowledge/': {
+      id: '/en/knowledge/'
+      path: '/knowledge'
+      fullPath: '/en/knowledge/'
+      preLoaderRoute: typeof EnKnowledgeIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/knowledge/$slug': {
+      id: '/en/knowledge/$slug'
+      path: '/knowledge/$slug'
+      fullPath: '/en/knowledge/$slug'
+      preLoaderRoute: typeof EnKnowledgeSlugRouteImport
+      parentRoute: typeof EnRoute
+    }
   }
 }
+
+interface EnRouteChildren {
+  EnAboutRoute: typeof EnAboutRoute
+  EnContactRoute: typeof EnContactRoute
+  EnDiagnoseRoute: typeof EnDiagnoseRoute
+  EnLoginRoute: typeof EnLoginRoute
+  EnMeRoute: typeof EnMeRoute
+  EnPrivacyRoute: typeof EnPrivacyRoute
+  EnSearchRoute: typeof EnSearchRoute
+  EnIndexRoute: typeof EnIndexRoute
+  EnCommunityIdRoute: typeof EnCommunityIdRoute
+  EnCommunityNewRoute: typeof EnCommunityNewRoute
+  EnEncyclopediaIdRoute: typeof EnEncyclopediaIdRoute
+  EnKnowledgeSlugRoute: typeof EnKnowledgeSlugRoute
+  EnCommunityIndexRoute: typeof EnCommunityIndexRoute
+  EnEncyclopediaIndexRoute: typeof EnEncyclopediaIndexRoute
+  EnKnowledgeIndexRoute: typeof EnKnowledgeIndexRoute
+}
+
+const EnRouteChildren: EnRouteChildren = {
+  EnAboutRoute: EnAboutRoute,
+  EnContactRoute: EnContactRoute,
+  EnDiagnoseRoute: EnDiagnoseRoute,
+  EnLoginRoute: EnLoginRoute,
+  EnMeRoute: EnMeRoute,
+  EnPrivacyRoute: EnPrivacyRoute,
+  EnSearchRoute: EnSearchRoute,
+  EnIndexRoute: EnIndexRoute,
+  EnCommunityIdRoute: EnCommunityIdRoute,
+  EnCommunityNewRoute: EnCommunityNewRoute,
+  EnEncyclopediaIdRoute: EnEncyclopediaIdRoute,
+  EnKnowledgeSlugRoute: EnKnowledgeSlugRoute,
+  EnCommunityIndexRoute: EnCommunityIndexRoute,
+  EnEncyclopediaIndexRoute: EnEncyclopediaIndexRoute,
+  EnKnowledgeIndexRoute: EnKnowledgeIndexRoute,
+}
+
+const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   DiagnoseRoute: DiagnoseRoute,
+  EnRoute: EnRouteWithChildren,
   LoginRoute: LoginRoute,
   MeRoute: MeRoute,
   PrivacyRoute: PrivacyRoute,
+  SearchRoute: SearchRoute,
   CommunityIdRoute: CommunityIdRoute,
   CommunityNewRoute: CommunityNewRoute,
   EncyclopediaIdRoute: EncyclopediaIdRoute,

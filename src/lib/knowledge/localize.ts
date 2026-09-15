@@ -1,8 +1,9 @@
 import overlayJson from "@/data/articles-en.json";
 import metaJson from "@/data/articles-en-meta.json";
 import { lex } from "@/lib/i18n/lexicon";
+import { cleanEn, cleanEnArr, dropHanLines } from "@/lib/i18n/han";
 import type { Lang } from "@/lib/i18n/lang";
-import type { Article, Confuse, Dose, Indicator } from "./types";
+import type { Article, Confuse, Dose, DoseRow, Indicator, LabRow, Photo } from "./types";
 
 type Overlay = {
   appearance?: string;
@@ -17,85 +18,172 @@ type Overlay = {
   prevention?: string[];
   longform?: string[];
   summary?: string;
+  commonCrops?: string;
+  confuse?: Confuse[];
+  dosage?: Dose[];
+  photos?: { alt: string; caption: string }[];
+  indicators?: Indicator[];
+  mechanism?: string;
+  example?: string;
+  doseTable?: DoseRow[];
+  labTable?: LabRow[];
+  sources?: string[];
 };
 
 const OVERLAY = overlayJson as Record<string, Overlay>;
-const META = metaJson as Record<string, { title: string; subtitle: string; summary: string }>;
+const META = metaJson as Record<string, { title: string; subtitle: string; summary: string; card?: string }>;
 
-function pick(en: string | undefined, zh: string, translate: (s: string) => string) {
-  return en && en.trim() ? en : translate(zh);
+function lexClean(word: string): string {
+  const v = lex(word, "en");
+  return cleanEn(v) || word;
 }
 
-function arr(en: string[] | undefined, zh: string[], translate: (s: string) => string) {
-  if (en && en.length) return en;
-  return zh.map(translate);
+function confuseEn(g: Overlay, a: Article): Confuse[] {
+  const src = g.confuse?.length ? g.confuse : [];
+  const out: Confuse[] = [];
+  for (const c of src) {
+    const lookalike = cleanEn(c.lookalike);
+    const difference = cleanEn(c.difference);
+    if (!lookalike || !difference) continue;
+    out.push({
+      lookalike,
+      difference,
+      photoHint: c.photoHint ? cleanEn(c.photoHint) || undefined : undefined,
+    });
+  }
+  if (out.length) return out;
+  return a.confuse.length ? [] : [];
 }
 
-function fallbackEn(s: string): string {
-  return s
-    .replace(/别抄邻县石灰账/g, "Don’t copy the next county’s lime recipe")
-    .replace(/宁少勿多/g, "better too little than too much")
-    .replace(/膜是伞不是镐/g, "the film is an umbrella, not a pickaxe")
-    .replace(/土里的肉/g, "the meat in the soil")
-    .replace(/pH 是尺子，不是病名/g, "pH is a ruler, not a disease name")
-    .replace(/盐的名片/g, "salt’s calling card");
+function dosageEn(g: Overlay, a: Article): Dose[] {
+  const src = g.dosage?.length ? g.dosage : a.dosage;
+  const out: Dose[] = [];
+  for (const d of src) {
+    const name = cleanEn(d.name) || (g.dosage?.length ? "" : d.name.replace(/[\u4e00-\u9fff]/g, "").trim());
+    const range = cleanEn(
+      d.range
+        .replace(/每亩/g, "per mu")
+        .replace(/公斤/g, "kg")
+        .replace(/吨/g, "t"),
+    );
+    const note = cleanEn(d.note);
+    if (!range) continue;
+    out.push({ name: name || "Rate", range, note });
+  }
+  return out;
+}
+
+function photosEn(g: Overlay, a: Article, title: string): Photo[] {
+  return a.photos.map((p, i) => {
+    let caption = cleanEn(g.photos?.[i]?.caption);
+    if ((p.kind === "lab" || p.kind === "diagram") && /clearest when the next ridge/i.test(caption)) {
+      caption = "Lab check, not a neighbour ridge.";
+    }
+    return {
+      ...p,
+      alt: cleanEn(g.photos?.[i]?.alt) || title,
+      caption,
+    };
+  });
+}
+
+function indicatorsEn(g: Overlay): Indicator[] {
+  if (!g.indicators?.length) return [];
+  return g.indicators
+    .map((d) => ({
+      name: d.name,
+      meaning: cleanEn(d.meaning),
+      typical: cleanEn(d.typical),
+    }))
+    .filter((d) => d.meaning || d.typical);
+}
+
+function tableEn<T extends DoseRow | LabRow>(rows: T[] | undefined): T[] | undefined {
+  if (!rows?.length) return undefined;
+  const out = rows.map((row) => {
+    const next: Record<string, string> = {};
+    let any = false;
+    for (const [k, v] of Object.entries(row)) {
+      if (typeof v !== "string") {
+        next[k] = v as string;
+        continue;
+      }
+      if (k === "id") {
+        next[k] = v;
+        continue;
+      }
+      const c = cleanEn(v);
+      next[k] = c;
+      if (c) any = true;
+    }
+    return any ? (next as T) : null;
+  });
+  const kept = out.filter((x): x is T => !!x);
+  return kept.length ? kept : undefined;
 }
 
 export function localizeArticle(a: Article, lang: Lang): Article {
-  if (lang !== "en") return a;
+  if (lang !== "en") {
+    return {
+      ...a,
+      speakZh: a.speakZh ?? a.spoken,
+      howtoSpeakZh: a.howtoSpeakZh ?? a.spokenHow,
+    };
+  }
   const g = OVERLAY[a.slug] ?? {};
   const m = META[a.slug];
-  const t = (s: string) => fallbackEn(s);
-  const confuse: Confuse[] = a.confuse.map((c) => ({
-    lookalike: lex(c.lookalike, "en") === c.lookalike ? t(c.lookalike) : lex(c.lookalike, "en"),
-    difference: t(c.difference),
-    photoHint: c.photoHint ? t(c.photoHint) : c.photoHint,
-  }));
-  const dosage: Dose[] = a.dosage.map((d) => ({
-    name: t(d.name),
-    range: d.range
-      .replace(/每亩/g, "per mu")
-      .replace(/公斤/g, "kg")
-      .replace(/吨/g, "t"),
-    note: t(d.note),
-  }));
-  const indicators: Indicator[] = a.indicators.map((d) => ({
-    name: d.name,
-    meaning: t(d.meaning),
-    typical: t(d.typical),
-  }));
+  const title = cleanEn(m?.title) || a.slug;
+  const speakEn = dropHanLines(a.speakEn ?? a.spokenEn ?? [], a.slug);
+  const howtoEn = dropHanLines(a.howtoSpeakEn ?? a.spokenHowEn ?? [], `${a.slug}-how`);
+  const sources = cleanEnArr(a.sourcesEn?.length ? a.sourcesEn : g.sources?.length ? g.sources : a.sources);
   return {
     ...a,
-    title: m?.title ?? t(a.title),
-    subtitle: m?.subtitle ?? t(a.subtitle),
-    summary: m?.summary ?? g.summary ?? t(a.summary),
-    problems: a.problems.map((p) => lex(p, "en")),
-    crops: a.crops.map((c) => lex(c, "en")),
-    regions: a.regions.map((r) => lex(r, "en")),
-    seasons: a.seasons.map((s) => lex(s, "en")),
-    photos: a.photos.map((p) => ({ ...p, alt: t(p.alt), caption: t(p.caption) })),
+    title,
+    subtitle: cleanEn(m?.subtitle),
+    summary: cleanEn(m?.summary ?? g.summary),
+    card: cleanEn(m?.card),
+    problems: a.problems.map(lexClean),
+    crops: a.crops.map(lexClean),
+    regions: a.regions.map(lexClean),
+    seasons: a.seasons.map(lexClean),
+    photos: photosEn(g, a, title),
     phenomenon: {
-      appearance: pick(g.appearance, a.phenomenon.appearance, t),
-      conditions: pick(g.conditions, a.phenomenon.conditions, t),
-      commonCrops: t(a.phenomenon.commonCrops),
+      appearance: cleanEn(g.appearance),
+      conditions: cleanEn(g.conditions),
+      commonCrops: cleanEn(g.commonCrops),
     },
-    confuse,
+    confuse: confuseEn(g, a),
     causes: {
-      natural: arr(g.natural, a.causes.natural, t),
-      human: arr(g.human, a.causes.human, t),
-      plainExplain: pick(g.plainExplain, a.causes.plainExplain, t),
+      natural: cleanEnArr(g.natural),
+      human: cleanEnArr(g.human),
+      plainExplain: cleanEn(g.plainExplain),
     },
     solutions: {
-      steps: arr(g.steps, a.solutions.steps, t),
+      steps: cleanEnArr(g.steps),
       videos: a.solutions.videos,
     },
-    dosage,
-    prevention: arr(g.prevention, a.prevention, t),
-    indicators,
-    fieldCheck: pick(g.fieldCheck, a.fieldCheck, t),
-    dontDo: arr(g.dontDo, a.dontDo, t),
-    whenToTest: pick(g.whenToTest, a.whenToTest, t),
-    longform: g.longform?.length ? g.longform : a.longform.map(t),
-    reviewer: lex(a.reviewer, "en"),
+    dosage: dosageEn(g, a),
+    prevention: cleanEnArr(g.prevention),
+    indicators: indicatorsEn(g),
+    fieldCheck: cleanEn(g.fieldCheck),
+    dontDo: cleanEnArr(g.dontDo),
+    whenToTest: cleanEn(g.whenToTest),
+    longform: cleanEnArr(g.longform),
+    reviewer: "Author notes; confirm rates with a local station",
+    mechanism: cleanEn(g.mechanism) || undefined,
+    example: cleanEn(g.example) || undefined,
+    doseTable: tableEn(g.doseTable),
+    labTable: tableEn(g.labTable),
+    spoken: speakEn,
+    spokenHow: howtoEn,
+    spokenEn: speakEn,
+    spokenHowEn: howtoEn,
+    speakZh: a.speakZh ?? a.spoken,
+    speakEn,
+    howtoSpeakZh: a.howtoSpeakZh ?? a.spokenHow,
+    howtoSpeakEn: howtoEn,
+    author: a.author && /李泽宇/.test(a.author) ? "Li Zeyu" : a.author || "Li Zeyu",
+    sources: sources.length ? sources : undefined,
+    doseRefSlug: a.doseRefSlug,
   };
 }

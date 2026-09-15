@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/en/community",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Q&A | 土知",
+      "hasCanvas": false,
+      "bodyTextLen": 5021,
+      "bodyTextHash": "2abade97fd273f25c07c1335d4a74dd55ad43759036841c38a233ad7937397bb",
+      "bodyTextPrefix": "Skip to content 土知 Know the soil, farm it well. Home Photo check",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/community-en.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Q&A | 土知",
+      "hasCanvas": false,
+      "bodyTextLen": 5006,
+      "bodyTextHash": "438f6024e2d611d50a1383aa6e5c4647705083d94a8cb29589758cddaf363e0f",
+      "bodyTextPrefix": "Skip to content 土知 Know the soil, farm it well. 中文 Sign in Q&A P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/community-en-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/community-en.json"
+}

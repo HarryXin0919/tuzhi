@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { addReply, getPost } from "@/lib/community/server";
 import { Bilingual } from "@/components/Bilingual";
 import { ReadAloud } from "@/components/ReadAloud";
-import { useLang } from "@/lib/i18n/lang";
+import { LangLink } from "@/components/LangLink";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
+import { useAnyLoaderData } from "@/lib/i18n/route-data";
 import { messages } from "@/lib/i18n/messages";
 import { displayName, lex } from "@/lib/i18n/lexicon";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
@@ -17,9 +19,9 @@ export const Route = createFileRoute("/community/$id")({
   component: PostPage,
 });
 
-function PostPage() {
-  const { post } = Route.useLoaderData();
-  const lang = useLang((s) => s.lang);
+export function PostPage() {
+  const { post } = useAnyLoaderData<{ post: NonNullable<Awaited<ReturnType<typeof getPost>>> }>();
+  const lang = usePathLang();
   const t = messages[lang];
   const r = t.community;
   const { user, isPending } = useCurrentUserState();
@@ -27,8 +29,8 @@ function PostPage() {
   const [err, setErr] = useState("");
   const listen =
     lang === "en"
-      ? [post.titleEn || post.title, post.bodyEn || post.body, ...post.answers.map((a) => a.bodyEn || a.body)].join(". ")
-      : [post.title, post.body, ...post.answers.map((a) => a.body)].join("。");
+      ? [post.titleEn, post.bodyEn, ...post.answers.map((a) => a.bodyEn)].filter((s): s is string => !!s && !/[\u4e00-\u9fff]/.test(s))
+      : [post.title, post.body, ...post.answers.map((a) => a.body)];
 
   async function send() {
     setErr("");
@@ -44,9 +46,9 @@ function PostPage() {
   return (
     <article className="space-y-6">
       <p className="text-sm">
-        <Link to="/community" className="text-forest">
+        <LangLink to="/community" className="text-forest">
           {r.back}
-        </Link>
+        </LangLink>
       </p>
       <header className="space-y-2">
         <Bilingual zh={post.title} en={post.titleEn} as="h1" className="font-display text-3xl font-semibold" />
@@ -54,8 +56,8 @@ function PostPage() {
           {displayName(post.author, lang)} · {String(post.createdAt).slice(0, 10)} · {lex(post.problem, lang)}
         </p>
       </header>
-      <ReadAloud text={listen} />
-      {post.photo ? <img src={post.photo} alt="" className="max-h-80 w-full rounded-2xl object-cover" /> : null}
+      <ReadAloud sentences={listen} title={lang === "en" ? post.titleEn || "Q&A" : post.title} />
+      {post.photo ? <img src={post.photo} alt={post.title} className="max-h-80 w-full rounded-2xl object-cover" /> : null}
       <Bilingual zh={post.body} en={post.bodyEn} />
       <section className="space-y-3">
         <h2 className="font-display text-xl font-semibold">{r.answers}</h2>
@@ -78,9 +80,9 @@ function PostPage() {
       ) : (
         <p className="text-muted">
           {r.loginToReply}{" "}
-          <Link to="/login" className="text-forest underline">
+          <LangLink to="/login" className="text-forest underline">
             {r.goLogin}
-          </Link>
+          </LangLink>
         </p>
       )}
     </article>

@@ -1,0 +1,6 @@
+<view>
+  <view class="h">土知</view>
+  <view>看懂土地，种好地。内容仅供学习对照。</view>
+  <button class="btn" bindtap="goSuan">土壤酸化</button>
+  <button class="btn" bindtap="goDiag">拍三张图</button>
+</view>

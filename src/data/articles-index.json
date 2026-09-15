@@ -1,0 +1,4635 @@
+[
+  {
+    "slug": "suan-hua",
+    "title": "土壤酸化：苗发僵，根尖褐秃",
+    "subtitle": "pH 是测量值，不是病名。粮田低于约 5.5 才谈改酸。",
+    "summary": "秧苗发僵、邻垄还绿时，先拔一棵洗手看根尖。根尖褐秃再测耕作层 pH，粮田低于约 5.5 才谈农用石灰。",
+    "crops": [
+      "水稻",
+      "茶叶",
+      "果树",
+      "花生",
+      "蔬菜",
+      "玉米"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游",
+      "西南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "pH",
+      "石灰",
+      "铝毒"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/suan-hua.jpg",
+        "alt": "实验室麦苗根部对照"
+      },
+      {
+        "src": "/images/articles/suan-hua-2.jpg",
+        "alt": "实验室麦苗根部对照"
+      },
+      {
+        "src": "/images/articles/lv-du-shang-gen.jpg",
+        "alt": "根尖褐秃对照"
+      },
+      {
+        "src": "/images/articles/shi-hui-yong-liang.jpg",
+        "alt": "农用石灰包装"
+      }
+    ],
+    "hot": true,
+    "featured": true,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "shi-hui-yong-liang",
+      "lv-du-shang-gen",
+      "sheng-li-suan-xing-fei"
+    ],
+    "conditions": "多雨红黄壤、连年铵态氮、有机质薄。春雨一场接一场更爱往酸里走。",
+    "commonCrops": "水稻、花生、玉米、蔬菜、柑橘。茶叶耐酸但另篇讲。",
+    "card": "发僵先看根尖，再测 pH。粮田低于约 5.5 才改。"
+  },
+  {
+    "slug": "yan-jian",
+    "title": "盐碱地：土面发白，出苗不齐",
+    "subtitle": "土面白粉或硬壳、叶缘发焦，先把盐害和碱化分开。",
+    "summary": "土面有白粉或硬壳、叶缘发焦、小水浇完更蔫，先分盐害和碱化。盐害看电导，碱害看 pH 和钠。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "棉花"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "华北",
+      "西北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季",
+      "冬季"
+    ],
+    "tags": [
+      "盐碱",
+      "白霜",
+      "EC",
+      "洗盐"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yan-jian-2.jpg",
+        "alt": "盐碱地土面白霜"
+      },
+      {
+        "src": "/images/articles/yan-jian.jpg",
+        "alt": "土面白霜"
+      },
+      {
+        "src": "/images/articles/fan-yan.jpg",
+        "alt": "浇后返盐"
+      },
+      {
+        "src": "/images/articles/yan-jian-di-xuan-zuo.jpg",
+        "alt": "盐碱地缺苗对照邻块还能出苗"
+      }
+    ],
+    "hot": true,
+    "featured": true,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "fan-yan",
+      "han-yan-jian-bie",
+      "xi-yan-pai-shui"
+    ],
+    "conditions": "干旱蒸发大、地下水咸、大水漫灌后又晒干。春季返盐最清楚。",
+    "commonCrops": "棉花、小麦、玉米。有淡水可用水稻压盐。",
+    "card": "土面发白加浇后更蔫，先测电导。没沟不要漫灌。"
+  },
+  {
+    "slug": "ban-jie",
+    "title": "土壤板结：根横着走，水进不去",
+    "subtitle": "雨后一层稀泥、干了发硬，根横着走，先认硬盖再谈肥。",
+    "summary": "锄头试一下：雨后稀泥、干了发硬，苗戴帽、根横走。刨开二十厘米看有没有发亮的硬盖，湿土别进车。",
+    "crops": [
+      "水稻",
+      "小麦",
+      "玉米",
+      "蔬菜"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "犁底层",
+      "深松"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ban-jie-2.jpg",
+        "alt": "田间剖面：上层较暗，下面土层更紧"
+      },
+      {
+        "src": "/images/articles/ban-jie.jpg",
+        "alt": "田间板结土面"
+      },
+      {
+        "src": "/images/articles/li-di-ceng.jpg",
+        "alt": "犁底层剖面"
+      },
+      {
+        "src": "/images/articles/ban-jie-yu-gen-xi.jpg",
+        "alt": "硬盖让根横走"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "li-di-ceng",
+      "nian-tu-nan-geng",
+      "yu-hou-ban-jie-kai-lie"
+    ],
+    "conditions": "连年浅旋、湿土进车、有机质薄。雨后第二天最能看出来。",
+    "commonCrops": "小麦、玉米、水稻、蔬菜，黏土地更重。",
+    "card": "根横走、雨后积水，先找硬盖。湿土不要进车。"
+  },
+  {
+    "slug": "you-ji-zhi",
+    "title": "有机质下降：土色发浅，肥留不住",
+    "subtitle": "颜色浅、搓不成团，一场雨肥就飘，先把有机质慢慢养起来。",
+    "summary": "搓一把土：颜色浅、发粉、搓不成团，肥下去一场雨又像没施。有机质要连续几年还田加腐熟粪，不是一季菌剂能补回。",
+    "crops": [
+      "全国"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质",
+      "秸秆还田",
+      "保肥"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/you-ji-zhi.jpg",
+        "alt": "浅色麦田土面"
+      },
+      {
+        "src": "/images/articles/jie-gan-huan-tian.jpg",
+        "alt": "秸秆还田"
+      },
+      {
+        "src": "/images/articles/sha-tu-zeng-you-ji-zhi.jpg",
+        "alt": "沙土保肥"
+      },
+      {
+        "src": "/images/articles/sha-tu-zeng-you-ji-zhi-2.jpg",
+        "alt": "沙土增有机质对照"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "jie-gan-huan-tian",
+      "you-ji-fei-ru-he-xuan",
+      "sha-tu-zeng-you-ji-zhi"
+    ],
+    "conditions": "秸秆拿走、连年裸冬、只靠化肥。沙土更显。",
+    "commonCrops": "粮田、菜地、果园都见。沙土漏得更明显。",
+    "card": "土色浅、一把就散，先测有机质。菌剂产品补不回三年还田。"
+  },
+  {
+    "slug": "que-dan",
+    "title": "缺氮：下部老叶先匀黄",
+    "subtitle": "底下老叶匀黄、新叶还绿、根是白的，才像缺氮。",
+    "summary": "底下老叶匀黄，顶上新叶还绿，洗出来的根是白的，才像缺氮。新叶也黄要想缺硫或缺铁。根黑臭时不要猛尿素。",
+    "crops": [
+      "水稻",
+      "小麦",
+      "玉米",
+      "蔬菜"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "缺氮",
+      "黄叶",
+      "尿素"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-dan.jpg",
+        "alt": "下部老叶均匀发黄、新叶相对还绿"
+      },
+      {
+        "src": "/images/articles/que-dan-2.jpg",
+        "alt": "缺氮植株瘦高不壮"
+      },
+      {
+        "src": "/images/articles/yu-mi-miao-huang.jpg",
+        "alt": "玉米苗黄对照"
+      },
+      {
+        "src": "/images/articles/huang-ye-jian-bie.jpg",
+        "alt": "黄叶叶位"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "huang-ye-jian-bie",
+      "que-liu",
+      "jie-gan-bu-dan"
+    ],
+    "conditions": "氮会搬家，老叶把氮送给新叶。沙土一次倒全年留不住。",
+    "commonCrops": "玉米、小麦、水稻、叶菜。",
+    "card": "老叶匀黄、新叶还绿、根还白，才像缺氮。根臭先别追氮。"
+  },
+  {
+    "slug": "que-jia",
+    "title": "缺钾：老叶边缘先焦",
+    "subtitle": "老叶叶缘先焦、往里卷，土面不一定白，先分盐害和缺钾。",
+    "summary": "老叶叶缘先焦，像火燎过往里卷，茎软果不甜。土面白霜加焦边，先分盐害和缺钾，不要直接补钾。",
+    "crops": [
+      "水稻",
+      "玉米",
+      "蔬菜",
+      "果树"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "夏季",
+      "秋季"
+    ],
+    "tags": [
+      "缺钾",
+      "叶缘焦枯"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-jia.jpg",
+        "alt": "老叶叶缘焦枯像火燎"
+      },
+      {
+        "src": "/images/articles/que-jia-2.jpg",
+        "alt": "缺钾叶缘焦从外向内"
+      },
+      {
+        "src": "/images/articles/yan-jian-2.jpg",
+        "alt": "土面白霜对照"
+      },
+      {
+        "src": "/images/articles/yu-mi-miao-huang.jpg",
+        "alt": "叶缘焦和黄叶对照"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "huang-ye-jian-bie",
+      "lv-hai",
+      "yang-fen-kang-kang"
+    ],
+    "conditions": "钾管气孔和糖分。缺了叶边先焦。盐害也焦边，但常有白霜和出苗差。",
+    "commonCrops": "水稻、玉米、蔬菜、果树、马铃薯。",
+    "card": "老叶焦边先看土面。有白霜走盐，没霜再问钾。"
+  },
+  {
+    "slug": "que-lin",
+    "title": "缺磷：苗紫红发僵，根少不发棵",
+    "subtitle": "暗绿带紫、发僵，不是匀黄那种缺",
+    "summary": "苗期紫红发僵，叶暗绿，根短少。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "蔬菜"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-lin"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-lin.jpg",
+        "alt": "缺磷苗紫红发僵"
+      },
+      {
+        "src": "/images/articles/que-lin-2.jpg",
+        "alt": "缺磷根系短少"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "suan-tu-shi-lin",
+      "que-xin-yu-lin",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "磷管生根。酸土被铁铝钉住，钙质土被钙钉住，土里有磷根摸不着。",
+    "commonCrops": "玉米、小麦、水稻、油菜、豆类。"
+  },
+  {
+    "slug": "que-tie",
+    "title": "缺铁：新叶黄、叶脉还绿",
+    "subtitle": "新叶黄、叶脉还绿，先问 pH 是不是把铁锁住了。",
+    "summary": "分清黄的是新叶还是老叶。新叶黄、叶脉还绿，顶端更明显，常是 pH 偏高把铁锁住，不是土里没有铁。",
+    "crops": [
+      "果树",
+      "花生",
+      "大豆"
+    ],
+    "problems": [
+      "缺素",
+      "盐碱"
+    ],
+    "regions": [
+      "华北",
+      "西北"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "缺素",
+      "盐碱",
+      "que-tie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-tie.jpg",
+        "alt": "新叶黄、叶脉还绿"
+      },
+      {
+        "src": "/images/articles/que-tie-2.jpg",
+        "alt": "果树缺铁黄化新梢"
+      },
+      {
+        "src": "/images/articles/pu-tao-shi-hui-tu-que-tie.jpg",
+        "alt": "石灰性土新叶黄"
+      },
+      {
+        "src": "/images/articles/shi-hui-xing-tu.jpg",
+        "alt": "石灰性土壤"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "pu-tao-shi-hui-tu-que-tie",
+      "qi-zi-huang-hua",
+      "shi-hui-xing-tu"
+    ],
+    "conditions": "高 pH 把铁锁住。土里有铁，根吃不到。缺氮是老叶先黄，路不一样。",
+    "commonCrops": "柑橘、葡萄、花生、大豆、花卉、桃。",
+    "card": "新叶黄、脉还绿，先想铁被锁住，不要只冲氮。"
+  },
+  {
+    "slug": "que-xin",
+    "title": "缺锌：新叶脉间失绿，节间缩短",
+    "subtitle": "花白苗、节间短，生长点先出事",
+    "summary": "新叶脉间失绿、节间短、小叶簇生，玉米花白苗最典型。",
+    "crops": [
+      "玉米",
+      "水稻",
+      "果树"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-xin"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-xin.jpg",
+        "alt": "玉米花白苗、节间缩短"
+      },
+      {
+        "src": "/images/articles/que-xin-2.jpg",
+        "alt": "果树小叶簇生"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-xin-yu-lin",
+      "yang-fen-kang-kang",
+      "yu-mi-miao-huang"
+    ],
+    "conditions": "锌走生长点。高磷会把门堵住。石灰性土、高 pH 更常见。",
+    "commonCrops": "玉米、水稻、果树、菜豆。"
+  },
+  {
+    "slug": "lian-zuo",
+    "title": "连作障碍：同一块地越种越差",
+    "subtitle": "死棵、死苗、土传病害一年比一年重",
+    "summary": "同一茬越种越差，点片死棵，邻地轮作的却好。",
+    "crops": [
+      "设施蔬菜",
+      "花生"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北",
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "lian-zuo"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/lian-zuo.jpg",
+        "alt": "连作棚点片死棵"
+      },
+      {
+        "src": "/images/articles/lian-zuo-2.jpg",
+        "alt": "连作根腐根结"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "da-peng-lian-zuo-zong-he",
+      "gen-fu-jian-bie",
+      "wei-sheng-wu"
+    ],
+    "conditions": "重茬把病菌、线虫、盐和偏肥熬在一口锅里。菌剂代替不了换科轮作。",
+    "commonCrops": "番茄、黄瓜、辣椒、西瓜、草莓、花生、茄子。"
+  },
+  {
+    "slug": "dashe-yanzhi",
+    "title": "大棚盐渍化：膜下白霜，越种越“咸”",
+    "subtitle": "设施菜地特有的肥盐问题",
+    "summary": "膜下白霜、滴口一圈、越浇越蔫。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "盐碱",
+      "肥害"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "全年",
+      "冬季"
+    ],
+    "tags": [
+      "盐碱",
+      "肥害",
+      "dashe-yanzhi"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/dashe-yanzhi.jpg",
+        "alt": "大棚膜下土面白霜"
+      },
+      {
+        "src": "/images/articles/dashe-yanzhi-2.jpg",
+        "alt": "设施内盐斑"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "di-guan-nong-du",
+      "fan-yan",
+      "da-peng-lian-zuo-zong-he"
+    ],
+    "conditions": "大棚是盆，盐排不出去。底肥拍胸脯、滴灌越浓，盆就越咸。",
+    "commonCrops": "番茄、黄瓜、辣椒、草莓。"
+  },
+  {
+    "slug": "shao-gen",
+    "title": "施肥烧根：种沟成行，肥粒贴根",
+    "subtitle": "施肥几天内叶焦根黑，种沟能见肥粒，先认肥害再谈补救。",
+    "summary": "施肥几天内叶焦根黑，种沟能见肥粒，沿肥带成行。先把肥从根边挪开、浇水稀释，不要再叠一袋。",
+    "crops": [
+      "蔬菜",
+      "玉米",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "肥害",
+      "shao-gen"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shao-gen.jpg",
+        "alt": "施肥沟里苗烧、根尖发黑"
+      },
+      {
+        "src": "/images/articles/shao-gen-2.jpg",
+        "alt": "烧根根尖褐黑"
+      },
+      {
+        "src": "/images/articles/miao-qi-fei-hai.jpg",
+        "alt": "苗期肥害"
+      },
+      {
+        "src": "/images/articles/wei-fu-shu-you-ji-fei.jpg",
+        "alt": "未腐熟有机肥"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "miao-qi-fei-hai",
+      "wei-fu-shu-you-ji-fei",
+      "di-guan-nong-du"
+    ],
+    "conditions": "肥把根周围做成盐水。沙土、种肥贴种子、一次过浓最伤。",
+    "commonCrops": "蔬菜育苗、玉米穴施、果树穴施最常见。",
+    "card": "种沟成行、能见肥粒，是烧根。先停肥灌清水。"
+  },
+  {
+    "slug": "lao-hai",
+    "title": "积水涝害：土湿还蔫，根在憋气",
+    "subtitle": "白天蔫晚上缓，土是湿的还蔫，先看根黑不黑。",
+    "summary": "白天蔫晚上缓，田里有明水或底湿，根黑臭。土是湿的还蔫，先排水，不要当旱猛灌，也不要猛尿素。",
+    "crops": [
+      "水稻",
+      "蔬菜"
+    ],
+    "problems": [
+      "涝害",
+      "板结"
+    ],
+    "regions": [
+      "长江中下游",
+      "华南"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "涝害",
+      "板结",
+      "lao-hai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/lao-hai.jpg",
+        "alt": "田间积水、苗发黄萎蔫"
+      },
+      {
+        "src": "/images/articles/lao-hai-2.jpg",
+        "alt": "涝害根发黑"
+      },
+      {
+        "src": "/images/articles/xiu-shui-tian.jpg",
+        "alt": "渍水田面"
+      },
+      {
+        "src": "/images/articles/qian-yu-tian.jpg",
+        "alt": "潜育化土层"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "shui-tian-huan-yuan",
+      "ban-jie",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "根要氧气。水把气排走，根就闷死。湿土再浇是火上浇油。",
+    "commonCrops": "玉米、棉花、大豆、蔬菜最怕；水稻也怕长期深涝。",
+    "card": "土湿还蔫、根有味，先排水。不要当旱浇。"
+  },
+  {
+    "slug": "wei-sheng-wu",
+    "title": "土壤微生物失衡：土不“活”了",
+    "subtitle": "有机质低、农药化肥过猛，土里的工人变少",
+    "summary": "养分不低却长不好，秸秆一年不烂，土臭发黏没孔隙。",
+    "crops": [
+      "设施蔬菜",
+      "蔬菜"
+    ],
+    "problems": [
+      "连作障碍",
+      "有机质低"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "有机质低",
+      "wei-sheng-wu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/wei-sheng-wu.jpg",
+        "alt": "结构差、板、无孔隙的死土"
+      },
+      {
+        "src": "/images/articles/wei-sheng-wu-2.jpg",
+        "alt": "发黏发臭的土块"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "sheng-wu-you-ji-fei",
+      "lian-zuo",
+      "you-ji-zhi"
+    ],
+    "conditions": "菌要房要饭。板、酸、咸、没有机质，倒菌也住不下。先改物理化学，菌才回来。",
+    "commonCrops": "设施蔬菜和果园最突出。"
+  },
+  {
+    "slug": "ce-tu-bao-gao",
+    "title": "如何看懂测土化验单",
+    "subtitle": "报告是测量，不是处方。先对地块名，再按 pH、有机质、盐分往下读。",
+    "summary": "单子拿回来先对地块名和取样日期。阅读顺序：pH → 有机质 → 盐分 → 氮磷钾 → 微量元素。单位看错，肥会下反。",
+    "crops": [
+      "全国"
+    ],
+    "problems": [
+      "其他"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "ce-tu-bao-gao"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ce-tu-bao-gao-2.jpg",
+        "alt": "中文测土单示意图：pH、有机质、碱解氮、有效磷、速效钾"
+      },
+      {
+        "src": "/images/articles/ce-tu-bao-gao.jpg",
+        "alt": "化验单阅读顺序"
+      },
+      {
+        "src": "/images/articles/ce-tu-qu-yang.jpg",
+        "alt": "田间取样"
+      },
+      {
+        "src": "/images/articles/ce-tu-qu-yang-2.jpg",
+        "alt": "取样点混合后再留一袋"
+      }
+    ],
+    "hot": true,
+    "featured": true,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ce-tu-qu-yang",
+      "huang-ye-jian-bie",
+      "suan-hua"
+    ],
+    "conditions": "刚拿到化验单、准备配肥或改土之前。",
+    "commonCrops": "所有作物。这篇农业知识不讲某一种庄稼的处方，讲怎么读。",
+    "card": "先圈 pH、有机质、盐分。报告是测量，不是处方。"
+  },
+  {
+    "slug": "ce-tu-qu-yang",
+    "title": "测土怎么取样才不准",
+    "subtitle": "取样错了，报告就是瞎的",
+    "summary": "取样错了，后面全错。",
+    "crops": [
+      "全国"
+    ],
+    "problems": [
+      "其他"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "ce-tu-qu-yang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ce-tu-qu-yang.jpg",
+        "alt": "田间多点取样、土袋"
+      },
+      {
+        "src": "/images/articles/ce-tu-qu-yang-2.jpg",
+        "alt": "土钻取耕作层"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ce-tu-bao-gao",
+      "guo-yuan-tu-rang",
+      "dashe-yanzhi"
+    ],
+    "conditions": "准备测土、改酸、配肥之前。刚施完肥、刚撒完石灰别取。",
+    "commonCrops": "所有作物。"
+  },
+  {
+    "slug": "que-gai",
+    "title": "缺钙：顶芽烂、脐腐、裂果",
+    "subtitle": "新长的部位先出事，喷叶面钙只能救急",
+    "summary": "顶芽停、脐腐、裂果、心叶焦边。",
+    "crops": [
+      "蔬菜",
+      "果树",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "缺素",
+      "que-gai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-gai.jpg",
+        "alt": "番茄脐腐、顶芽出问题"
+      },
+      {
+        "src": "/images/articles/que-gai-2.jpg",
+        "alt": "缺钙裂果"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "suan-yu-que-gai",
+      "hua-sheng-kong-jia",
+      "yang-fen-kang-kang"
+    ],
+    "conditions": "钙像砌墙的砖，摆上就不大搬家。干旱、铵态氮、盐、酸，都会让生长点吃不到。",
+    "commonCrops": "番茄、辣椒、大白菜、苹果、花生。"
+  },
+  {
+    "slug": "que-mei",
+    "title": "缺镁：老叶脉间黄、叶脉还绿",
+    "subtitle": "老叶脉间先空，新叶相对还绿",
+    "summary": "你先分清黄的是新叶还是老叶。",
+    "crops": [
+      "蔬菜",
+      "果树",
+      "水稻"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "缺素",
+      "que-mei"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-mei.jpg",
+        "alt": "老叶脉间黄、叶脉仍绿"
+      },
+      {
+        "src": "/images/articles/que-mei-2.jpg",
+        "alt": "缺镁从叶缘向内黄"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yang-fen-kang-kang",
+      "que-tie",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "镁在叶绿素里。钾太高会把镁挤掉。缺铁走新叶，缺镁走老叶。",
+    "commonCrops": "蔬菜、果树、烟草、马铃薯、玉米。"
+  },
+  {
+    "slug": "que-peng",
+    "title": "缺硼：花而不实、裂茎空心",
+    "subtitle": "花开了籽是空的，先想硼也要想旱",
+    "summary": "花而不实、蕾铃掉、茎空心或裂，生长点萎缩。",
+    "crops": [
+      "棉花",
+      "花生",
+      "果树",
+      "蔬菜"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "黄淮海",
+      "长江中下游"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-peng"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-peng.jpg",
+        "alt": "花而不实、茎空心"
+      },
+      {
+        "src": "/images/articles/que-peng-2.jpg",
+        "alt": "裂茎空心"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-peng-hua-er-bu-shi",
+      "ye-cai-xiao-xing-yuan-su",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "硼管开花结实。缺和毒只隔一层纸。沙土、干旱更容易缺。",
+    "commonCrops": "油菜、棉花、花生、甜菜、果树。"
+  },
+  {
+    "slug": "que-meng",
+    "title": "缺锰：新叶脉间失绿、有褐斑",
+    "subtitle": "新叶脉间黄还带褐点，别当成缺铁",
+    "summary": "新叶脉间失绿，常带褐斑或灰白小点。",
+    "crops": [
+      "小麦",
+      "大豆"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "华北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-meng"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-meng.jpg",
+        "alt": "新叶脉间失绿带褐斑"
+      },
+      {
+        "src": "/images/articles/que-meng-2.jpg",
+        "alt": "小麦缺锰褐斑"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-tie",
+      "suan-hua",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "锰在新叶。过酸或过碱都会乱。有机质很高的石灰性土有时也锁锰。",
+    "commonCrops": "小麦、大豆、蔬菜。"
+  },
+  {
+    "slug": "que-liu",
+    "title": "缺硫：整株偏黄，新叶也黄",
+    "subtitle": "心叶跟着黄，不是下部先脱色",
+    "summary": "你先分清黄的是新叶还是老叶。",
+    "crops": [
+      "蔬菜",
+      "水稻"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "长江中下游"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-liu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-liu.jpg",
+        "alt": "整株偏黄，新叶也黄"
+      },
+      {
+        "src": "/images/articles/que-liu-2.jpg",
+        "alt": "缺硫新叶发黄"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-dan",
+      "huang-ye-jian-bie",
+      "sha-tu-lou-fei"
+    ],
+    "conditions": "硫不容易从老叶搬到新叶。缺氮老叶先黄，缺硫新老一起黄。沙土、高氮更容易显。",
+    "commonCrops": "油菜、玉米、小麦。"
+  },
+  {
+    "slug": "que-tong",
+    "title": "缺铜：穗不实、叶尖发白",
+    "subtitle": "秕穗加白尖，不是单纯干旱",
+    "summary": "叶尖发白卷曲，穗不实、结实差。",
+    "crops": [
+      "小麦",
+      "水稻"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-tong"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-tong.jpg",
+        "alt": "叶尖发白卷曲、穗不实"
+      },
+      {
+        "src": "/images/articles/que-tong-2.jpg",
+        "alt": "小麦穗不实"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-dan",
+      "yao-hai",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "铜在花和穗。有机质很高的沙土、过酸过碱都可能缺。",
+    "commonCrops": "小麦、水稻。"
+  },
+  {
+    "slug": "que-mu",
+    "title": "缺钼：豆科固氮差、叶片畸形",
+    "subtitle": "根瘤不红、叶子畸形，先别猛尿素",
+    "summary": "豆科叶片畸形发黄，固氮差、植株瘦。",
+    "crops": [
+      "大豆",
+      "蔬菜"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-mu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-mu.jpg",
+        "alt": "豆科叶片畸形、固氮差"
+      },
+      {
+        "src": "/images/articles/que-mu-2.jpg",
+        "alt": "大豆缺钼植株"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "suan-hua",
+      "que-dan",
+      "lv-du-shang-gen"
+    ],
+    "conditions": "钼帮豆科固氮。过酸土钼被锁，过石灰又是另一套乱。",
+    "commonCrops": "大豆、花生。"
+  },
+  {
+    "slug": "yang-fen-kang-kang",
+    "title": "养分互相打架：磷锌拮抗、钾镁失衡",
+    "subtitle": "肥不是越多越好，多了会把别的挤走",
+    "summary": "化验单某一项极高，地里却像缺另一项。",
+    "crops": [
+      "全国"
+    ],
+    "problems": [
+      "缺素",
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "缺素",
+      "肥害",
+      "yang-fen-kang-kang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yang-fen-kang-kang.jpg",
+        "alt": "化验单某一项极高"
+      },
+      {
+        "src": "/images/articles/yang-fen-kang-kang-2.jpg",
+        "alt": "拮抗示意：高磷植株小叶"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-xin",
+      "que-mei",
+      "ce-tu-bao-gao"
+    ],
+    "conditions": "养分排队进同一扇门。人多的把门堵住。一张‘很肥’的单子仍能黄。",
+    "commonCrops": "所有作物，大棚和玉米高产田常见。"
+  },
+  {
+    "slug": "yao-hai",
+    "title": "药害：喷完药又斑又扭，不像慢慢缺素",
+    "subtitle": "喷药后 1～3 天突然斑驳、扭曲、焦边",
+    "summary": "喷完药几天内斑、扭、心叶畸形，来得快，不像慢慢缺素。",
+    "crops": [
+      "蔬菜",
+      "水稻",
+      "果树",
+      "棉花"
+    ],
+    "problems": [
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "肥害",
+      "yao-hai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yao-hai.jpg",
+        "alt": "喷药后叶片扭曲斑驳"
+      },
+      {
+        "src": "/images/articles/yao-hai-2.jpg",
+        "alt": "药害心叶畸形"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "huang-ye-jian-bie",
+      "miao-qi-fei-hai",
+      "que-xin"
+    ],
+    "conditions": "药害是外来一巴掌。缺素是慢慢亏。斑扭不规则、有喷药史，就先停药。",
+    "commonCrops": "蔬菜、水稻、果树、棉花都可能。"
+  },
+  {
+    "slug": "miao-qi-fei-hai",
+    "title": "苗期肥害：出苗就烧、根尖发黑",
+    "subtitle": "种子旁边那把肥，最容易腌幼根",
+    "summary": "出苗不齐、小苗叶子焦、根尖发黑。",
+    "crops": [
+      "玉米",
+      "蔬菜",
+      "水稻"
+    ],
+    "problems": [
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "肥害",
+      "miao-qi-fei-hai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/miao-qi-fei-hai.jpg",
+        "alt": "出苗不齐、小苗叶子焦"
+      },
+      {
+        "src": "/images/articles/miao-qi-fei-hai-2.jpg",
+        "alt": "幼苗根尖发黑"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "shao-gen",
+      "wei-fu-shu-you-ji-fei",
+      "que-dan"
+    ],
+    "conditions": "种肥贴种子、穴里拌肥、沙土、出苗那一周。",
+    "commonCrops": "玉米、蔬菜穴盘和直播最常见。"
+  },
+  {
+    "slug": "an-hai",
+    "title": "氨气烧叶烧根：刚施肥就熏",
+    "subtitle": "设施里闷着，尿素和未腐熟粪最容易冒氨",
+    "summary": "你先问最近下了什么肥、下了多少。",
+    "crops": [
+      "设施蔬菜",
+      "蔬菜"
+    ],
+    "problems": [
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "肥害",
+      "an-hai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/an-hai.jpg",
+        "alt": "棚内叶缘焦像烟熏"
+      },
+      {
+        "src": "/images/articles/an-hai-2.jpg",
+        "alt": "氨气烧伤的嫩叶"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "wei-fu-shu-you-ji-fei",
+      "dashe-yanzhi",
+      "yao-hai"
+    ],
+    "conditions": "未腐熟粪、碳铵、尿素表施遇湿，氨气往上走。设施更闷。",
+    "commonCrops": "设施蔬菜。"
+  },
+  {
+    "slug": "lv-hai",
+    "title": "氯害：忌氯作物遇上含氯化肥",
+    "subtitle": "不是所有作物都怕氯，但怕的那些真怕",
+    "summary": "忌氯作物叶缘焦，问最近用了什么含氯化肥。",
+    "crops": [
+      "蔬菜",
+      "果树",
+      "马铃薯"
+    ],
+    "problems": [
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "肥害",
+      "lv-hai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/lv-hai.jpg",
+        "alt": "马铃薯叶缘焦，氯害"
+      },
+      {
+        "src": "/images/articles/lv-hai-2.jpg",
+        "alt": "氯害焦边特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-jia",
+      "yan-jian",
+      "ma-ling-shu-tu"
+    ],
+    "conditions": "氯跟着水走。过量叶缘焦。盐害也焦，但氯害要问肥料袋。",
+    "commonCrops": "马铃薯、部分蔬菜和果树。"
+  },
+  {
+    "slug": "di-guan-nong-du",
+    "title": "滴灌肥水太浓：越浇越伤",
+    "subtitle": "水肥一体化不是越浓越有劲",
+    "summary": "你先问最近下了什么肥、下了多少。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "肥害",
+      "盐碱"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "肥害",
+      "盐碱",
+      "di-guan-nong-du"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/di-guan-nong-du.jpg",
+        "alt": "滴头附近白霜烧圈"
+      },
+      {
+        "src": "/images/articles/di-guan-nong-du-2.jpg",
+        "alt": "滴灌过浓伤苗"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "dashe-yanzhi",
+      "shao-gen",
+      "fan-yan"
+    ],
+    "conditions": "滴灌是细水，浓度高了根吸水费劲。EC 超了不是更有劲。",
+    "commonCrops": "设施蔬菜。"
+  },
+  {
+    "slug": "wei-fu-shu-you-ji-fei",
+    "title": "未腐熟有机肥：当粪宝，变成烧苗",
+    "subtitle": "生粪发热、抢氮、带虫卵和盐",
+    "summary": "生粪堆边苗像被烫，粪还臭，土发热。",
+    "crops": [
+      "蔬菜",
+      "果树"
+    ],
+    "problems": [
+      "肥害",
+      "有机质低"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "肥害",
+      "有机质低",
+      "wei-fu-shu-you-ji-fei"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/wei-fu-shu-you-ji-fei.jpg",
+        "alt": "未腐熟粪肥旁烧苗"
+      },
+      {
+        "src": "/images/articles/wei-fu-shu-you-ji-fei-2.jpg",
+        "alt": "未腐熟有机肥发热"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "an-hai",
+      "shao-gen",
+      "you-ji-zhi"
+    ],
+    "conditions": "未腐熟会抢氮、发热、带盐带氨。当宝埋到根边，就是烧苗。",
+    "commonCrops": "蔬菜、果树。"
+  },
+  {
+    "slug": "fan-yan",
+    "title": "返盐：浇完水土更白",
+    "subtitle": "春天太阳一晒，盐又爬回来",
+    "summary": "浇完再晒干看：地表一层白，干湿交界最白，苗更焦边。",
+    "crops": [
+      "设施蔬菜",
+      "小麦",
+      "棉花"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "华北",
+      "西北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季",
+      "冬季"
+    ],
+    "tags": [
+      "盐碱",
+      "fan-yan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/fan-yan.jpg",
+        "alt": "浇后晒干地表一层白"
+      },
+      {
+        "src": "/images/articles/fan-yan-2.jpg",
+        "alt": "返盐白壳特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "dashe-yanzhi",
+      "han-yan-jian-bie"
+    ],
+    "conditions": "春季蒸发大、膜下、小水勤浇、有盐的井水。浇完第二天太阳一晒最清楚。",
+    "commonCrops": "小麦、棉花、设施蔬菜。"
+  },
+  {
+    "slug": "shi-hui-xing-tu",
+    "title": "石灰性土壤：肥在土里，根吃不到",
+    "subtitle": "华北西北常见，pH 高，铁锌磷被锁",
+    "summary": "土并不瘦，叶子却黄，尤其新叶脉绿。",
+    "crops": [
+      "果树",
+      "花生",
+      "玉米"
+    ],
+    "problems": [
+      "盐碱",
+      "缺素"
+    ],
+    "regions": [
+      "华北",
+      "西北"
+    ],
+    "seasons": [
+      "全年",
+      "冬季"
+    ],
+    "tags": [
+      "盐碱",
+      "缺素",
+      "shi-hui-xing-tu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shi-hui-xing-tu.jpg",
+        "alt": "石灰性土壤表土发白"
+      },
+      {
+        "src": "/images/articles/shi-hui-xing-tu-2.jpg",
+        "alt": "石灰性土上的黄化植株"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-tie",
+      "que-xin",
+      "que-lin"
+    ],
+    "conditions": "石灰性土把铁锰锌锁住。化验全量不低，有效量低。",
+    "commonCrops": "果树、花生、玉米。"
+  },
+  {
+    "slug": "shi-gao-gai-jian",
+    "title": "石膏改碱和洗盐",
+    "subtitle": "碱土和盐土不是一回事，药不能吃错",
+    "summary": "你低头先看土面那一层白。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "棉花"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "西北",
+      "华北"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "盐碱",
+      "shi-gao-gai-jian"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shi-gao-gai-jian.jpg",
+        "alt": "碱土撒石膏"
+      },
+      {
+        "src": "/images/articles/shi-gao-gai-jian-2.jpg",
+        "alt": "碱斑土柱"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "suan-hua",
+      "fan-yan"
+    ],
+    "conditions": "石膏里的钙把钠换下来，还要靠水把钠洗走。没有排水，石膏白撒。盐土的正道是灌排。",
+    "commonCrops": "小麦、玉米、棉花。"
+  },
+  {
+    "slug": "sha-tu-lou-fei",
+    "title": "沙土漏肥漏水",
+    "subtitle": "一把肥，一场雨，全没了",
+    "summary": "你抓一把土搓一搓，看还有没有肉。",
+    "crops": [
+      "花生",
+      "玉米"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "西北",
+      "华北"
+    ],
+    "seasons": [
+      "全年",
+      "冬季"
+    ],
+    "tags": [
+      "有机质低",
+      "sha-tu-lou-fei"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/sha-tu-lou-fei.jpg",
+        "alt": "沙土散漏，保不住肥"
+      },
+      {
+        "src": "/images/articles/sha-tu-lou-fei-2.jpg",
+        "alt": "沙土地漏水"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "you-ji-zhi",
+      "que-dan",
+      "di-guan-nong-du"
+    ],
+    "conditions": "沙土是筛子。水肥留不住。一次堆山，第二天就空。",
+    "commonCrops": "花生、西瓜（按花生/玉米管理思路）、玉米。"
+  },
+  {
+    "slug": "nian-tu-nan-geng",
+    "title": "黏土难耕又易裂",
+    "subtitle": "湿时黏锄，干时裂得像龟背",
+    "summary": "你拿锄头试一试这块地。",
+    "crops": [
+      "水稻",
+      "小麦"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "长江中下游",
+      "华南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "nian-tu-nan-geng"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/nian-tu-nan-geng.jpg",
+        "alt": "黏土干裂大块，难耕"
+      },
+      {
+        "src": "/images/articles/nian-tu-nan-geng-2.jpg",
+        "alt": "黏土地裂缝扯根"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ban-jie",
+      "li-di-ceng",
+      "you-ji-zhi"
+    ],
+    "conditions": "黏土颗粒细，水一多就糊，水一少就砖。有机质和适墒是钥匙。",
+    "commonCrops": "水稻、小麦。"
+  },
+  {
+    "slug": "li-di-ceng",
+    "title": "犁底层：旋耕下面那层硬盖",
+    "subtitle": "根到这里就拐弯",
+    "summary": "刨开剖面：十五到二十厘米下面一层发亮硬盖，根到那儿拐弯。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "水稻"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "li-di-ceng"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/li-di-ceng.jpg",
+        "alt": "剖面里一层致密犁底层，根拐弯"
+      },
+      {
+        "src": "/images/articles/li-di-ceng-2.jpg",
+        "alt": "犁底层发亮硬盖特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ban-jie",
+      "lao-hai",
+      "hei-tu-tui-hua"
+    ],
+    "conditions": "同一深度年年旋、湿土进机，压出犁底层。根浅了，旱涝都更敏感。",
+    "commonCrops": "小麦、玉米、水稻。"
+  },
+  {
+    "slug": "hei-tu-tui-hua",
+    "title": "东北黑土变瘦变硬",
+    "subtitle": "黑土层变薄，家底被吃掉",
+    "summary": "你抓一把土搓一搓，看还有没有肉。",
+    "crops": [
+      "玉米",
+      "大豆",
+      "水稻"
+    ],
+    "problems": [
+      "有机质低",
+      "板结"
+    ],
+    "regions": [
+      "东北"
+    ],
+    "seasons": [
+      "全年",
+      "冬季"
+    ],
+    "tags": [
+      "有机质低",
+      "板结",
+      "hei-tu-tui-hua"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/hei-tu-tui-hua.jpg",
+        "alt": "黑土层变薄、心土露出、板硬"
+      },
+      {
+        "src": "/images/articles/hei-tu-tui-hua-2.jpg",
+        "alt": "退化黑土风蚀"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "you-ji-zhi",
+      "jie-gan-huan-tian",
+      "li-di-ceng"
+    ],
+    "conditions": "黑土的肉在有机质。风蚀、水蚀、只拿不还，黑土层一年年变薄。加氮补不回变薄的 A 层。",
+    "commonCrops": "玉米、大豆、水稻。"
+  },
+  {
+    "slug": "jie-gan-huan-tian",
+    "title": "秸秆还田：改土也会烧苗和抢氮",
+    "subtitle": "不是把秸秆一撒就完",
+    "summary": "还田后出苗黄弱、粉碎压实不够也会出苗难。",
+    "crops": [
+      "玉米",
+      "水稻",
+      "小麦"
+    ],
+    "problems": [
+      "有机质低",
+      "肥害"
+    ],
+    "regions": [
+      "东北",
+      "黄淮海",
+      "长江中下游"
+    ],
+    "seasons": [
+      "秋季",
+      "春季"
+    ],
+    "tags": [
+      "有机质低",
+      "肥害",
+      "jie-gan-huan-tian"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/jie-gan-huan-tian.jpg",
+        "alt": "秸秆还田后出苗黄弱"
+      },
+      {
+        "src": "/images/articles/jie-gan-huan-tian-2.jpg",
+        "alt": "还田秸秆覆盖的地"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "you-ji-zhi",
+      "que-dan",
+      "hei-tu-tui-hua"
+    ],
+    "conditions": "秸秆碳多，微生物先吃饭，苗会饿一阵。碎得不够、压不实，出苗像钻被子。",
+    "commonCrops": "玉米、水稻、小麦。"
+  },
+  {
+    "slug": "shi-hui-yong-liang",
+    "title": "石灰怎么用才不把土改过劲",
+    "subtitle": "已经决定改酸，才问用哪种灰、撒多少。农用的才能下地。",
+    "summary": "已经决定改酸，才问用哪种灰、撒多少、何时撒。农用石灰才能下地，建筑石灰不行。粮田常见每亩 50–150 公斤，沙土按下限，分两次。",
+    "crops": [
+      "水稻",
+      "茶叶",
+      "果树"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游",
+      "西南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "shi-hui-yong-liang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shi-hui-yong-liang.jpg",
+        "alt": "农用石灰撒在酸性土上"
+      },
+      {
+        "src": "/images/articles/shi-hui-yong-liang-2.jpg",
+        "alt": "石灰粉堆在田间"
+      },
+      {
+        "src": "/images/articles/hong-huang-rang-gai-suan.jpg",
+        "alt": "红黄壤改酸"
+      },
+      {
+        "src": "/images/articles/cha-yuan-shi-hui-jin-ji.jpg",
+        "alt": "茶园石灰禁忌"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "suan-hua",
+      "hong-huang-rang-gai-suan",
+      "cha-yuan-shi-hui-jin-ji"
+    ],
+    "conditions": "已经测过 pH、粮田低于大约 5.5、准备改酸。茶园另算。",
+    "commonCrops": "粮田旱地。茶园去禁忌那篇。"
+  },
+  {
+    "slug": "xiu-shui-tian",
+    "title": "锈水田、亚铁毒：水田苗发黄发僵",
+    "subtitle": "排水不良的酸水田，铁太多也会毒",
+    "summary": "水面锈、有时油膜，稻苗黄僵，根发黑。",
+    "crops": [
+      "水稻"
+    ],
+    "problems": [
+      "酸化",
+      "涝害"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游",
+      "西南"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "酸化",
+      "涝害",
+      "xiu-shui-tian"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/xiu-shui-tian.jpg",
+        "alt": "锈色水面、黄僵稻苗"
+      },
+      {
+        "src": "/images/articles/xiu-shui-tian-2.jpg",
+        "alt": "锈水油膜特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "qian-yu-tian",
+      "shui-tian-huan-yuan",
+      "suan-hua"
+    ],
+    "conditions": "还原条件下亚铁出来毒根。长期深水、酸、有机质发酵会叠。",
+    "commonCrops": "水稻。"
+  },
+  {
+    "slug": "qian-yu-tian",
+    "title": "冷浸田、潜育化：土冷根不长",
+    "subtitle": "山垄田、阴冷田，春季不发苗",
+    "summary": "土冷、长期渍水、剖面发青灰。",
+    "crops": [
+      "水稻"
+    ],
+    "problems": [
+      "涝害"
+    ],
+    "regions": [
+      "华南",
+      "西南"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "涝害",
+      "qian-yu-tian"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/qian-yu-tian.jpg",
+        "alt": "冷浸田灰蓝潜育层"
+      },
+      {
+        "src": "/images/articles/qian-yu-tian-2.jpg",
+        "alt": "山垄冷浸稻田"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "xiu-shui-tian",
+      "que-lin",
+      "lao-hai"
+    ],
+    "conditions": "潜育层缺氧又冷。根不往下，肥再多也吃得慢。",
+    "commonCrops": "水稻。"
+  },
+  {
+    "slug": "shui-tian-huan-yuan",
+    "title": "水田还原障碍：根黑、臭、不发新根",
+    "subtitle": "长期深水，土变成臭泥",
+    "summary": "长期深水，土发臭，根黑不发新根，有时有硫化氢味。",
+    "crops": [
+      "水稻"
+    ],
+    "problems": [
+      "涝害"
+    ],
+    "regions": [
+      "长江中下游",
+      "华南"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "涝害",
+      "shui-tian-huan-yuan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shui-tian-huan-yuan.jpg",
+        "alt": "深水田根黑不发新根"
+      },
+      {
+        "src": "/images/articles/shui-tian-huan-yuan-2.jpg",
+        "alt": "还原障碍黑根"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "xiu-shui-tian",
+      "jie-gan-huan-tian",
+      "lao-hai"
+    ],
+    "conditions": "氧气没了，锰铁硫被还原，根被毒。不是缺那一袋复合肥。",
+    "commonCrops": "水稻。"
+  },
+  {
+    "slug": "gen-fu-jian-bie",
+    "title": "根腐还是土问题：先看根再下肥",
+    "subtitle": "死棵先拔起来，别在叶上猜",
+    "summary": "黑腐、根结、茎基缢缩，和缺肥的白根细弱不是一路。",
+    "crops": [
+      "蔬菜",
+      "设施蔬菜",
+      "花生"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "gen-fu-jian-bie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/gen-fu-jian-bie.jpg",
+        "alt": "黑腐根和白根对照"
+      },
+      {
+        "src": "/images/articles/gen-fu-jian-bie-2.jpg",
+        "alt": "根结线虫根"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "gen-jie-xian-chong",
+      "tu-chuan-ku-wei",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "肥解决不了烂根。土问题可以叠病害，但切开维管束、闻气味、看分布，能先分流。",
+    "commonCrops": "番茄、黄瓜、草莓、瓜类。"
+  },
+  {
+    "slug": "huang-ye-jian-bie",
+    "title": "黄叶鉴别：缺素、涝害、药害还是病害",
+    "subtitle": "先分叶位、根和土面，再谈缺哪一种",
+    "summary": "先分新叶还是老叶，再分匀黄还是脉间黄，再问药、涝、病。一张黄叶不够下肥。",
+    "crops": [
+      "水稻",
+      "玉米",
+      "蔬菜",
+      "果树"
+    ],
+    "problems": [
+      "缺素",
+      "涝害",
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "缺素",
+      "涝害",
+      "肥害",
+      "huang-ye-jian-bie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/huang-ye-jian-bie.jpg",
+        "alt": "黄叶四种对照"
+      },
+      {
+        "src": "/images/articles/huang-ye-jian-bie-2.jpg",
+        "alt": "黄叶叶位特写"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-dan",
+      "que-tie",
+      "yao-hai"
+    ],
+    "conditions": "老叶匀黄像缺氮；新叶脉绿像缺铁；斑扭来得快像药害；湿蔫像涝。叶位是第一把尺子。",
+    "commonCrops": "所有大田和棚室。"
+  },
+  {
+    "slug": "han-yan-jian-bie",
+    "title": "旱了还是咸了：萎蔫和焦边怎么分",
+    "subtitle": "土干是旱，土湿还蔫还白是咸",
+    "summary": "一边萎蔫无白霜土干，一边白霜加焦边土不一定干。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "棉花",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "华北",
+      "西北"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "盐碱",
+      "han-yan-jian-bie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/han-yan-jian-bie.jpg",
+        "alt": "一边萎蔫无白霜，一边白霜加焦边"
+      },
+      {
+        "src": "/images/articles/han-yan-jian-bie-2.jpg",
+        "alt": "抓一把干土对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "fan-yan",
+      "que-jia"
+    ],
+    "conditions": "旱是没水，咸是有水喝不着。浇小水：旱了能缓，咸了有时更蔫。",
+    "commonCrops": "小麦、玉米、棉花、设施蔬菜。"
+  },
+  {
+    "slug": "cha-yuan-guo-suan",
+    "title": "茶园过酸：耐酸不等于越酸越好",
+    "subtitle": "茶叶喜欢偏酸，不是喜欢喝醋",
+    "summary": "茶树还活着但叶小、新梢短、根色差。",
+    "crops": [
+      "茶叶"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "西南",
+      "长江中下游"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "cha-yuan-guo-suan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/cha-yuan-guo-suan.jpg",
+        "alt": "茶园茶树行，不是粮田"
+      },
+      {
+        "src": "/images/articles/cha-yuan-guo-suan-2.jpg",
+        "alt": "过酸茶园叶小"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "cha-yuan-shi-hui-jin-ji",
+      "suan-hua",
+      "shi-hui-yong-liang"
+    ],
+    "conditions": "茶树能喝酸，不等于拿醋当水。适宜大约 pH 4.5～6.0。低于 4.0 根一样伤。",
+    "commonCrops": "茶叶。不见麦苗。"
+  },
+  {
+    "slug": "ma-ling-shu-tu",
+    "title": "马铃薯疮痂和偏碱土壤",
+    "subtitle": "疮痂和土的酸碱、干湿有关系",
+    "summary": "你低头先看土面那一层白。",
+    "crops": [
+      "马铃薯"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "东北",
+      "华北",
+      "西北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "盐碱",
+      "ma-ling-shu-tu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ma-ling-shu-tu.jpg",
+        "alt": "马铃薯块茎疮痂"
+      },
+      {
+        "src": "/images/articles/ma-ling-shu-tu-2.jpg",
+        "alt": "疮痂薯块特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "lv-hai",
+      "lian-zuo"
+    ],
+    "conditions": "疮痂喜欢偏碱、干、沙。把 pH 改酸一点、稳墒，比打药故事实在。这里不开杀菌剂方。",
+    "commonCrops": "马铃薯。"
+  },
+  {
+    "slug": "sheng-wu-you-ji-fei",
+    "title": "生物有机肥怎么用才不是安慰剂",
+    "subtitle": "菌要有房有饭，才会干活",
+    "summary": "你抓一把土搓一搓，看还有没有肉。",
+    "crops": [
+      "蔬菜",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "有机质低",
+      "连作障碍"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质低",
+      "连作障碍",
+      "sheng-wu-you-ji-fei"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/sheng-wu-you-ji-fei.jpg",
+        "alt": "腐熟堆肥"
+      },
+      {
+        "src": "/images/articles/sheng-wu-you-ji-fei-2.jpg",
+        "alt": "结构差的死土"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "wei-sheng-wu",
+      "you-ji-zhi",
+      "lian-zuo"
+    ],
+    "conditions": "菌是房客。没房没饭，安慰剂。先有有机质和通气，菌才住得下。看登记证。",
+    "commonCrops": "蔬菜、设施。"
+  },
+  {
+    "slug": "guo-yuan-tu-rang",
+    "title": "果园土壤培肥：树下那层土怎么养",
+    "subtitle": "清耕光板地，树会越来越馋",
+    "summary": "树下那层土板、清耕、草都没有。",
+    "crops": [
+      "果树"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质低",
+      "guo-yuan-tu-rang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/guo-yuan-tu-rang.jpg",
+        "alt": "果园树盘覆盖，不是大田"
+      },
+      {
+        "src": "/images/articles/guo-yuan-tu-rang-2.jpg",
+        "alt": "果园有机肥沟施"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-tie",
+      "you-ji-zhi",
+      "shi-hui-xing-tu"
+    ],
+    "conditions": "果树吃的是树盘。清耕把肉晒掉。行间生草、树盘覆盖、肥进根区，才像养树。",
+    "commonCrops": "苹果、柑橘、桃、梨等。"
+  },
+  {
+    "slug": "da-peng-lian-zuo-zong-he",
+    "title": "大棚越种越差：盐、病、肥害一起到",
+    "subtitle": "棚是一口锅，盐病肥三样都能熬稠",
+    "summary": "棚内盐斑加病株，越种死棵越多。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "连作障碍",
+      "盐碱",
+      "肥害"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "盐碱",
+      "肥害",
+      "da-peng-lian-zuo-zong-he"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/da-peng-lian-zuo-zong-he.jpg",
+        "alt": "大棚连作：盐斑加病株"
+      },
+      {
+        "src": "/images/articles/da-peng-lian-zuo-zong-he-2.jpg",
+        "alt": "棚内点片死棵加白霜"
+      }
+    ],
+    "hot": true,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "lian-zuo",
+      "dashe-yanzhi",
+      "gen-fu-jian-bie"
+    ],
+    "conditions": "盐、病、肥害熬在一口锅里。一瓶药一袋肥掀不开这口锅。先测 EC，再看根。",
+    "commonCrops": "番茄、黄瓜、辣椒、草莓。"
+  },
+  {
+    "slug": "hong-huang-rang-gai-suan",
+    "title": "红黄壤改酸：先测 pH，再谈石灰",
+    "subtitle": "南方红土发酸，先测这块地的 pH，再谈石灰。",
+    "summary": "红土黄泥土上苗僵叶黄根褐，先认土色和根，再认 pH。",
+    "crops": [
+      "水稻",
+      "花生",
+      "玉米"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "西南",
+      "长江中下游"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "hong-huang-rang-gai-suan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/hong-huang-rang-gai-suan.jpg",
+        "alt": "红黄壤坡地玉米苗僵"
+      },
+      {
+        "src": "/images/articles/hong-huang-rang-gai-suan-2.jpg",
+        "alt": "红黄壤土色特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "suan-hua",
+      "shi-hui-yong-liang",
+      "lv-du-shang-gen"
+    ],
+    "conditions": "红黄壤本底就酸，雨把盐基淋走。石灰是药不是饭。",
+    "commonCrops": "水稻、花生、玉米、薯类。茶叶另算，不要按粮田改到中性。"
+  },
+  {
+    "slug": "lv-du-shang-gen",
+    "title": "铝毒伤根：根尖秃、发褐，不是单纯缺肥",
+    "subtitle": "根尖褐秃、侧根很少，先改酸让新嘴长出来，再薄肥。",
+    "summary": "洗出来的根尖发褐、发秃，侧根很少。地上再追氮也不发棵。缺肥的根还在，只是细；铝毒是根尖伤掉。",
+    "crops": [
+      "水稻",
+      "小麦",
+      "花生"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "西南"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "酸化",
+      "lv-du-shang-gen"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/lv-du-shang-gen.jpg",
+        "alt": "酸土上根尖褐秃的植株"
+      },
+      {
+        "src": "/images/articles/lv-du-shang-gen-2.jpg",
+        "alt": "洗出的褐秃根尖"
+      },
+      {
+        "src": "/images/articles/suan-hua.jpg",
+        "alt": "酸化根部对照"
+      },
+      {
+        "src": "/images/articles/suan-hua-2.jpg",
+        "alt": "褐秃根尖"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "hong-huang-rang-gai-suan",
+      "suan-hua",
+      "que-lin"
+    ],
+    "conditions": "红黄壤、pH 低于大约 5.5、连年铵态氮。",
+    "commonCrops": "水稻、花生、小麦、薯类。"
+  },
+  {
+    "slug": "suan-yu-que-gai",
+    "title": "土酸和缺钙一起到：脐腐裂果别只补叶面钙",
+    "subtitle": "酸土里钙被淋走，果上出事根上也缺",
+    "summary": "番茄脐腐、裂果、心叶焦边，喷叶面钙只能救急。",
+    "crops": [
+      "蔬菜",
+      "花生",
+      "果树"
+    ],
+    "problems": [
+      "酸化",
+      "缺素"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "缺素",
+      "suan-yu-que-gai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/suan-yu-que-gai.jpg",
+        "alt": "番茄脐腐贴在酸土田"
+      },
+      {
+        "src": "/images/articles/suan-yu-que-gai-2.jpg",
+        "alt": "脐腐特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-gai",
+      "suan-hua",
+      "shi-hui-yong-liang"
+    ],
+    "conditions": "酸土里钙被淋走。钙像砖，干旱时根更吃不到。叶面钙退烧，改土才是正道。",
+    "commonCrops": "番茄、辣椒、花生、果树。"
+  },
+  {
+    "slug": "suan-tu-shi-lin",
+    "title": "酸性土磷被锁：苗紫矮，先改酸再猛补磷",
+    "subtitle": "磷在土里，铁铝把它钉死了",
+    "summary": "苗紫、矮、根少，不一定土里没磷。",
+    "crops": [
+      "玉米",
+      "小麦",
+      "油菜"
+    ],
+    "problems": [
+      "酸化",
+      "缺素"
+    ],
+    "regions": [
+      "华南",
+      "西南",
+      "长江中下游"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "酸化",
+      "缺素",
+      "suan-tu-shi-lin"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/suan-tu-shi-lin.jpg",
+        "alt": "酸土上发紫发僵的玉米苗"
+      },
+      {
+        "src": "/images/articles/suan-tu-shi-lin-2.jpg",
+        "alt": "紫苗和根对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-lin",
+      "hong-huang-rang-gai-suan",
+      "suan-hua"
+    ],
+    "conditions": "你撒的过磷酸钙，根摸不着。先把锁打开，再谈用量。",
+    "commonCrops": "玉米、小麦、油菜、蔬菜。"
+  },
+  {
+    "slug": "sheng-li-suan-xing-fei",
+    "title": "生理酸性肥越用土越酸",
+    "subtitle": "铵态氮、硫酸钾用久了，土会一年年更酸。",
+    "summary": "你蹲下去拔一棵，洗手看根尖。",
+    "crops": [
+      "水稻",
+      "蔬菜",
+      "玉米"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游",
+      "西南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "sheng-li-suan-xing-fei"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/sheng-li-suan-xing-fei.jpg",
+        "alt": "生理酸性肥袋子"
+      },
+      {
+        "src": "/images/articles/sheng-li-suan-xing-fei-2.jpg",
+        "alt": "肥袋和酸化苗对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "suan-hua",
+      "hong-huang-rang-gai-suan",
+      "shi-hui-yong-liang"
+    ],
+    "conditions": "有的肥进了土，作物吃走阳离子，留下酸根。不是肥有毒，是账要会算。",
+    "commonCrops": "水稻、蔬菜、玉米。"
+  },
+  {
+    "slug": "cha-yuan-shi-hui-jin-ji",
+    "title": "茶园石灰禁忌：耐酸作物怎么改才不伤树",
+    "subtitle": "粮田那套公斤数，在茶行里是伤树",
+    "summary": "茶树新梢短、叶小；有人照搬粮田石灰，随后更黄。",
+    "crops": [
+      "茶叶"
+    ],
+    "problems": [
+      "酸化"
+    ],
+    "regions": [
+      "华南",
+      "西南",
+      "长江中下游"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "酸化",
+      "cha-yuan-shi-hui-jin-ji"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/cha-yuan-shi-hui-jin-ji.jpg",
+        "alt": "茶园行间，不是粮田"
+      },
+      {
+        "src": "/images/articles/cha-yuan-shi-hui-jin-ji-2.jpg",
+        "alt": "茶园土面特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "cha-yuan-guo-suan",
+      "shi-hui-yong-liang",
+      "suan-hua"
+    ],
+    "conditions": "茶树是耐酸的人，不是喜欢喝石灰水。过酸降一点铝，过碱又把铁锁住。",
+    "commonCrops": "茶叶。"
+  },
+  {
+    "slug": "su-da-yan-jian",
+    "title": "苏打盐碱地：碱和盐不是一回事",
+    "subtitle": "涩的是碱，咸的是盐，药不能吃错",
+    "summary": "土发涩发黏，pH 常大于 8.5，结构差，苗出不来。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "棉花"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "西北",
+      "东北",
+      "华北"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "盐碱",
+      "su-da-yan-jian"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/su-da-yan-jian.jpg",
+        "alt": "苏打碱斑土面发白发涩"
+      },
+      {
+        "src": "/images/articles/su-da-yan-jian-2.jpg",
+        "alt": "碱斑结构差特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "shi-gao-gai-jian",
+      "yan-jian",
+      "xi-yan-pai-shui"
+    ],
+    "conditions": "盐是汤咸，碱是汤涩还挂碗。石膏里的钙把钠换下来，再靠水把钠洗走。",
+    "commonCrops": "小麦、玉米、棉花、向日葵。"
+  },
+  {
+    "slug": "bin-hai-yan-tu",
+    "title": "滨海盐土：先排水洗盐，再谈培肥",
+    "subtitle": "海边的白霜，是海留下的盐",
+    "summary": "春季返盐白霜、出苗花斑，靠近海或倒灌河。",
+    "crops": [
+      "棉花",
+      "水稻",
+      "小麦"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "华北",
+      "华南"
+    ],
+    "seasons": [
+      "春季",
+      "秋季"
+    ],
+    "tags": [
+      "盐碱",
+      "bin-hai-yan-tu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/bin-hai-yan-tu.jpg",
+        "alt": "滨海盐土排水沟"
+      },
+      {
+        "src": "/images/articles/bin-hai-yan-tu-2.jpg",
+        "alt": "盐霜加沟渠"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "xi-yan-pai-shui",
+      "yan-jian-di-xuan-zuo"
+    ],
+    "conditions": "海退了盐还在。洗盐像洗衣，要有进水也要有出水。没有排水，大水只是把盐赶到田边。",
+    "commonCrops": "棉花、水稻、小麦、田菁等。"
+  },
+  {
+    "slug": "wei-xian-shui-guan-gai",
+    "title": "微咸水灌溉：能浇但不能连浇",
+    "subtitle": "水有一点咸，连浇会把地浇成盐田",
+    "summary": "浇了几次苗更焦边、土面更白。",
+    "crops": [
+      "小麦",
+      "棉花",
+      "玉米"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "西北",
+      "华北"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "盐碱",
+      "wei-xian-shui-guan-gai"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/wei-xian-shui-guan-gai.jpg",
+        "alt": "微咸水灌进麦田，水边起白霜"
+      },
+      {
+        "src": "/images/articles/wei-xian-shui-guan-gai-2.jpg",
+        "alt": "地表盐晶特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "bin-hai-yan-tu",
+      "fan-yan",
+      "yan-jian"
+    ],
+    "conditions": "微咸水不是不能用，是不能当自来水天天喝。小水勤浇最容易返盐。",
+    "commonCrops": "小麦、棉花、玉米。"
+  },
+  {
+    "slug": "di-biao-fu-yan",
+    "title": "地表覆膜返盐：膜边白霜怎么破",
+    "subtitle": "膜内把蒸发赶到膜边，盐就在那儿排队",
+    "summary": "膜边、破孔周围一圈白霜，苗出在孔边就焦。",
+    "crops": [
+      "棉花",
+      "玉米",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "西北",
+      "华北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "盐碱",
+      "di-biao-fu-yan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/di-biao-fu-yan.jpg",
+        "alt": "地膜边白霜"
+      },
+      {
+        "src": "/images/articles/di-biao-fu-yan-2.jpg",
+        "alt": "膜边盐圈特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "fan-yan",
+      "dashe-yanzhi",
+      "yan-jian"
+    ],
+    "conditions": "膜是帽子。帽子挡住蒸发，盐就从帽檐爬出来。苗要坐在帽子底下的湿润区。",
+    "commonCrops": "棉花、玉米、瓜类、设施蔬菜。"
+  },
+  {
+    "slug": "yan-jian-di-xuan-zuo",
+    "title": "盐碱地适种什么：先活苗再求高产",
+    "subtitle": "咸地先求保住苗，再谈吨粮",
+    "summary": "年年缺苗断垄，种玉米像赌博。",
+    "crops": [
+      "棉花",
+      "小麦",
+      "水稻"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "西北",
+      "华北",
+      "东北"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "盐碱",
+      "yan-jian-di-xuan-zuo"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yan-jian-di-xuan-zuo.jpg",
+        "alt": "盐斑垄上油菜还能出苗"
+      },
+      {
+        "src": "/images/articles/yan-jian-di-xuan-zuo-2.jpg",
+        "alt": "耐盐作物和旁边缺苗对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "bin-hai-yan-tu",
+      "su-da-yan-jian"
+    ],
+    "conditions": "盐碱地像浅水，先学游泳再比速度。耐盐作物和品种比复合肥堆出来的高产方案实在。",
+    "commonCrops": "棉花、向日葵、高粱、田菁、耐盐稻麦按当地。"
+  },
+  {
+    "slug": "xi-yan-pai-shui",
+    "title": "洗盐排水：有灌没排等于把盐赶上来",
+    "subtitle": "水是电梯，盐是乘客，没出口就上楼",
+    "summary": "灌了大水，田边更白、邻地开始返盐，就是把盐赶上来了。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "棉花",
+      "水稻"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "西北",
+      "华北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季",
+      "冬季"
+    ],
+    "tags": [
+      "盐碱",
+      "xi-yan-pai-shui"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/xi-yan-pai-shui.jpg",
+        "alt": "田边排沟和盐斑对照"
+      },
+      {
+        "src": "/images/articles/xi-yan-pai-shui-2.jpg",
+        "alt": "土面白霜特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "yan-jian",
+      "bin-hai-yan-tu",
+      "fan-yan"
+    ],
+    "conditions": "洗衣要拧出去。洗盐不排水，就是衣服在盆里泡着。水是电梯，盐是乘客，没出口就上楼。",
+    "commonCrops": "小麦、玉米、棉花、水稻。"
+  },
+  {
+    "slug": "da-peng-huan-tu-xi-yan",
+    "title": "大棚换土还是洗盐：别一盐就翻棚",
+    "subtitle": "能洗就先洗，换土是最后一招",
+    "summary": "膜下白霜、越浇越蔫。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "盐碱"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "盐碱",
+      "da-peng-huan-tu-xi-yan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/da-peng-huan-tu-xi-yan.jpg",
+        "alt": "棚内滴口白霜、苗焦边"
+      },
+      {
+        "src": "/images/articles/da-peng-huan-tu-xi-yan-2.jpg",
+        "alt": "膜下盐晶特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "dashe-yanzhi",
+      "xi-yan-pai-shui",
+      "da-peng-lian-zuo-zong-he"
+    ],
+    "conditions": "大棚是盆。盆里的盐洗得掉就先洗。换土不改习惯，新土很快又咸。换土留给病土或洗不动的盐。",
+    "commonCrops": "番茄、黄瓜、辣椒、草莓。"
+  },
+  {
+    "slug": "xuan-geng-bian-qian",
+    "title": "年年旋耕：耕层越旋越浅",
+    "subtitle": "旋耕像剃头，只刮表层",
+    "summary": "耕层越来越浅，雨后上层积水，刨开看见发亮的一层。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "水稻"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "xuan-geng-bian-qian"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/xuan-geng-bian-qian.jpg",
+        "alt": "旋耕只翻浅层，下面还是硬盖"
+      },
+      {
+        "src": "/images/articles/xuan-geng-bian-qian-2.jpg",
+        "alt": "根碰到硬层横走"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "li-di-ceng",
+      "shen-song-shi-ji",
+      "ban-jie"
+    ],
+    "conditions": "旋耕像剃头，只刮表层。年年同一深度，下面压出硬盖。",
+    "commonCrops": "小麦、玉米、水稻。"
+  },
+  {
+    "slug": "shen-song-shi-ji",
+    "title": "深松窗口：什么时候松、松多深",
+    "subtitle": "深松不是越深越好，也不是天天松",
+    "summary": "准备深松却赶上泥地或干硬地；松完大坷垃，苗更差。",
+    "crops": [
+      "小麦",
+      "玉米"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "华北",
+      "黄淮海",
+      "东北"
+    ],
+    "seasons": [
+      "秋季",
+      "春季"
+    ],
+    "tags": [
+      "板结",
+      "shen-song-shi-ji"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shen-song-shi-ji.jpg",
+        "alt": "深松铲把犁底层划开"
+      },
+      {
+        "src": "/images/articles/shen-song-shi-ji-2.jpg",
+        "alt": "土坑里发亮的硬盖特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "xuan-geng-bian-qian",
+      "li-di-ceng",
+      "ji-ya-che-zhe"
+    ],
+    "conditions": "手握成团落地能散，就是窗口。深度以刚过硬盖为准，常见 25～40 厘米。过湿是和泥，过干是打坷垃。",
+    "commonCrops": "小麦、玉米、大豆。"
+  },
+  {
+    "slug": "tu-rang-tuan-ju-ti",
+    "title": "团聚体碎了：土面一碰就面、一下雨就浆",
+    "subtitle": "好土能搓团又易散，粉土是面",
+    "summary": "干了面、湿了浆，一碰就散，雨点一砸就糊。",
+    "crops": [
+      "蔬菜",
+      "小麦",
+      "玉米"
+    ],
+    "problems": [
+      "板结",
+      "有机质低"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "有机质低",
+      "tu-rang-tuan-ju-ti"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/tu-rang-tuan-ju-ti.jpg",
+        "alt": "手里搓得出团粒的活土"
+      },
+      {
+        "src": "/images/articles/tu-rang-tuan-ju-ti-2.jpg",
+        "alt": "结构碎了的面土对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ban-jie",
+      "you-ji-zhi",
+      "fu-gai-gai-zhi-di"
+    ],
+    "conditions": "好土像面包，粉土像面粉。团聚体是房间。有机质、覆盖、少碾，房间才在。",
+    "commonCrops": "蔬菜、小麦、玉米。"
+  },
+  {
+    "slug": "ji-ya-che-zhe",
+    "title": "农机碾压：车辙里出不来苗",
+    "subtitle": "车辙是一条压死的土",
+    "summary": "车辙里不出苗，垄上有苗。",
+    "crops": [
+      "玉米",
+      "小麦",
+      "棉花"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "春季",
+      "秋季"
+    ],
+    "tags": [
+      "板结",
+      "ji-ya-che-zhe"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ji-ya-che-zhe.jpg",
+        "alt": "车辙里不出苗"
+      },
+      {
+        "src": "/images/articles/ji-ya-che-zhe-2.jpg",
+        "alt": "碾压土特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ban-jie",
+      "shen-song-shi-ji",
+      "xuan-geng-bian-qian"
+    ],
+    "conditions": "湿土承载差。一次碾压，孔隙塌了，几年缓不过来。固定车道比满田碾体面。",
+    "commonCrops": "玉米、小麦、棉花、大豆。"
+  },
+  {
+    "slug": "ban-jie-yu-gen-xi",
+    "title": "板结和浅根互相反馈",
+    "subtitle": "土硬根浅，根浅土更没人管",
+    "summary": "你拿锄头试一试这块地。",
+    "crops": [
+      "小麦",
+      "玉米",
+      "蔬菜"
+    ],
+    "problems": [
+      "板结"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "ban-jie-yu-gen-xi"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ban-jie-yu-gen-xi.jpg",
+        "alt": "根碰到硬盖拐弯横走"
+      },
+      {
+        "src": "/images/articles/ban-jie-yu-gen-xi-2.jpg",
+        "alt": "浅旋后的硬层"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ban-jie",
+      "li-di-ceng",
+      "xuan-geng-bian-qian"
+    ],
+    "conditions": "硬土养浅根，浅根更不改土，土更硬。要打断这个圈。",
+    "commonCrops": "小麦、玉米、蔬菜。"
+  },
+  {
+    "slug": "fu-gai-gai-zhi-di",
+    "title": "地膜/秸秆覆盖能不能把板结土养松",
+    "subtitle": "覆盖能挡雨滴、保墒，不能代替深松",
+    "summary": "你拿锄头试一试这块地。",
+    "crops": [
+      "玉米",
+      "小麦",
+      "蔬菜"
+    ],
+    "problems": [
+      "板结",
+      "有机质低"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "板结",
+      "有机质低",
+      "fu-gai-gai-zhi-di"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/fu-gai-gai-zhi-di.jpg",
+        "alt": "地膜覆盖的玉米行"
+      },
+      {
+        "src": "/images/articles/fu-gai-gai-zhi-di-2.jpg",
+        "alt": "秸秆盖住龟裂土"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ban-jie",
+      "jie-gan-huan-tian",
+      "tu-rang-tuan-ju-ti"
+    ],
+    "conditions": "秸秆和地膜是护理，不是深松。犁底层仍要揭。残膜要捡。",
+    "commonCrops": "玉米、小麦、蔬菜、棉花。"
+  },
+  {
+    "slug": "lv-fei-fan-ya",
+    "title": "绿肥翻压：改土也会憋苗",
+    "subtitle": "绿肥是肉，翻早了会发烧抢氮",
+    "summary": "鲜草翻下去，苗黄弱，土发热。",
+    "crops": [
+      "水稻",
+      "玉米",
+      "油菜"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "长江中下游",
+      "华南",
+      "西南"
+    ],
+    "seasons": [
+      "春季",
+      "秋季"
+    ],
+    "tags": [
+      "有机质低",
+      "lv-fei-fan-ya"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/lv-fei-fan-ya.jpg",
+        "alt": "绿肥被压进地里"
+      },
+      {
+        "src": "/images/articles/lv-fei-fan-ya-2.jpg",
+        "alt": "秸秆覆盖对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "jie-gan-huan-tian",
+      "you-ji-zhi",
+      "jie-gan-bu-dan"
+    ],
+    "conditions": "鲜草会发热、会抢氮。花期翻、等几天、补一点氮，才不像憋苗。",
+    "commonCrops": "水稻、玉米、后茬蔬菜。"
+  },
+  {
+    "slug": "sheng-wu-tan",
+    "title": "生物炭：不是每亩撒一点就翻身",
+    "subtitle": "炭能帮忙，但不能当饭和药",
+    "summary": "炭渣拌进耕层，指望一季翻身。",
+    "crops": [
+      "玉米",
+      "水稻",
+      "蔬菜"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "东北",
+      "华南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质低",
+      "sheng-wu-tan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/sheng-wu-tan.jpg",
+        "alt": "炭渣拌进耕层"
+      },
+      {
+        "src": "/images/articles/sheng-wu-tan-2.jpg",
+        "alt": "手里的生物炭特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "you-ji-zhi",
+      "hei-tu-you-ji-zhi-shou-hu",
+      "sheng-wu-you-ji-fei"
+    ],
+    "conditions": "炭是架子，不是饭。没有有机质，架子上没肉。先小片试，看登记和来源。",
+    "commonCrops": "玉米、水稻、蔬菜、果园。"
+  },
+  {
+    "slug": "you-ji-fei-ru-he-xuan",
+    "title": "有机肥怎么选：看腐熟、看盐、看碳氮比",
+    "subtitle": "粪不是都能进棚，袋上写有机也不等于能当有机质。",
+    "summary": "袋上写有机，有的还烫手还臭，有的盐很高。",
+    "crops": [
+      "蔬菜",
+      "果树",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "有机质低",
+      "肥害"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质低",
+      "肥害",
+      "you-ji-fei-ru-he-xuan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/you-ji-fei-ru-he-xuan.jpg",
+        "alt": "腐熟堆肥和生粪对照"
+      },
+      {
+        "src": "/images/articles/you-ji-fei-ru-he-xuan-2.jpg",
+        "alt": "未腐熟和腐熟特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "wei-fu-shu-you-ji-fei",
+      "sheng-wu-you-ji-fei",
+      "you-ji-zhi"
+    ],
+    "conditions": "不是每袋都是肉。看腐熟：不烫、不熏、色暗。看盐。看碳氮比。生的会烧，咸的会腌。",
+    "commonCrops": "蔬菜、果树、设施。"
+  },
+  {
+    "slug": "jie-gan-bu-dan",
+    "title": "秸秆还田必须补氮的账怎么算",
+    "subtitle": "微生物先吃饭，苗就会挨饿",
+    "summary": "你抓一把土搓一搓，看还有没有肉。",
+    "crops": [
+      "玉米",
+      "小麦",
+      "水稻"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "东北",
+      "黄淮海",
+      "长江中下游"
+    ],
+    "seasons": [
+      "秋季",
+      "春季"
+    ],
+    "tags": [
+      "有机质低",
+      "jie-gan-bu-dan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/jie-gan-bu-dan.jpg",
+        "alt": "还田后苗黄弱"
+      },
+      {
+        "src": "/images/articles/jie-gan-bu-dan-2.jpg",
+        "alt": "秸秆旁黄苗特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "jie-gan-huan-tian",
+      "que-dan",
+      "lv-fei-fan-ya"
+    ],
+    "conditions": "秸秆碳多，菌要氮。苗会饿一阵。补氮是还账，不是加倍追肥。",
+    "commonCrops": "玉米、小麦、水稻。"
+  },
+  {
+    "slug": "hei-tu-you-ji-zhi-shou-hu",
+    "title": "黑土有机质掉得快，怎么守",
+    "subtitle": "黑土的黑就是肉，有机质低了化肥也撑不住",
+    "summary": "你抓一把土搓一搓，看还有没有肉。",
+    "crops": [
+      "玉米",
+      "大豆",
+      "水稻"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "东北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质低",
+      "hei-tu-you-ji-zhi-shou-hu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/hei-tu-you-ji-zhi-shou-hu.jpg",
+        "alt": "东北黑土耕层"
+      },
+      {
+        "src": "/images/articles/hei-tu-you-ji-zhi-shou-hu-2.jpg",
+        "alt": "黑土层和浅层对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "hei-tu-tui-hua",
+      "jie-gan-huan-tian",
+      "you-ji-zhi"
+    ],
+    "conditions": "黑的是肉。守住秸秆、少裸露、轮耕，比再加一袋氮实在。产量目标不要把 A 层吃空。",
+    "commonCrops": "玉米、大豆、水稻。"
+  },
+  {
+    "slug": "sha-tu-zeng-you-ji-zhi",
+    "title": "沙土增有机质：少量多次，别一次堆山",
+    "subtitle": "沙土像筛子，一次堆山会漏、会烧",
+    "summary": "沙土漏，一次堆一座粪山，第二天还是筛子。",
+    "crops": [
+      "花生",
+      "玉米"
+    ],
+    "problems": [
+      "有机质低"
+    ],
+    "regions": [
+      "西北",
+      "华北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "有机质低",
+      "sha-tu-zeng-you-ji-zhi"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/sha-tu-zeng-you-ji-zhi.jpg",
+        "alt": "沙土里拌进堆肥"
+      },
+      {
+        "src": "/images/articles/sha-tu-zeng-you-ji-zhi-2.jpg",
+        "alt": "沙粒和有机肥拌匀特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "sha-tu-lou-fei",
+      "you-ji-zhi",
+      "you-ji-fei-ru-he-xuan"
+    ],
+    "conditions": "筛子盛不住山。少量多次，覆盖，分顿肥，才留得住。",
+    "commonCrops": "花生、玉米、瓜类按花生玉米思路。"
+  },
+  {
+    "slug": "que-xin-yu-lin",
+    "title": "缺锌常被高磷掩盖",
+    "subtitle": "磷堆多了，锌进不了门",
+    "summary": "你先分清黄的是新叶还是老叶。",
+    "crops": [
+      "玉米",
+      "水稻",
+      "果树"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "华北",
+      "黄淮海",
+      "东北"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-xin-yu-lin"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-xin-yu-lin.jpg",
+        "alt": "玉米花白苗、节间短"
+      },
+      {
+        "src": "/images/articles/que-xin-yu-lin-2.jpg",
+        "alt": "新叶条纹失绿"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-xin",
+      "yang-fen-kang-kang",
+      "que-lin"
+    ],
+    "conditions": "磷和锌排队进同一扇门。磷人多，锌进不去。不是锌袋子买少了那么简单。",
+    "commonCrops": "玉米、水稻、果树。"
+  },
+  {
+    "slug": "que-peng-hua-er-bu-shi",
+    "title": "花而不实先查硼，也要查旱和盐",
+    "subtitle": "开花挺热闹，籽却是空的",
+    "summary": "你先分清黄的是新叶还是老叶。",
+    "crops": [
+      "油菜",
+      "棉花",
+      "花生"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "长江中下游",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "que-peng-hua-er-bu-shi"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/que-peng-hua-er-bu-shi.jpg",
+        "alt": "花开了却少荚少铃"
+      },
+      {
+        "src": "/images/articles/que-peng-hua-er-bu-shi-2.jpg",
+        "alt": "茎空心开裂特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-peng",
+      "hua-sheng-kong-jia",
+      "han-yan-jian-bie"
+    ],
+    "conditions": "硼管开花。缺和毒只隔一层纸。旱和盐也会落花。先分流。",
+    "commonCrops": "油菜、棉花、花生、果树。"
+  },
+  {
+    "slug": "qi-zi-huang-hua",
+    "title": "柑橘黄化：缺铁、根腐、黄龙病先分清",
+    "subtitle": "黄化不是一种病，乱补铁会误事",
+    "summary": "有的匀、有的一枝一枝、有的根差。",
+    "crops": [
+      "果树"
+    ],
+    "problems": [
+      "缺素",
+      "连作障碍"
+    ],
+    "regions": [
+      "华南",
+      "西南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "缺素",
+      "连作障碍",
+      "qi-zi-huang-hua"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/qi-zi-huang-hua.jpg",
+        "alt": "柑橘新梢黄化"
+      },
+      {
+        "src": "/images/articles/qi-zi-huang-hua-2.jpg",
+        "alt": "叶脉绿的新叶"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-tie",
+      "gen-fu-jian-bie",
+      "guo-yuan-tu-rang"
+    ],
+    "conditions": "三条路：土里铁被锁、根烂了吃不到、系统性病害。路走错，铁喷得越多越耽误。",
+    "commonCrops": "柑橘类。"
+  },
+  {
+    "slug": "pu-tao-shi-hui-tu-que-tie",
+    "title": "葡萄石灰土黄叶：土里有铁根吃不到",
+    "subtitle": "华北西北葡萄园，新叶黄脉还绿",
+    "summary": "葡萄新梢黄、叶脉绿，土并不瘦。",
+    "crops": [
+      "果树"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "华北",
+      "西北"
+    ],
+    "seasons": [
+      "春季",
+      "夏季"
+    ],
+    "tags": [
+      "缺素",
+      "pu-tao-shi-hui-tu-que-tie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/pu-tao-shi-hui-tu-que-tie.jpg",
+        "alt": "石灰土上的葡萄黄叶"
+      },
+      {
+        "src": "/images/articles/pu-tao-shi-hui-tu-que-tie-2.jpg",
+        "alt": "葡萄新叶脉间黄"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-tie",
+      "shi-hui-xing-tu",
+      "guo-yuan-tu-rang"
+    ],
+    "conditions": "钥匙在根际 pH 和氧气。叶面铁能绿一阵，土还是那把锁。",
+    "commonCrops": "葡萄。"
+  },
+  {
+    "slug": "hua-sheng-kong-jia",
+    "title": "花生空荚：钙在土里走不进果针",
+    "subtitle": "果针要在湿润有钙的土里才能灌饱",
+    "summary": "棵子不小，刨开空荚多、仁秕。",
+    "crops": [
+      "花生"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "华北",
+      "黄淮海",
+      "华南"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "缺素",
+      "hua-sheng-kong-jia"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/hua-sheng-kong-jia.jpg",
+        "alt": "花生田里的空荚"
+      },
+      {
+        "src": "/images/articles/hua-sheng-kong-jia-2.jpg",
+        "alt": "空壳特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-gai",
+      "suan-yu-que-gai",
+      "que-peng-hua-er-bu-shi"
+    ],
+    "conditions": "花生的钙主要靠果针自己吸。果针周围土干、酸、盐，钙走不到。叶面钙帮一点，荚果层更要紧。",
+    "commonCrops": "花生。"
+  },
+  {
+    "slug": "ye-cai-xiao-xing-yuan-su",
+    "title": "叶菜微量元素：喷叶不是代替改土",
+    "subtitle": "叶菜长得快，缺了也显，喷了就忘改土不行",
+    "summary": "心叶焦、叶柄裂、新叶黄脉绿，喷一次好像好了，过几天又来。",
+    "crops": [
+      "蔬菜",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "缺素"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北",
+      "长江中下游"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "缺素",
+      "ye-cai-xiao-xing-yuan-su"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ye-cai-xiao-xing-yuan-su.jpg",
+        "alt": "叶菜新叶发黄、脉还绿"
+      },
+      {
+        "src": "/images/articles/ye-cai-xiao-xing-yuan-su-2.jpg",
+        "alt": "菠菜脉间黄特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-gai",
+      "que-peng",
+      "dashe-yanzhi"
+    ],
+    "conditions": "叶菜像小孩，缺了马上写在脸上。喷叶是退烧药。退完烧还要看土是不是酸、咸、没肉。",
+    "commonCrops": "菠菜、芹菜、生菜等叶菜。"
+  },
+  {
+    "slug": "shui-dao-jiang-miao",
+    "title": "水稻僵苗：酸、冷、毒、肥害怎么分",
+    "subtitle": "坐蔸不一定是缺肥，先看根和水",
+    "summary": "返青后不发棵。可能冷浸、亚铁毒、酸、缺磷、种肥烧。先看水温、锈水、根色。",
+    "crops": [
+      "水稻"
+    ],
+    "problems": [
+      "缺素",
+      "酸化",
+      "涝害"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游",
+      "西南"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "酸化",
+      "涝害",
+      "shui-dao-jiang-miao"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shui-dao-jiang-miao.jpg",
+        "alt": "水稻僵苗不发棵"
+      },
+      {
+        "src": "/images/articles/shui-dao-jiang-miao-2.jpg",
+        "alt": "僵苗根特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "qian-yu-tian",
+      "xiu-shui-tian",
+      "que-lin"
+    ],
+    "conditions": "僵苗是一组症，不是一个缺。冷要增温排水，锈水要排，酸要测 pH，肥害沿施肥沟。",
+    "commonCrops": "水稻。"
+  },
+  {
+    "slug": "yu-mi-miao-huang",
+    "title": "玉米苗黄：缺氮、缺锌、除草剂、涝要分开看",
+    "subtitle": "苗黄不是一种肥能打天下",
+    "summary": "玉米苗黄要分：下部匀黄像缺氮；条纹失绿像缺锌；扭曲像药害；湿根像涝。",
+    "crops": [
+      "玉米"
+    ],
+    "problems": [
+      "缺素",
+      "涝害",
+      "肥害"
+    ],
+    "regions": [
+      "东北",
+      "华北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "缺素",
+      "涝害",
+      "肥害",
+      "yu-mi-miao-huang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yu-mi-miao-huang.jpg",
+        "alt": "玉米下部老叶匀黄"
+      },
+      {
+        "src": "/images/articles/yu-mi-miao-huang-2.jpg",
+        "alt": "叶脉间失绿特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "que-dan",
+      "que-xin",
+      "yao-hai",
+      "lao-hai"
+    ],
+    "conditions": "一袋尿素盖不住四条路。叶位、根、土面、喷药史，四样问完再动手。",
+    "commonCrops": "玉米。"
+  },
+  {
+    "slug": "gen-jie-xian-chong",
+    "title": "根结线虫：根上长瘤，肥再多也不长",
+    "subtitle": "须根上的珠子，不是肥不够",
+    "summary": "根上长珠子、瘤，肥再多也不长。",
+    "crops": [
+      "蔬菜",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "黄淮海",
+      "华南",
+      "华北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "gen-jie-xian-chong"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/gen-jie-xian-chong.jpg",
+        "alt": "棚里点片萎蔫的番茄"
+      },
+      {
+        "src": "/images/articles/gen-jie-xian-chong-2.jpg",
+        "alt": "根结线虫根瘤特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "lian-zuo",
+      "gen-fu-jian-bie",
+      "cao-mei-lian-zuo"
+    ],
+    "conditions": "线虫占了根。轮作换科、卫生、抗性砧或品种。用药去农技站按标签，这里不开方。",
+    "commonCrops": "黄瓜、番茄、芹菜、瓜类。"
+  },
+  {
+    "slug": "tu-chuan-ku-wei",
+    "title": "土传枯萎：死棵先看维管束",
+    "subtitle": "切开茎，维管束褐了就不是缺水",
+    "summary": "点片死棵，切开茎维管束发褐。",
+    "crops": [
+      "蔬菜",
+      "棉花"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "黄淮海",
+      "长江中下游",
+      "华南"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "连作障碍",
+      "tu-chuan-ku-wei"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/tu-chuan-ku-wei.jpg",
+        "alt": "切开茎维管束发褐"
+      },
+      {
+        "src": "/images/articles/tu-chuan-ku-wei-2.jpg",
+        "alt": "茎髓特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "qing-ku-bing-tu",
+      "lian-zuo",
+      "gen-fu-jian-bie"
+    ],
+    "conditions": "褐管子是土传萎蔫的名片。轮作、嫁接、卫生。确诊走农技站。这里不开药方。",
+    "commonCrops": "黄瓜、西瓜、香蕉、棉花、番茄。"
+  },
+  {
+    "slug": "qing-ku-bing-tu",
+    "title": "青枯病土：热闷棚不是万能",
+    "subtitle": "细菌性青枯，横切常有菌脓",
+    "summary": "热天茄科整株突然萎，切茎有时能挤出菌脓。",
+    "crops": [
+      "蔬菜",
+      "设施蔬菜"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "连作障碍",
+      "qing-ku-bing-tu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/qing-ku-bing-tu.jpg",
+        "alt": "热天番茄整株突然萎"
+      },
+      {
+        "src": "/images/articles/qing-ku-bing-tu-2.jpg",
+        "alt": "茎内维管束对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "tu-chuan-ku-wei",
+      "gao-wen-men-peng",
+      "lian-zuo"
+    ],
+    "conditions": "青枯是土里的细菌性萎蔫。闷棚能压一部分，不是万能开关。轮作、排水、抗性品种。",
+    "commonCrops": "茄科、花生。"
+  },
+  {
+    "slug": "cao-mei-lian-zuo",
+    "title": "草莓连作：盐、线虫、黄萎挤在一起",
+    "subtitle": "棚草莓越种越差，很少是单一原因",
+    "summary": "你比一比这块和换过茬的那块。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "连作障碍",
+      "盐碱"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北",
+      "西南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "盐碱",
+      "cao-mei-lian-zuo"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/cao-mei-lian-zuo.jpg",
+        "alt": "草莓棚点片死棵"
+      },
+      {
+        "src": "/images/articles/cao-mei-lian-zuo-2.jpg",
+        "alt": "草莓根结或根腐"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "da-peng-lian-zuo-zong-he",
+      "gen-jie-xian-chong",
+      "dashe-yanzhi"
+    ],
+    "conditions": "年五很少是一个原因。读 EC、根结、维管束。洗盐、轮作或改基质。不要只喂。",
+    "commonCrops": "草莓。"
+  },
+  {
+    "slug": "ping-guo-zai-zhi",
+    "title": "苹果再植障碍：挖了老树坑还是老土",
+    "subtitle": "老果园换树，坑里的土还记得上一代",
+    "summary": "挖了老树坑再栽，还是那坑土。",
+    "crops": [
+      "果树"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "华北",
+      "西北",
+      "黄淮海"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "连作障碍",
+      "ping-guo-zai-zhi"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ping-guo-zai-zhi.jpg",
+        "alt": "苹果老树坑再植"
+      },
+      {
+        "src": "/images/articles/ping-guo-zai-zhi-2.jpg",
+        "alt": "树坑心土特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "lian-zuo",
+      "guo-yuan-tu-rang",
+      "gen-fu-jian-bie"
+    ],
+    "conditions": "再植障碍在土里：残根、病菌、偏肥、结构。换坑不换土，故事没完。",
+    "commonCrops": "苹果、部分梨、桃也有类似。"
+  },
+  {
+    "slug": "gao-wen-men-peng",
+    "title": "高温闷棚：能压菌，也会伤根和结构",
+    "subtitle": "夏天把棚闷死，不是什么菌都能杀干净",
+    "summary": "薄膜盖土，能压菌，也会伤结构和有益生物。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "连作障碍"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "连作障碍",
+      "gao-wen-men-peng"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/gao-wen-men-peng.jpg",
+        "alt": "高温闷棚后的土面"
+      },
+      {
+        "src": "/images/articles/gao-wen-men-peng-2.jpg",
+        "alt": "闷过的干裂土"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "tu-rang-xiao-du-bian-jie",
+      "da-peng-lian-zuo-zong-he",
+      "lian-zuo"
+    ],
+    "conditions": "闷棚是药，不是饭。消完要养：有机质、通气、有时要补菌的房和饭。连作再毒，病菌会回来。",
+    "commonCrops": "番茄、黄瓜、草莓等。"
+  },
+  {
+    "slug": "han-lao-ji-zhuan",
+    "title": "旱涝急转：先伤根再黄叶",
+    "subtitle": "刚旱完又淹，根最受伤",
+    "summary": "刚涝过又干裂，苗先蔫后黄。",
+    "crops": [
+      "玉米",
+      "大豆",
+      "棉花",
+      "蔬菜"
+    ],
+    "problems": [
+      "涝害"
+    ],
+    "regions": [
+      "黄淮海",
+      "长江中下游"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "涝害",
+      "han-lao-ji-zhuan"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/han-lao-ji-zhuan.jpg",
+        "alt": "刚涝过又干裂的田"
+      },
+      {
+        "src": "/images/articles/han-lao-ji-zhuan-2.jpg",
+        "alt": "龟裂土面特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "lao-hai",
+      "yu-hou-ban-jie-kai-lie",
+      "huang-ye-jian-bie"
+    ],
+    "conditions": "旱涝急转先伤根。根伤了再黄叶，不要只看叶色下肥。",
+    "commonCrops": "玉米、大豆、棉花、蔬菜。"
+  },
+  {
+    "slug": "di-xia-shui-wei-gao",
+    "title": "地下水位高：土不干、根不深",
+    "subtitle": "脚底下有一盆水，根不敢往下走",
+    "summary": "土坑里很快渗出水。",
+    "crops": [
+      "小麦",
+      "水稻",
+      "棉花"
+    ],
+    "problems": [
+      "涝害",
+      "盐碱"
+    ],
+    "regions": [
+      "华北",
+      "长江中下游",
+      "华南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "涝害",
+      "盐碱",
+      "di-xia-shui-wei-gao"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/di-xia-shui-wei-gao.jpg",
+        "alt": "土坑里很快渗出水"
+      },
+      {
+        "src": "/images/articles/di-xia-shui-wei-gao-2.jpg",
+        "alt": "干裂但底下一层湿"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "lao-hai",
+      "xi-yan-pai-shui",
+      "li-di-ceng"
+    ],
+    "conditions": "水位高，氧气少，根不敢往下。旱涝都更敏感。先降水位，再谈深施肥。",
+    "commonCrops": "小麦、棉花、水稻。"
+  },
+  {
+    "slug": "yu-hou-ban-jie-kai-lie",
+    "title": "雨后板结开裂：跑墒又卡苗",
+    "subtitle": "雨过一皮，干了大缝",
+    "summary": "你白天看叶蔫不蔫，再拔根闻一闻。",
+    "crops": [
+      "玉米",
+      "蔬菜",
+      "棉花"
+    ],
+    "problems": [
+      "涝害",
+      "板结"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "夏季"
+    ],
+    "tags": [
+      "涝害",
+      "板结",
+      "yu-hou-ban-jie-kai-lie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yu-hou-ban-jie-kai-lie-2.jpg",
+        "alt": "雨后土面结壳翘边"
+      },
+      {
+        "src": "",
+        "alt": "待补：请拍雨后玉米卡在硬壳里。"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "tu-rang-tuan-ju-ti",
+      "ban-jie",
+      "han-lao-ji-zhuan"
+    ],
+    "conditions": "雨点砸实，太阳一晒就成锅盖。粉土、无覆盖、雨后进车更重。",
+    "commonCrops": "玉米、棉花、蔬菜。"
+  },
+  {
+    "slug": "leng-shui-guan-miao",
+    "title": "冷水灌苗：水田发僵不一定是缺肥",
+    "subtitle": "井水和山水太冷，稻根不爱长",
+    "summary": "进水口一条黄僵苗，邻行更绿。",
+    "crops": [
+      "水稻"
+    ],
+    "problems": [
+      "涝害"
+    ],
+    "regions": [
+      "华南",
+      "西南",
+      "东北"
+    ],
+    "seasons": [
+      "春季"
+    ],
+    "tags": [
+      "涝害",
+      "leng-shui-guan-miao"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/leng-shui-guan-miao.jpg",
+        "alt": "进水口一条黄僵苗"
+      },
+      {
+        "src": "/images/articles/leng-shui-guan-miao-2.jpg",
+        "alt": "水口苗特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "qian-yu-tian",
+      "shui-dao-jiang-miao",
+      "xiu-shui-tian"
+    ],
+    "conditions": "冷水打在苗上，根停。水口一条，不像全田缺素那么匀。",
+    "commonCrops": "水稻。"
+  },
+  {
+    "slug": "yan-jiang-qi-hou-tu",
+    "title": "沿江湿地土：潜育化比表面看的更狠",
+    "subtitle": "土发青发臭，底下在还原",
+    "summary": "沿江稻田水冷苗黄。",
+    "crops": [
+      "水稻",
+      "小麦"
+    ],
+    "problems": [
+      "涝害"
+    ],
+    "regions": [
+      "长江中下游",
+      "华南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "涝害",
+      "yan-jiang-qi-hou-tu"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/yan-jiang-qi-hou-tu.jpg",
+        "alt": "沿江稻田水冷苗黄"
+      },
+      {
+        "src": "/images/articles/yan-jiang-qi-hou-tu-2.jpg",
+        "alt": "铲上一锹青灰色潜育土"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "qian-yu-tian",
+      "shui-tian-huan-yuan",
+      "nan-fang-shui-tian-yang-fen"
+    ],
+    "conditions": "灰蓝土、锈斑，根不爱往下。表面看着像普通水田，底下在憋。",
+    "commonCrops": "水稻、小麦。"
+  },
+  {
+    "slug": "shui-fei-yi-ti-hua-ec",
+    "title": "水肥一体化：EC 偏高时根吸水费劲",
+    "subtitle": "管子里的肥水太浓，根和滴头一起受伤",
+    "summary": "你把叶、根、土面三样放一起看。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "其他",
+      "肥害",
+      "盐碱"
+    ],
+    "regions": [
+      "黄淮海",
+      "华北"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "肥害",
+      "盐碱",
+      "shui-fei-yi-ti-hua-ec"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shui-fei-yi-ti-hua-ec.jpg",
+        "alt": "滴灌口白圈让根吸水费劲"
+      },
+      {
+        "src": "/images/articles/shui-fei-yi-ti-hua-ec-2.jpg",
+        "alt": "滴口烧圈特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "di-guan-nong-du",
+      "dashe-yanzhi",
+      "jian-yi-ph-ec"
+    ],
+    "conditions": "水肥一体化不是越浓越有劲。苗期更严。没有仪器就送水样。",
+    "commonCrops": "设施蔬菜、部分果园。"
+  },
+  {
+    "slug": "ji-zhi-yu-tu-rang",
+    "title": "基质栽培和土壤不是同一套方子",
+    "subtitle": "袋子里的椰糠草炭，不能按大田施肥",
+    "summary": "你把叶、根、土面三样放一起看。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "其他"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "ji-zhi-yu-tu-rang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/ji-zhi-yu-tu-rang.jpg",
+        "alt": "基质袋栽和土栽在一个棚"
+      },
+      {
+        "src": "/images/articles/ji-zhi-yu-tu-rang-2.jpg",
+        "alt": "椰糠和园土对照"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "shui-fei-yi-ti-hua-ec",
+      "jian-yi-ph-ec",
+      "cao-mei-lian-zuo"
+    ],
+    "conditions": "土壤能瞒一点错。基质瞒不住。浇水和配方要按基质走，不能按园土袋数抄。",
+    "commonCrops": "设施果菜。"
+  },
+  {
+    "slug": "tu-rang-xiao-du-bian-jie",
+    "title": "土壤消毒的边界：消完要养，不能连作再毒",
+    "subtitle": "消毒是清场，不是把地变成无菌天堂",
+    "summary": "消完接着连作，病菌会回来。",
+    "crops": [
+      "设施蔬菜"
+    ],
+    "problems": [
+      "其他",
+      "连作障碍"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "连作障碍",
+      "tu-rang-xiao-du-bian-jie"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/tu-rang-xiao-du-bian-jie.jpg",
+        "alt": "闷棚薄膜盖着土面"
+      },
+      {
+        "src": "/images/articles/tu-rang-xiao-du-bian-jie-2.jpg",
+        "alt": "薄膜下的土面特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "gao-wen-men-peng",
+      "lian-zuo",
+      "wei-sheng-wu"
+    ],
+    "conditions": "能压菌，也会伤结构。消完要有机质、通气、有时要给房客重新安家。连作再毒不是策略。",
+    "commonCrops": "设施蔬菜。"
+  },
+  {
+    "slug": "jian-yi-ph-ec",
+    "title": "地头怎么用 pH 试纸和电导仪",
+    "subtitle": "两样小工具，先分酸咸再下肥",
+    "summary": "地头试纸和电导仪是检查，不是判决书。",
+    "crops": [
+      "全国"
+    ],
+    "problems": [
+      "其他"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "jian-yi-ph-ec"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/jian-yi-ph-ec.jpg",
+        "alt": "地头用试纸和电导仪"
+      },
+      {
+        "src": "/images/articles/jian-yi-ph-ec-2.jpg",
+        "alt": "试纸浸土浆特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ce-tu-bao-gao",
+      "ce-tu-qu-yang",
+      "shui-fei-yi-ti-hua-ec"
+    ],
+    "conditions": "pH 试纸看酸碱方向，电导仪看咸不咸。数字是区间。极端才优先改。",
+    "commonCrops": "所有作物。"
+  },
+  {
+    "slug": "shi-fei-tiao-tu-rang",
+    "title": "看叶片能猜肥，不能代替测土",
+    "subtitle": "叶子是线索，化验单才是判决",
+    "summary": "你把叶、根、土面三样放一起看。",
+    "crops": [
+      "水稻",
+      "玉米",
+      "蔬菜",
+      "果树"
+    ],
+    "problems": [
+      "其他",
+      "缺素"
+    ],
+    "regions": [
+      "全国"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "缺素",
+      "shi-fei-tiao-tu-rang"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/shi-fei-tiao-tu-rang.jpg",
+        "alt": "黄叶和化验单对照着看"
+      },
+      {
+        "src": "/images/articles/shi-fei-tiao-tu-rang-2.jpg",
+        "alt": "手里叶子和报告"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "ce-tu-bao-gao",
+      "huang-ye-jian-bie",
+      "ye-cai-xiao-xing-yuan-su"
+    ],
+    "conditions": "看叶片能猜，不能代替测土。四种黄叶可能四条路。先分流再下肥。",
+    "commonCrops": "所有作物。"
+  },
+  {
+    "slug": "nan-fang-shui-tian-yang-fen",
+    "title": "南方水田养分：还原层把养分锁住了",
+    "subtitle": "淹着的土会改脾气，磷和微量元素不听话",
+    "summary": "你把叶、根、土面三样放一起看。",
+    "crops": [
+      "水稻"
+    ],
+    "problems": [
+      "其他",
+      "涝害"
+    ],
+    "regions": [
+      "华南",
+      "长江中下游",
+      "西南"
+    ],
+    "seasons": [
+      "全年"
+    ],
+    "tags": [
+      "其他",
+      "涝害",
+      "nan-fang-shui-tian-yang-fen"
+    ],
+    "photos": [
+      {
+        "src": "/images/articles/nan-fang-shui-tian-yang-fen.jpg",
+        "alt": "南方水田苗黄水冷"
+      },
+      {
+        "src": "/images/articles/nan-fang-shui-tian-yang-fen-2.jpg",
+        "alt": "水稻叶面褐斑特写"
+      }
+    ],
+    "hot": false,
+    "featured": false,
+    "updatedAt": "2026-09-01",
+    "relatedSlugs": [
+      "shui-tian-huan-yuan",
+      "xiu-shui-tian",
+      "que-xin"
+    ],
+    "conditions": "不是缺那一袋复合肥。先给根空气，养分才会开门。锈水、黑根、臭味是线索。",
+    "commonCrops": "水稻。"
+  }
+]

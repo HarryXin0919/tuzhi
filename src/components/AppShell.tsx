@@ -1,11 +1,14 @@
-import { useEffect } from "react";
-import { Link, useRouterState } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import { BookOpen, FlaskConical, House, MessagesSquare, ScanLine, UserRound } from "lucide-react";
-import { SignedIn, SignedOut, UserButton } from "@/lib/auth/gates";
+import { UserButton } from "@/lib/auth/gates";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { messages } from "@/lib/i18n/messages";
 import { useLang } from "@/lib/i18n/lang";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
+import { langFromPath } from "@/lib/i18n/path";
 import { LanguageToggle } from "./LanguageToggle";
+import { LangLink } from "./LangLink";
 
 const NAV = [
   { to: "/", key: "home" as const, Icon: House },
@@ -18,54 +21,70 @@ const NAV = [
 
 function AuthSlot({ loginLabel }: { loginLabel: string }) {
   const { user, isPending } = useCurrentUserState();
-  if (isPending) {
+  const [waited, setWaited] = useState(false);
+  useEffect(() => {
+    const t = window.setTimeout(() => setWaited(true), 4000);
+    return () => window.clearTimeout(t);
+  }, []);
+  if (isPending && !waited) {
     return <span className="inline-flex min-h-10 min-w-16 items-center rounded-lg bg-surface-2 px-4" />;
   }
   if (user) {
-    return (
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-    );
+    return <UserButton />;
   }
   return (
-    <SignedOut>
-      <Link
-        to="/login"
-        className="inline-flex min-h-10 items-center rounded-lg bg-forest px-4 text-sm font-medium text-forest-fg"
-      >
-        {loginLabel}
-      </Link>
-    </SignedOut>
+    <LangLink
+      to="/login"
+      className="inline-flex min-h-10 items-center rounded-lg bg-forest px-4 text-sm font-medium text-forest-fg"
+    >
+      {loginLabel}
+    </LangLink>
   );
 }
 
 export function AppShell({ children }: { children: React.ReactNode }) {
-  const lang = useLang((s) => s.lang);
+  const lang = usePathLang();
+  const syncFromPath = useLang((s) => s.syncFromPath);
   const t = messages[lang];
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  useEffect(() => {
+    syncFromPath(pathname);
+  }, [pathname, syncFromPath]);
   useEffect(() => {
     if (typeof document === "undefined") return;
     document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
   }, [lang]);
+  useEffect(() => {
+    if (typeof navigator === "undefined" || !("serviceWorker" in navigator)) return;
+    navigator.serviceWorker.register("/sw-tuzhi.js").catch(() => undefined);
+  }, []);
   function active(to: string) {
-    if (to === "/") return pathname === "/";
-    return pathname === to || pathname.startsWith(to + "/");
+    const pathLang = langFromPath(pathname);
+    const prefix = pathLang === "en" ? "/en" : "";
+    const full = to === "/" ? prefix || "/" : `${prefix}${to}`;
+    if (to === "/") return pathname === "/" || pathname === "/en";
+    return pathname === full || pathname.startsWith(full + "/");
   }
   return (
     <div className="min-h-dvh bg-bg text-ink">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-forest-fg"
+      >
+        {lang === "en" ? "Skip to content" : "跳到正文"}
+      </a>
       <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-          <Link to="/" className="flex min-w-0 items-center gap-3">
+        <div className="mx-auto flex h-16 max-w-[70rem] items-center gap-3 px-4">
+          <LangLink to="/" className="flex shrink-0 items-center gap-3">
             <img src="/logo.png" alt={t.name} width={44} height={44} className="size-11 rounded-full" />
-            <span className="leading-tight">
+            <span className="hidden leading-tight sm:block">
               <span className="block font-display text-xl font-semibold">{t.name}</span>
               <span className="block truncate text-sm text-muted">{t.tagline}</span>
             </span>
-          </Link>
-          <nav className="hidden items-center gap-1 md:flex">
+          </LangLink>
+          <nav className="hidden min-w-0 flex-1 items-center justify-center gap-1 md:flex">
             {NAV.map((n) => (
-              <Link
+              <LangLink
                 key={n.to}
                 to={n.to}
                 className={
@@ -75,40 +94,42 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 }
               >
                 {t.nav[n.key]}
-              </Link>
+              </LangLink>
             ))}
           </nav>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="ml-auto flex shrink-0 items-center gap-2">
             <LanguageToggle />
             <AuthSlot loginLabel={t.nav.login} />
           </div>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-5xl px-4 pb-28 pt-4 md:pb-10">{children}</main>
-      <footer className="mx-auto mt-10 max-w-5xl border-t border-line px-4 pb-28 pt-6 text-base text-muted md:pb-8">
+      <main id="main-content" className="mx-auto w-full max-w-[70rem] px-4 pb-28 pt-4 md:pb-10">
+        {children}
+      </main>
+      <footer className="mx-auto mt-10 max-w-[70rem] border-t border-line px-4 pb-28 pt-6 text-base text-muted md:pb-8">
         <p className="font-display text-lg text-ink">
           {t.name} · {t.tagline}
         </p>
         <p className="mt-1 text-sm">{t.footer.maker}</p>
         <nav className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
-          <Link to="/about" className="text-forest underline">
+          <LangLink to="/about" className="text-forest underline">
             {t.footer.about}
-          </Link>
-          <Link to="/knowledge" className="text-forest underline">
+          </LangLink>
+          <LangLink to="/knowledge" className="text-forest underline">
             {t.footer.knowledge}
-          </Link>
-          <Link to="/encyclopedia" className="text-forest underline">
+          </LangLink>
+          <LangLink to="/encyclopedia" className="text-forest underline">
             {t.footer.wiki}
-          </Link>
-          <Link to="/community" className="text-forest underline">
+          </LangLink>
+          <LangLink to="/community" className="text-forest underline">
             {t.footer.community}
-          </Link>
-          <Link to="/privacy" className="text-forest underline">
+          </LangLink>
+          <LangLink to="/privacy" className="text-forest underline">
             {t.footer.privacy}
-          </Link>
-          <Link to="/contact" className="text-forest underline">
+          </LangLink>
+          <LangLink to="/contact" className="text-forest underline">
             {t.footer.contact}
-          </Link>
+          </LangLink>
         </nav>
         <p className="mt-3 leading-relaxed">{t.disclaimer}</p>
       </footer>
@@ -119,7 +140,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         <ul className="mx-auto grid max-w-lg grid-cols-6">
           {NAV.map((n) => (
             <li key={n.to}>
-              <Link
+              <LangLink
                 to={n.to}
                 className={
                   "flex min-h-16 flex-col items-center justify-center gap-0.5 px-0.5 text-center text-[11px] font-medium leading-tight " +
@@ -127,8 +148,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 }
               >
                 <n.Icon className="size-6" strokeWidth={active(n.to) ? 2.4 : 1.8} />
-                {t.nav[n.key]}
-              </Link>
+                {t.nav.short[n.key]}
+              </LangLink>
             </li>
           ))}
         </ul>

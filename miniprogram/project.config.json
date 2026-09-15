@@ -1,0 +1,6 @@
+{
+  "appid": "touristappid",
+  "projectname": "tuzhi-miniprogram",
+  "compileType": "miniprogram",
+  "setting": { "es6": true, "minified": true }
+}

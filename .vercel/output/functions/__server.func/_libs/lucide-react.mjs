@@ -1,5 +1,5 @@
 import { o as __toESM } from "../_runtime.mjs";
-import { U as require_react } from "./@tanstack/react-router+[...].mjs";
+import { K as require_react } from "./@tanstack/react-router+[...].mjs";
 //#region node_modules/lucide-react/dist/esm/shared/src/utils.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 /**
@@ -141,6 +141,29 @@ var MessagesSquare = createLucideIcon("messages-square", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Mic = createLucideIcon("mic", [
+	["path", {
+		d: "M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z",
+		key: "131961"
+	}],
+	["path", {
+		d: "M19 10v2a7 7 0 0 1-14 0v-2",
+		key: "1vc78b"
+	}],
+	["line", {
+		x1: "12",
+		x2: "12",
+		y1: "19",
+		y2: "22",
+		key: "x3vr5v"
+	}]
+]);
+/**
+* @license lucide-react v0.510.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var ScanLine = createLucideIcon("scan-line", [
 	["path", {
 		d: "M3 7V5a2 2 0 0 1 2-2h2",
@@ -184,6 +207,20 @@ var Search = createLucideIcon("search", [["path", {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Square = createLucideIcon("square", [["rect", {
+	width: "18",
+	height: "18",
+	x: "3",
+	y: "3",
+	rx: "2",
+	key: "afitv7"
+}]]);
+/**
+* @license lucide-react v0.510.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var TriangleAlert = createLucideIcon("triangle-alert", [
 	["path", {
 		d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3",
@@ -214,4 +251,4 @@ var UserRound = createLucideIcon("user-round", [["circle", {
 	key: "rfgkzh"
 }]]);
 //#endregion
-export { MessagesSquare as a, BookOpen as c, ScanLine as i, TriangleAlert as n, House as o, Search as r, FlaskConical as s, UserRound as t };
+export { ScanLine as a, House as c, Search as i, FlaskConical as l, TriangleAlert as n, Mic as o, Square as r, MessagesSquare as s, UserRound as t, BookOpen as u };

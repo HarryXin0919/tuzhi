@@ -1,25 +1,30 @@
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { seo } from "@/lib/seo";
 import { signOut } from "@/lib/auth/client";
 import { UserButton } from "@/lib/auth/gates";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { ArticleCard } from "@/components/ArticleCard";
-import { getArticle } from "@/lib/knowledge/search";
+import { getCard } from "@/lib/knowledge/catalog";
 import { getFavorites, getHistory } from "@/lib/local";
-import { useLang } from "@/lib/i18n/lang";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
 import { displayName } from "@/lib/i18n/lexicon";
+import { LangLink } from "@/components/LangLink";
 
-export const Route = createFileRoute("/me")({ component: Me });
+export const Route = createFileRoute("/me")({
+  head: () => seo({ title: "我的｜土知", description: "收藏与最近的拍照识别。", path: "/me", noindex: true }),
+  component: Me,
+});
 
-function Me() {
-  const lang = useLang((s) => s.lang);
+export function Me() {
+  const lang = usePathLang();
   const t = messages[lang];
   const m = t.me;
   const { user, isPending } = useCurrentUserState();
   const [favs] = useState(() => (typeof window === "undefined" ? [] : getFavorites()));
   const [hist] = useState(() => (typeof window === "undefined" ? [] : getHistory()));
-  const articles = favs.map(getArticle).filter((a): a is NonNullable<typeof a> => !!a);
+  const articles = favs.map(getCard).filter((a): a is NonNullable<typeof a> => !!a);
 
   return (
     <div className="space-y-6">
@@ -39,11 +44,12 @@ function Me() {
       ) : (
         <div className="rounded-2xl border border-line bg-surface p-4">
           <p className="text-muted">{m.guest}</p>
-          <Link to="/login" className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-forest text-forest-fg">
+          <LangLink to="/login" className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-forest text-forest-fg">
             {t.nav.login}
-          </Link>
+          </LangLink>
         </div>
       )}
+      <p className="text-sm text-muted">{m.localOnly}</p>
       <section className="space-y-3">
         <h2 className="font-display text-xl font-semibold">{m.favs}</h2>
         {articles.length === 0 ? (

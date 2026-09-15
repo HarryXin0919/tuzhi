@@ -1,5 +1,5 @@
 import { r as __exportAll$1 } from "../_runtime.mjs";
-import { A as resolveManifestCssLink, B as rootRouteId, D as getScriptPreloadAttrs, I as isRedirect, L as isResolvedRedirect, M as executeRewriteInput, N as invariant, O as getStylesheetHref, R as parseRedirect, S as require_jsx_runtime, U as require_react, V as isNotFound, a as isSsrResponse, c as stripSsrResponseBody, f as RouterProvider, i as disposeSsrResponseDetached, j as _getRenderedMatches, k as resolveManifestAssetLink, n as bindSsrResponseToRequest, o as normalizeSsrResponse, r as defineHandlerCallback, s as replaceSsrResponse, t as renderRouterToStream } from "../_libs/@tanstack/react-router+[...].mjs";
+import { A as getStylesheetHref, B as parseRedirect, F as invariant, K as require_react, M as resolveManifestCssLink, N as _getRenderedMatches, P as executeRewriteInput, R as isRedirect, U as rootRouteId, W as isNotFound, a as isSsrResponse, c as stripSsrResponseBody, f as RouterProvider, i as disposeSsrResponseDetached, j as resolveManifestAssetLink, k as getScriptPreloadAttrs, n as bindSsrResponseToRequest, o as normalizeSsrResponse, r as defineHandlerCallback, s as replaceSsrResponse, t as renderRouterToStream, w as require_jsx_runtime, z as isResolvedRedirect } from "../_libs/@tanstack/react-router+[...].mjs";
 import { n as createMemoryHistory } from "../_libs/tanstack__history.mjs";
 import { a as getOrigin, c as createSerializationAdapter, d as toCrossJSONAsync, f as toCrossJSONStream, i as getNormalizedURL, l as makeSerovalPlugin, n as mergeHeaders, o as defaultSerovalPlugins, r as attachRouterServerSsrUtils, s as createRawStreamRPCPlugin, t as waitForRequest, u as fromJSON } from "../_libs/@tanstack/router-core+[...].mjs";
 import { n as setCookie, r as toResponse, t as H3Event } from "../_libs/h3-v2+rou3.mjs";
@@ -116,7 +116,7 @@ var HEADERS = { TSS_SHELL: "X-TSS_SHELL" };
 * the dev styles URL for route-scoped CSS collection.
 */
 async function getStartManifest(matchedRoutes) {
-	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-BtiC0zoS.mjs");
+	const { tsrStartManifest } = await import("../_tanstack-start-manifest_v-b9-rm5Hc.mjs");
 	const startManifest = tsrStartManifest();
 	let routes = startManifest.routes;
 	routes[rootRouteId];
@@ -138,11 +138,11 @@ async function getStartManifest(matchedRoutes) {
 var manifest = {
 	"04e67d7f6357f36871f5b682b8c29ef050f05772ff57b40eb7fb50b9e90cecc1": {
 		functionName: "listPosts_createServerFn_handler",
-		importer: () => import("./server-CP4GgG85.mjs")
+		importer: () => import("./server-FOc2VFF_.mjs")
 	},
 	"1e9d4cadd619017d0384b415fbbef9e8ff2e5b45ab2279f91be8edae2a528e91": {
 		functionName: "createPost_createServerFn_handler",
-		importer: () => import("./server-CP4GgG85.mjs")
+		importer: () => import("./server-FOc2VFF_.mjs")
 	},
 	"2c4985e96c199268f7f639534cb5e8e31d6b19d43286bf77416413db60ffde26": {
 		functionName: "fetchSessionUser_createServerFn_handler",
@@ -150,15 +150,23 @@ var manifest = {
 	},
 	"4c15d74ca4e73d436d153bc970e05e3cfa7b4a7c7e16e9e9be35bd4dea5dcf81": {
 		functionName: "runDiagnose_createServerFn_handler",
-		importer: () => import("./server-BhomLkpy.mjs")
+		importer: () => import("./server-CkyBnhwn.mjs")
 	},
 	"523c93b342ee2a4a6a375a1610c7bbff6dc82bb85195ab08150afe1f41141711": {
 		functionName: "addReply_createServerFn_handler",
-		importer: () => import("./server-CP4GgG85.mjs")
+		importer: () => import("./server-FOc2VFF_.mjs")
 	},
 	"96cba498bb5177c3acab66991e358bfd8ed5f4d542ad0da54c3455b07cc30dcb": {
 		functionName: "getPost_createServerFn_handler",
-		importer: () => import("./server-CP4GgG85.mjs")
+		importer: () => import("./server-FOc2VFF_.mjs")
+	},
+	"9d3eadfdd891e572ae785cd6aecff0b4218a2fd5cefa7de7903836cedb7259ac": {
+		functionName: "extractLab_createServerFn_handler",
+		importer: () => import("./transcribe-CWWRkONk.mjs")
+	},
+	"d3135c8a4c0a9f9fdab757c84aca51bd637b48ed14bbd57c0a869cfa3c2b0c2c": {
+		functionName: "transcribeAudio_createServerFn_handler",
+		importer: () => import("./transcribe-CWWRkONk.mjs")
 	}
 };
 async function getServerFnById(id, access) {
@@ -1428,7 +1436,7 @@ var getBaseManifest = getProdBaseManifest;
 var createEarlyHintsForRequest = createEarlyHintsCollector;
 async function loadEntries() {
 	const [routerEntry, startEntry, pluginAdapters] = await Promise.all([
-		import("./router-Cmkla7Wz.mjs").then((n) => n.t),
+		import("./router-ZFzRiwjx.mjs").then((n) => n.t),
 		import("./start-5Z2QO8AU.mjs"),
 		import("./empty-plugin-adapters-D9UWiqvJ.mjs")
 	]);

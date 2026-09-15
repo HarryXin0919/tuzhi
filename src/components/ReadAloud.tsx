@@ -1,137 +1,354 @@
 import { useEffect, useRef, useState } from "react";
-import { useLang } from "@/lib/i18n/lang";
+import { useRouterState } from "@tanstack/react-router";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
-import { pickVoice, speakPrepare, splitSentences } from "@/lib/tts/speak";
+import { dropHanLines } from "@/lib/i18n/han";
+import {
+  hasLangVoice,
+  pickVoice,
+  readTtsRate,
+  speakPrepare,
+  TTS_RATES,
+  type TtsRate,
+  waitForVoices,
+  writeTtsRate,
+} from "@/lib/tts/speak";
+import { beginSpeakSession, isSpeakSession, stopSpeakSession } from "@/lib/tts/session";
 
 type Mode = "idle" | "playing" | "paused";
 
-export function ReadAloud({ text }: { text: string }) {
-  const lang = useLang((s) => s.lang);
+function mp3Path(slug: string | undefined, lang: "zh" | "en", howto: boolean) {
+  if (!slug) return "";
+  return howto ? `/audio/${slug}.how.${lang}.mp3` : `/audio/${slug}.${lang}.mp3`;
+}
+
+export function ReadAloud({
+  sentences,
+  howSentences,
+  title,
+  slug,
+  howto: howtoProp,
+  listenLabel,
+}: {
+  sentences?: string[];
+  howSentences?: string[];
+  title?: string;
+  slug?: string;
+  howto?: boolean;
+  onHowto?: (v: boolean) => void;
+  listenLabel?: string;
+}) {
+  const lang = usePathLang();
   const t = messages[lang].tts;
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [mode, setMode] = useState<Mode>("idle");
-  const [caption, setCaption] = useState("");
-  const idx = useRef(0);
-  const sentences = useRef<string[]>([]);
+  const [idx, setIdx] = useState(0);
+  const [rate, setRate] = useState<TtsRate>(1);
+  const [howtoInner] = useState(false);
+  const [noVoice, setNoVoice] = useState(false);
+  const [hasMp3, setHasMp3] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const session = useRef(0);
+  const want = useRef(false);
+  const listRef = useRef<string[]>([]);
+  const idxRef = useRef(0);
+  const rateRef = useRef<TtsRate>(1);
   const langRef = useRef(lang);
-  const wantPlay = useRef(false);
-  const modeRef = useRef<Mode>("idle");
-  const textRef = useRef(text);
-  modeRef.current = mode;
-  textRef.current = text;
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  langRef.current = lang;
+  rateRef.current = rate;
+  idxRef.current = idx;
+  const howto = howtoProp ?? howtoInner;
 
-  function stopAll() {
-    if (typeof window !== "undefined") window.speechSynthesis?.cancel();
-    idx.current = 0;
-    wantPlay.current = false;
-    modeRef.current = "idle";
-    setMode("idle");
-    setCaption("");
+  const SKIP = /translation pending|^土知$|^Tuzhi$|^李泽宇$|^Li Zeyu$|^Sources$|^依据$/i;
+  const STEP_NO = /^\s*\d+\s*[）).、]/;
+  function take(list: string[] | undefined, label: string) {
+    const prepared = (list ?? [])
+      .map((s) => speakPrepare(s, lang))
+      .filter((s) => s.trim() && !SKIP.test(s.trim()));
+    const cleaned = lang === "en" ? dropHanLines(prepared, `${slug || title || "read"}:${label}`) : prepared;
+    if (label === "full") return cleaned.filter((s) => !STEP_NO.test(s));
+    return cleaned;
   }
-
-  function speakFrom(i: number) {
-    if (typeof window === "undefined" || !window.speechSynthesis) {
-      setCaption(t.unsupported);
-      modeRef.current = "idle";
-      setMode("idle");
-      return;
-    }
-    const list = sentences.current;
-    if (i >= list.length) {
-      modeRef.current = "idle";
-      setMode("idle");
-      setCaption("");
-      wantPlay.current = false;
-      return;
-    }
-    idx.current = i;
-    const u = new SpeechSynthesisUtterance(list[i]);
-    const voice = pickVoice(langRef.current);
-    if (voice) u.voice = voice;
-    u.lang = langRef.current === "zh" ? "zh-CN" : "en-US";
-    u.rate = 0.98;
-    u.pitch = 1;
-    u.onstart = () => setCaption(list[i]);
-    u.onend = () => {
-      if (!wantPlay.current) return;
-      speakFrom(i + 1);
-    };
-    u.onerror = () => {
-      if (!wantPlay.current) return;
-      speakFrom(i + 1);
-    };
-    window.speechSynthesis.speak(u);
-    modeRef.current = "playing";
-    setMode("playing");
-  }
-
-  function startFromTop() {
-    const prepared = speakPrepare(textRef.current, langRef.current);
-    sentences.current = splitSentences(prepared);
-    idx.current = 0;
-    wantPlay.current = true;
-    if (typeof window === "undefined" || !window.speechSynthesis) {
-      setCaption(t.unsupported);
-      return;
-    }
-    window.speechSynthesis.cancel();
-    const voices = window.speechSynthesis.getVoices();
-    if (voices.length === 0) {
-      window.speechSynthesis.addEventListener("voiceschanged", () => speakFrom(0), { once: true });
-    }
-    speakFrom(0);
-  }
-
-  function pause() {
-    if (typeof window === "undefined") return;
-    if (modeRef.current !== "playing") return;
-    window.speechSynthesis.pause();
-    wantPlay.current = false;
-    modeRef.current = "paused";
-    setMode("paused");
-  }
+  const fullLines = take(sentences, "full");
+  const howLines = take(howSentences, "how");
+  const lines = howto && howLines.length ? howLines : fullLines;
+  const fileUrl = mp3Path(slug, lang, !!(howto && howLines.length));
 
   useEffect(() => {
-    const langChanged = langRef.current !== lang;
-    langRef.current = lang;
-    if (!langChanged) return;
-    if (modeRef.current === "idle" && !wantPlay.current) return;
-    startFromTop();
-    // restart from the top on language switch, including mid-pause
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
+    setRate(readTtsRate());
+  }, []);
+
+  useEffect(() => {
+    want.current = false;
+    stopSpeakSession();
+    const el = audioRef.current;
+    if (el) {
+      el.pause();
+      el.currentTime = 0;
+    }
+    setMode("idle");
+    setIdx(0);
+    setProgress(0);
+    setHasMp3(false);
+  }, [howto, pathname, lang, fileUrl]);
 
   useEffect(() => {
     return () => {
-      wantPlay.current = false;
-      if (typeof window !== "undefined") window.speechSynthesis?.cancel();
+      want.current = false;
+      stopSpeakSession();
+      audioRef.current?.pause();
     };
   }, []);
 
+  function applyMedia(state: Mode, i: number, list: string[]) {
+    if (typeof navigator === "undefined" || !navigator.mediaSession) return;
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: title || (langRef.current === "en" ? "Tuzhi" : "土知"),
+        artist: langRef.current === "en" ? "Tuzhi" : "土知",
+        album: list[i] || "",
+      });
+      navigator.mediaSession.playbackState = state === "playing" ? "playing" : state === "paused" ? "paused" : "none";
+      navigator.mediaSession.setActionHandler("play", () => resume());
+      navigator.mediaSession.setActionHandler("pause", () => pause());
+      navigator.mediaSession.setActionHandler("stop", () => stopAll());
+    } catch {
+      /* ignore */
+    }
+  }
+
+  function stopAll() {
+    want.current = false;
+    stopSpeakSession();
+    const el = audioRef.current;
+    if (el) {
+      el.pause();
+      el.currentTime = 0;
+    }
+    setMode("idle");
+    setIdx(0);
+    setProgress(0);
+  }
+
+  function pause() {
+    if (mode !== "playing") return;
+    want.current = false;
+    audioRef.current?.pause();
+    try {
+      window.speechSynthesis?.pause();
+    } catch {
+      window.speechSynthesis?.cancel();
+    }
+    setMode("paused");
+    applyMedia("paused", idxRef.current, listRef.current);
+  }
+
+  function resume() {
+    if (mode === "paused") {
+      want.current = true;
+      const el = audioRef.current;
+      if (el && !el.ended && el.src) {
+        void el.play().then(() => {
+          setMode("playing");
+          applyMedia("playing", idxRef.current, listRef.current);
+        });
+        return;
+      }
+      try {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+          setMode("playing");
+          applyMedia("playing", idxRef.current, listRef.current);
+          return;
+        }
+      } catch {
+        /* fall through */
+      }
+    }
+    void speakFrom(0);
+  }
+
+  async function playFile(): Promise<boolean> {
+    const el = audioRef.current;
+    if (!el || !fileUrl) return false;
+    try {
+      el.src = fileUrl;
+      el.playbackRate = rateRef.current;
+      await el.play();
+      setHasMp3(true);
+      setMode("playing");
+      applyMedia("playing", 0, listRef.current);
+      return true;
+    } catch {
+      setHasMp3(false);
+      return false;
+    }
+  }
+
+  async function speakFrom(start: number) {
+    const list = lines;
+    listRef.current = list;
+    if (!list.length && !fileUrl) return;
+    const tok = beginSpeakSession();
+    session.current = tok;
+    want.current = true;
+    if (await playFile()) return;
+    if (!list.length) return;
+    await waitForVoices();
+    if (!isSpeakSession(tok)) return;
+    if (langRef.current === "zh" && !hasLangVoice("zh")) {
+      setNoVoice(true);
+      setMode("idle");
+      return;
+    }
+    setNoVoice(false);
+    const voice = pickVoice(langRef.current);
+    if (langRef.current === "zh" && voice && !/^zh/i.test(voice.lang) && !/chinese|cmn|普通话/i.test(voice.name)) {
+      setNoVoice(true);
+      setMode("idle");
+      return;
+    }
+    function utter(i: number) {
+      if (!isSpeakSession(tok) || !want.current) return;
+      if (i >= list.length) {
+        setMode("idle");
+        setIdx(0);
+        want.current = false;
+        applyMedia("idle", 0, list);
+        return;
+      }
+      const line = list[i]!;
+      if (langRef.current === "en" && /[\u4e00-\u9fff]/.test(line)) {
+        utter(i + 1);
+        return;
+      }
+      const u = new SpeechSynthesisUtterance(line);
+      if (voice) u.voice = voice;
+      u.lang = langRef.current === "zh" ? "zh-CN" : "en-US";
+      u.rate = rateRef.current;
+      u.onstart = () => {
+        if (!isSpeakSession(tok)) return;
+        setIdx(i);
+        idxRef.current = i;
+        setMode("playing");
+        applyMedia("playing", i, list);
+      };
+      u.onend = () => {
+        if (!isSpeakSession(tok) || !want.current) return;
+        utter(i + 1);
+      };
+      u.onerror = () => {
+        if (!isSpeakSession(tok) || !want.current) return;
+        utter(i + 1);
+      };
+      window.speechSynthesis.speak(u);
+    }
+    setIdx(start);
+    utter(start);
+  }
+
+  function changeRate(next: TtsRate) {
+    setRate(next);
+    writeTtsRate(next);
+    if (audioRef.current) audioRef.current.playbackRate = next;
+  }
+
+  function seekMp3(frac: number) {
+    const el = audioRef.current;
+    if (!el?.duration) return;
+    el.currentTime = frac * el.duration;
+    setProgress(frac);
+  }
+
+  function onTime() {
+    const el = audioRef.current;
+    if (!el?.duration) return;
+    const p = el.currentTime / el.duration;
+    setProgress(p);
+    const n = listRef.current.length || lines.length;
+    if (n) {
+      const i = Math.min(n - 1, Math.floor(p * n + 1e-6));
+      setIdx(i);
+      idxRef.current = i;
+    }
+  }
+
   return (
-    <div className="space-y-2">
-      <div className="flex flex-wrap items-center gap-2">
-        <button type="button" className="inline-flex min-h-11 items-center rounded-full bg-forest px-4 text-forest-fg" onClick={startFromTop}>
-          {t.listen}
-        </button>
-        <button
-          type="button"
-          className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4"
-          onClick={pause}
-          disabled={mode === "idle"}
-        >
-          {t.pause}
-        </button>
-        <button
-          type="button"
-          className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4"
-          onClick={stopAll}
-        >
+    <div className="space-y-2 rounded-2xl border border-line bg-surface p-3">
+      {fileUrl ? (
+        <audio
+          ref={audioRef}
+          src={fileUrl}
+          preload="metadata"
+          className="sr-only"
+          onCanPlay={() => setHasMp3(true)}
+          onError={() => setHasMp3(false)}
+          onTimeUpdate={onTime}
+          onEnded={() => {
+            setMode("idle");
+            setIdx(0);
+            setProgress(0);
+          }}
+        />
+      ) : null}
+      <div className="flex flex-wrap items-center gap-2 lg:flex-nowrap">
+        {mode === "playing" ? (
+          <button type="button" className="inline-flex min-h-11 items-center rounded-full bg-forest px-4 text-forest-fg" onClick={pause}>
+            {t.pause}
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="inline-flex min-h-11 items-center rounded-full bg-forest px-4 text-forest-fg"
+            onClick={() => (mode === "paused" ? resume() : void speakFrom(0))}
+          >
+            {mode === "paused" ? t.resume : listenLabel || t.listen}
+          </button>
+        )}
+        <button type="button" className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4" onClick={stopAll}>
           {t.stop}
         </button>
+        <span className="text-sm text-muted">{t.rate}</span>
+        {TTS_RATES.map((r) => (
+          <button
+            key={r}
+            type="button"
+            className={
+              r === rate
+                ? "inline-flex min-h-9 items-center rounded-full bg-forest px-3 text-sm text-forest-fg"
+                : "inline-flex min-h-9 items-center rounded-full border border-line bg-surface px-3 text-sm"
+            }
+            onClick={() => changeRate(r)}
+          >
+            {r}×
+          </button>
+        ))}
       </div>
-      {caption ? (
-        <p className="rounded-xl border border-line bg-surface-2 px-4 py-3 text-base leading-relaxed text-ink">{caption}</p>
+      {mode !== "idle" && hasMp3 ? (
+        <input
+          type="range"
+          min={0}
+          max={1000}
+          value={Math.round(progress * 1000)}
+          aria-label={t.progress}
+          className="w-full accent-forest"
+          onChange={(e) => seekMp3(Number(e.target.value) / 1000)}
+        />
+      ) : null}
+      {mode !== "idle" && lines[idx] ? <p className="rounded-lg bg-surface-2 px-3 py-2 text-base leading-relaxed">{lines[idx]}</p> : null}
+      {noVoice ? <p className="rounded-xl bg-surface-2 px-3 py-2 text-sm leading-relaxed text-muted">{t.noZhVoice}</p> : null}
+      {lines.length ? (
+        <ol data-tts-queue={howto && howLines.length ? "howto" : "full"} data-tts-count={lines.length} className="sr-only">
+          {lines.map((line, i) => (
+            <li key={`${i}-${line.slice(0, 8)}`}>{line}</li>
+          ))}
+        </ol>
       ) : null}
     </div>
   );
+}
+
+export function spokenScript(slug: string, lang: "zh" | "en", lines: string[]) {
+  return { slug, lang, lines };
 }

@@ -6,15 +6,15 @@
     "problem": "酸化",
     "crop": "水稻",
     "region": "华南",
-    "title": "秧苗发僵，浇水有点锈",
-    "body": "一块水稻田，邻垄绿、这块僵。拔起来根尖发褐，白尖很少。有人说缺肥，有人说土酸。想问先看根还是先追尿素。",
+    "title": "秧苗发僵不长，浇水有时带锈水，邻垄还绿",
+    "body": "玉米苗发僵，根尖发褐发秃。邻垄还绿。浇水有时带一点锈水。想先分是酸化还是缺肥。",
     "bodyEn": "Rice seedlings are stalling. The next ridge is green. Root tips came up brown with few white tips. Some neighbours say feed it, some say the soil is acid. Do I look at the root first or chase urea?",
     "photo": "/images/articles/suan-hua.jpg",
     "answers": [
       {
         "author": "李泽宇",
-        "body": "先洗手洗根。褐秃、少白尖，才像铝在咬，锈水只是加分项。别抄邻县石灰账。0～20 厘米测 pH，低于 5.5 才谈农用石灰，常见每亩 50–150 公斤、分两次，沙土按下限。茶园别按粮田改到中性。根秃时不要猛尿素。",
-        "bodyEn": "Wash the roots first. Brown and bald tips look like aluminium; rusty water is extra evidence. Don’t copy the next county’s lime recipe. Test 0–20 cm pH; lime only below 5.5. Farm lime is often 50–150 kg per mu, split, sandy soils at the low end. Don’t push tea to neutrality. Don’t pour urea on bald roots."
+        "body": "先洗手洗根。褐秃、少白尖，才像铝毒伤根，锈水只是加分项。零到二十厘米测 pH，低于 5.5 才谈农用石灰，常见每亩 50–150 公斤、分两次，沙土按下限。茶园别按粮田改到中性。根秃时不要猛尿素。不要照搬别人的石灰用量，先测这块地。",
+        "bodyEn": "Wash the roots first. Brown and bald tips look like aluminium toxicity; rusty water is extra evidence. Test 0–20 cm pH; lime only below about 5.5. Farm lime is often 50–150 kg/mu (about 750–2250 kg/ha), split, sandy soils at the low end. Don’t push tea to neutral. Don’t pour urea on bald roots. Don’t copy a neighbour’s lime rate. Test this field first."
       }
     ],
     "titleEn": "Seedlings are stalling, and the water looks a bit rusty"
@@ -33,8 +33,8 @@
     "answers": [
       {
         "author": "李泽宇",
-        "body": "白霜当盐的名片。小水浇完更蔫，不要当成旱了猛灌。没沟别大水漫灌。先停高盐肥，测电导、pH、全盐，分清是咸还是涩。见白霜别一律撒石膏。",
-        "bodyEn": "Treat the white film as salt’s calling card. Worse wilt after a light watering is not a reason to flood. No drain, no flood. Stop high-salt fertiliser. Read EC, pH and total salt — saline and alkali are different jobs. Don’t spread gypsum on every white crust."
+        "body": "白霜是盐分线索，不是确诊。小水浇完更蔫，不要当成旱了猛灌。没沟别大水漫灌。先停高盐肥，测电导、pH、全盐，分清是咸还是涩。见白霜别一律撒石膏。",
+        "bodyEn": "A white crust is a salt clue, not proof by itself. Worse wilt after a light watering is not a reason to flood. No drain, no flood. Stop high-salt fertiliser. Read EC, pH and total salt — saline and alkali are different jobs. Don’t spread gypsum on every white crust."
       }
     ],
     "titleEn": "The soil surface is white; seedlings come up in patches"
@@ -253,7 +253,7 @@
     "answers": [
       {
         "author": "李泽宇",
-        "body": "钙在土里走不进果，水要均匀，根还得在。土酸、铝咬根尖，叶面钙只是拖延。先测 pH 和这块地的水。根秃时不要只喷果。",
+        "body": "钙在土里走不进果，水要均匀，根还得在。土酸、铝伤根尖，叶面钙只是拖延。先测 pH 和这块地的水。根秃时不要只喷果。",
         "bodyEn": "Calcium in the soil does not walk into the fruit by itself — water flow and a living root carry it. If acid aluminium is biting the tip, foliar calcium is a delay. Test pH and how you water. Don’t only spray the fruit while the root is bald."
       }
     ],
@@ -313,7 +313,7 @@
     "answers": [
       {
         "author": "李泽宇",
-        "body": "EC 超了就是在腌根。先稀一档，有出路再冲洗。不要因为叶黄把开关拧更大。尾水测一测电导，比再加肥明白。",
+        "body": "EC 偏高时根吸水费劲。先稀一档，有出路再冲洗。不要因为叶黄把开关拧更大。尾水测一测电导，比再加肥明白。",
         "bodyEn": "When EC is over the line you are pickling the root. Dilute one step; flush only if water can leave. Don’t turn the tap stronger because the leaf is pale. A meter on the tail-water tells you more than another bag."
       }
     ],
@@ -373,8 +373,8 @@
     "answers": [
       {
         "author": "李泽宇",
-        "body": "pH 是尺子不是病名。EC 是咸。有机质是肉。先把这三格圈死，再看氮磷钾。水土比不同，数字不能抄邻县实验室。改土用量去农业知识，单子这页不给袋数。",
-        "bodyEn": "pH is a ruler, not a disease name. EC is salt. Organic matter is the meat. Circle those three first, then NPK. Different soil:water ratios are not the same number as the next county’s lab. Rates live in the field guides — this sheet page does not hand you a bag count."
+        "body": "pH 是测量不是病名。EC 是咸。有机质是土壤里的有机物质含量。先把这三格圈死，再看氮磷钾。水土比不同，数字不能跨实验室对打。改土用量去农业知识，单子这页不给袋数。",
+        "bodyEn": "pH is a measurement, not a disease name. EC is salt. Organic matter is the meat. Circle those three first, then NPK. Different soil:water ratios are not the same number as the next county’s lab. Rates live in the field guides — this sheet page does not hand you a bag count."
       }
     ],
     "titleEn": "I can't read pH and EC on the sheet"
@@ -453,7 +453,7 @@
     "answers": [
       {
         "author": "李泽宇",
-        "body": "田边、粪堆边、水坑边，最会骗人。耕作层 8 到 15 个点混合装一袋，深度写在袋子上。一铲不能代表这块地。数字不准，后面的配方都是邻县的账。",
+        "body": "田边、粪堆边、水坑边，最会骗人。耕作层 8 到 15 个点混合装一袋，深度写在袋子上。一铲不能代表这块地。数字不准，数字不准，后面的配方就站不住。",
         "bodyEn": "The headland, the manure heap and the wet corner all lie. Mix 8–15 spots of the tilled layer, write the depth on the bag. One spadeful is not this field. If the number is wrong, every recipe after it is the next county’s ledger."
       }
     ],

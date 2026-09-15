@@ -1,1 +1,146 @@
-{"ph":{"zh":"无量纲。水土比常见 1:2.5 或 1:1，看单子注明，别跨实验室硬比。","en":"Dimensionless. Soil:water is often 1:2.5 or 1:1 — read the note, don’t mix labs."},"ec":{"zh":"常见 mS/cm 或 dS/m，也有 μS/cm。水土比不同，数字不能直接抄邻县。","en":"Often mS/cm or dS/m, sometimes μS/cm. Different soil:water ratios are not the same number."},"salt":{"zh":"常见 g/kg 或 %。和 EC 一起看咸。","en":"Often g/kg or %. Read with EC."},"om":{"zh":"常见 g/kg。有的实验室写 %。","en":"Often g/kg; some labs use %."},"texture":{"zh":"沙 / 壤 / 黏，或卡氏三角的名称。不是一个公斤数。","en":"Sand / loam / clay, or a texture-triangle name — not a kg figure."},"cec":{"zh":"常见 cmol/kg 或 cmol(+) / kg。","en":"Often cmol/kg."},"aggregate":{"zh":"多为描述或稳定性分级，不是处方袋数。","en":"Usually a description or stability class."},"porosity":{"zh":"常用 %。","en":"Usually %."},"fc":{"zh":"常用 % 或 g/g。过了这条线就是涝。","en":"Usually % or g/g. Past the line is waterlog."},"n":{"zh":"全氮常见 g/kg。别和碱解氮混成一格。","en":"Total N often g/kg. Don’t mix it with available N."},"alkn":{"zh":"常见 mg/kg。这是当季能用的氮，不是库里全部。","en":"Often mg/kg. This season’s N, not the whole warehouse."},"p":{"zh":"全磷常见 g/kg。有效磷才是根能摸到的。","en":"Total P often g/kg. Available P is what the root can touch."},"avp":{"zh":"常见 mg/kg。方法（Olsen 等）写在单子上。","en":"Often mg/kg. The method (Olsen etc.) is on the sheet."},"k":{"zh":"全钾常见 g/kg。","en":"Total K often g/kg."},"avk":{"zh":"常见 mg/kg。","en":"Often mg/kg."},"ca":{"zh":"常见 cmol/kg 或 mg/kg。","en":"Often cmol/kg or mg/kg."},"mg":{"zh":"常见 cmol/kg 或 mg/kg。","en":"Often cmol/kg or mg/kg."},"fe":{"zh":"有效铁常见 mg/kg。","en":"Available Fe often mg/kg."},"mn":{"zh":"有效锰常见 mg/kg。","en":"Available Mn often mg/kg."},"zn":{"zh":"有效锌常见 mg/kg。","en":"Available Zn often mg/kg."},"b":{"zh":"有效硼常见 mg/kg。缺和毒只隔一层纸。","en":"Available B often mg/kg. Deficiency and toxicity are close."},"s":{"zh":"有效硫常见 mg/kg。","en":"Available S often mg/kg."},"cu":{"zh":"有效铜常见 mg/kg。","en":"Available Cu often mg/kg."},"mo":{"zh":"有效钼常见 mg/kg。微量，加倍会出事。","en":"Available Mo often mg/kg. A trace — doubling hurts."},"al":{"zh":"交换性铝常见 cmol/kg。pH 低了它才活跃。","en":"Exchangeable Al often cmol/kg. It wakes up when pH is low."},"na":{"zh":"交换性钠常见 cmol/kg；碱化度 ESP 常用 %。","en":"Exchangeable Na often cmol/kg; ESP is usually %."},"bulk":{"zh":"常见 g/cm³。耕层过大说明紧。","en":"Often g/cm³. High in the tilled layer means tight."},"test":{"zh":"配方本身没有单位。先看取样深度和水土比。","en":"The recipe has no unit. Read sampling depth and the soil:water ratio first."},"acid":{"zh":"酸化是判断，不是单子上的一格。对着 pH 和交换性铝看。","en":"Acidification is a reading, not one cell. Pair pH and exchangeable Al."},"saline":{"zh":"盐碱是判断。咸看 EC/全盐，涩看 pH 和钠。","en":"A reading: salt is EC; alkali is pH and sodium."},"compaction":{"zh":"对着容重、孔隙和刨坑看，不是一袋肥的单位。","en":"Read bulk density, pores and a dug pit — not a bag of fertiliser."},"gley":{"zh":"潜育是判断。对着渍水和青灰色看。","en":"A reading: standing water and blue-grey soil."},"replant":{"zh":"连作是判断。菌剂没有标准单位能替代轮作。","en":"A reading. A microbe bag has no unit that replaces rotation."}}
+{
+  "ph": {
+    "zh": "无量纲。水土比常见 1:2.5 或 1:1，看单子注明，别跨实验室硬比。",
+    "en": "Dimensionless. Soil:water is often 1:2.5 or 1:1 — read the note, don’t mix labs."
+  },
+  "ec": {
+    "zh": "常见 mS/cm 或 dS/m，也有 μS/cm。水土比不同，水土比不同，数字不能直接对打。",
+    "en": "Often mS/cm or dS/m, sometimes μS/cm. Different soil:water ratios are not the same number."
+  },
+  "salt": {
+    "zh": "常见 g/kg 或 %。和 EC 一起看咸。",
+    "en": "Often g/kg or %. Read with EC."
+  },
+  "om": {
+    "zh": "常见 g/kg。有的实验室写 %。",
+    "en": "Often g/kg; some labs use %."
+  },
+  "texture": {
+    "zh": "沙 / 壤 / 黏，或卡氏三角的名称。不是一个公斤数。",
+    "en": "Sand / loam / clay, or a texture-triangle name — not a kg figure."
+  },
+  "cec": {
+    "zh": "常见 cmol/kg 或 cmol(+) / kg。",
+    "en": "Often cmol/kg."
+  },
+  "aggregate": {
+    "zh": "多为描述或稳定性分级，不是处方袋数。",
+    "en": "Usually a description or stability class."
+  },
+  "porosity": {
+    "zh": "常用 %。",
+    "en": "Usually %."
+  },
+  "fc": {
+    "zh": "常用 % 或 g/g。过了这条线就是涝。",
+    "en": "Usually % or g/g. Past the line is waterlog."
+  },
+  "n": {
+    "zh": "全氮常见 g/kg。别和碱解氮混成一格。",
+    "en": "Total N often g/kg. Don’t mix it with available N."
+  },
+  "alkn": {
+    "zh": "常见 mg/kg。这是当季能用的氮，不是库里全部。",
+    "en": "Often mg/kg. This season’s N, not the whole warehouse."
+  },
+  "p": {
+    "zh": "全磷常见 g/kg。有效磷才是根能摸到的。",
+    "en": "Total P often g/kg. Available P is what the root can touch."
+  },
+  "avp": {
+    "zh": "常见 mg/kg。方法（Olsen 等）写在单子上。",
+    "en": "Often mg/kg. The method (Olsen etc.) is on the sheet."
+  },
+  "k": {
+    "zh": "全钾常见 g/kg。",
+    "en": "Total K often g/kg."
+  },
+  "avk": {
+    "zh": "常见 mg/kg。",
+    "en": "Often mg/kg."
+  },
+  "ca": {
+    "zh": "常见 cmol/kg 或 mg/kg。",
+    "en": "Often cmol/kg or mg/kg."
+  },
+  "mg": {
+    "zh": "常见 cmol/kg 或 mg/kg。",
+    "en": "Often cmol/kg or mg/kg."
+  },
+  "fe": {
+    "zh": "有效铁常见 mg/kg。",
+    "en": "Available Fe often mg/kg."
+  },
+  "mn": {
+    "zh": "有效锰常见 mg/kg。",
+    "en": "Available Mn often mg/kg."
+  },
+  "zn": {
+    "zh": "有效锌常见 mg/kg。",
+    "en": "Available Zn often mg/kg."
+  },
+  "b": {
+    "zh": "有效硼常见 mg/kg。缺和毒只隔一层纸。",
+    "en": "Available B often mg/kg. Deficiency and toxicity are close."
+  },
+  "s": {
+    "zh": "有效硫常见 mg/kg。",
+    "en": "Available S often mg/kg."
+  },
+  "cu": {
+    "zh": "有效铜常见 mg/kg。",
+    "en": "Available Cu often mg/kg."
+  },
+  "mo": {
+    "zh": "有效钼常见 mg/kg。微量，加倍会出事。",
+    "en": "Available Mo often mg/kg. A trace — doubling hurts."
+  },
+  "al": {
+    "zh": "交换性铝常见 cmol/kg。pH 低了它才活跃。",
+    "en": "Exchangeable Al often cmol/kg. It becomes active when pH is low."
+  },
+  "na": {
+    "zh": "交换性钠常见 cmol/kg；碱化度 ESP 常用 %。",
+    "en": "Exchangeable Na often cmol/kg; ESP is usually %."
+  },
+  "bulk": {
+    "zh": "常见 g/cm³。耕层过大说明紧。",
+    "en": "Often g/cm³. High in the tilled layer means tight."
+  },
+  "test": {
+    "zh": "配方本身没有单位。先看取样深度和水土比。",
+    "en": "The recipe has no unit. Read sampling depth and the soil:water ratio first."
+  },
+  "acid": {
+    "zh": "酸化是判断，不是单子上的一格。对着 pH 和交换性铝看。",
+    "en": "Acidification is a reading, not one cell. Pair pH and exchangeable Al."
+  },
+  "saline": {
+    "zh": "盐碱是判断。盐害看 EC/全盐，碱害看 pH 和钠。",
+    "en": "A reading: salt is EC; alkali is pH and sodium."
+  },
+  "compaction": {
+    "zh": "对着容重、孔隙和刨坑看，不是一袋肥的单位。",
+    "en": "Read bulk density, pores and a dug pit — not a bag of fertiliser."
+  },
+  "gley": {
+    "zh": "潜育是判断。对着渍水和青灰色看。",
+    "en": "A reading: standing water and blue-grey soil."
+  },
+  "replant": {
+    "zh": "连作是判断。菌剂没有标准单位能替代轮作。",
+    "en": "A reading. A microbe bag has no unit that replaces rotation."
+  },
+  "esp": {
+    "zh": "碱化度 ESP 常用 %。SAR 无量纲。和交换性钠、CEC 一起看。",
+    "en": "ESP is usually %. SAR is dimensionless. Read with exchangeable Na and CEC."
+  },
+  "cl": {
+    "zh": "氯离子常见 mg/kg 或 cmol/kg。和全盐、EC 一起看咸。",
+    "en": "Chloride often mg/kg or cmol/kg. Read with total salt and EC."
+  },
+  "si": {
+    "zh": "有效硅常见 mg/kg。水稻、甘蔗更常看这一格。",
+    "en": "Available Si often mg/kg. Rice and sugarcane look here more often."
+  }
+}

@@ -1,1 +1,66 @@
-[{"id":"ruler","title":"单子上的尺子","titleEn":"The rulers","ids":["ph","ec","salt","om","texture","cec","aggregate","porosity","fc"]},{"id":"nutrient","title":"养分","titleEn":"Nutrients","ids":["n","alkn","p","avp","k","avk","ca","mg","fe","mn","zn","b","s","cu","mo"]},{"id":"ion","title":"伤根的离子","titleEn":"Ions that bite","ids":["al","na"]},{"id":"check","title":"检测与障碍","titleEn":"Tests and trouble","ids":["bulk","test","acid","saline","compaction","gley","replant"]}]
+[
+  {
+    "id": "ruler",
+    "title": "单子上的测量",
+    "titleEn": "The measurements",
+    "ids": [
+      "ph",
+      "ec",
+      "salt",
+      "om",
+      "texture",
+      "cec",
+      "aggregate",
+      "porosity",
+      "fc"
+    ]
+  },
+  {
+    "id": "nutrient",
+    "title": "养分",
+    "titleEn": "Nutrients",
+    "ids": [
+      "n",
+      "alkn",
+      "p",
+      "avp",
+      "k",
+      "avk",
+      "ca",
+      "mg",
+      "fe",
+      "mn",
+      "zn",
+      "b",
+      "s",
+      "cu",
+      "mo",
+      "si"
+    ]
+  },
+  {
+    "id": "ion",
+    "title": "伤根的离子",
+    "titleEn": "Root-injuring ions",
+    "ids": [
+      "al",
+      "na",
+      "esp",
+      "cl"
+    ]
+  },
+  {
+    "id": "check",
+    "title": "检测与障碍",
+    "titleEn": "Tests and trouble",
+    "ids": [
+      "bulk",
+      "test",
+      "acid",
+      "saline",
+      "compaction",
+      "gley",
+      "replant"
+    ]
+  }
+]

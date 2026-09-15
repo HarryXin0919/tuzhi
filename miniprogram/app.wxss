@@ -1,0 +1,16 @@
+page {
+  background: #f4efe6;
+  color: #1c1612;
+  font-size: 32rpx;
+  line-height: 1.6;
+  padding: 24rpx;
+}
+.btn {
+  display: block;
+  margin-top: 24rpx;
+  background: #1f6b4a;
+  color: #f4efe6;
+  text-align: center;
+  padding: 24rpx;
+  border-radius: 16rpx;
+}

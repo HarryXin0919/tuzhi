@@ -1,0 +1,10 @@
+{
+  "pages": ["pages/index/index", "pages/suan-hua/index", "pages/diagnose/index"],
+  "window": {
+    "navigationBarTitleText": "土知",
+    "navigationBarBackgroundColor": "#1F6B4A",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F4EFE6"
+  },
+  "style": "v2"
+}

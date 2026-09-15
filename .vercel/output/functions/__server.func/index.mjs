@@ -15,6 +15,8 @@ var grokOgIdentity = { "site": {
 	"title": "土知",
 	"card": "custom",
 	"color": "1F6B4A",
+	"origin": "https://tuzhi.asia",
+	"description": "看懂土地，种好地。面向农民的土壤科普与拍照诊断。",
 	"image": "/og.jpg"
 } };
 //#endregion

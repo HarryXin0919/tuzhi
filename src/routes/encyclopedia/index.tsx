@@ -1,13 +1,24 @@
 import { useMemo, useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { LAB_GROUPS, localizeTerm, searchTerms } from "@/lib/knowledge/encyclopedia";
-import { useLang } from "@/lib/i18n/lang";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
+import { seo } from "@/lib/seo";
+import { LabBand } from "@/components/LabBand";
+import { LangLink } from "@/components/LangLink";
 
-export const Route = createFileRoute("/encyclopedia/")({ component: WikiList });
+export const Route = createFileRoute("/encyclopedia/")({
+  head: () =>
+    seo({
+      title: "化验知识｜土知",
+      description: "化验单上的 pH、EC、有机质、交换性铝、交换性钠，用大白话讲。",
+      path: "/encyclopedia",
+    }),
+  component: WikiList,
+});
 
-function WikiList() {
-  const lang = useLang((s) => s.lang);
+export function WikiList() {
+  const lang = usePathLang();
   const t = messages[lang];
   const r = t.wiki;
   const [q, setQ] = useState("");
@@ -24,6 +35,7 @@ function WikiList() {
         <h1 className="font-display text-3xl font-semibold">{r.title}</h1>
         <p className="mt-2 text-muted">{r.lead}</p>
       </header>
+      <LabBand />
       <input
         value={q}
         onChange={(e) => setQ(e.target.value)}
@@ -34,12 +46,12 @@ function WikiList() {
         <p className="rounded-xl border border-line bg-surface p-6 text-muted">
           {r.empty}
           <span className="mt-3 flex flex-wrap gap-4">
-            <Link to="/knowledge" className="text-forest underline">
+            <LangLink to="/knowledge" className="text-forest underline">
               {t.nav.knowledge}
-            </Link>
-            <Link to="/diagnose" className="text-forest underline">
+            </LangLink>
+            <LangLink to="/diagnose" className="text-forest underline">
               {t.nav.diagnose}
-            </Link>
+            </LangLink>
           </span>
         </p>
       ) : (
@@ -50,7 +62,7 @@ function WikiList() {
               if (!term) return null;
               const copy = localizeTerm(term, lang);
               return (
-                <Link
+                <LangLink
                   key={term.id}
                   to="/encyclopedia/$id"
                   params={{ id: term.id }}
@@ -64,7 +76,7 @@ function WikiList() {
                     </p>
                   ) : null}
                   <p className="mt-2 text-lg leading-relaxed">{copy.summary}</p>
-                </Link>
+                </LangLink>
               );
             })}
           </section>

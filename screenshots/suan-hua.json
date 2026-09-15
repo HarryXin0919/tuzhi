@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/knowledge/suan-hua",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "土壤酸化：苗发僵，根尖褐秃 · 土知",
+      "hasCanvas": false,
+      "bodyTextLen": 1580,
+      "bodyTextHash": "833e0115e4f95a3f3708105e2d5e1a9647b156adc39a70c6f1ac373f5bd29ebb",
+      "bodyTextPrefix": "跳到正文 土知 看懂土地，种好地 首页 拍照识别 农业知识 化验知识 问答区 我的 English 返回农业知识 土壤酸化：苗发",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/suan-hua.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "土壤酸化：苗发僵，根尖褐秃 · 土知",
+      "hasCanvas": false,
+      "bodyTextLen": 1576,
+      "bodyTextHash": "53e56cd7a787672c738f3c9619d026a5a750c13f281e5aaebe56f7d7a97e2230",
+      "bodyTextPrefix": "跳到正文 土知 看懂土地，种好地 English 登录 返回农业知识 土壤酸化：苗发僵，根尖褐秃 pH 是尺子，不是病名。粮田低",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/suan-hua-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/suan-hua.json"
+}

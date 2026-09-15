@@ -57,7 +57,7 @@ const MAP: Record<string, string> = {
   健康对照: "Healthy check",
   "作者整理，用量须经当地农技站确认": "Compiled for learning. Rates need a local agronomist.",
   农户: "Farmer",
-  李泽宇: "Li Zeyu 李泽宇",
+  李泽宇: "Li Zeyu",
 };
 
 export function lex(word: string, lang: Lang): string {
@@ -70,7 +70,7 @@ export function displayName(raw: string | null | undefined, lang: Lang): string 
   const phone = a.match(/^(\d{7,11})@phone\.tuzhi\.local$/i);
   if (phone) return lang === "en" ? `Farmer ${phone[1].slice(-4)}` : `农户${phone[1].slice(-4)}`;
   if (/^农户(\d{4})$/.test(a)) return lang === "en" ? `Farmer ${a.slice(-4)}` : a;
-  if (/李泽宇|Li Zeyu/i.test(a)) return lang === "en" ? "Li Zeyu 李泽宇" : "李泽宇";
+  if (/李泽宇|Li Zeyu/i.test(a)) return lang === "en" ? "Li Zeyu" : "李泽宇";
   if (!a || a === "Account" || a.includes("@") || a.toLowerCase().includes("phone.tuzhi")) {
     return lang === "en" ? "Farmer" : "农户";
   }

@@ -1,33 +1,39 @@
 {
   "suan-hua": {
-    "title": "Acid soil: seedlings stall, roots go brown and bald",
-    "subtitle": "Decide if this field is acid before you copy the next county’s lime recipe. Measure this field first.",
-    "summary": "Stunted seedlings, brown bald root tips, rusty water as extra evidence. Wash the roots, test this field, don’t copy the next county’s lime bags."
+    "title": "Acid soil: seedlings stall, root tips go brown",
+    "subtitle": "pH is a measurement, not a disease. On grain land, consider lime only when pH is below about 5.5.",
+    "summary": "When seedlings stall and the next ridge stays green, pull one plant and wash the roots. Brown, bald tips mean test plough-layer pH. On grain land, consider lime only below about 5.5.",
+    "card": "Stunted seedlings: check the root tips, then pH. On grain land, consider lime only below about 5.5."
   },
   "yan-jian": {
-    "title": "Salty-alkali land: a white crust, patchy emergence, scorched leaf edges",
-    "subtitle": "Treat the white film as salt’s calling card. Don’t flood-irrigate without a drain.",
-    "summary": "A thin white powder or a hard crust. Seedlings come up in patches; leaf edges look scalded. After a light watering they wilt more — that isn’t drought."
+    "title": "Saline soil: white crust and scorched margins",
+    "subtitle": "Split salt from alkali. Salt is EC; alkali is pH and sodium.",
+    "summary": "Crouch and read the surface: a thin white powder, or a crust you can peel. Emergence is patchy, leaf margins scorch. A light watering makes wilt worse — that is not drought. Pull o",
+    "card": "Split salt from alkali. Salt is EC; alkali is pH and sodium."
   },
   "ban-jie": {
-    "title": "Hard-packed soil: the hoe bounces, roots can’t come up",
-    "subtitle": "The cap on the seed and the pan under the plough are two different lids.",
-    "summary": "Clods like bricks, a cap after rain, a hard floor the roots hit. Loosen when the soil is dry enough to crack, not smear."
+    "title": "Hard soil: a shiny pan the roots will not cross",
+    "subtitle": "After rain a slurry, when dry a cap. Look at twenty centimetres before you feed.",
+    "summary": "Try the hoe: after rain a slurry, when dry a cap that bounces the blade. Seedlings wear a cap of soil; roots run sideways. Dig a pit in the wheel track and look at about twenty cen",
+    "card": "After rain a slurry, when dry a cap. Look at twenty centimetres before you feed."
   },
   "you-ji-zhi": {
-    "title": "Thin organic matter: the soil gets hungrier every year",
-    "subtitle": "Organic matter is the meat in the soil. A bag of NPK is not a substitute.",
-    "summary": "Colour fades, clods won’t hold, fertiliser lasts a shorter time. Feed the soil’s meat, don’t only chase a leaf colour."
+    "title": "Thin organic matter: pale soil that will not hold a ball",
+    "subtitle": "Organic matter is a reserve, not a packet of microbes. Build it over years.",
+    "summary": "Rub a handful of plough-layer soil: pale, powdery, it will not hold a ball and runs through the fingers. Fertiliser after one rain looks as if you never applied it. Bare ground in ",
+    "card": "Organic matter is a reserve, not a packet of microbes. Build it over years."
   },
   "que-dan": {
-    "title": "Nitrogen shortage: old leaves yellow first, plants thin and tall",
-    "subtitle": "Yellow old leaves are not the same as yellow new leaves.",
-    "summary": "Lower leaves go evenly yellow while new leaves stay greener. Plants look starved and lanky. Don’t mix this with iron lock or waterlog."
+    "title": "Nitrogen: old leaves yellow, new leaves still green",
+    "subtitle": "Yellow old leaves, white roots. If new leaves yellow too, think sulphur or iron.",
+    "summary": "Read which leaves are yellow. Old leaves evenly yellow, new leaves still green, and washed roots still white: that looks like nitrogen. If new leaves yellow too, think sulphur or i",
+    "card": "Yellow old leaves, white roots. If new leaves yellow too, think sulphur or iron."
   },
   "que-jia": {
-    "title": "Potassium shortage: leaf edges scorch as if burned",
-    "subtitle": "The burn starts at the margin of older leaves, not as a spray speckle.",
-    "summary": "Margins of older leaves scorch and curl. Fruit and stems go weak. Don’t treat every scorched edge as salt."
+    "title": "Potassium: scorch from the old-leaf margin",
+    "subtitle": "Scorched margins plus a white crust: split salt from potassium first.",
+    "summary": "Old-leaf margins scorch first and roll inward; stems soften; fruit is bland. Pick the worst old leaves and see whether the scorch walks in from the edge. The soil surface need not ",
+    "card": "Scorched margins plus a white crust: split salt from potassium first."
   },
   "que-lin": {
     "title": "Phosphorus shortage: seedlings purple, stiff, short of roots",
@@ -35,9 +41,10 @@
     "summary": "Dark green with purple on the underside; roots short. Not the even yellow of nitrogen shortage."
   },
   "que-tie": {
-    "title": "Iron lock: new leaves yellow, veins still green",
-    "subtitle": "This is not nitrogen shortage. Nitrogen yellows the old leaves.",
-    "summary": "Newest leaves bleach while veins stay green. Common on limey, high-pH soils. Iron is in the soil; the root can’t unlock it."
+    "title": "Iron: new leaves yellow, veins still green",
+    "subtitle": "Often a pH lock, not a missing bag of iron.",
+    "summary": "Decide whether the yellow leaves are new or old. New leaves yellow with veins still green, worse at the tip, while old leaves stay greener: that looks like iron shortage or iron lo",
+    "card": "Often a pH lock, not a missing bag of iron."
   },
   "que-xin": {
     "title": "Zinc shortage: new leaves stripe, internodes shrink",
@@ -55,14 +62,16 @@
     "summary": "White crust at the drip line, leaf edges burn, yield drops. Flush only if you have a way out; don’t just change the soil."
   },
   "shao-gen": {
-    "title": "Fertiliser burn: more bags, more injured roots",
-    "subtitle": "Black root tips after a heavy dressing are a burn, not a shortage.",
-    "summary": "Roots go brown-black, leaves scorch from the tip, seedlings collapse after a rich dressing. Water first, don’t add another bag."
+    "title": "Fertiliser burn: a row of scorched seedlings along the band",
+    "subtitle": "Move the granules, dilute, wait for new roots. Do not add another bag.",
+    "summary": "Within days of a dressing, leaves scorch and roots blacken in a line along the seed furrow or dripper. Scrape the soil and you see undissolved granules. Compare that row with plant",
+    "card": "Move the granules, dilute, wait for new roots. Do not add another bag."
   },
   "lao-hai": {
-    "title": "Waterlogging: roots drank their fill of water and ran out of air",
-    "subtitle": "Wilt by day, recover at night, a sour smell at the root — that is drowning, not drought.",
-    "summary": "Standing water, yellow from the bottom, roots brown and smelly. Drain first. More fertiliser on a drowned root makes it worse."
+    "title": "Waterlogging: wilt by day, wet soil, black roots",
+    "subtitle": "Drain first. Urea cannot enter a drowned root.",
+    "summary": "Wilt by day, recover a little at night, standing water or a squelch underfoot, cool subsoil. Pull a plant: white roots or black and smelly. Wet soil that still wilts is not drought",
+    "card": "Drain first. Urea cannot enter a drowned root."
   },
   "wei-sheng-wu": {
     "title": "The soil isn’t ‘alive’: microbes out of balance",
@@ -70,9 +79,10 @@
     "summary": "Soil smells sour or dead, residues don’t rot, plants stall. Feed carbon and air before you buy a miracle bottle."
   },
   "ce-tu-bao-gao": {
-    "title": "How to read a soil-test sheet",
-    "subtitle": "pH is a ruler, not a disease name. EC is salt. Organic matter is the meat.",
-    "summary": "Circle pH, EC and organic matter first. Don’t jump to a fertiliser recipe from one cell. Units and methods differ between labs."
+    "title": "Reading a soil-test sheet",
+    "subtitle": "The sheet is a measurement, not a prescription. Circle pH, organic matter and salt first.",
+    "summary": "Match the field name, sampling depth and date before you read any number. Order: pH, organic matter, salt or EC, then NPK, then micronutrients. Misread the unit and the fertiliser ",
+    "card": "The sheet is a measurement, not a prescription. Circle pH, organic matter and salt first."
   },
   "ce-tu-qu-yang": {
     "title": "Sampling for a soil test: how to miss the truth",
@@ -140,7 +150,7 @@
     "summary": "Leaf margins burn on chloride-sensitive crops after KCl. Switch the potassium source, don’t just cut the rate blindly."
   },
   "di-guan-nong-du": {
-    "title": "Drip too strong: every watering pickles the root",
+    "title": "Drip too strong: every watering can salt the root zone",
     "subtitle": "EC over the line is a brine, not a feed.",
     "summary": "Tips burn, white at the emitter, growth stalls. Dilute, flush if you can drain, then restart weaker."
   },
@@ -190,9 +200,10 @@
     "summary": "Yellow seedlings after a heavy straw layer. Chop, mix, add a little N, don’t bury a wet mat."
   },
   "shi-hui-yong-liang": {
-    "title": "How to lime without overshooting the field",
-    "subtitle": "Don’t copy the next county’s lime recipe. Measure this field first.",
-    "summary": "Most crops: lime when pH is below 5.5. Farm lime often 50–150 kg per mu, split, sandy soils at the low end. Tea is not grain."
+    "title": "Agricultural lime: how much, and when",
+    "subtitle": "Farm lime 50–150 kg/mu (about 750–2250 kg/ha), split, sandy soils low. No builder’s lime.",
+    "summary": "Open this page only after you have decided to amend acid soil. Read the bag: agricultural lime can go on the field; builder’s lime and leftover renovation lime cannot. Match textur",
+    "card": "Farm lime 50–150 kg/mu (about 750–2250 kg/ha), split, sandy soils low. No builder’s lime."
   },
   "xiu-shui-tian": {
     "title": "Rusty-water paddies: ferrous iron poisoning",
@@ -250,14 +261,15 @@
     "summary": "White crust, wilt, burn after a rich year. Flush, rotate, rest the bed. Don’t only change the soil."
   },
   "hong-huang-rang-gai-suan": {
-    "title": "Red-yellow earth: test pH before you talk lime",
+    "title": "Red-yellow earth: test pH before you consider lime",
     "subtitle": "Southern red soil is acid by nature. Don’t copy a northern lime bill.",
     "summary": "Stiff seedlings, rusty water, red or yellow clay. Lime only below about 5.5, split, sandy soils low."
   },
   "lv-du-shang-gen": {
-    "title": "Aluminium toxicity: root tips bald and brown, not a simple shortage",
-    "subtitle": "Wash the tips. Brown and bald is aluminium; rusty water is extra evidence.",
-    "summary": "Short brown roots, few laterals. pH low enough that aluminium woke up. Lime the field, don’t chase nitrogen on bald roots."
+    "title": "Aluminium injury: brown, bald root tips",
+    "subtitle": "On grain land, consider lime only below about 5.5. Do not push urea onto bald tips.",
+    "summary": "Washed tips are brown and bald, with few laterals. More nitrogen will not make a canopy. Pull one stalled plant, rinse, and look for remaining white points. A starved root is still",
+    "card": "On grain land, consider lime only below about 5.5. Do not push urea onto bald tips."
   },
   "suan-yu-que-gai": {
     "title": "Acid soil and calcium shortage together: blossom-end rot is not only a foliar calcium job",
@@ -462,7 +474,7 @@
   "leng-shui-guan-miao": {
     "title": "Cold water on seedlings: a stalled paddy is not always hungry",
     "subtitle": "Deep cold water holds the root in a fridge.",
-    "summary": "Shallow, warmer water, then talk fertiliser."
+    "summary": "Shallow, warmer water, then add fertiliser."
   },
   "yan-jiang-qi-hou-tu": {
     "title": "River-wetland soils: gleying is meaner than the surface looks",
@@ -486,7 +498,7 @@
   },
   "jian-yi-ph-ec": {
     "title": "pH paper and a conductivity meter at the field edge",
-    "subtitle": "A ruler in the pocket is not a lab, but it beats guessing.",
+    "subtitle": "A meter in the pocket is not a lab, but it beats guessing.",
     "summary": "Same water ratio, same depth. Don’t compare your strip to the neighbour’s lab sheet as if they were one number."
   },
   "shi-fei-tiao-tu-rang": {

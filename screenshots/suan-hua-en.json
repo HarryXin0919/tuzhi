@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/en/knowledge/suan-hua",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Acid soil: seedlings stall, root tips go brown · 土知",
+      "hasCanvas": false,
+      "bodyTextLen": 4438,
+      "bodyTextHash": "a418dd89f2993904b67c3585d42c6743751f768618c538a6f66f67b01d9f1bcf",
+      "bodyTextPrefix": "Skip to content 土知 Know the soil, farm it well. Home Photo check",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/suan-hua-en.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Acid soil: seedlings stall, root tips go brown · 土知",
+      "hasCanvas": false,
+      "bodyTextLen": 4423,
+      "bodyTextHash": "66c92375c68f9d05ab76bf89e1ae844e2cc1cf38c5fbe814dda85ef6dfb8bebc",
+      "bodyTextPrefix": "Skip to content 土知 Know the soil, farm it well. 中文 Sign in Back ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/suan-hua-en-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/suan-hua-en.json"
+}

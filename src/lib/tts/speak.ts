@@ -4,7 +4,7 @@ const ZH_DIGITS = ["零", "一", "二", "三", "四", "五", "六", "七", "八"
 
 function zhInt(n: number): string {
   if (n < 0) return "负" + zhInt(-n);
-  if (n < 10) return ZH_DIGITS[n];
+  if (n < 10) return ZH_DIGITS[n]!;
   if (n < 20) return n === 10 ? "十" : "十" + ZH_DIGITS[n % 10];
   if (n < 100) {
     const tens = Math.floor(n / 10);
@@ -17,6 +17,14 @@ function zhInt(n: number): string {
     return ZH_DIGITS[hun] + "百" + (rest ? (rest < 10 ? "零" : "") + zhInt(rest) : "");
   }
   return String(n);
+}
+
+function spokenNum(raw: string): string {
+  const n = Number(raw);
+  if (!Number.isFinite(n)) return raw;
+  if (Number.isInteger(n)) return zhInt(n);
+  const [a, b] = raw.split(".");
+  return zhInt(Number(a)) + "点" + [...(b ?? "")].map((d) => ZH_DIGITS[Number(d)] ?? d).join("");
 }
 
 export function speakPrepare(text: string, lang: Lang): string {
@@ -33,20 +41,45 @@ export function speakPrepare(text: string, lang: Lang): string {
   return s;
 }
 
-function spokenNum(raw: string): string {
-  const n = Number(raw);
-  if (!Number.isFinite(n)) return raw;
-  if (Number.isInteger(n)) return zhInt(n);
-  const [a, b] = raw.split(".");
-  return zhInt(Number(a)) + "点" + [...b].map((d) => ZH_DIGITS[Number(d)] ?? d).join("");
+export function splitSentences(text: string): string[] {
+  return clipSpoken(
+    text
+      .replace(/\s+/g, " ")
+      .split(/(?<=[。！？!?；;…\n])/)
+      .map((s) => s.trim())
+      .filter((s) => s.length > 0),
+  );
 }
 
-export function splitSentences(text: string): string[] {
-  return text
-    .replace(/\s+/g, " ")
-    .split(/(?<=[。！？!?；;…\n])/)
-    .map((s) => s.trim())
-    .filter((s) => s.length > 0);
+/** Keep spoken lines short enough to hear as one breath. */
+export function clipSpoken(lines: string[], max = 28): string[] {
+  const out: string[] = [];
+  for (const raw of lines) {
+    let s = raw.replace(/示意图，不能单凭此图下肥。?/g, "").trim();
+    if (/仅供学习|不能替代农技/.test(s)) continue;
+    if (!s) continue;
+    const parts = s.split(/(?<=[。！？!?；;])/);
+    for (let p of parts) {
+      p = p.trim();
+      if (!p) continue;
+      const chars = p.replace(/[。！？!?；;\s]/g, "");
+      if (chars.length <= max) {
+        out.push(p.endsWith("。") || /[!？?！]$/.test(p) ? p : p + "。");
+        continue;
+      }
+      const bits = p.split(/[，,、]/);
+      let buf = "";
+      for (const b of bits) {
+        const next = buf ? buf + "，" + b : b;
+        if (next.replace(/[。！？\s，,]/g, "").length > max && buf) {
+          out.push(/[。！？!?]$/.test(buf) ? buf : buf + "。");
+          buf = b;
+        } else buf = next;
+      }
+      if (buf.trim()) out.push(/[。！？!?]$/.test(buf) ? buf : buf + "。");
+    }
+  }
+  return out;
 }
 
 function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
@@ -54,6 +87,7 @@ function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
   let s = 0;
   if (lang === "zh") {
     if (/zh-cn|zh_cn|cmn|chinese/.test(n)) s += 4;
+    if (/zh-tw|zh_hk|yue/.test(n)) s += 1;
     if (/xiaoxiao|yunxi|yunyang|xiaoyi|neural|natural|tingting|google 普通话|huihui/.test(n)) s += 6;
   } else {
     if (/en-us|en_us|en-gb/.test(n)) s += 4;
@@ -63,12 +97,55 @@ function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
   return s;
 }
 
+export function listVoices(): SpeechSynthesisVoice[] {
+  if (typeof window === "undefined" || !window.speechSynthesis) return [];
+  return window.speechSynthesis.getVoices();
+}
+
+export function hasLangVoice(lang: Lang): boolean {
+  const prefix = lang === "zh" ? "zh" : "en";
+  return listVoices().some((v) => v.lang.toLowerCase().startsWith(prefix) || (lang === "zh" && /chinese|cmn|普通话/.test(`${v.name} ${v.lang}`.toLowerCase())));
+}
+
 export function pickVoice(lang: Lang): SpeechSynthesisVoice | null {
   if (typeof window === "undefined" || !window.speechSynthesis) return null;
-  const voices = window.speechSynthesis.getVoices();
+  const voices = listVoices();
   const prefix = lang === "zh" ? "zh" : "en";
   const ranked = voices
     .filter((v) => v.lang.toLowerCase().startsWith(prefix) || voiceScore(v, lang) > 0)
     .sort((a, b) => voiceScore(b, lang) - voiceScore(a, lang));
-  return ranked[0] ?? voices.find((v) => v.lang.toLowerCase().startsWith(prefix)) ?? null;
+  return ranked[0] ?? null;
+}
+
+export function waitForVoices(): Promise<SpeechSynthesisVoice[]> {
+  if (typeof window === "undefined" || !window.speechSynthesis) return Promise.resolve([]);
+  const now = window.speechSynthesis.getVoices();
+  if (now.length) return Promise.resolve(now);
+  return new Promise((resolve) => {
+    const done = () => {
+      window.speechSynthesis.removeEventListener("voiceschanged", done);
+      resolve(window.speechSynthesis.getVoices());
+    };
+    window.speechSynthesis.addEventListener("voiceschanged", done);
+    setTimeout(done, 1200);
+  });
+}
+
+const RATE_KEY = "tuzhi-tts-rate";
+
+export const TTS_RATES = [0.8, 1, 1.25, 1.5] as const;
+export type TtsRate = (typeof TTS_RATES)[number];
+
+export function readTtsRate(): TtsRate {
+  if (typeof window === "undefined") return 1;
+  const n = Number(localStorage.getItem(RATE_KEY));
+  return (TTS_RATES as readonly number[]).includes(n) ? (n as TtsRate) : 1;
+}
+
+export function writeTtsRate(rate: TtsRate) {
+  try {
+    localStorage.setItem(RATE_KEY, String(rate));
+  } catch {
+    /* ignore */
+  }
 }

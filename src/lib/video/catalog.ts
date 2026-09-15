@@ -18,12 +18,14 @@ export function wikiVideo(id: string): VideoMap | undefined {
   return DATA.wiki[id];
 }
 
-export function biliEmbed(bvid: string) {
-  return `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bvid)}&page=1&high_quality=1&danmaku=0`;
+export function biliEmbed(bvid: string, autoplay = false) {
+  const ap = autoplay ? 1 : 0;
+  return `https://player.bilibili.com/player.html?isOutside=true&bvid=${encodeURIComponent(bvid)}&danmaku=0&autoplay=${ap}&high_quality=1`;
 }
 
-export function youtubeEmbed(id: string) {
-  return `https://www.youtube.com/embed/${encodeURIComponent(id)}`;
+export function youtubeEmbed(id: string, autoplay = false) {
+  const ap = autoplay ? 1 : 0;
+  return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?rel=0&modestbranding=1&autoplay=${ap}`;
 }
 
 export { DATA as VIDEO_LOG };

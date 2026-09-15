@@ -286,6 +286,25 @@ test("published VITE_PUBLIC_HOSTNAME wins over request Host for og:image", () =>
   }
 });
 
+test("tuzhi.asia host does not inject Grok chrome", () => {
+  const html =
+    '<html><head><title>土知</title><meta property="og:image" content="https://tuzhi.asia/og.jpg"></head></html>';
+  const prev = process.env.VITE_PUBLIC_HOSTNAME;
+  process.env.VITE_PUBLIC_HOSTNAME = "wave-solar-harbor-river.grok.me";
+  try {
+    const out = injectGrokPwaHead(html, { host: "tuzhi.asia", projectId: "proj-1" });
+    assert.equal(out, html);
+    assert.doesNotMatch(out, /grok\.com/);
+    assert.doesNotMatch(out, /grok\.me/);
+    assert.doesNotMatch(out, /Grok App/);
+    assert.doesNotMatch(out, /grok-project-id/);
+    assert.doesNotMatch(out, /__grok\/manifest/);
+  } finally {
+    if (prev === undefined) delete process.env.VITE_PUBLIC_HOSTNAME;
+    else process.env.VITE_PUBLIC_HOSTNAME = prev;
+  }
+});
+
 test("vercel Host without a public hostname emits no og:image", () => {
   const prev = process.env.VITE_PUBLIC_HOSTNAME;
   delete process.env.VITE_PUBLIC_HOSTNAME;

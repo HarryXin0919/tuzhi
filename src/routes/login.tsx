@@ -1,15 +1,34 @@
 import { useState } from "react";
-import { createFileRoute, Navigate, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Navigate } from "@tanstack/react-router";
 import { authClient, authEnabled } from "@/lib/auth/client";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
-import { useLang } from "@/lib/i18n/lang";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
+import { seo } from "@/lib/seo";
+import { useAnyNavigate, useAnySearch } from "@/lib/i18n/route-data";
+import { withLangPath } from "@/lib/i18n/path";
 
-type Search = { tab?: "login" | "register" };
+type Search = { tab?: "login" | "register"; next?: string };
+
+function safeNext(raw?: string) {
+  if (!raw) return "/";
+  if (!raw.startsWith("/") || raw.startsWith("//") || raw.includes("\\")) return "/";
+  if (raw.startsWith("/api") || raw.startsWith("/__")) return "/";
+  return raw.split("#")[0] || "/";
+}
 
 export const Route = createFileRoute("/login")({
-  validateSearch: (s: Record<string, unknown>): Search =>
-    s.tab === "register" ? { tab: "register" } : {},
+  validateSearch: (s: Record<string, unknown>): Search => ({
+    ...(s.tab === "register" ? { tab: "register" as const } : {}),
+    ...(typeof s.next === "string" ? { next: s.next } : {}),
+  }),
+  head: () =>
+    seo({
+      title: "登录｜土知",
+      description: "只用邮箱或手机号登录，不用第三方账号。",
+      path: "/login",
+      noindex: true,
+    }),
   component: Login,
 });
 
@@ -21,26 +40,39 @@ function resolveEmail(email: string, phone: string) {
   return e;
 }
 
-function Login() {
-  const lang = useLang((s) => s.lang);
+export function Login() {
+  const lang = usePathLang();
   const t = messages[lang];
   const L = t.login;
-  const search = Route.useSearch();
-  const navigate = Route.useNavigate();
-  const nav = useNavigate();
+  const search = useAnySearch<Search>();
+  const navigate = useAnyNavigate();
   const { user, isPending } = useCurrentUserState();
   const register = search.tab === "register";
+  const destRaw = safeNext(search.next);
+  const dest = destRaw === "/" ? withLangPath("/", lang) : destRaw;
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
+  const [honey, setHoney] = useState("");
+  const [confirm, setConfirm] = useState(false);
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState(false);
 
-  if (!isPending && user) return <Navigate to="/" />;
+  if (!isPending && user) {
+    if (dest !== "/") {
+      if (typeof window !== "undefined") window.location.replace(dest);
+      return null;
+    }
+    return <Navigate to={withLangPath("/", lang) as never} />;
+  }
 
   async function submit() {
     setErr("");
+    if (honey.trim()) {
+      setErr(L.fail);
+      return;
+    }
     const mail = resolveEmail(email, phone);
     if (!mail) {
       setErr(L.needEmail);
@@ -52,6 +84,10 @@ function Login() {
     }
     if (register && password !== password2) {
       setErr(L.mismatch);
+      return;
+    }
+    if (register && !confirm) {
+      setErr(L.needConfirm);
       return;
     }
     if (!authEnabled) {
@@ -76,7 +112,7 @@ function Login() {
         setBusy(false);
         return;
       }
-      nav({ to: "/" });
+      window.location.assign(dest);
     } catch {
       setErr(L.fail);
       setBusy(false);
@@ -97,7 +133,7 @@ function Login() {
               ? "flex-1 rounded-full bg-forest px-4 py-2 text-forest-fg"
               : "flex-1 rounded-full border border-line px-4 py-2"
           }
-          onClick={() => navigate({ search: {} })}
+          onClick={() => navigate({ search: { next: search.next } })}
         >
           {L.tabLogin}
         </button>
@@ -108,11 +144,15 @@ function Login() {
               ? "flex-1 rounded-full bg-forest px-4 py-2 text-forest-fg"
               : "flex-1 rounded-full border border-line px-4 py-2"
           }
-          onClick={() => navigate({ search: { tab: "register" } })}
+          onClick={() => navigate({ search: { tab: "register", next: search.next } })}
         >
           {L.tabRegister}
         </button>
       </div>
+      <label className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+        <span>website</span>
+        <input tabIndex={-1} autoComplete="off" value={honey} onChange={(e) => setHoney(e.target.value)} />
+      </label>
       <label className="block space-y-1">
         <span className="text-sm text-muted">{L.email}</span>
         <input
@@ -152,6 +192,17 @@ function Login() {
             onChange={(e) => setPassword2(e.target.value)}
             className="min-h-12 w-full rounded-xl border border-line bg-surface px-3"
           />
+        </label>
+      ) : null}
+      {register ? (
+        <label className="flex items-start gap-2 text-sm leading-relaxed">
+          <input
+            type="checkbox"
+            checked={confirm}
+            onChange={(e) => setConfirm(e.target.checked)}
+            className="mt-1 size-4"
+          />
+          <span>{L.confirm}</span>
         </label>
       ) : null}
       {err ? <p className="text-danger">{err}</p> : null}

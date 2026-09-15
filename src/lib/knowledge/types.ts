@@ -1,14 +1,18 @@
-export type Photo = { src: string; alt: string; caption: string };
+export type PhotoKind = "field" | "lab" | "diagram" | "stock" | "missing";
+export type Photo = { src: string; alt: string; caption: string; kind?: PhotoKind };
 export type Confuse = { lookalike: string; difference: string; photoHint?: string };
 export type Dose = { name: string; range: string; note: string };
 export type Indicator = { name: string; meaning: string; typical: string };
 export type VideoRef = { platform: string; title: string; url: string };
+export type DoseRow = { crop: string; texture: string; rate: string; note: string };
+export type LabRow = { id: string; name: string; low: string; mid: string; high: string; note?: string };
 
 export type Article = {
   slug: string;
   title: string;
   subtitle: string;
   summary: string;
+  card?: string;
   crops: string[];
   problems: string[];
   regions: string[];
@@ -33,6 +37,22 @@ export type Article = {
   updatedAt: string;
   reviewer: string;
   longform: string[];
+  mechanism?: string;
+  example?: string;
+  doseTable?: DoseRow[];
+  labTable?: LabRow[];
+  spoken?: string[];
+  spokenHow?: string[];
+  spokenEn?: string[];
+  spokenHowEn?: string[];
+  speakZh?: string[];
+  speakEn?: string[];
+  howtoSpeakZh?: string[];
+  howtoSpeakEn?: string[];
+  author?: string;
+  sources?: string[];
+  sourcesEn?: string[];
+  doseRefSlug?: string;
 };
 
 export type WikiPack = {
@@ -67,6 +87,9 @@ export type WikiCopy = {
   prevention: string[];
   indicators: Indicator[];
   aka?: string;
+  spoken?: string[];
+  readTable?: { label: string; low: string; mid: string; high: string }[];
+  ratioNote?: string;
 };
 
 export type SearchQuery = {

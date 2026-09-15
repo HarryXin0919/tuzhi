@@ -1,0 +1,8 @@
+Bags and soil beds in one house; recipes get copied the wrong way.
+Substrate has no soil buffer; EC is jumpy.
+Soil has a buffer; a mix almost has none.
+A mix shows shortage faster, but read EC and pH first.
+Don’t pour a garden-soil recipe into coir; don’t heap manure into substrate as if it were soil.
+Leachate EC / pH: Follow the crop stage. Measure every day, or on a rhythm
+Name what you see before you feed.
+If leaves, roots and the surface disagree, stop.

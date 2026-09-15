@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { langFromPath } from "./path";
 
 export type Lang = "zh" | "en";
 
@@ -19,6 +20,7 @@ function writeCookie(lang: Lang) {
 export const useLang = create<{
   lang: Lang;
   setLang: (lang: Lang) => void;
+  syncFromPath: (pathname: string) => void;
 }>()(
   persist(
     (set) => ({
@@ -27,11 +29,23 @@ export const useLang = create<{
         writeCookie(lang);
         set({ lang });
       },
+      syncFromPath: (pathname) => {
+        const next = langFromPath(pathname);
+        writeCookie(next);
+        set({ lang: next });
+      },
     }),
     {
       name: "tuzhi-lang",
       onRehydrateStorage: () => (state) => {
         if (!state) return;
+        if (typeof window !== "undefined") {
+          const fromPath = langFromPath(window.location.pathname);
+          if (fromPath !== state.lang) {
+            state.setLang(fromPath);
+            return;
+          }
+        }
         const cookie = readCookie();
         if (cookie && cookie !== state.lang) state.setLang(cookie);
         else writeCookie(state.lang);

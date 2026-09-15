@@ -1,11 +1,12 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts, useRouterState } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { AppShell } from "@/components/AppShell";
+import { HOME_DESC, HOME_TITLE, OG_IMAGE, SITE_NAME } from "@/lib/seo";
+import { SITE_ORIGIN } from "@/lib/constants";
+import { langFromPath } from "@/lib/i18n/path";
 import appCss from "../styles.css?url";
-
-const APP_NAME = "土知";
 
 const fetchSessionUser = createServerFn({ method: "GET" }).handler(async () => {
   const { getSessionUser } = await import("@/lib/auth/verify.server");
@@ -19,11 +20,26 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: APP_NAME },
+      { title: HOME_TITLE },
       { name: "theme-color", content: "#1F6B4A" },
-      { name: "description", content: "看懂土地，种好地。面向农民的土壤科普与拍照诊断。" },
+      { name: "description", content: HOME_DESC },
+      { property: "og:title", content: HOME_TITLE },
+      { property: "og:description", content: HOME_DESC },
+      { property: "og:url", content: `${SITE_ORIGIN}/` },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: "zh_CN" },
+      { property: "og:site_name", content: SITE_NAME },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: HOME_TITLE },
+      { name: "twitter:description", content: HOME_DESC },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
+      { rel: "canonical", href: `${SITE_ORIGIN}/` },
+      { rel: "icon", href: "/favicon.ico", sizes: "32x32" },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
@@ -35,8 +51,10 @@ export const Route = createRootRoute({
 });
 
 function Root() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const lang = langFromPath(pathname);
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang={lang === "en" ? "en" : "zh-CN"} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>

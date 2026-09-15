@@ -116,6 +116,43 @@ async function seedIfEmpty() {
   }
 }
 
+function seedPosts(problem?: string): Post[] {
+  const rows = (seed as Array<{
+    id: string;
+    author: string;
+    createdAt: string;
+    problem: string;
+    crop: string;
+    region: string;
+    title: string;
+    body: string;
+    bodyEn: string;
+    titleEn?: string;
+    photo: string;
+    answers: { author: string; body: string; bodyEn: string }[];
+  }>).filter((p) => !problem || p.problem === problem);
+  return rows.map((p) => ({
+    id: p.id,
+    author: p.author,
+    title: p.title,
+    titleEn: p.titleEn ?? null,
+    body: p.body,
+    bodyEn: p.bodyEn,
+    problem: p.problem,
+    crop: p.crop,
+    region: p.region,
+    photo: p.photo,
+    createdAt: p.createdAt,
+    answers: p.answers.map((a, i) => ({
+      id: `${p.id}-a${i}`,
+      author: a.author,
+      body: a.body,
+      bodyEn: a.bodyEn,
+      createdAt: p.createdAt,
+    })),
+  }));
+}
+
 async function loadPosts(problem?: string): Promise<Post[]> {
   await seedIfEmpty();
   try {
@@ -183,7 +220,7 @@ async function loadPosts(problem?: string): Promise<Post[]> {
   }));
   } catch (err) {
     console.error("[community] load skipped:", err instanceof Error ? err.message : err);
-    return [];
+    return seedPosts(problem);
   }
 }
 
@@ -198,6 +235,22 @@ export const getPost = createServerFn({ method: "GET" })
     return all.find((p) => p.id === data.id) ?? null;
   });
 
+
+const lastPostAt = new Map<string, number>();
+const BLOCKED = /加微信|加微信号|代开发票|色情|赌博|点击下载|免费领取/i;
+
+function validPhoto(photo: string) {
+  if (photo.startsWith("/images/") || photo.startsWith("https://")) return true;
+  if (
+    photo.startsWith("data:image/jpeg") ||
+    photo.startsWith("data:image/png") ||
+    photo.startsWith("data:image/webp")
+  ) {
+    return photo.length < 900_000;
+  }
+  return false;
+}
+
 function farmerName(email: string | null | undefined, userId: string) {
   const digits = userId.replace(/\D/g, "").slice(-4) || email?.replace(/\D/g, "").slice(-4) || "0000";
   return `农户${digits.padStart(4, "0").slice(-4)}`;
@@ -207,9 +260,16 @@ export const createPost = createServerFn({ method: "POST" })
   .middleware([authMiddleware])
   .validator((input: { title: string; body: string; problem: string; crop?: string; region?: string; photo?: string }) => input)
   .handler(async ({ data, context }) => {
-    const title = data.title.trim();
-    const body = data.body.trim();
+    const title = data.title.trim().slice(0, 120);
+    const body = data.body.trim().slice(0, 4000);
     if (title.length < 4 || body.length < 8) throw new Error("short");
+    if (BLOCKED.test(title) || BLOCKED.test(body)) throw new Error("blocked");
+    const prev = lastPostAt.get(context.userId) ?? 0;
+    if (Date.now() - prev < 45_000) throw new Error("rate");
+    const photo = data.photo?.trim() || "";
+    if (!photo) throw new Error("photo-required");
+    if (!validPhoto(photo)) throw new Error("photo");
+    lastPostAt.set(context.userId, Date.now());
     const sql = await getSql();
     const id = `u${Date.now()}`;
     const author = farmerName(undefined, context.userId);
@@ -217,7 +277,7 @@ export const createPost = createServerFn({ method: "POST" })
     const bodyEn = await translateToEn(body);
     await sql`
       insert into posts (id, user_id, author, title, title_en, body, body_en, problem, crop, region, photo)
-      values (${id}, ${context.userId}, ${author}, ${title}, ${titleEn}, ${body}, ${bodyEn}, ${data.problem || "其他"}, ${data.crop ?? null}, ${data.region ?? null}, ${data.photo ?? null})
+      values (${id}, ${context.userId}, ${author}, ${title}, ${titleEn}, ${body}, ${bodyEn}, ${data.problem || "其他"}, ${data.crop ?? null}, ${data.region ?? null}, ${photo})
     `;
     return { id };
   });
@@ -226,7 +286,7 @@ export const addReply = createServerFn({ method: "POST" })
   .middleware([authMiddleware])
   .validator((input: { postId: string; body: string }) => input)
   .handler(async ({ data, context }) => {
-    const body = data.body.trim();
+    const body = data.body.trim().slice(0, 2000);
     if (body.length < 2) throw new Error("short");
     const sql = await getSql();
     const id = `r${Date.now()}`;

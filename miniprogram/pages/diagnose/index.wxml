@@ -1,0 +1,8 @@
+<view>
+  <view>拍整株、特写、土面。这里只做上传原型，对照请打开网站酸化篇。</view>
+  <button class="btn" data-key="plant" bindtap="pick">整株</button>
+  <button class="btn" data-key="leaf" bindtap="pick">特写</button>
+  <button class="btn" data-key="soil" bindtap="pick">土面</button>
+  <button class="btn" bindtap="send">看对照提示</button>
+  <view wx:if="{{done}}">更像酸化 / 铝毒时先洗手洗根。不要在这里读袋数。打开土知网站酸化篇。</view>
+</view>

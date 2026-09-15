@@ -1,15 +1,30 @@
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { CROPS, FERTS, REGIONS, STAGES } from "@/lib/constants";
 import { runDiagnose, type DiagnoseResult } from "@/lib/diagnose/server";
-import { getArticle } from "@/lib/knowledge/search";
+import { extractLab } from "@/lib/diagnose/transcribe";
+import { getCard } from "@/lib/knowledge/catalog";
 import { ArticleCard } from "@/components/ArticleCard";
-import { useLang } from "@/lib/i18n/lang";
+import { LangLink } from "@/components/LangLink";
+import { PhotoSlot } from "@/components/PhotoSlot";
+import { ReadAloud } from "@/components/ReadAloud";
+import { VoiceButton } from "@/components/VoiceButton";
+import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
 import { lex } from "@/lib/i18n/lexicon";
 import { pushHistory } from "@/lib/local";
+import { seo } from "@/lib/seo";
+import { downloadShareCard } from "@/components/ShareCard";
 
-export const Route = createFileRoute("/diagnose")({ component: Diagnose });
+export const Route = createFileRoute("/diagnose")({
+  head: () =>
+    seo({
+      title: "拍照识别｜土知",
+      description: "先拍整株、特写和土面，再到农业知识里对照。尽量把土壤问题和病害、药害分开。",
+      path: "/diagnose",
+    }),
+  component: Diagnose,
+});
 
 type Slot = "plant" | "leaf" | "soil";
 
@@ -22,8 +37,22 @@ function fileToData(file: File): Promise<string> {
   });
 }
 
-function Diagnose() {
-  const lang = useLang((s) => s.lang);
+function kindLabel(kind: string, d: (typeof messages)["zh"]["diagnose"]) {
+  if (kind === "病害") return d.kindDisease;
+  if (kind === "药害") return d.kindSpray;
+  if (kind === "盐害") return d.kindSalt;
+  if (kind === "不够") return d.kindLow;
+  return d.kindSoil;
+}
+
+function confLabel(c: string, d: (typeof messages)["zh"]["diagnose"]) {
+  if (c === "高") return d.confHigh;
+  if (c === "低") return d.confLow;
+  return d.confMid;
+}
+
+export function Diagnose() {
+  const lang = usePathLang();
   const t = messages[lang];
   const d = t.diagnose;
   const [photos, setPhotos] = useState<Record<Slot, string | null>>({ plant: null, leaf: null, soil: null });
@@ -35,39 +64,118 @@ function Diagnose() {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const [result, setResult] = useState<DiagnoseResult | null>(null);
+  const [labOpen, setLabOpen] = useState(false);
+  const [labPhoto, setLabPhoto] = useState<string | null>(null);
+  const [labPh, setLabPh] = useState("");
+  const [labEc, setLabEc] = useState("");
+  const [labOm, setLabOm] = useState("");
+  const [ocrHint, setOcrHint] = useState("");
 
   async function onFile(slot: Slot, f?: File | null) {
     if (!f) return;
+    if (f.size > 8 * 1024 * 1024) {
+      setErr(lang === "en" ? "That photo is too large. Keep it under 8 MB." : "这张照片太大了，请控制在 8 MB 以内。");
+      return;
+    }
     const data = await fileToData(f);
+    if (data.length > 12 * 1024 * 1024) {
+      setErr(lang === "en" ? "That photo is too large. Try another shot." : "这张照片太大了，换一张再试。");
+      return;
+    }
     setPhotos((p) => ({ ...p, [slot]: data }));
   }
 
+  async function onLabFile(f?: File | null) {
+    if (!f) return;
+    if (f.size > 8 * 1024 * 1024) {
+      setErr(lang === "en" ? "That photo is too large. Keep it under 8 MB." : "这张照片太大了，请控制在 8 MB 以内。");
+      return;
+    }
+    const data = await fileToData(f);
+    setLabPhoto(data);
+    setLabOpen(true);
+    const ocr = await extractLab({ data: { photo: data } });
+    if (ocr.ok) {
+      if (ocr.ph) setLabPh(ocr.ph);
+      if (ocr.ec) setLabEc(ocr.ec);
+      if (ocr.om) setLabOm(ocr.om);
+      if (ocr.ph || ocr.ec || ocr.om) setOcrHint(d.labOcr);
+    }
+  }
+
+  function validLab(): boolean {
+    if (labPh) {
+      const n = Number(labPh);
+      if (!Number.isFinite(n) || n < 0 || n > 14) {
+        setErr(d.labPhRange);
+        return false;
+      }
+    }
+    if (labEc) {
+      const n = Number(labEc);
+      if (!Number.isFinite(n) || n < 0) {
+        setErr(d.labNeg);
+        return false;
+      }
+    }
+    if (labOm) {
+      const n = Number(labOm);
+      if (!Number.isFinite(n) || n < 0) {
+        setErr(d.labNeg);
+        return false;
+      }
+    }
+    return true;
+  }
+
   async function send() {
-    const list = [photos.plant, photos.leaf, photos.soil].filter(Boolean) as string[];
-    if (list.length === 0 && text.trim().length < 8) {
+    if (!validLab()) return;
+    const list = [photos.plant, photos.leaf, photos.soil, labPhoto].filter(Boolean) as string[];
+    let note = text.trim();
+    if (labPh || labEc || labOm) {
+      note += `${note ? "\n" : ""}化验单数字：pH=${labPh || "未填"} EC=${labEc || "未填"} 有机质=${labOm || "未填"}`;
+    }
+    if (list.length === 0 && note.length < 8) {
       setErr(d.needPhoto);
       return;
     }
     setBusy(true);
     setErr("");
-    const res = await runDiagnose({
-      data: { photos: list, text, crop, region, stage, fert, lang },
-    });
-    setBusy(false);
-    if (!res.ok) {
-      setErr(res.error === "off" ? d.aiOff : d.sendFail);
-      return;
+    try {
+      const res = await runDiagnose({
+        data: { photos: list, text: note, crop, region, stage, fert, lang },
+      });
+      if (!res.ok) {
+        setErr(res.error === "off" ? d.aiOff : d.sendFail);
+        return;
+      }
+      setResult(res.result);
+      pushHistory({
+        id: String(Date.now()),
+        at: new Date().toISOString(),
+        title: res.result.title,
+        summary: res.result.summary,
+      });
+    } catch {
+      setErr(d.sendFail);
+    } finally {
+      setBusy(false);
     }
-    setResult(res.result);
-    pushHistory({
-      id: String(Date.now()),
-      at: new Date().toISOString(),
-      title: res.result.title,
-      summary: res.result.summary,
-    });
   }
 
   const filled = [photos.plant, photos.leaf, photos.soil].filter(Boolean).length;
+  const missing: string[] = [];
+  if (!photos.plant) missing.push(d.fewPlant);
+  if (!photos.leaf) missing.push(d.fewLeaf);
+  if (!photos.soil) missing.push(d.fewSoil);
+
+  const spoken = result
+    ? result.spoken?.length
+      ? result.spoken
+      : [result.dont?.[0], result.guesses?.[0] ? (lang === "en" ? `Closer to ${result.guesses[0].title}` : `更像${result.guesses[0].title}`) : result.title, result.next?.[0]].filter(
+          (s): s is string => !!s,
+        )
+    : [];
 
   return (
     <div className="space-y-6">
@@ -80,10 +188,39 @@ function Diagnose() {
           <p className="text-sm text-subtle">{d.result}</p>
           <h2 className="font-display text-2xl font-semibold">{result.title}</h2>
           <p className="text-lg leading-relaxed">{result.summary}</p>
+          <ReadAloud sentences={spoken} title={result.title} listenLabel={d.listenConclusion} />
+          {result.guesses?.length ? (
+            <div className="space-y-2">
+              <h3 className="font-medium">{d.guess}</h3>
+              <ul className="space-y-2">
+                {result.guesses.map((g, i) => (
+                  <li key={`${g.title}-${i}`} className="rounded-xl bg-surface-2 p-3">
+                    <p className="font-medium">
+                      {g.title}
+                      <span className="ml-2 text-sm font-normal text-muted">
+                        {kindLabel(g.kind, d)} · {confLabel(g.confidence, d)}
+                      </span>
+                    </p>
+                    {g.why ? <p className="mt-1 text-sm text-muted">{g.why}</p> : null}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
           <div>
             <h3 className="font-medium">{d.analysis}</h3>
             <p className="mt-1 leading-relaxed text-muted">{result.photosSay}</p>
           </div>
+          {result.unlike?.length ? (
+            <div>
+              <h3 className="font-medium">{d.unlike}</h3>
+              <ul className="mt-1 list-disc space-y-1 pl-5">
+                {result.unlike.map((x, i) => (
+                  <li key={i}>{x}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
           {result.distinguish ? (
             <p className="rounded-xl bg-surface-2 p-3 leading-relaxed">{result.distinguish}</p>
           ) : null}
@@ -111,7 +248,7 @@ function Diagnose() {
             <div className="grid gap-3">
               <h3 className="font-medium">{d.related}</h3>
               {result.related.map((slug) => {
-                const a = getArticle(slug);
+                const a = getCard(slug);
                 return a ? <ArticleCard key={slug} article={a} /> : null;
               })}
             </div>
@@ -119,22 +256,30 @@ function Diagnose() {
           <div className="flex flex-wrap gap-3">
             <button
               type="button"
+              className="inline-flex min-h-12 items-center rounded-xl bg-forest px-4 text-forest-fg"
+              onClick={() => void downloadShareCard({ title: result.title, dont: result.dont, next: result.next, lang })}
+            >
+              {d.shareCard}
+            </button>
+            <button
+              type="button"
               className="inline-flex min-h-12 items-center rounded-xl border border-line px-4"
               onClick={() => {
                 setResult(null);
                 setPhotos({ plant: null, leaf: null, soil: null });
+                setLabPhoto(null);
               }}
             >
               {d.retry}
             </button>
-            <Link to="/knowledge/$slug" params={{ slug: "suan-hua" }} className="inline-flex min-h-12 items-center text-forest underline">
+            <LangLink to="/knowledge/$slug" params={{ slug: "suan-hua" }} className="inline-flex min-h-12 items-center text-forest underline">
               {d.example}
-            </Link>
+            </LangLink>
           </div>
         </section>
       ) : (
         <>
-          <div className="grid gap-3 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
             {(
               [
                 ["plant", d.slotPlant, d.hintPlant, d.avoidPlant],
@@ -142,14 +287,55 @@ function Diagnose() {
                 ["soil", d.slotSoil, d.hintSoil, d.avoidSoil],
               ] as const
             ).map(([key, label, hint, avoid]) => (
-              <label key={key} className="block cursor-pointer rounded-2xl border border-dashed border-line bg-surface p-3">
-                <span className="font-medium">{label}</span>
-                <p className="text-sm text-muted">{hint}</p>
-                <p className="text-sm text-subtle">{avoid}</p>
-                {photos[key] ? <img src={photos[key]!} alt="" className="mt-2 h-32 w-full rounded-lg object-cover" /> : <span className="mt-2 block h-32 rounded-lg bg-surface-2" />}
-                <input type="file" accept="image/*" capture="environment" className="sr-only" onChange={(e) => onFile(key, e.target.files?.[0])} />
-              </label>
+              <PhotoSlot
+                key={key}
+                label={label}
+                hint={hint}
+                avoid={avoid}
+                preview={photos[key]}
+                cameraLabel={d.camera}
+                albumLabel={d.album}
+                shotLabel={d.shot}
+                avoidLabel={d.avoid}
+                kind={key}
+                onFile={(f) => onFile(key, f)}
+              />
             ))}
+          </div>
+          <div className="rounded-2xl border border-line bg-surface p-3">
+            <button type="button" className="text-forest underline" onClick={() => setLabOpen((v) => !v)}>
+              {labOpen ? d.labHide : d.labToggle}
+            </button>
+            {labOpen ? (
+              <div className="mt-3 space-y-3">
+                <p className="text-sm text-muted">{d.labHint}</p>
+                <PhotoSlot
+                  label={d.labPhoto}
+                  hint={d.labHint}
+                  avoid={d.labAvoid}
+                  preview={labPhoto}
+                  cameraLabel={d.camera}
+                  albumLabel={d.album}
+                  onFile={onLabFile}
+                />
+                {ocrHint ? <p className="text-sm text-forest">{ocrHint}</p> : null}
+                <p className="text-sm">{d.labFill}</p>
+                <div className="grid gap-2 sm:grid-cols-3">
+                  <label className="text-sm">
+                    pH
+                    <input value={labPh} onChange={(e) => setLabPh(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-line bg-surface px-2" inputMode="decimal" />
+                  </label>
+                  <label className="text-sm">
+                    EC
+                    <input value={labEc} onChange={(e) => setLabEc(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-line bg-surface px-2" inputMode="decimal" />
+                  </label>
+                  <label className="text-sm">
+                    {lang === "en" ? "Organic matter" : "有机质"}
+                    <input value={labOm} onChange={(e) => setLabOm(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-line bg-surface px-2" inputMode="decimal" />
+                  </label>
+                </div>
+              </div>
+            ) : null}
           </div>
           <textarea
             value={text}
@@ -157,6 +343,7 @@ function Diagnose() {
             placeholder={d.qPh}
             className="min-h-28 w-full rounded-xl border border-line bg-surface p-3"
           />
+          <VoiceButton value={text} onChange={setText} />
           <div className="grid gap-3 sm:grid-cols-2">
             <select value={crop} onChange={(e) => setCrop(e.target.value)} className="min-h-12 rounded-xl border border-line bg-surface px-3">
               <option value="">{d.crop}</option>
@@ -191,7 +378,13 @@ function Diagnose() {
               ))}
             </select>
           </div>
-          {filled === 0 ? <p className="text-sm text-clay">{d.noPhotoWarn}</p> : filled < 3 ? <p className="text-sm text-clay">{d.fewPhotoWarn}</p> : null}
+          {filled < 3
+            ? missing.map((m) => (
+                <p key={m} className="text-sm text-clay">
+                  {m}
+                </p>
+              ))
+            : null}
           {err ? <p className="text-danger">{err}</p> : null}
           <button
             type="button"

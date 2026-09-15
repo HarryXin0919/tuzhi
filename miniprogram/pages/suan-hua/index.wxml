@@ -1,0 +1,5 @@
+<view>
+  <view class="h">土壤酸化：苗发僵，根尖褐秃</view>
+  <view wx:for="{{lines}}" wx:key="*this" class="line">{{item}}</view>
+  <view class="note">仅供学习对照。用量问当地农技站。</view>
+</view>
