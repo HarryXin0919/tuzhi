@@ -7,7 +7,7 @@
     "crop": "水稻",
     "region": "华南",
     "title": "秧苗发僵不长，浇水有时带锈水，邻垄还绿",
-    "body": "玉米苗发僵，根尖发褐发秃。邻垄还绿。浇水有时带一点锈水。想先分是酸化还是缺肥。",
+    "body": "秧苗发僵，根尖发褐发秃。邻垄还绿。浇水有时带一点锈水。想先分是酸化还是缺肥。",
     "bodyEn": "Rice seedlings are stalling. The next ridge is green. Root tips came up brown with few white tips. Some neighbours say feed it, some say the soil is acid. Do I look at the root first or chase urea?",
     "photo": "/images/articles/suan-hua.jpg",
     "answers": [
@@ -17,7 +17,7 @@
         "bodyEn": "Wash the roots first. Brown and bald tips look like aluminium toxicity; rusty water is extra evidence. Test 0–20 cm pH; lime only below about 5.5. Farm lime is often 50–150 kg/mu (about 750–2250 kg/ha), split, sandy soils at the low end. Don’t push tea to neutral. Don’t pour urea on bald roots. Don’t copy a neighbour’s lime rate. Test this field first."
       }
     ],
-    "titleEn": "Seedlings are stalling, and the water looks a bit rusty"
+    "titleEn": "Rice seedlings are stalling, and the water looks a bit rusty"
   },
   {
     "id": "p02",

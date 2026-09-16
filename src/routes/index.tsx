@@ -10,8 +10,9 @@ import { messages } from "@/lib/i18n/messages";
 import { lex } from "@/lib/i18n/lexicon";
 import { listPosts } from "@/lib/community/server";
 import { displayName } from "@/lib/i18n/lexicon";
-import { HOME_DESC, HOME_TITLE, orgJsonLd, seo } from "@/lib/seo";
 import { hasHan } from "@/lib/i18n/han";
+import { HOME_DESC, HOME_TITLE, orgJsonLd, seo } from "@/lib/seo";
+import { isSeedPost, problemQuery } from "@/lib/problem-query";
 
 export const Route = createFileRoute("/")({
   loader: async () => {
@@ -58,13 +59,14 @@ export function Home() {
             <LangLink
               key={p}
               to="/knowledge"
-              search={{ problem: p }}
+              search={{ problem: problemQuery(p, lang) }}
               className="inline-flex min-h-11 shrink-0 items-center rounded-full border border-line bg-surface px-4"
             >
               {lex(p, lang)}
             </LangLink>
           ))}
         </div>
+        <p className="text-sm text-subtle lg:hidden">{t.home.chipsHint}</p>
       </section>
       <section className="space-y-3">
         <div className="flex items-center justify-between">
@@ -90,7 +92,10 @@ export function Home() {
           {posts.length ? (
             posts.map((p) => (
               <LangLink key={p.id} to="/community/$id" params={{ id: p.id }} className="rounded-2xl border border-line bg-surface p-4">
-                <p className="font-medium">{lang === "en" && p.titleEn && !hasHan(p.titleEn) ? p.titleEn : p.title}</p>
+                <p className="font-medium">
+                  {isSeedPost(p.id) ? <span className="mr-2 text-sm font-medium text-clay">{t.home.seedBadge}</span> : null}
+                  {lang === "en" && p.titleEn && !hasHan(p.titleEn) ? p.titleEn : p.title}
+                </p>
                 <p className="mt-1 text-sm text-muted">{displayName(p.author, lang)}</p>
               </LangLink>
             ))

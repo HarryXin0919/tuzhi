@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CROPS, FERTS, REGIONS, STAGES } from "@/lib/constants";
 import { runDiagnose, type DiagnoseResult } from "@/lib/diagnose/server";
@@ -64,12 +64,18 @@ export function Diagnose() {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const [result, setResult] = useState<DiagnoseResult | null>(null);
-  const [labOpen, setLabOpen] = useState(false);
+  const [labOpen, setLabOpen] = useState(true);
   const [labPhoto, setLabPhoto] = useState<string | null>(null);
   const [labPh, setLabPh] = useState("");
   const [labEc, setLabEc] = useState("");
   const [labOm, setLabOm] = useState("");
   const [ocrHint, setOcrHint] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [onPhone, setOnPhone] = useState(false);
+
+  useEffect(() => {
+    setOnPhone(window.matchMedia("(pointer: coarse)").matches);
+  }, []);
 
   async function onFile(slot: Slot, f?: File | null) {
     if (!f) return;
@@ -137,6 +143,10 @@ export function Diagnose() {
     }
     if (list.length === 0 && note.length < 8) {
       setErr(d.needPhoto);
+      return;
+    }
+    if (!consent) {
+      setErr(d.consentNeed);
       return;
     }
     setBusy(true);
@@ -282,28 +292,29 @@ export function Diagnose() {
           <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
             {(
               [
-                ["plant", d.slotPlant, d.hintPlant, d.avoidPlant],
-                ["leaf", d.slotLeaf, d.hintLeaf, d.avoidLeaf],
-                ["soil", d.slotSoil, d.hintSoil, d.avoidSoil],
+                ["plant", d.slotPlant, d.hintPlant, d.avoidPlant, d.shotPlant, d.avoidPlantShot],
+                ["leaf", d.slotLeaf, d.hintLeaf, d.avoidLeaf, d.shotLeaf, d.avoidLeafShot],
+                ["soil", d.slotSoil, d.hintSoil, d.avoidSoil, d.shotSoil, d.avoidSoilShot],
               ] as const
-            ).map(([key, label, hint, avoid]) => (
+            ).map(([key, label, hint, avoid, shot, avoidShot]) => (
               <PhotoSlot
                 key={key}
                 label={label}
                 hint={hint}
                 avoid={avoid}
                 preview={photos[key]}
-                cameraLabel={d.camera}
+                cameraLabel={onPhone ? d.cameraPhone : d.cameraFile}
                 albumLabel={d.album}
-                shotLabel={d.shot}
-                avoidLabel={d.avoid}
+                shotLabel={shot}
+                avoidLabel={avoidShot}
                 kind={key}
                 onFile={(f) => onFile(key, f)}
               />
             ))}
           </div>
           <div className="rounded-2xl border border-line bg-surface p-3">
-            <button type="button" className="text-forest underline" onClick={() => setLabOpen((v) => !v)}>
+            <p className="font-medium">{d.labStep}</p>
+            <button type="button" className="mt-1 text-forest underline" onClick={() => setLabOpen((v) => !v)}>
               {labOpen ? d.labHide : d.labToggle}
             </button>
             {labOpen ? (
@@ -314,7 +325,7 @@ export function Diagnose() {
                   hint={d.labHint}
                   avoid={d.labAvoid}
                   preview={labPhoto}
-                  cameraLabel={d.camera}
+                  cameraLabel={onPhone ? d.cameraPhone : d.cameraFile}
                   albumLabel={d.album}
                   onFile={onLabFile}
                 />
@@ -386,6 +397,11 @@ export function Diagnose() {
               ))
             : null}
           {err ? <p className="text-danger">{err}</p> : null}
+          <label className="flex items-start gap-2 text-sm leading-relaxed">
+            <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-1 size-4" />
+            <span>{d.consent}</span>
+          </label>
+          <p className="text-sm text-muted">{d.whereResult}</p>
           <button
             type="button"
             disabled={busy}

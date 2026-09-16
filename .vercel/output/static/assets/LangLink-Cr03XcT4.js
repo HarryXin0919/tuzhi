@@ -1,1 +1,0 @@
-import{c as e,r as t,t as n}from"./use-path-lang-C--Ev1-j.js";import{c as r}from"./useStore-Ci5QMeSG.js";var i=r();function a(r){let a=n(),{to:o,params:s,search:c,children:l,...u}=r;return(0,i.jsx)(e,{...u,to:t(o,a),params:s,search:c,children:l})}export{a as t};

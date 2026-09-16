@@ -7,6 +7,7 @@ import { displayName, lex } from "@/lib/i18n/lexicon";
 import { seo } from "@/lib/seo";
 import { LangLink } from "@/components/LangLink";
 import { useAnyLoaderData, useAnyNavigate, useAnySearch } from "@/lib/i18n/route-data";
+import { isSeedPost, parseProblem, problemQuery } from "@/lib/problem-query";
 
 type Search = { problem?: string };
 
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/community/")({
     problem: typeof s.problem === "string" ? s.problem : undefined,
   }),
   loaderDeps: ({ search }) => ({ problem: search.problem }),
-  loader: async ({ deps }) => ({ posts: await listPosts({ data: { problem: deps.problem } }) }),
+  loader: async ({ deps }) => ({ posts: await listPosts({ data: { problem: parseProblem(deps.problem) } }) }),
   head: () =>
     seo({
       title: "问答区｜土知",
@@ -32,17 +33,19 @@ export function Community() {
   const { posts } = useAnyLoaderData<{ posts: Awaited<ReturnType<typeof listPosts>> }>();
   const search = useAnySearch<Search>();
   const nav = useAnyNavigate();
+  const problemZh = parseProblem(search.problem);
   return (
     <div className="space-y-5">
       <header>
         <h1 className="font-display text-3xl font-semibold">{r.title}</h1>
         <p className="mt-1 text-muted">{r.lead}</p>
       </header>
+      <p className="rounded-xl border border-line bg-surface-2 px-4 py-3 text-sm leading-relaxed">{r.seedNote}</p>
       <div className="flex flex-wrap gap-2">
         <button
           type="button"
           onClick={() => nav({ search: { problem: undefined } })}
-          className={!search.problem ? "rounded-full bg-forest px-4 py-2 text-forest-fg" : "rounded-full border border-line px-4 py-2"}
+          className={!problemZh ? "rounded-full bg-forest px-4 py-2 text-forest-fg" : "rounded-full border border-line px-4 py-2"}
         >
           {t.all}
         </button>
@@ -50,8 +53,8 @@ export function Community() {
           <button
             key={p}
             type="button"
-            onClick={() => nav({ search: { problem: p } })}
-            className={search.problem === p ? "rounded-full bg-forest px-4 py-2 text-forest-fg" : "rounded-full border border-line px-4 py-2"}
+            onClick={() => nav({ search: { problem: problemQuery(p, lang) } })}
+            className={problemZh === p ? "rounded-full bg-forest px-4 py-2 text-forest-fg" : "rounded-full border border-line px-4 py-2"}
           >
             {lex(p, lang)}
           </button>
@@ -76,7 +79,10 @@ export function Community() {
         ) : (
           posts.map((p) => (
             <LangLink key={p.id} to="/community/$id" params={{ id: p.id }} className="block rounded-2xl border border-line bg-surface p-4">
-              <p className="font-medium">{lang === "en" && p.titleEn && !/[\u4e00-\u9fff]/.test(p.titleEn) ? p.titleEn : p.title}</p>
+              <p className="font-medium">
+                {isSeedPost(p.id) ? <span className="mr-2 text-sm font-medium text-clay">{r.seedBadge}</span> : null}
+                {lang === "en" && p.titleEn && !/[\u4e00-\u9fff]/.test(p.titleEn) ? p.titleEn : p.title}
+              </p>
               <p className="mt-1 line-clamp-2 text-muted">{lang === "en" && p.bodyEn && !/[\u4e00-\u9fff]/.test(p.bodyEn) ? p.bodyEn : p.body}</p>
               <p className="mt-2 text-sm text-subtle">
                 {displayName(p.author, lang)} · {String(p.createdAt).slice(0, 10)} · {lex(p.problem, lang)} ·{" "}

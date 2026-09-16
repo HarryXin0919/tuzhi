@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SplatRouteImport } from './routes/$'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DiagnoseRouteImport } from './routes/diagnose'
@@ -18,10 +19,12 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as MeRouteImport } from './routes/me'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CommunityIndexRouteImport } from './routes/community/index'
 import { Route as CommunityIdRouteImport } from './routes/community/$id'
 import { Route as CommunityNewRouteImport } from './routes/community/new'
 import { Route as EnIndexRouteImport } from './routes/en/index'
+import { Route as EnSplatRouteImport } from './routes/en/$'
 import { Route as EnAboutRouteImport } from './routes/en/about'
 import { Route as EnContactRouteImport } from './routes/en/contact'
 import { Route as EnDiagnoseRouteImport } from './routes/en/diagnose'
@@ -29,6 +32,7 @@ import { Route as EnLoginRouteImport } from './routes/en/login'
 import { Route as EnMeRouteImport } from './routes/en/me'
 import { Route as EnPrivacyRouteImport } from './routes/en/privacy'
 import { Route as EnSearchRouteImport } from './routes/en/search'
+import { Route as EnTermsRouteImport } from './routes/en/terms'
 import { Route as EncyclopediaIndexRouteImport } from './routes/encyclopedia/index'
 import { Route as EncyclopediaIdRouteImport } from './routes/encyclopedia/$id'
 import { Route as KnowledgeIndexRouteImport } from './routes/knowledge/index'
@@ -45,6 +49,11 @@ import { Route as EnKnowledgeSlugRouteImport } from './routes/en/knowledge/$slug
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -87,6 +96,11 @@ const SearchRoute = SearchRouteImport.update({
   path: '/search',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CommunityIndexRoute = CommunityIndexRouteImport.update({
   id: '/community/',
   path: '/community/',
@@ -105,6 +119,11 @@ const CommunityNewRoute = CommunityNewRouteImport.update({
 const EnIndexRoute = EnIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnSplatRoute = EnSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => EnRoute,
 } as any)
 const EnAboutRoute = EnAboutRouteImport.update({
@@ -140,6 +159,11 @@ const EnPrivacyRoute = EnPrivacyRouteImport.update({
 const EnSearchRoute = EnSearchRouteImport.update({
   id: '/search',
   path: '/search',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnTermsRoute = EnTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => EnRoute,
 } as any)
 const EncyclopediaIndexRoute = EncyclopediaIndexRouteImport.update({
@@ -205,6 +229,7 @@ const EnKnowledgeSlugRoute = EnKnowledgeSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/diagnose': typeof DiagnoseRoute
@@ -213,8 +238,10 @@ export interface FileRoutesByFullPath {
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
   '/community/$id': typeof CommunityIdRoute
   '/community/new': typeof CommunityNewRoute
+  '/en/$': typeof EnSplatRoute
   '/en/about': typeof EnAboutRoute
   '/en/contact': typeof EnContactRoute
   '/en/diagnose': typeof EnDiagnoseRoute
@@ -222,6 +249,7 @@ export interface FileRoutesByFullPath {
   '/en/me': typeof EnMeRoute
   '/en/privacy': typeof EnPrivacyRoute
   '/en/search': typeof EnSearchRoute
+  '/en/terms': typeof EnTermsRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
   '/knowledge/$slug': typeof KnowledgeSlugRoute
   '/community/': typeof CommunityIndexRoute
@@ -239,6 +267,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/diagnose': typeof DiagnoseRoute
@@ -246,8 +275,10 @@ export interface FileRoutesByTo {
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
   '/community/$id': typeof CommunityIdRoute
   '/community/new': typeof CommunityNewRoute
+  '/en/$': typeof EnSplatRoute
   '/en/about': typeof EnAboutRoute
   '/en/contact': typeof EnContactRoute
   '/en/diagnose': typeof EnDiagnoseRoute
@@ -255,6 +286,7 @@ export interface FileRoutesByTo {
   '/en/me': typeof EnMeRoute
   '/en/privacy': typeof EnPrivacyRoute
   '/en/search': typeof EnSearchRoute
+  '/en/terms': typeof EnTermsRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
   '/knowledge/$slug': typeof KnowledgeSlugRoute
   '/community': typeof CommunityIndexRoute
@@ -273,6 +305,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$': typeof SplatRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/diagnose': typeof DiagnoseRoute
@@ -281,8 +314,10 @@ export interface FileRoutesById {
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
   '/search': typeof SearchRoute
+  '/terms': typeof TermsRoute
   '/community/$id': typeof CommunityIdRoute
   '/community/new': typeof CommunityNewRoute
+  '/en/$': typeof EnSplatRoute
   '/en/about': typeof EnAboutRoute
   '/en/contact': typeof EnContactRoute
   '/en/diagnose': typeof EnDiagnoseRoute
@@ -290,6 +325,7 @@ export interface FileRoutesById {
   '/en/me': typeof EnMeRoute
   '/en/privacy': typeof EnPrivacyRoute
   '/en/search': typeof EnSearchRoute
+  '/en/terms': typeof EnTermsRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
   '/knowledge/$slug': typeof KnowledgeSlugRoute
   '/community/': typeof CommunityIndexRoute
@@ -309,6 +345,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$'
     | '/about'
     | '/contact'
     | '/diagnose'
@@ -317,8 +354,10 @@ export interface FileRouteTypes {
     | '/me'
     | '/privacy'
     | '/search'
+    | '/terms'
     | '/community/$id'
     | '/community/new'
+    | '/en/$'
     | '/en/about'
     | '/en/contact'
     | '/en/diagnose'
@@ -326,6 +365,7 @@ export interface FileRouteTypes {
     | '/en/me'
     | '/en/privacy'
     | '/en/search'
+    | '/en/terms'
     | '/encyclopedia/$id'
     | '/knowledge/$slug'
     | '/community/'
@@ -343,6 +383,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$'
     | '/about'
     | '/contact'
     | '/diagnose'
@@ -350,8 +391,10 @@ export interface FileRouteTypes {
     | '/me'
     | '/privacy'
     | '/search'
+    | '/terms'
     | '/community/$id'
     | '/community/new'
+    | '/en/$'
     | '/en/about'
     | '/en/contact'
     | '/en/diagnose'
@@ -359,6 +402,7 @@ export interface FileRouteTypes {
     | '/en/me'
     | '/en/privacy'
     | '/en/search'
+    | '/en/terms'
     | '/encyclopedia/$id'
     | '/knowledge/$slug'
     | '/community'
@@ -376,6 +420,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/$'
     | '/about'
     | '/contact'
     | '/diagnose'
@@ -384,8 +429,10 @@ export interface FileRouteTypes {
     | '/me'
     | '/privacy'
     | '/search'
+    | '/terms'
     | '/community/$id'
     | '/community/new'
+    | '/en/$'
     | '/en/about'
     | '/en/contact'
     | '/en/diagnose'
@@ -393,6 +440,7 @@ export interface FileRouteTypes {
     | '/en/me'
     | '/en/privacy'
     | '/en/search'
+    | '/en/terms'
     | '/encyclopedia/$id'
     | '/knowledge/$slug'
     | '/community/'
@@ -411,6 +459,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   DiagnoseRoute: typeof DiagnoseRoute
@@ -419,6 +468,7 @@ export interface RootRouteChildren {
   MeRoute: typeof MeRoute
   PrivacyRoute: typeof PrivacyRoute
   SearchRoute: typeof SearchRoute
+  TermsRoute: typeof TermsRoute
   CommunityIdRoute: typeof CommunityIdRoute
   CommunityNewRoute: typeof CommunityNewRoute
   EncyclopediaIdRoute: typeof EncyclopediaIdRoute
@@ -436,6 +486,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -494,6 +551,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/community/': {
       id: '/community/'
       path: '/community'
@@ -520,6 +584,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/en/'
       preLoaderRoute: typeof EnIndexRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/$': {
+      id: '/en/$'
+      path: '/$'
+      fullPath: '/en/$'
+      preLoaderRoute: typeof EnSplatRouteImport
       parentRoute: typeof EnRoute
     }
     '/en/about': {
@@ -569,6 +640,13 @@ declare module '@tanstack/react-router' {
       path: '/search'
       fullPath: '/en/search'
       preLoaderRoute: typeof EnSearchRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/terms': {
+      id: '/en/terms'
+      path: '/terms'
+      fullPath: '/en/terms'
+      preLoaderRoute: typeof EnTermsRouteImport
       parentRoute: typeof EnRoute
     }
     '/encyclopedia/': {
@@ -659,6 +737,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface EnRouteChildren {
+  EnSplatRoute: typeof EnSplatRoute
   EnAboutRoute: typeof EnAboutRoute
   EnContactRoute: typeof EnContactRoute
   EnDiagnoseRoute: typeof EnDiagnoseRoute
@@ -666,6 +745,7 @@ interface EnRouteChildren {
   EnMeRoute: typeof EnMeRoute
   EnPrivacyRoute: typeof EnPrivacyRoute
   EnSearchRoute: typeof EnSearchRoute
+  EnTermsRoute: typeof EnTermsRoute
   EnIndexRoute: typeof EnIndexRoute
   EnCommunityIdRoute: typeof EnCommunityIdRoute
   EnCommunityNewRoute: typeof EnCommunityNewRoute
@@ -677,6 +757,7 @@ interface EnRouteChildren {
 }
 
 const EnRouteChildren: EnRouteChildren = {
+  EnSplatRoute: EnSplatRoute,
   EnAboutRoute: EnAboutRoute,
   EnContactRoute: EnContactRoute,
   EnDiagnoseRoute: EnDiagnoseRoute,
@@ -684,6 +765,7 @@ const EnRouteChildren: EnRouteChildren = {
   EnMeRoute: EnMeRoute,
   EnPrivacyRoute: EnPrivacyRoute,
   EnSearchRoute: EnSearchRoute,
+  EnTermsRoute: EnTermsRoute,
   EnIndexRoute: EnIndexRoute,
   EnCommunityIdRoute: EnCommunityIdRoute,
   EnCommunityNewRoute: EnCommunityNewRoute,
@@ -698,6 +780,7 @@ const EnRouteWithChildren = EnRoute._addFileChildren(EnRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   DiagnoseRoute: DiagnoseRoute,
@@ -706,6 +789,7 @@ const rootRouteChildren: RootRouteChildren = {
   MeRoute: MeRoute,
   PrivacyRoute: PrivacyRoute,
   SearchRoute: SearchRoute,
+  TermsRoute: TermsRoute,
   CommunityIdRoute: CommunityIdRoute,
   CommunityNewRoute: CommunityNewRoute,
   EncyclopediaIdRoute: EncyclopediaIdRoute,

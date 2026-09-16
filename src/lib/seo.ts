@@ -1,5 +1,6 @@
 import { SITE_ORIGIN } from "@/lib/constants";
 import type { Lang } from "@/lib/i18n/lang";
+import { stripLangPrefix, withLangPath } from "@/lib/i18n/path";
 
 export const OG_IMAGE = `${SITE_ORIGIN}/og.jpg`;
 export const SITE_NAME = "土知";
@@ -22,32 +23,44 @@ export function seo(opts: {
   type?: "website" | "article";
   noindex?: boolean;
   lang?: Lang;
+  image?: string;
 }) {
   const url = canonicalUrl(opts.path);
   const type = opts.type ?? "website";
   const desc = opts.description.slice(0, 180);
   const lang = opts.lang === "en" ? "en" : "zh";
   const site = lang === "en" ? SITE_NAME_EN : SITE_NAME;
+  const image = opts.image && opts.image.startsWith("http") ? opts.image : opts.image ? `${SITE_ORIGIN}${opts.image}` : OG_IMAGE;
+  const bare = stripLangPrefix(opts.path);
+  const zhUrl = canonicalUrl(withLangPath(bare, "zh"));
+  const enUrl = canonicalUrl(withLangPath(bare, "en"));
   return {
     meta: [
       { title: opts.title },
       { name: "description", content: desc },
       ...(opts.noindex ? [{ name: "robots", content: "noindex, nofollow" }] : []),
+      { name: "apple-mobile-web-app-title", content: lang === "en" ? SITE_NAME_EN : SITE_NAME },
       { property: "og:title", content: opts.title },
       { property: "og:description", content: desc },
       { property: "og:url", content: url },
       { property: "og:type", content: type },
       { property: "og:locale", content: lang === "en" ? "en_US" : "zh_CN" },
+      { property: "og:locale:alternate", content: lang === "en" ? "zh_CN" : "en_US" },
       { property: "og:site_name", content: site },
-      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image", content: image },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: opts.title },
       { name: "twitter:description", content: desc },
-      { name: "twitter:image", content: OG_IMAGE },
+      { name: "twitter:image", content: image },
     ],
-    links: [{ rel: "canonical", href: url }],
+    links: [
+      { rel: "canonical", href: url },
+      { rel: "alternate", hrefLang: "zh-CN", href: zhUrl },
+      { rel: "alternate", hrefLang: "en", href: enUrl },
+      { rel: "alternate", hrefLang: "x-default", href: zhUrl },
+    ],
   };
 }
 
@@ -57,11 +70,13 @@ export function articleJsonLd(opts: {
   path: string;
   dateModified: string;
   lang?: Lang;
+  image?: string;
 }) {
   const url = canonicalUrl(opts.path);
   const lang = opts.lang === "en" ? "en" : "zh-CN";
   const home = opts.lang === "en" ? SITE_ORIGIN + "/en" : SITE_ORIGIN + "/";
   const knowledge = opts.lang === "en" ? SITE_ORIGIN + "/en/knowledge" : SITE_ORIGIN + "/knowledge";
+  const image = opts.image && opts.image.startsWith("http") ? opts.image : opts.image ? `${SITE_ORIGIN}${opts.image}` : OG_IMAGE;
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -73,7 +88,7 @@ export function articleJsonLd(opts: {
         inLanguage: lang,
         author: { "@type": "Person", name: opts.lang === "en" ? "Li Zeyu" : "李泽宇" },
         publisher: { "@type": "Organization", name: opts.lang === "en" ? SITE_NAME_EN : SITE_NAME, url: SITE_ORIGIN },
-        image: OG_IMAGE,
+        image,
         url,
       },
       {
@@ -85,6 +100,33 @@ export function articleJsonLd(opts: {
         ],
       },
     ],
+  };
+}
+
+export function qaPageJsonLd(opts: {
+  title: string;
+  description: string;
+  path: string;
+  dateModified: string;
+  answers: string[];
+  lang?: Lang;
+}) {
+  const url = canonicalUrl(opts.path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "QAPage",
+    mainEntity: {
+      "@type": "Question",
+      name: opts.title,
+      text: opts.description.slice(0, 300),
+      dateCreated: opts.dateModified,
+      inLanguage: opts.lang === "en" ? "en" : "zh-CN",
+      answerCount: opts.answers.length,
+      acceptedAnswer: opts.answers[0]
+        ? { "@type": "Answer", text: opts.answers[0], author: { "@type": "Person", name: opts.lang === "en" ? "Li Zeyu" : "李泽宇" } }
+        : undefined,
+    },
+    url,
   };
 }
 

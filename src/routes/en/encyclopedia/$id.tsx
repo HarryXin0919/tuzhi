@@ -18,6 +18,7 @@ export const Route = createFileRoute("/en/encyclopedia/$id")({
       path: term ? `/en/encyclopedia/${term.id}` : "/en/encyclopedia",
       type: "article",
       lang: "en",
+      image: term?.photos?.[0]?.src,
     });
   },
   component: TermPage,

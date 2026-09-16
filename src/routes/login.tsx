@@ -7,6 +7,7 @@ import { messages } from "@/lib/i18n/messages";
 import { seo } from "@/lib/seo";
 import { useAnyNavigate, useAnySearch } from "@/lib/i18n/route-data";
 import { withLangPath } from "@/lib/i18n/path";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 type Search = { tab?: "login" | "register"; next?: string };
 
@@ -124,6 +125,7 @@ export function Login() {
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-semibold">{L.title}</h1>
         <p className="text-muted">{L.lead}</p>
+        <p className="text-sm text-subtle">{L.rules}</p>
       </header>
       <div className="flex gap-2">
         <button
@@ -206,6 +208,16 @@ export function Login() {
         </label>
       ) : null}
       {err ? <p className="text-danger">{err}</p> : null}
+      {!register ? (
+        <p className="text-sm leading-relaxed text-muted">
+          <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(L.forgot)}`} className="text-forest underline">
+            {L.forgot}
+          </a>{" "}
+          {L.forgotHint}
+        </p>
+      ) : (
+        <p className="text-sm leading-relaxed text-muted">{L.registered}</p>
+      )}
       <button
         type="button"
         disabled={busy}

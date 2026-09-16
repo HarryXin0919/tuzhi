@@ -27,7 +27,14 @@ function AuthSlot({ loginLabel }: { loginLabel: string }) {
     return () => window.clearTimeout(t);
   }, []);
   if (isPending && !waited) {
-    return <span className="inline-flex min-h-10 min-w-16 items-center rounded-lg bg-surface-2 px-4" />;
+    return (
+      <LangLink
+        to="/login"
+        className="inline-flex min-h-10 items-center rounded-lg bg-forest px-4 text-sm font-medium text-forest-fg"
+      >
+        {loginLabel}
+      </LangLink>
+    );
   }
   if (user) {
     return <UserButton />;
@@ -58,6 +65,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     if (typeof navigator === "undefined" || !("serviceWorker" in navigator)) return;
     navigator.serviceWorker.register("/sw-tuzhi.js").catch(() => undefined);
   }, []);
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const link = document.querySelector('link[rel="manifest"]');
+    if (link) link.setAttribute("href", lang === "en" ? "/manifest-en.webmanifest" : "/manifest.webmanifest");
+  }, [lang]);
   function active(to: string) {
     const pathLang = langFromPath(pathname);
     const prefix = pathLang === "en" ? "/en" : "";
@@ -126,6 +138,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </LangLink>
           <LangLink to="/privacy" className="text-forest underline">
             {t.footer.privacy}
+          </LangLink>
+          <LangLink to="/terms" className="text-forest underline">
+            {t.footer.terms}
           </LangLink>
           <LangLink to="/contact" className="text-forest underline">
             {t.footer.contact}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/diagnose",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "拍照识别｜土知",
+      "hasCanvas": false,
+      "bodyTextLen": 866,
+      "bodyTextHash": "37db9cf34cbb37215177d13cd1507076fc02e4e6434892f6daec9e1c50e04ac7",
+      "bodyTextPrefix": "跳到正文 土知 看懂土地，种好地 首页 拍照识别 农业知识 化验知识 问答区 我的 English 登录 拍照识别土地问题 先拍",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/diagnose.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "拍照识别｜土知",
+      "hasCanvas": false,
+      "bodyTextLen": 847,
+      "bodyTextHash": "bc402387526ed2eb56ebeee41339c9672df5fe8b0a054eb14b32dfe108ac4ced",
+      "bodyTextPrefix": "跳到正文 English 登录 拍照识别土地问题 先拍整株、特写和土面，再到农业知识里对照。尽量把土壤问题和病害、药害分开。 整",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/diagnose-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/diagnose.json"
+}

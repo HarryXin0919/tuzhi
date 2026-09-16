@@ -28,6 +28,11 @@ var grokOgIdentity = { "site": {
 */
 var DEFAULT_APP_NAME = "Grok App";
 var OG_SITE_REL_PATH = "src/lib/og/site.json";
+/** Custom domains keep their own head. Grok preview / *.grok.me still get the injector. */
+function skipPlatformChrome(hostHeader) {
+	const host = String(hostHeader ?? "").split(",")[0].trim().split(":")[0].toLowerCase();
+	return host === "tuzhi.asia" || host === "www.tuzhi.asia" || host === "localhost" || host === "127.0.0.1";
+}
 var SHARE_META_KEYS = /* @__PURE__ */ new Set([
 	"og:title",
 	"og:description",
@@ -301,6 +306,7 @@ function normalizeHeadContext(ctx = {}) {
 function injectGrokPwaHead(html, ctx = {}) {
 	if (typeof html !== "string") return html;
 	const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
+	if (skipPlatformChrome(host)) return html;
 	const documentTitle = titleFromDocument(html);
 	const appName = resolveOgTitle(site, ctx.appName ?? "Grok App", host, documentTitle);
 	let next = stripShareMetaTags(html);
@@ -436,6 +442,7 @@ async function grokPwaMiddleware(event, next) {
 	}
 	if (!isDocumentPath(path)) return next();
 	const result = await next();
+	if (skipPlatformChrome(requestHost(event))) return result;
 	if (result instanceof Response && result.body && String(result.headers.get("content-type") ?? "").includes("text/html") && !result.headers.get("content-encoding")) return injectHeadStreaming(result, requestHost(event));
 	return result;
 }

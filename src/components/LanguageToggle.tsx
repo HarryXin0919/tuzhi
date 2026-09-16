@@ -1,4 +1,4 @@
-import { useNavigate, useRouterState } from "@tanstack/react-router";
+import { useRouterState } from "@tanstack/react-router";
 import { useLang } from "@/lib/i18n/lang";
 import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
@@ -10,19 +10,17 @@ export function LanguageToggle() {
   const t = messages[lang];
   const next = lang === "zh" ? "en" : "zh";
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const search = useRouterState({ select: (s) => s.location.search });
-  const navigate = useNavigate();
+  const searchStr = useRouterState({ select: (s) => s.location.searchStr || "" });
+  const href = `${withLangPath(pathname, next)}${searchStr}`;
   return (
-    <button
-      type="button"
+    <a
+      href={href}
       className="inline-flex min-h-10 items-center rounded-lg border border-line bg-surface px-3 text-sm font-medium text-ink"
+      hrefLang={next === "en" ? "en" : "zh-CN"}
       aria-label={t.langSwitchAria}
-      onClick={() => {
-        setLang(next);
-        void navigate({ to: withLangPath(pathname, next) as never, search: search as never });
-      }}
+      onClick={() => setLang(next)}
     >
       {t.langSwitch}
-    </button>
+    </a>
   );
 }

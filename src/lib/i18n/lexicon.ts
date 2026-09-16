@@ -18,7 +18,7 @@ const MAP: Record<string, string> = {
   板结: "Hard-packed soil",
   有机质低: "Thin organic matter",
   缺素: "Nutrient shortage",
-  连作障碍: "Same-crop fatigue",
+  连作障碍: "Same crop again",
   涝害: "Waterlogging",
   肥害: "Fertiliser burn",
   其他: "Other",

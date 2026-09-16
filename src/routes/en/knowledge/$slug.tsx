@@ -24,6 +24,7 @@ export const Route = createFileRoute("/en/knowledge/$slug")({
       path: a ? `/en/knowledge/${a.slug}` : "/en/knowledge",
       type: "article",
       lang: "en",
+      image: a?.photos?.[0]?.src,
     });
   },
   component: function Page() {

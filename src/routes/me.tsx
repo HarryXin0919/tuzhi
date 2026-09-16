@@ -49,7 +49,17 @@ export function Me() {
           </LangLink>
         </div>
       )}
-      <p className="text-sm text-muted">{m.localOnly}</p>
+      <section className="space-y-3 rounded-2xl border border-line bg-surface p-4">
+        <h2 className="font-display text-xl font-semibold">{m.accountTitle}</h2>
+        <p className="text-sm text-muted">{m.guest}</p>
+        <LangLink to="/community" className="inline-block text-forest underline">
+          {t.nav.community}
+        </LangLink>
+      </section>
+      <section className="space-y-3">
+        <h2 className="font-display text-xl font-semibold">{m.deviceTitle}</h2>
+        <p className="text-sm text-muted">{m.localOnly}</p>
+      </section>
       <section className="space-y-3">
         <h2 className="font-display text-xl font-semibold">{m.favs}</h2>
         {articles.length === 0 ? (

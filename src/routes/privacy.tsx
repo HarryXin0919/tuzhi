@@ -24,6 +24,7 @@ export function Privacy() {
           {p}
         </p>
       ))}
+      <p className="text-sm text-subtle">{t.privacy.updated}</p>
       <p className="text-muted">{t.disclaimer}</p>
     </article>
   );

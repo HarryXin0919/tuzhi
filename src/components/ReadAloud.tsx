@@ -306,7 +306,7 @@ export function ReadAloud({
             {mode === "paused" ? t.resume : listenLabel || t.listen}
           </button>
         )}
-        <button type="button" className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4" onClick={stopAll}>
+        <button type="button" disabled={mode === "idle"} className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 disabled:opacity-40" onClick={stopAll}>
           {t.stop}
         </button>
         <span className="text-sm text-muted">{t.rate}</span>
@@ -314,10 +314,11 @@ export function ReadAloud({
           <button
             key={r}
             type="button"
+            disabled={mode === "idle"}
             className={
               r === rate
-                ? "inline-flex min-h-9 items-center rounded-full bg-forest px-3 text-sm text-forest-fg"
-                : "inline-flex min-h-9 items-center rounded-full border border-line bg-surface px-3 text-sm"
+                ? "inline-flex min-h-9 items-center rounded-full bg-forest px-3 text-sm text-forest-fg disabled:opacity-40"
+                : "inline-flex min-h-9 items-center rounded-full border border-line bg-surface px-3 text-sm disabled:opacity-40"
             }
             onClick={() => changeRate(r)}
           >

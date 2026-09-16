@@ -21,7 +21,7 @@ export const Route = createFileRoute("/encyclopedia/$id")({
     const term = loaderData?.term;
     const title = term ? `${term.zh.title} · 土知` : "土知";
     const desc = term?.zh.summary?.slice(0, 180) || "化验单上的词，说成人话";
-    return seo({ title, description: desc, path: term ? `/encyclopedia/${term.id}` : "/encyclopedia", type: "article" });
+    return seo({ title, description: desc, path: term ? `/encyclopedia/${term.id}` : "/encyclopedia", type: "article", image: term?.photos?.[0]?.src });
   },
   component: TermPage,
 });
@@ -130,14 +130,13 @@ export function TermPage() {
         </section>
       ) : null}
       <LessonVideo slug={term.id} kind="wiki" />
-      <div className="lg:hidden">{relatedBlock}</div>
     </div>
   );
   return (
     <article>
       <div className="lg:grid lg:grid-cols-[minmax(0,45rem)_22.5rem] lg:items-start lg:gap-8">
         {reading}
-        <aside className="sticky top-20 hidden space-y-6 lg:block">{relatedBlock}</aside>
+        <aside className="mt-8 space-y-6 lg:sticky lg:top-20 lg:mt-0">{relatedBlock}</aside>
       </div>
     </article>
   );

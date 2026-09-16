@@ -28,6 +28,7 @@ export const Route = createFileRoute("/knowledge/$slug")({
       path: a ? `/knowledge/${a.slug}` : "/knowledge",
       type: "article",
       lang: "zh",
+      image: a?.photos?.[0]?.src,
     });
   },
   component: function Page() {
@@ -113,6 +114,7 @@ export function GuidePage({ raw }: { raw: Article }) {
     path: withLangPath(`/knowledge/${raw.slug}`, lang),
     dateModified: a.updatedAt || raw.updatedAt,
     lang,
+    image: a.photos?.[0]?.src || raw.photos?.[0]?.src,
   });
   const sample = lang === "en" ? LAB_SAMPLE_EN : LAB_SAMPLE_ZH;
   const wikiRows = a.labTable?.length
@@ -353,10 +355,6 @@ export function GuidePage({ raw }: { raw: Article }) {
         {a.whenToTest ? <p className="rounded-2xl border border-line bg-surface p-4 leading-relaxed">{a.whenToTest}</p> : null}
       </Section>
       {!howto ? <LessonVideo slug={raw.slug} /> : null}
-      <div className="lg:hidden space-y-6">
-        {wikiBlock}
-        {relatedBlock}
-      </div>
       <p className="text-sm text-muted">{C.updated(a.updatedAt, author)}</p>
       {sources.length ? (
         <p className="text-sm text-subtle">
@@ -375,7 +373,7 @@ export function GuidePage({ raw }: { raw: Article }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="lg:grid lg:grid-cols-[minmax(0,45rem)_22.5rem] lg:items-start lg:gap-8">
         {reading}
-        <aside className="sticky top-20 hidden space-y-6 lg:block">
+        <aside className="mt-8 space-y-6 lg:sticky lg:top-20 lg:mt-0">
           {wikiBlock}
           {relatedBlock}
         </aside>

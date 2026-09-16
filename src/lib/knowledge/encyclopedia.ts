@@ -24,7 +24,7 @@ function localizeWikiPhotos(term: WikiPack, lang: Lang, title: string): Photo[] 
       alt: close ? `${title} close-up` : `${title} field check`,
       caption: close
         ? "A close-up check. Trust your own field."
-        : "What this cell looks like on a sheet. Field photo to be added.",
+        : "What this cell looks like on a sheet. A lab sketch, not your own field.",
     };
   });
 }

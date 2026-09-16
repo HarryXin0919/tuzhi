@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { facetCounts, filterArticles } from "@/lib/knowledge/catalog";
 import { HOME_DESC_EN, seo } from "@/lib/seo";
+import { parseProblem } from "@/lib/problem-query";
 import { KnowledgeList } from "../../knowledge/index";
 
 type Search = { q?: string; crop?: string; problem?: string; region?: string; season?: string };
@@ -15,8 +16,9 @@ export const Route = createFileRoute("/en/knowledge/")({
   }),
   loaderDeps: ({ search }) => search,
   loader: ({ deps }) => {
-    const list = filterArticles(deps);
-    const facets = facetCounts(deps);
+    const parsed = { ...deps, problem: parseProblem(deps.problem) };
+    const list = filterArticles(parsed);
+    const facets = facetCounts(parsed);
     return { list, facets };
   },
   head: () =>

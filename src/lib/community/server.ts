@@ -70,12 +70,18 @@ async function seedIfEmpty() {
     await ensureCommunitySchema(sql);
     const rows = await sql<{ c: number }>`select count(*)::int as c from posts`;
     if ((rows[0]?.c ?? 0) > 0) {
-      for (const p of seed as Array<{ id: string; titleEn?: string }>) {
-        if (!p.titleEn) continue;
+      for (const p of seed as Array<{ id: string; title?: string; titleEn?: string; body?: string; bodyEn?: string; crop?: string }>) {
         try {
-          await sql`update posts set title_en = ${p.titleEn} where id = ${p.id} and (title_en is null or title_en = '')`;
+          await sql`update posts set
+            title = coalesce(${p.title ?? null}, title),
+            title_en = coalesce(${p.titleEn ?? null}, title_en),
+            body = coalesce(${p.body ?? null}, body),
+            body_en = coalesce(${p.bodyEn ?? null}, body_en),
+            crop = coalesce(${p.crop ?? null}, crop)
+            where id = ${p.id} and id like 'p%'`
+          ;
         } catch {
-          // title_en may be missing until 0003 applies
+          // seed refresh is best-effort
         }
       }
       seeded = true;

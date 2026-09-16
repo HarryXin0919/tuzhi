@@ -1,6 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /en
+Allow: /en/
 Disallow: /login
 Disallow: /me
 Disallow: /community/new
+Disallow: /en/login
+Disallow: /en/me
+Disallow: /en/community/new
 Sitemap: https://tuzhi.asia/sitemap.xml

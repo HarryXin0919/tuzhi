@@ -11,6 +11,7 @@ import { messages } from "@/lib/i18n/messages";
 import { lex } from "@/lib/i18n/lexicon";
 import { extraFiltersOpen, setExtraFiltersOpen } from "@/lib/local";
 import { seo } from "@/lib/seo";
+import { parseProblem, problemQuery } from "@/lib/problem-query";
 
 type Search = { q?: string; crop?: string; problem?: string; region?: string; season?: string };
 
@@ -24,8 +25,8 @@ export const Route = createFileRoute("/knowledge/")({
   }),
   loaderDeps: ({ search }) => search,
   loader: ({ deps }) => {
-    const list = filterArticles(deps);
-    const facets = facetCounts(deps);
+    const list = filterArticles({ ...deps, problem: parseProblem(deps.problem) });
+    const facets = facetCounts({ ...deps, problem: parseProblem(deps.problem) });
     return { list, facets };
   },
   head: ({ loaderData }) => {
@@ -64,14 +65,15 @@ export function KnowledgeList() {
   const tAll = messages[lang];
   const t = tAll.knowledge;
   const search = useAnySearch<Search>();
+  const problemZh = parseProblem(search.problem);
   const { facets: loadedFacets } = useAnyLoaderData<{ list: ReturnType<typeof filterArticles>; facets: ReturnType<typeof facetCounts> }>();
   const navigate = useAnyNavigate();
   const urlForces = !!(search.crop || search.region || search.season);
   const [open, setOpen] = useState(false);
   const [limit, setLimit] = useState(PAGE);
   const [qLive, setQLive] = useState(search.q ?? "");
-  const list = filterArticles({ ...search, q: qLive, lang });
-  const facets = facetCounts({ ...search, q: qLive, lang });
+  const list = filterArticles({ ...search, problem: problemZh, q: qLive, lang });
+  const facets = facetCounts({ ...search, problem: problemZh, q: qLive, lang });
   const shown = list;
   const shownFacets = facets ?? loadedFacets;
 
@@ -85,6 +87,7 @@ export function KnowledgeList() {
 
   useEffect(() => {
     if (urlForces || extraFiltersOpen()) setOpen(true);
+    else if (typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches) setOpen(true);
   }, [urlForces]);
 
   function setSearch(patch: Partial<Search>) {
@@ -111,11 +114,11 @@ export function KnowledgeList() {
           {t.toWiki}
         </LangLink>
       </header>
-      <div className="sticky top-[57px] z-20 space-y-3 border-b border-line bg-bg/95 py-3 backdrop-blur-sm">
+      <div className="space-y-3 border-b border-line py-3">
         <form
           method="get"
           action={lang === "en" ? "/en/knowledge" : "/knowledge"}
-          className="relative"
+          className="relative sticky top-16 z-20 bg-bg/95 py-1 backdrop-blur-sm"
           onSubmit={(e) => {
             e.preventDefault();
             setSearch({ q: qLive || undefined });
@@ -142,11 +145,11 @@ export function KnowledgeList() {
         <section className="space-y-2">
           <h2 className="text-sm font-medium text-muted">{t.byProblem}</h2>
           <div className="flex flex-wrap gap-2">
-            <Chip active={!search.problem} onClick={() => setSearch({ problem: undefined })}>
+            <Chip active={!problemZh} onClick={() => setSearch({ problem: undefined })}>
               {tAll.all}
             </Chip>
             {PROBLEMS.filter((p) => (shownFacets.problems[p] ?? 0) > 0).map((p) => (
-              <Chip key={p} active={search.problem === p} onClick={() => setSearch({ problem: p })}>
+              <Chip key={p} active={problemZh === p} onClick={() => setSearch({ problem: problemQuery(p, lang) })}>
                 {lex(p, lang)} {shownFacets.problems[p]}
               </Chip>
             ))}
@@ -214,6 +217,7 @@ export function KnowledgeList() {
         ) : null}
       </div>
       <p className="text-sm text-muted">{t.count(shown.length)}</p>
+      <p className="text-sm text-subtle">{t.multiTag}</p>
       <div className="grid gap-3">
         {shown.slice(0, limit).map((a) => (
           <ArticleCard key={a.slug} article={a} />
@@ -237,7 +241,7 @@ export function KnowledgeList() {
       {limit < shown.length ? (
         <button
           type="button"
-          className="flex min-h-12 w-full items-center justify-center rounded-xl border border-line bg-surface text-base"
+          className="relative z-0 mb-8 flex min-h-12 w-full items-center justify-center rounded-xl border border-line bg-surface text-base"
           onClick={() => setLimit((n) => n + PAGE)}
         >
           {t.morePage(Math.min(PAGE, shown.length - limit))}

@@ -9,12 +9,27 @@ import { useAnyLoaderData } from "@/lib/i18n/route-data";
 import { messages } from "@/lib/i18n/messages";
 import { displayName, lex } from "@/lib/i18n/lexicon";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
+import { isSeedPost } from "@/lib/problem-query";
+import { qaPageJsonLd, seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/community/$id")({
   loader: async ({ params }) => {
     const post = await getPost({ data: { id: params.id } });
     if (!post) throw notFound();
     return { post };
+  },
+  head: ({ loaderData }) => {
+    const post = loaderData?.post;
+    if (!post) {
+      return seo({ title: "问答区｜土知", description: "把自家地里的照片和现象发出来。", path: "/community" });
+    }
+    return seo({
+      title: `${post.title}｜土知`,
+      description: post.body.slice(0, 180),
+      path: `/community/${post.id}`,
+      type: "article",
+      image: post.photo || undefined,
+    });
   },
   component: PostPage,
 });
@@ -31,6 +46,14 @@ export function PostPage() {
     lang === "en"
       ? [post.titleEn, post.bodyEn, ...post.answers.map((a) => a.bodyEn)].filter((s): s is string => !!s && !/[\u4e00-\u9fff]/.test(s))
       : [post.title, post.body, ...post.answers.map((a) => a.body)];
+  const jsonLd = qaPageJsonLd({
+    title: lang === "en" && post.titleEn ? post.titleEn : post.title,
+    description: lang === "en" && post.bodyEn ? post.bodyEn : post.body,
+    path: lang === "en" ? `/en/community/${post.id}` : `/community/${post.id}`,
+    dateModified: String(post.createdAt).slice(0, 10),
+    answers: (lang === "en" ? post.answers.map((a) => a.bodyEn || a.body) : post.answers.map((a) => a.body)).filter(Boolean),
+    lang,
+  });
 
   async function send() {
     setErr("");
@@ -45,12 +68,16 @@ export function PostPage() {
 
   return (
     <article className="space-y-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <p className="text-sm">
         <LangLink to="/community" className="text-forest">
           {r.back}
         </LangLink>
       </p>
       <header className="space-y-2">
+        {isSeedPost(post.id) ? (
+          <p className="text-sm font-medium text-clay">{r.seedBadge}</p>
+        ) : null}
         <Bilingual zh={post.title} en={post.titleEn} as="h1" className="font-display text-3xl font-semibold" />
         <p className="text-sm text-muted">
           {displayName(post.author, lang)} · {String(post.createdAt).slice(0, 10)} · {lex(post.problem, lang)}

@@ -11,12 +11,16 @@ export const Route = createFileRoute("/en/community/$id")({
   },
   head: ({ loaderData }) => {
     const post = loaderData?.post;
-    const title = post?.titleEn && !/[\u4e00-\u9fff]/.test(post.titleEn) ? post.titleEn : "Q&A";
+    const title = post?.titleEn && !/[\u4e00-\u9fff]/.test(post.titleEn) ? post.titleEn : post?.title || "Q&A";
+    const description =
+      post?.bodyEn && !/[\u4e00-\u9fff]/.test(post.bodyEn) ? post.bodyEn : post?.body?.slice(0, 180) || HOME_DESC_EN;
     return seo({
       title: `${title} · Tuzhi`,
-      description: HOME_DESC_EN,
+      description,
       path: post ? `/en/community/${post.id}` : "/en/community",
+      type: "article",
       lang: "en",
+      image: post?.photo || undefined,
     });
   },
   component: PostPage,
