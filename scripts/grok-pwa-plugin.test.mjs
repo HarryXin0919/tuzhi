@@ -20,6 +20,8 @@ import {
 import { renderInstallPage } from "./grok-pwa-plugin.mjs";
 
 const TEMPLATE_ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const EMPTY_CWD = mkdtempSync(join(tmpdir(), "grok-pwa-bare-"));
+const bare = { site: {}, cwd: EMPTY_CWD };
 
 test("injects before </head>", () => {
   const out = injectGrokPwaHead("<html><head><title>x</title></head><body></body></html>");
@@ -105,7 +107,7 @@ test("does not duplicate x:creator tags", () => {
 test("platform chrome overwrites share-card metas and always sets og:title", () => {
   const html =
     '<html><head><title>Hello World</title><meta property="og:title" content="Old"><meta name="twitter:card" content="summary"></head></html>';
-  const out = injectGrokPwaHead(html, { appName: "Wild Race" });
+  const out = injectGrokPwaHead(html, { appName: "Wild Race", ...bare });
   assert.match(out, /name="twitter:card" content="summary_large_image"/);
   assert.match(out, /property="og:title" content="Hello World"/);
   assert.doesNotMatch(out, /content="Old"/);
@@ -246,6 +248,7 @@ test("site title Grok App is a real name, not a sentinel", () => {
 test("published grok.me slug is still a title fallback", () => {
   const out = injectGrokPwaHead("<html><head></head></html>", {
     host: "wild-race.grok.me",
+    ...bare,
   });
   assert.match(out, /property="og:title" content="Wild Race"/);
 });
@@ -305,6 +308,34 @@ test("tuzhi.asia host does not inject Grok chrome", () => {
   }
 });
 
+test("tuzhi.asia strips baked platform chrome from a published HTML document", () => {
+  const baked = `<html><head><meta name="twitter:card" content="summary_large_image"><meta property="og:title" content="土知"><meta property="og:description" content="desc"><meta property="og:image" content="https://wave-solar-harbor-river.grok.me/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta charSet="utf-8"><link rel="manifest" href="/__grok/manifest.webmanifest"><meta name="grok-project-id" content="proj-1"><script src="https://grok.com/grok-app-builder/extensions.js" data-project-id="proj-1" defer></script><meta property="grok:app_id" content="proj-1"><title>酸化 · 土知</title><meta property="og:image" content="https://tuzhi.asia/og.jpg"></head></html>`;
+  const out = injectGrokPwaHead(baked, { host: "tuzhi.asia", projectId: "proj-1" });
+  assert.doesNotMatch(out, /grok\.com/);
+  assert.doesNotMatch(out, /grok\.me/);
+  assert.doesNotMatch(out, /wave-solar/);
+  assert.doesNotMatch(out, /grok-project-id/);
+  assert.doesNotMatch(out, /grok:app_id/);
+  assert.doesNotMatch(out, /__grok/);
+  assert.match(out, /https:\/\/tuzhi\.asia\/og\.jpg/);
+});
+
+test("comma-separated forwarded hosts still skip when tuzhi.asia is present", () => {
+  const html =
+    '<html><head><title>土知</title><meta property="og:image" content="https://tuzhi.asia/og.jpg"></head></html>';
+  for (const host of [
+    "tuzhi.asia, wave-solar-harbor-river.grok.me",
+    "wave-solar-harbor-river.grok.me, tuzhi.asia",
+    "www.tuzhi.asia:443",
+  ]) {
+    const out = injectGrokPwaHead(html, { host, projectId: "proj-1" });
+    assert.doesNotMatch(out, /grok\.com/, host);
+    assert.doesNotMatch(out, /grok-project-id/, host);
+    assert.doesNotMatch(out, /__grok/, host);
+    assert.match(out, /https:\/\/tuzhi\.asia\/og\.jpg/, host);
+  }
+});
+
 test("vercel Host without a public hostname emits no og:image", () => {
   const prev = process.env.VITE_PUBLIC_HOSTNAME;
   delete process.env.VITE_PUBLIC_HOSTNAME;
@@ -326,6 +357,7 @@ test("emits og:image for a public host and prefers a custom card", () => {
     appName: "Wild Race",
     host: "wild-race.grok.me",
     site: { title: "Wild Race" },
+    cwd: EMPTY_CWD,
   });
   assert.match(
     placeholder,
@@ -346,6 +378,7 @@ test("placeholder og:image appends site.color when it is 6-digit hex", () => {
   const themed = injectGrokPwaHead("<html><head></head></html>", {
     host: "wild-race.grok.me",
     site: { title: "Wild Race", color: "#FF4D2E" },
+    cwd: EMPTY_CWD,
   });
   assert.match(
     themed,
@@ -355,6 +388,7 @@ test("placeholder og:image appends site.color when it is 6-digit hex", () => {
   const invalid = injectGrokPwaHead("<html><head></head></html>", {
     host: "wild-race.grok.me",
     site: { title: "Wild Race", color: "red" },
+    cwd: EMPTY_CWD,
   });
   assert.doesNotMatch(invalid, /color=/);
 
@@ -368,6 +402,7 @@ test("placeholder og:image appends site.color when it is 6-digit hex", () => {
 test("document title entities are not double-escaped on og:title", () => {
   const out = injectGrokPwaHead(
     "<html><head><title>Cats &amp; Dogs</title></head></html>",
+    bare,
   );
   assert.match(out, /property="og:title" content="Cats &amp; Dogs"/);
   assert.doesNotMatch(out, /Cats &amp;amp; Dogs/);
@@ -382,14 +417,14 @@ test("site.json title wins over the host slug", () => {
 });
 
 test("injects into documents with no head element", () => {
-  const out = injectGrokPwaHead("<html><body>hi</body></html>", { appName: "Solo" });
+  const out = injectGrokPwaHead("<html><body>hi</body></html>", { appName: "Solo", ...bare });
   assert.match(out, /<head>/);
   assert.match(out, /property="og:title" content="Solo"/);
   assert.match(out, /<\/head>/);
 });
 
 test("streaming injector matches </HEAD> case-insensitively", () => {
-  const injector = createHeadInjector({ appName: "Wild Race" });
+  const injector = createHeadInjector({ appName: "Wild Race", ...bare });
   const chunks = [
     ...injector.push("<html><HEAD><title>x</title></HE"),
     ...injector.push("AD><body>hello</body></html>"),
@@ -414,12 +449,12 @@ test("is idempotent", () => {
 });
 
 test("uses the app name in the injected title tag", () => {
-  const out = injectGrokPwaHead("<html><head></head></html>", { appName: "Wild Race" });
+  const out = injectGrokPwaHead("<html><head></head></html>", { appName: "Wild Race", ...bare });
   assert.match(out, /apple-mobile-web-app-title" content="Wild Race"/);
 });
 
 test("streaming injector handles </head> split across chunks", () => {
-  const injector = createHeadInjector({ appName: "Wild Race" });
+  const injector = createHeadInjector({ appName: "Wild Race", ...bare });
   const chunks = [
     ...injector.push("<html><head><title>x</title></he"),
     ...injector.push("ad><body>hello</body></html>"),

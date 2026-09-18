@@ -453,7 +453,8 @@
       {
         "src": "/images/wiki/cec-2.jpg",
         "alt": "CEC（阳离子交换量） 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -3267,7 +3268,8 @@
       {
         "src": "/images/wiki/bulk-2.jpg",
         "alt": "容重 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -3819,7 +3821,8 @@
       {
         "src": "/images/wiki/acid-2.jpg",
         "alt": "酸化 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -4184,7 +4187,8 @@
       {
         "src": "/images/wiki/mg-2.jpg",
         "alt": "交换性镁 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -4733,7 +4737,8 @@
       {
         "src": "/images/wiki/s-2.jpg",
         "alt": "有效硫 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -5465,7 +5470,8 @@
       {
         "src": "/images/wiki/fc-2.jpg",
         "alt": "田间持水量 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -5830,7 +5836,8 @@
       {
         "src": "/images/wiki/replant-2.jpg",
         "alt": "连作障碍 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "caption": "特写对照，请以自家地为准。",
+        "role": "field"
       }
     ],
     "zh": {
@@ -6413,9 +6420,15 @@
         "captionEn": "Sample sheet with the cl cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
-        "src": "/images/wiki/ec-2.jpg",
-        "alt": "氯离子 特写",
-        "caption": "化验单格子示意图，不是自家地头。请以自家单子为准。"
+        "src": "/images/wiki/cl-2.jpg",
+        "alt": "盐壳土面（氯盐类型对照）",
+        "caption": "拍的是盐壳土面。用来说明氯离子偏高时地里可能对上白霜，不是电导仪摆拍。青海茶卡盐湖盐壳，类型对照，不是自家粮田。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "维基共享",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%8C%B6%E5%8D%A1%E7%9B%90%E6%B9%96%E6%B9%96%E9%9D%A210.jpg",
+        "altEn": "Salt crust, chloride type-check",
+        "captionEn": "A salt crust as a field match for chloride, not an EC meter. Type check, not your own field."
       }
     ],
     "zh": {

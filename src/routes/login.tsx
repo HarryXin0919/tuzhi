@@ -237,17 +237,23 @@ function ForgotBlock() {
 
   async function send() {
     setMsg("");
+    if (!mail.trim()) {
+      setMsg(L.needEmail);
+      return;
+    }
     setBusy(true);
     try {
       const res = await requestPasswordReset({ data: { email: mail } });
       if (res.phoneOnly) {
         setMsg(L.phoneNoReset);
-      } else {
+      } else if (res.mailed) {
         setMsg(L.resetSent);
         if (res.previewText) setMsg(`${L.resetSent}\n${res.previewText}`);
+      } else {
+        setMsg(L.resetMailOff);
       }
     } catch {
-      setMsg(L.resetSent);
+      setMsg(L.resetMailOff);
     } finally {
       setBusy(false);
     }

@@ -10,12 +10,12 @@ import { fileURLToPath } from "node:url";
 import {
   acceptsHtml,
   createHeadInjector,
-  injectGrokPwaHead,
   isDocumentPath,
   isInstallQuery,
   renderInstallPageHtml,
   renderWebManifest,
   snapshotOgIdentity,
+  stripGrokChrome,
 } from "./grok-pwa-shared.mjs";
 
 export const GROK_OG_IDENTITY_ID = "virtual:grok-og-identity";
@@ -166,10 +166,10 @@ export function grokPwaPlugin() {
       return `export const grokOgIdentity = ${JSON.stringify(snapshotOgIdentity(root))};`;
     },
     transformIndexHtml(html) {
-      return injectGrokPwaHead(html, {
-        host: process.env.VITE_PUBLIC_HOSTNAME ?? "",
-        cwd: root,
-      });
+      // First-party HTML shell: never bake grok.me / extensions.js into the
+      // published document. grok.me unit tests call injectGrokPwaHead directly.
+      // Nitro middleware also strips on tuzhi.asia.
+      return stripGrokChrome(html);
     },
     configureServer(server) {
       // Registered directly (not in a returned post-hook) so both run BEFORE

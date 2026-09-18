@@ -47,6 +47,10 @@ export function Contact() {
       setErr(c.needBody);
       return;
     }
+    if (body.trim().length < 4) {
+      setErr(c.needBody);
+      return;
+    }
     setBusy(true);
     try {
       await sendContactMessage({ data: { name, email, body, honey } });

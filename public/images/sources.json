@@ -99,8 +99,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crops_in_acid_soil_demo_2017_05_09_6717.jpg",
     "credit": "Alandmanson",
     "license": "CC BY 4.0",
-    "note": "示范地能看清整垄/整片分布，用来对照点片黄还是整块黄。南非材料，类型对照。",
-    "commons": "Crops in acid soil demo 2017 05 09 6717.jpg",
+    "note": "示范小区前景整垄，裁掉站立人物。用来对照点片黄还是整块黄。南非材料，类型对照。",
     "kind": "stock",
     "role": "field"
   },
@@ -148,7 +147,7 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6164.jpg",
     "credit": "Alandmanson",
     "license": "CC BY 4.0",
-    "note": "洗根后根尖褐秃、侧根少，带尺。南非试验地，类型对照。",
+    "note": "洗根褐秃根尖特写（再裁掉偏白健康根）。试验地材料，铝毒伤根教学图，带尺。",
     "kind": "lab",
     "role": "mechanism"
   },
@@ -274,11 +273,10 @@
     "role": "field"
   },
   "/images/articles/suan-hua-field.jpg": {
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6209.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6161.jpg",
     "credit": "Alandmanson",
     "license": "CC BY 4.0",
-    "note": "酸性土发僵玉米整垄。南非材料，类型对照。与 ph-2、诊断整株反例不是同一张。",
-    "commons": "Zea mays acid soil 2017 01 05 6209.jpg",
+    "note": "酸性土发僵玉米整垄，无人脸正脸。类型对照。",
     "kind": "stock",
     "role": "field"
   },
@@ -544,11 +542,10 @@
     "role": "contrast-other"
   },
   "/images/articles/yan-shuang-chaka.jpg": {
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:茶卡盐湖湖面10.jpg",
-    "credit": "Wikimedia contributor",
-    "license": "CC BY-SA 4.0",
-    "note": "青海茶卡盐湖盐壳土面。中国盐霜类型对照，不是自家粮田。",
-    "commons": "茶卡盐湖湖面10.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%8C%B6%E5%8D%A1%E7%9B%90%E6%B9%96%E6%B9%96%E9%9D%A210.jpg",
+    "credit": "维基共享",
+    "license": "CC BY-SA",
+    "note": "青海茶卡盐湖盐壳特写（裁掉行人）。中国盐壳类型对照，不是自家粮田。",
     "kind": "stock",
     "role": "field"
   },
@@ -766,6 +763,14 @@
     "note": "实验室测土，不是化验单格子本身。测土报告词条的地头/实验室对照。",
     "commons": "CSIRO ScienceImage 1739 Testing soil pH.jpg",
     "kind": "lab",
+    "role": "field"
+  },
+  "/images/wiki/cl-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%8C%B6%E5%8D%A1%E7%9B%90%E6%B9%96%E6%B9%96%E9%9D%A210.jpg",
+    "credit": "维基共享",
+    "license": "CC BY-SA",
+    "note": "氯离子地头对照：盐壳土面。不是 EC 仪器图。",
+    "kind": "stock",
     "role": "field"
   }
 }

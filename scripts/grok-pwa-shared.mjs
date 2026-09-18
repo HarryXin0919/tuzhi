@@ -116,6 +116,43 @@ export function resolvePublicHost(hostHeader) {
   );
 }
 
+/**
+ * Custom domains that already ship their own identity. grok.me / live preview
+ * still get the platform injector. Request host wins — do not use
+ * VITE_PUBLIC_HOSTNAME here, or a custom domain would keep the preview host.
+ * Comma-separated X-Forwarded-Host lists: skip if ANY host is first-party.
+ */
+export function skipPlatformChrome(hostHeader) {
+  const raw = String(hostHeader ?? "");
+  const parts = raw
+    .split(/[\s,]+/)
+    .map((s) => s.trim().split(":")[0].toLowerCase())
+    .filter(Boolean);
+  return parts.some((host) => host === "tuzhi.asia" || host === "www.tuzhi.asia");
+}
+
+/** Peel baked platform chrome so a custom-domain HTML document stays first-party. */
+export function stripGrokChrome(html) {
+  let s = String(html ?? "");
+  s = s.replace(
+    /<script\b[^>]*src=["']https:\/\/grok\.com\/grok-app-builder\/extensions\.js[^>]*>\s*<\/script>/gi,
+    "",
+  );
+  s = s.replace(
+    /<meta\b[^>]*(?:name=["']grok-project-id["']|property=["']grok:app_id["'])[^>]*>/gi,
+    "",
+  );
+  s = s.replace(/<link\b[^>]*href=["']\/__grok\/[^"']*["'][^>]*>/gi, "");
+  s = s.replace(
+    /(<head\b[^>]*>)(\s*<meta name="twitter:card"[^>]*>)?(\s*<meta property="og:title"[^>]*>)?(\s*<meta property="og:description"[^>]*>)?(\s*<meta property="og:image"[^>]*grok\.me[^>]*>)(\s*<meta property="og:image:width"[^>]*>)?(\s*<meta property="og:image:height"[^>]*>)?/i,
+    "$1",
+  );
+  s = s.replace(/https:\/\/[a-z0-9.-]+\.grok\.me/gi, "https://tuzhi.asia");
+  s = s.replace(/https:\/\/grok\.com\/grok-app-builder\/[^"'>\s]*/gi, "");
+  return s;
+}
+
+
 export function isInstallQuery(url) {
   const query = String(url ?? "").split("?", 2)[1] ?? "";
   const params = new URLSearchParams(query);
@@ -424,6 +461,7 @@ export function normalizeHeadContext(ctx = {}) {
 
 export function injectGrokPwaHead(html, ctx = {}) {
   if (typeof html !== "string") return html;
+  if (skipPlatformChrome(ctx.host)) return stripGrokChrome(html);
   const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
   const documentTitle = titleFromDocument(html);
   const appName = resolveOgTitle(

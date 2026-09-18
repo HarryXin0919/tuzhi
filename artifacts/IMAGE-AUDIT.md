@@ -1,6 +1,27 @@
-# 土知配图审计（2026-09-17 收口）
+# 土知配图审计（2026-09-18 返工）
+
+以仓库为准。版权风险由制作人李泽宇承担。来源总表：`public/images/sources.json`。不用生成图冒充地头。
+
+## 本单返工（名实 / 隐私）
+
+| 路径 | 开工问题 | 现图 | 来源 | 状态 |
+| --- | --- | --- | --- | --- |
+| /images/articles/suan-hua-roots.jpg | 混有偏白健康根 | 再裁褐秃根尖+尺，侧根少 | https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6164.jpg Alandmanson CC BY 4.0 | 达标 |
+| /images/articles/suan-hua-field.jpg | 微笑人物正脸 | 发僵玉米整垄，无人脸 | https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6161.jpg Alandmanson CC BY 4.0 | 达标 |
+| /images/diagnose/whole-good.jpg | 站立人物 | 裁到前景示范小区，点片/整块可辨，无人 | https://commons.wikimedia.org/wiki/File:Crops_in_acid_soil_demo_2017_05_09_6717.jpg Alandmanson CC BY 4.0 | 达标 |
+| /images/articles/yan-shuang-chaka.jpg | 路人风险 | 盐壳土面，无行人 | 茶卡盐湖盐壳 | 达标 |
+| /images/wiki/cl-2.jpg | 曾误用 ec-2.jpg | 独立盐壳图 | 茶卡盐湖；wiki.json 已指向 cl-2.jpg | 达标 |
+| /images/diagnose/close-good.jpg | — | 健康白根特写，挂诊断特写正例 | Gesunde_Wurzeln.jpg | 达标 |
+| /images/articles/leng-hai-cauli.jpg | — | 冷害对照，挂酸化易混 | 花椰菜冻害 | 达标 |
+
+化验词 36 条：主图 sheet + 对照 field，src 全站不复用。cl 不再借用 EC 仪器图。
+
+---
+
+# 土知配图审计（2026-09-17 收口，部分行已被上表覆盖）
 
 以仓库为准。版权风险由制作人李泽宇承担。来源总表：`public/images/sources.json`。
+
 
 | 页面URL | 路径 | 描述 | 问题类型 | 来源URL | 图注 | 对应链接 | 状态 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -13,7 +34,7 @@
 | /diagnose | /images/diagnose/lab-good.jpg | 化验单正例示意 | 已换 | https://tuzhi.asia/diagnose | 化验单示例（示意），不是某实验室真单。 | /diagnose | 达标 |
 | /diagnose | /images/diagnose/lab-bad.jpg | 化验单反光反例 | 已换 | https://tuzhi.asia/diagnose | 反光示意，教人别这么拍。 | /diagnose | 达标 |
 | /knowledge/suan-hua | /images/articles/suan-hua-roots.jpg | 洗根褐秃根尖 | 已换 | https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6164.jpg | 洗根后根尖褐秃、侧根少，带尺。南非试验地，类型对照。 | /knowledge/suan-hua | 达标 |
-| /knowledge/suan-hua | /images/articles/suan-hua-field.jpg | 酸化发僵整垄（与ph-2不同文件） | 已换 | https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6209.jpg | 酸性土发僵玉米整垄。南非材料，类型对照。与 ph-2、诊断整株反例不是同一张。 | /knowledge/suan-hua | 达标 |
+| /knowledge/suan-hua | /images/articles/suan-hua-field.jpg | 酸化发僵整垄（无人脸，与ph-2不同文件） | 已换 | https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6161.jpg | 酸性土发僵玉米整垄。南非材料，类型对照。画面不放可辨认人物。 | /knowledge/suan-hua | 达标 |
 | /knowledge/suan-hua | /images/articles/leng-hai-cauli.jpg | 冷害对照花椰菜冻害 | 已换 | https://commons.wikimedia.org/wiki/File:Blumenkohl-Winter-Frostschäden-Josef_Schlaghecken-1.jpg | 花椰菜冻害焦边。冷害对照，德国材料，类型对照，不是酸化根尖。 | /knowledge/suan-hua | 达标 |
 | /knowledge/yan-jian | /images/articles/yan-shuang-chaka.jpg | 中国盐霜土面（青海茶卡） | 已换 | https://commons.wikimedia.org/wiki/File:茶卡盐湖湖面10.jpg | 青海茶卡盐湖盐壳土面。中国盐霜类型对照，不是自家粮田。 | /knowledge/yan-jian | 达标 |
 | /encyclopedia/ph | /images/wiki/ph.jpg | 化验单示例（示意），红框pH | sheet | https://tuzhi.asia/encyclopedia/ph | 拍的是化验单示意。用来说明单子上怎么写pH。土知绘制，不是某实验室真单。类型：化验单示意。 | /knowledge/suan-hua | 达标 |

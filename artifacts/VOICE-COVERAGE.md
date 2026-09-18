@@ -2,7 +2,19 @@
 
 神经女声：中文 Xiaoxiao，英文 Jenny。缺失必须为 0。
 
+**公开可拉 mp3 数 = 472**（仓库 `public/audio/*.mp3` 与线上 HEAD 口径一致）。
+
+URL 规则（不要写成 `/audio/knowledge/`）：
+
+- 知识：`https://tuzhi.asia/audio/{slug}.zh.mp3` 与 `.en.mp3`，另有 `.how.zh.mp3` / `.how.en.mp3`（100×4 = 400）
+- 化验：`https://tuzhi.asia/audio/{id}.zh.mp3` 与 `.en.mp3`（36×2 = 72）
+
+开工抽测（2026-09-18）：`/audio/suan-hua.zh.mp3` `259436`、`/audio/suan-hua.en.mp3` `373052`、`/audio/ph.zh.mp3` `168572` 均为 200 audio/mpeg。
+
+听感抽 5 条（仓库文件）：女声讲解。本单不重录。
+
 | 对象 | zh | en | how.zh | how.en | 状态 |
+
 | --- | --- | --- | --- | --- | --- |
 | knowledge/suan-hua | ✓ | ✓ | ✓ | ✓ | 达标 |
 | knowledge/yan-jian | ✓ | ✓ | ✓ | ✓ | 达标 |

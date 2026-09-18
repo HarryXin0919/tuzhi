@@ -23,6 +23,7 @@ import {
   isInstallQuery,
   renderInstallPageHtml,
   renderWebManifest,
+  skipPlatformChrome,
 } from "../../scripts/grok-pwa-shared.mjs";
 
 interface GrokPwaEvent {
@@ -30,10 +31,29 @@ interface GrokPwaEvent {
   req: { method: string; headers: Headers };
 }
 
+function hostCandidates(event: GrokPwaEvent): string[] {
+  return [
+    event.req.headers.get("x-forwarded-host"),
+    event.req.headers.get("host"),
+    event.url.host,
+  ].filter((h): h is string => Boolean(h));
+}
+
 function requestHost(event: GrokPwaEvent): string {
-  return (
-    event.req.headers.get("x-forwarded-host") ?? event.req.headers.get("host") ?? event.url.host
-  );
+  const candidates = hostCandidates(event);
+  if (candidates.some((h) => skipPlatformChrome(h))) return "tuzhi.asia";
+  return candidates[0] ?? event.url.host;
+}
+
+/** tuzhi.asia is first-party: never wrap production HTML in Grok chrome. */
+function injectHostFor(event: GrokPwaEvent): string {
+  const host = requestHost(event);
+  if (skipPlatformChrome(host) || skipPlatformChrome(hostCandidates(event).join(","))) {
+    return "tuzhi.asia";
+  }
+  // Published custom domain can arrive as grok.me / vercel.app in forwarded
+  // headers. This app's public identity is tuzhi.asia — strip anyway.
+  return "tuzhi.asia";
 }
 
 function injectHeadStreaming(response: Response, host: string): Response {
@@ -105,7 +125,7 @@ export default async function grokPwaMiddleware(
     String(result.headers.get("content-type") ?? "").includes("text/html") &&
     !result.headers.get("content-encoding")
   ) {
-    return injectHeadStreaming(result, requestHost(event));
+    return injectHeadStreaming(result, injectHostFor(event));
   }
   return result;
 }

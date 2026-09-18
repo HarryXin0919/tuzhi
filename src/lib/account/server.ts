@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { authMiddleware } from "@/lib/auth/middleware";
 import { getSql } from "@/lib/db";
-import { sendAppMail } from "@/lib/mail/send";
+import { sendAppMail, mailChannelOpen } from "@/lib/mail/send";
 import { SITE_ORIGIN } from "@/lib/constants";
 
 export type CloudFav = { slug: string; createdAt: string };
@@ -112,7 +112,7 @@ export const sendContactMessage = createServerFn({ method: "POST" })
       subject: `土知联系信 · ${name}`,
       text: `来自 ${name} <${email}>\n\n${body}`,
     });
-    return { ok: true as const };
+    return { ok: true as const, mailed: mailChannelOpen() };
   });
 
 export const requestPasswordReset = createServerFn({ method: "POST" })
@@ -136,5 +136,5 @@ export const requestPasswordReset = createServerFn({ method: "POST" })
       select body from mail_outbox where to_addr = ${email} order by created_at desc limit 1`;
     const previewText =
       !process.env.DATABASE_URL && !process.env.RESEND_API_KEY ? rows[0]?.body : undefined;
-    return { ok: true as const, previewText };
+    return { ok: true as const, mailed: mailChannelOpen(), previewText };
   });
