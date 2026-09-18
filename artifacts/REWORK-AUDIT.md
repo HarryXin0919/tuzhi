@@ -46,3 +46,24 @@
 ## 部署后线上验收（本栏部署后填写）
 
 见同目录部署证据段；以 `curl -sL https://tuzhi.asia` 为准。
+
+### 仓库与构建（已完成）
+
+- GitHub：https://github.com/Zzyyio/tuzhi9.18/commit/3e7c8fbde7c059ca988e142b262bd45ec8c850f7
+- 单测 50/50；`tsc --noEmit` 通过；`npm run build`（Vercel/Nitro）通过，server bundle 含 `skipPlatformChrome` / `stripGrokChrome`
+- 用开工时抓到的线上首页 HTML 在本地跑 `injectGrokPwaHead(html, { host: "tuzhi.asia" })`：`grok-project-id` / `__grok` / `wave-solar` / `extensions.js` 全部消失
+
+### 线上 https://tuzhi.asia（最后一次 curl：2026-09-18 03:48 UTC）
+
+仍为旧构建：`og:image` 仍是 `https://wave-solar-harbor-river.grok.me/og.jpg`；`suan-hua-roots.jpg` 仍 281130 B（Last-Modified 03:10:44）。Grok 平台从本沙箱发布，git push 不能单独切换自定义域。发布后请硬刷新再跑：
+
+```
+curl -sL https://tuzhi.asia | 搜索 grok|__grok|wave-solar   应无匹配
+curl -sI https://tuzhi.asia/images/articles/suan-hua-roots.jpg   约 112409
+curl -sI https://tuzhi.asia/audio/suan-hua.zh.mp3
+curl -sI https://tuzhi.asia/audio/suan-hua.en.mp3
+curl -sI https://tuzhi.asia/audio/ph.zh.mp3
+```
+
+www DNS 未做。
+
