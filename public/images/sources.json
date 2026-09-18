@@ -1,0 +1,771 @@
+{
+  "/images/diagnose/lab-good.jpg": {
+    "sourceUrl": "https://tuzhi.asia/diagnose",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），不是某实验室真单。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/diagnose/lab-bad.jpg": {
+    "sourceUrl": "https://tuzhi.asia/diagnose",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "反光示意，教人别这么拍。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/ph.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/ph",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框pH。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/ec.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/ec",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框EC。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/om.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/om",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有机质。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/al.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/al",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框交换性铝。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/na.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/na",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框交换性钠。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/salt.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/salt",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框全盐。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/alkn.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/alkn",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框碱解氮。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/avk.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/avk",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框速效钾。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/fe.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/fe",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效铁。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/esp.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/esp",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框ESP。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/diagnose/whole-good.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Crops_in_acid_soil_demo_2017_05_09_6717.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "示范地能看清整垄/整片分布，用来对照点片黄还是整块黄。南非材料，类型对照。",
+    "commons": "Crops in acid soil demo 2017 05 09 6717.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/diagnose/whole-bad.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6259b.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "发僵玉米整垄，能看清症状铺开。南非材料，类型对照。",
+    "commons": "Zea mays acid soil 2017 01 05 6259b.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/diagnose/close-good.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gesunde_Wurzeln.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "健康白根特写：白尖还在、侧根清楚。实验室/洗根对照，不是水下红树。",
+    "commons": "Gesunde Wurzeln.jpg",
+    "kind": "lab",
+    "role": "field"
+  },
+  "/images/diagnose/close-bad.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6143.jpg",
+    "credit": "土知处理（原图 Wikimedia，已模糊）",
+    "license": "derived",
+    "note": "把真实特写故意拍糊，教人别这么拍。不是地头症状正例。",
+    "kind": "diagram",
+    "role": "field"
+  },
+  "/images/diagnose/soil-good.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_soil_scientist_examines_soil_health._(24816169900).jpg",
+    "credit": "USDA NRCS South Dakota",
+    "license": "Public domain (US federal)",
+    "note": "耕层土色与结构。美国南达科他州，类型对照。",
+    "commons": "A soil scientist examines soil health. (24816169900).jpg"
+  },
+  "/images/diagnose/soil-bad.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1740_Testing_soil_salinity.jpg",
+    "credit": "CSIRO",
+    "license": "CC BY 3.0",
+    "note": "盐分测定现场。澳大利亚材料，类型对照；用来说明要拍清土面，不是化验单。",
+    "commons": "CSIRO ScienceImage 1740 Testing soil salinity.jpg"
+  },
+  "/images/articles/suan-hua-roots.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6164.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "洗根后根尖褐秃、侧根少，带尺。南非试验地，类型对照。",
+    "kind": "lab",
+    "role": "mechanism"
+  },
+  "/images/articles/yan-jian-sodic.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sodic_Solonchak.JPG",
+    "credit": "Ji-Elle",
+    "license": "CC BY-SA 3.0",
+    "note": "新疆吐鲁番苏打盐土剖面。ISRIC 博物馆剖面，实验室对照，不是自家地头。",
+    "commons": "Sodic Solonchak.JPG"
+  },
+  "/images/articles/yan-jian-solonchak.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Solontchak.jpg",
+    "credit": "Hedwig Storch",
+    "license": "CC BY-SA 3.0",
+    "note": "盐土剖面。奥地利材料，类型对照。",
+    "commons": "Solontchak.jpg"
+  },
+  "/images/articles/ban-jie-tracks.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ernteschäden.jpg",
+    "credit": "F. Bucher",
+    "license": "CC BY-SA 3.0",
+    "note": "收获机械压出的车辙与板结。德国材料，类型对照。",
+    "commons": "Ernteschäden.jpg"
+  },
+  "/images/articles/ban-jie-compact.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Compact_soil.jpg",
+    "credit": "USDA NRCS",
+    "license": "Public domain (US federal)",
+    "note": "紧实土面。美国材料，类型对照。",
+    "commons": "Compact soil.jpg"
+  },
+  "/images/articles/ban-jie-erosion.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Erosion_Verdichtung001.jpg",
+    "credit": "Llez",
+    "license": "CC BY-SA 3.0",
+    "note": "压实后的侵蚀与径流。类型对照。",
+    "commons": "Erosion Verdichtung001.jpg"
+  },
+  "/images/articles/que-dan-bean.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "菜豆缺氮：下部老叶匀黄。类型对照。",
+    "commons": "Phaseolus vulgaris nitrogen deficiency.jpg"
+  },
+  "/images/articles/que-tie-citrus.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg",
+    "credit": "INRA / Wikimedia",
+    "license": "CC BY-SA 4.0",
+    "note": "柑橘缺铁：新叶黄、叶脉还绿。类型对照。",
+    "commons": "Chlorose ferrique sur Citrus aurantium.jpg"
+  },
+  "/images/articles/lao-hai-wet.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_waterlogged_meadow_on_the_southern_shore_of_Llyn_Traffwll_-_geograph.org.uk_-_774100.jpg",
+    "credit": "Eric Jones / geograph.org.uk",
+    "license": "CC BY-SA 2.0",
+    "note": "地表积水。英国材料，类型对照，用来说明积水要拍清楚。",
+    "commons": "A waterlogged meadow on the southern shore of Llyn Traffwll - geograph.org.uk - 774100.jpg"
+  },
+  "/images/wiki/ph-meter.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1739_Testing_soil_pH.jpg",
+    "credit": "CSIRO",
+    "license": "CC BY 3.0",
+    "note": "实验室测土水 pH，实验室测 pH，不是化验单格子。",
+    "commons": "CSIRO ScienceImage 1739 Testing soil pH.jpg"
+  },
+  "/images/wiki/ec-salinity.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1740_Testing_soil_salinity.jpg",
+    "credit": "CSIRO",
+    "license": "CC BY 3.0",
+    "note": "盐分/电导测定。类型对照。",
+    "commons": "CSIRO ScienceImage 1740 Testing soil salinity.jpg"
+  },
+  "/images/wiki/om-sample.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amostragem-de-solo-com-estrutura-preservada.jpg",
+    "credit": "Wikimedia / soil sampling",
+    "license": "CC BY-SA 4.0",
+    "note": "保持结构的耕层取样。类型对照。",
+    "commons": "Amostragem-de-solo-com-estrutura-preservada.jpg"
+  },
+  "/images/articles/you-ji-zhi-sample.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amostragem-de-solo-com-estrutura-preservada.jpg",
+    "credit": "Wikimedia / soil sampling",
+    "license": "CC BY-SA 4.0",
+    "note": "耕层取样看土色和结构。类型对照。",
+    "commons": "Amostragem-de-solo-com-estrutura-preservada.jpg"
+  },
+  "/images/articles/rice-lanxi.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:201907_Rice_Field_in_Yongchang,_Lanxi.jpg",
+    "credit": "Zhangzhugang",
+    "license": "CC BY-SA 4.0",
+    "note": "浙江兰溪水田。中国地头。",
+    "commons": "201907 Rice Field in Yongchang, Lanxi.jpg"
+  },
+  "/images/articles/que-jia-maize1.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_1_2003-01-13.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "玉米缺钾：老叶焦边。南非 Cedara，类型对照。",
+    "commons": "K-deficient maize on Cedara 1 2003-01-13.jpg"
+  },
+  "/images/articles/que-jia-maize2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_2_2003-01-13.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "玉米缺钾叶缘焦枯特写。类型对照。",
+    "commons": "K-deficient maize on Cedara 2 2003-01-13.jpg"
+  },
+  "/images/articles/que-dan-cauli.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Spitskool_stikstofgebrek_(nitrogen_deficiency)_Brassica_oleracea_convar._capitata_var._alba.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "结球甘蓝缺氮：下部老叶匀黄。类型对照。",
+    "commons": "Spitskool stikstofgebrek (nitrogen deficiency) Brassica oleracea convar. capitata var. alba.jpg"
+  },
+  "/images/wiki/ph-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6265e.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "偏低 pH 对得上粮田发僵。南非酸性土玉米，类型对照。与酸化主图不是同一张。",
+    "commons": "Zea mays acid soil 2017 01 05 6265e.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/articles/suan-hua-field.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6209.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "酸性土发僵玉米整垄。南非材料，类型对照。与 ph-2、诊断整株反例不是同一张。",
+    "commons": "Zea mays acid soil 2017 01 05 6209.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/al-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6186.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "酸性土玉米基部与根。与洗根特写不是同一张。",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/na-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sodic_Solonchak.JPG",
+    "credit": "Ji-Elle",
+    "license": "CC BY-SA 3.0",
+    "note": "新疆吐鲁番苏打盐土剖面。ISRIC 博物馆对照。",
+    "commons": "Sodic Solonchak.JPG",
+    "kind": "lab",
+    "role": "field"
+  },
+  "/images/wiki/ec-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3924_Petrocalcic_Sulfidic_Hypersalic_Hydrosol_soil_profile_in_the_Cooke_Plains_district_of_South_Australia.jpg",
+    "credit": "CSIRO",
+    "license": "CC BY 3.0",
+    "note": "高盐剖面。电导偏高时地里可能对上的样子，澳大利亚材料。",
+    "commons": "CSIRO ScienceImage 3924 Petrocalcic Sulfidic Hypersalic Hydrosol soil profile in the Cooke Plains district of South Australia.jpg",
+    "kind": "lab",
+    "role": "field"
+  },
+  "/images/wiki/om-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soybean_Field_with_Healthy_Soil_(9316804120).jpg",
+    "credit": "USDA NRCS",
+    "license": "Public domain (US federal)",
+    "note": "有机质尚可的耕层土色。类型对照。",
+    "commons": "Soybean Field with Healthy Soil (9316804120).jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/test.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/test",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框检测项目。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/n.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/n",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框氮。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/p.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/p",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框磷。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/avp.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/avp",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效磷。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/k.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/k",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框钾。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/cec.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/cec",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框CEC。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/zn.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/zn",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效锌。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/b.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/b",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效硼。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/ca.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/ca",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框交换性钙。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/mg.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/mg",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框交换性镁。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/mn.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/mn",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效锰。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/s.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/s",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效硫。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/cu.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/cu",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效铜。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/mo.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/mo",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效钼。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/cl.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/cl",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框氯离子。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/si.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/si",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框有效硅。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/bulk.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/bulk",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框容重。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/texture.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/texture",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框质地。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/aggregate.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/aggregate",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框团粒。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/porosity.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/porosity",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框孔隙度。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/fc.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/fc",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框田间持水量。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/gley.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/gley",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框潜育。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/acid.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/acid",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框酸化程度。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/saline.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/saline",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框盐渍化。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/compaction.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/compaction",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框紧实度。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/wiki/replant.jpg": {
+    "sourceUrl": "https://tuzhi.asia/encyclopedia/replant",
+    "credit": "土知绘制",
+    "license": "site sample",
+    "note": "化验单示例（示意），红框连作风险。每条词独特一张。",
+    "kind": "lab",
+    "role": "sheet"
+  },
+  "/images/articles/healthy-white-roots.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gesunde_Wurzeln.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "健康白根特写。洗根对照。",
+    "commons": "Gesunde Wurzeln.jpg",
+    "kind": "lab",
+    "role": "mechanism"
+  },
+  "/images/articles/leng-hai-cauli.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blumenkohl-Winter-Frostschäden-Josef_Schlaghecken-1.jpg",
+    "credit": "Josef Schlaghecken",
+    "license": "CC BY-SA 4.0",
+    "note": "花椰菜冻害焦边。冷害对照，德国材料，类型对照，不是酸化根尖。",
+    "commons": "Blumenkohl-Winter-Frostschäden-Josef Schlaghecken-1.jpg",
+    "kind": "stock",
+    "role": "contrast-other"
+  },
+  "/images/articles/yan-shuang-chaka.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:茶卡盐湖湖面10.jpg",
+    "credit": "Wikimedia contributor",
+    "license": "CC BY-SA 4.0",
+    "note": "青海茶卡盐湖盐壳土面。中国盐霜类型对照，不是自家粮田。",
+    "commons": "茶卡盐湖湖面10.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/salt-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:茶卡盐湖湖面10.jpg",
+    "credit": "Wikimedia contributor",
+    "license": "CC BY-SA 4.0",
+    "note": "中国青海茶卡盐湖盐壳。全盐/盐霜土面类型对照。",
+    "commons": "茶卡盐湖湖面10.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/p-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niedobór_fosforu,_objawy.JPG",
+    "credit": "Mieszkanko",
+    "license": "CC BY-SA 3.0",
+    "note": "缺磷叶色发紫。用来和铝毒根尖分开，不要把紫茎当成酸化根。",
+    "commons": "Niedobór fosforu, objawy.JPG",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/avp-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2005_1214_0928_Hlokozi_-_Acid-induced_P_deficiency.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "过酸诱发的缺磷紫茎。有效磷格子对得上的地头样子。",
+    "commons": "2005 1214 0928 Hlokozi - Acid-induced P deficiency.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/n-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "菜豆缺氮：下部老叶匀黄。",
+    "commons": "Phaseolus vulgaris nitrogen deficiency.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/alkn-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_Cauliflower_Bloemkool_stikstofgebrek.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "花椰菜缺氮黄叶。碱解氮格子的地头对照。",
+    "commons": "Brassica oleracea Cauliflower Bloemkool stikstofgebrek.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/k-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_1_2003-01-13.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "玉米缺钾老叶焦边。",
+    "commons": "K-deficient maize on Cedara 1 2003-01-13.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/avk-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_2_2003-01-13.jpg",
+    "credit": "Alandmanson",
+    "license": "CC BY 4.0",
+    "note": "玉米缺钾叶缘焦枯特写。",
+    "commons": "K-deficient maize on Cedara 2 2003-01-13.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/zn-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zinc-deficient_maize_plants.jpg",
+    "credit": "CIMMYT / Wikimedia",
+    "license": "CC BY-SA 3.0",
+    "note": "玉米缺锌。新叶条纹黄白。",
+    "commons": "Zinc-deficient maize plants.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/b-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Banana_(Musa_sp.)-_Boron_deficiency_and_black_leaf_streak_disease.jpg",
+    "credit": "Scot Nelson",
+    "license": "Public domain",
+    "note": "香蕉缺硼叶缘皱缩。类型对照。",
+    "commons": "Banana (Musa sp.)- Boron deficiency and black leaf streak disease.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/cu-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Starr-120608-7321-Brassica_rapa-broccoli_rabe_leaf_with_copper_deficiency-Ulupalakua_Ranch-Maui_(24777617959).jpg",
+    "credit": "Forest & Kim Starr",
+    "license": "CC BY 3.0",
+    "note": "叶菜缺铜。类型对照。",
+    "commons": "Starr-120608-7321-Brassica rapa-broccoli rabe leaf with copper deficiency-Ulupalakua Ranch-Maui (24777617959).jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/mn-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manganese-deficiency-rose.jpg",
+    "credit": "Wikimedia",
+    "license": "CC BY-SA 3.0",
+    "note": "缺锰脉间黄。类型对照。",
+    "commons": "Manganese-deficiency-rose.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/fe-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg",
+    "credit": "INRA / Wikimedia",
+    "license": "CC BY-SA 4.0",
+    "note": "柑橘缺铁：新叶黄、叶脉还绿。",
+    "commons": "Chlorose ferrique sur Citrus aurantium.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/gley-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gleying_in_glacial_till_-_geograph.org.uk_-_351899.jpg",
+    "credit": "Richard Webb",
+    "license": "CC BY-SA 2.0",
+    "note": "潜育蓝灰土层。类型对照。",
+    "commons": "Gleying in glacial till - geograph.org.uk - 351899.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/aggregate-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Douglas_County,_SD,_Soil_Structure_on_April_27,_2015_(17207379368).jpg",
+    "credit": "USDA NRCS",
+    "license": "Public domain (US federal)",
+    "note": "耕层团粒结构。类型对照。",
+    "commons": "Douglas County, SD, Soil Structure on April 27, 2015 (17207379368).jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/texture-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Struktury_gleby.jpg",
+    "credit": "Wikimedia",
+    "license": "CC BY-SA 3.0",
+    "note": "土壤结构/质地对照。",
+    "commons": "Struktury gleby.jpg",
+    "kind": "lab",
+    "role": "field"
+  },
+  "/images/wiki/esp-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_2512_Bleachedsodic_Sulfuric_Hypersalic_Hydrosol_soil_profile_near_Gillman_South_Australia.jpg",
+    "credit": "CSIRO",
+    "license": "CC BY 3.0",
+    "note": "漂白碱化剖面。ESP 地头类型对照，澳大利亚材料。",
+    "commons": "CSIRO ScienceImage 2512 Bleachedsodic Sulfuric Hypersalic Hydrosol soil profile near Gillman South Australia.jpg",
+    "kind": "lab",
+    "role": "field"
+  },
+  "/images/wiki/saline-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Solontchak.jpg",
+    "credit": "Hedwig Storch",
+    "license": "CC BY-SA 3.0",
+    "note": "盐土剖面。奥地利材料，类型对照。",
+    "commons": "Solontchak.jpg",
+    "kind": "lab",
+    "role": "field"
+  },
+  "/images/wiki/compaction-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ernteschäden.jpg",
+    "credit": "F. Bucher",
+    "license": "CC BY-SA 3.0",
+    "note": "机械压出的车辙与板结。",
+    "commons": "Ernteschäden.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/articles/que-tong.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Starr-120608-7321-Brassica_rapa-broccoli_rabe_leaf_with_copper_deficiency-Ulupalakua_Ranch-Maui_(24777617959).jpg",
+    "credit": "Forest & Kim Starr",
+    "license": "CC BY 3.0",
+    "note": "叶菜缺铜。不再复用缺氮图。",
+    "commons": "Starr-120608-7321-Brassica rapa-broccoli rabe leaf with copper deficiency-Ulupalakua Ranch-Maui (24777617959).jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/si-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:201907_Rice_Field_in_Yongchang,_Lanxi.jpg",
+    "credit": "Zhangzhugang",
+    "license": "CC BY-SA 4.0",
+    "note": "浙江兰溪水田。有效硅常跟水稻叶姿对看。中国地头。",
+    "commons": "201907 Rice Field in Yongchang, Lanxi.jpg",
+    "kind": "field",
+    "role": "field"
+  },
+  "/images/wiki/ca-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+    "credit": "Rasbak",
+    "license": "CC BY-SA 3.0",
+    "note": "钙低时常和顶腐/空荚一起认，这张先作叶色线索，花生空荚另见知识篇。",
+    "commons": "Phaseolus vulgaris nitrogen deficiency.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/mo-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Banana_(Musa_sp.)-_Boron_deficiency_and_black_leaf_streak_disease.jpg",
+    "credit": "Scot Nelson",
+    "license": "Public domain",
+    "note": "钼低在十字花科更明显。此图只作微量元素叶形线索，详见知识篇。",
+    "commons": "Banana (Musa sp.)- Boron deficiency and black leaf streak disease.jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/porosity-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soybean_Field_with_Healthy_Soil_(9316804120).jpg",
+    "credit": "USDA NRCS",
+    "license": "Public domain (US federal)",
+    "note": "孔隙好的耕层土色。与有机质地头图若撞文件，脚本会改用团粒图。",
+    "commons": "Soybean Field with Healthy Soil (9316804120).jpg",
+    "kind": "stock",
+    "role": "field"
+  },
+  "/images/wiki/test-2.jpg": {
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1739_Testing_soil_pH.jpg",
+    "credit": "CSIRO",
+    "license": "CC BY 3.0",
+    "note": "实验室测土，不是化验单格子本身。测土报告词条的地头/实验室对照。",
+    "commons": "CSIRO ScienceImage 1739 Testing soil pH.jpg",
+    "kind": "lab",
+    "role": "field"
+  }
+}

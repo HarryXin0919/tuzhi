@@ -1,6 +1,31 @@
+export type SearchQuery = {
+  q?: string;
+  lang?: "zh" | "en";
+  crop?: string;
+  problem?: string;
+  region?: string;
+  season?: string;
+};
+
 export type PhotoKind = "field" | "lab" | "diagram" | "stock" | "missing";
-export type Photo = { src: string; alt: string; caption: string; kind?: PhotoKind };
-export type Confuse = { lookalike: string; difference: string; photoHint?: string };
+export type PhotoRole = "field" | "mechanism" | "contrast-this" | "contrast-other" | "sheet" | "material";
+export type Photo = {
+  src: string;
+  alt: string;
+  caption: string;
+  kind?: PhotoKind;
+  role?: PhotoRole;
+  credit?: string;
+  sourceUrl?: string;
+  altEn?: string;
+  captionEn?: string;
+};
+export type Confuse = {
+  lookalike: string;
+  difference: string;
+  photoHint?: string;
+  photos?: Photo[];
+};
 export type Dose = { name: string; range: string; note: string };
 export type Indicator = { name: string; meaning: string; typical: string };
 export type VideoRef = { platform: string; title: string; url: string };
@@ -81,22 +106,12 @@ export type WikiCopy = {
   natural: string[];
   human: string[];
   steps: string[];
-  dosage: Dose[];
   dontDo: string[];
   whenToTest: string;
   prevention: string[];
-  indicators: Indicator[];
   aka?: string;
   spoken?: string[];
-  readTable?: { label: string; low: string; mid: string; high: string }[];
+  unit?: string;
   ratioNote?: string;
-};
-
-export type SearchQuery = {
-  q?: string;
-  crop?: string;
-  problem?: string;
-  region?: string;
-  season?: string;
-  lang?: "zh" | "en";
+  readTable?: { label: string; low: string; mid: string; high: string }[];
 };

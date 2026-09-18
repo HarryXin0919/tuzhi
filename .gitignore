@@ -3,3 +3,13 @@ node_modules/
 .github_repo
 .env
 .env.*
+.vercel/
+artifacts/imagine_images/
+artifacts/searched_images/
+.grok/preview.log
+.grok/preview.pid
+.vercel/
+artifacts/imagine_images/
+artifacts/searched_images/
+.grok/preview.log
+.grok/preview.pid

@@ -88,11 +88,14 @@ function voiceScore(v: SpeechSynthesisVoice, lang: Lang): number {
   if (lang === "zh") {
     if (/zh-cn|zh_cn|cmn|chinese/.test(n)) s += 4;
     if (/zh-tw|zh_hk|yue/.test(n)) s += 1;
-    if (/xiaoxiao|yunxi|yunyang|xiaoyi|neural|natural|tingting|google 普通话|huihui/.test(n)) s += 6;
+    if (/xiaoxiao|xiaoyi|xiaoxuan|xiaohan|neural|natural|tingting|huihui|google 普通话/.test(n)) s += 8;
+    if (/female|woman|女/.test(n)) s += 4;
   } else {
     if (/en-us|en_us|en-gb/.test(n)) s += 4;
-    if (/jenny|aria|guy|davis|neural|natural|samantha|google us english/.test(n)) s += 6;
+    if (/jenny|aria|samantha|zira|susan|neural|natural|google us english/.test(n)) s += 8;
+    if (/female|woman/.test(n)) s += 4;
   }
+  if (/yunyang|yunxi|yunjian|yunye|kangkang|kefu|guy|davis|david|mark|male|man|男|nan/.test(n)) s -= 12;
   if (v.localService) s += 1;
   return s;
 }

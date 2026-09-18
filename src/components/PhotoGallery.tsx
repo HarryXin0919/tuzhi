@@ -29,9 +29,18 @@ export function PhotoGallery({ photos, slug, tall }: { photos: Photo[]; slug?: s
   }, [open]);
 
   function kindNote(p: Photo) {
+    if (p.kind === "missing") return t.photoKindPending;
+    if (p.role === "sheet") return t.photoKindSheet;
     if (p.kind === "lab") return t.photoKindLab;
-    if (p.kind === "diagram" || p.kind === "stock") return t.photoKindDiagram;
-    return "";
+    if (p.kind === "diagram") return t.photoKindDiagram;
+    if (p.kind === "stock") return t.photoKindStock;
+    return t.photoKindField;
+  }
+
+  function creditLine(p: Photo) {
+    const bits: string[] = [];
+    if (p.credit) bits.push(p.credit);
+    return bits.join(" · ");
   }
 
   return (
@@ -54,8 +63,18 @@ export function PhotoGallery({ photos, slug, tall }: { photos: Photo[]; slug?: s
             />
             <span className="block p-2 text-left text-sm text-muted">
               {p.caption.replace(/示意图，不能单凭此图下肥。?/g, "").trim()}
-              {kindNote(p) && !/实验室对照|不是自家地头|不是地头|lab check|not your own field|not a neighbour ridge/i.test(p.caption) ? (
-                <span className="mt-1 block text-subtle">{kindNote(p)}</span>
+              <span className="mt-1 block text-subtle">{kindNote(p)}</span>
+              {creditLine(p) ? <span className="mt-1 block text-subtle">{creditLine(p)}</span> : null}
+              {p.sourceUrl ? (
+                <a
+                  href={p.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-forest underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {t.photoSource}
+                </a>
               ) : null}
             </span>
           </button>

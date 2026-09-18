@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { seo } from "@/lib/seo";
 import { signOut } from "@/lib/auth/client";
@@ -6,7 +6,8 @@ import { UserButton } from "@/lib/auth/gates";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { ArticleCard } from "@/components/ArticleCard";
 import { getCard } from "@/lib/knowledge/catalog";
-import { getFavorites, getHistory } from "@/lib/local";
+import { getFavorites, getHistory, type HistItem } from "@/lib/local";
+import { listLibrary, mergeFavorites } from "@/lib/account/server";
 import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
 import { displayName } from "@/lib/i18n/lexicon";
@@ -22,9 +23,40 @@ export function Me() {
   const t = messages[lang];
   const m = t.me;
   const { user, isPending } = useCurrentUserState();
-  const [favs] = useState(() => (typeof window === "undefined" ? [] : getFavorites()));
-  const [hist] = useState(() => (typeof window === "undefined" ? [] : getHistory()));
+  const [favs, setFavs] = useState<string[]>(() => (typeof window === "undefined" ? [] : getFavorites()));
+  const [hist, setHist] = useState<HistItem[]>(() => (typeof window === "undefined" ? [] : getHistory()));
+  const [cloudNote, setCloudNote] = useState("");
   const articles = favs.map(getCard).filter((a): a is NonNullable<typeof a> => !!a);
+
+  useEffect(() => {
+    if (!user) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const local = getFavorites();
+        if (local.length) {
+          const merged = await mergeFavorites({ data: { slugs: local } });
+          if (!cancelled) {
+            setFavs(merged.favorites);
+            localStorage.setItem("tuzhi.favorites", JSON.stringify(merged.favorites));
+          }
+        }
+        const lib = await listLibrary();
+        if (cancelled) return;
+        setFavs(lib.favorites);
+        localStorage.setItem("tuzhi.favorites", JSON.stringify(lib.favorites));
+        if (lib.history.length) {
+          setHist(lib.history);
+        }
+        setCloudNote(m.cloudOn);
+      } catch {
+        setCloudNote(m.cloudFail);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [user, m.cloudOn, m.cloudFail]);
 
   return (
     <div className="space-y-6">
@@ -51,14 +83,15 @@ export function Me() {
       )}
       <section className="space-y-3 rounded-2xl border border-line bg-surface p-4">
         <h2 className="font-display text-xl font-semibold">{m.accountTitle}</h2>
-        <p className="text-sm text-muted">{m.guest}</p>
+        <p className="text-sm text-muted">{user ? m.cloudOn : m.guest}</p>
+        {cloudNote ? <p className="text-sm text-subtle">{cloudNote}</p> : null}
         <LangLink to="/community" className="inline-block text-forest underline">
           {t.nav.community}
         </LangLink>
       </section>
       <section className="space-y-3">
         <h2 className="font-display text-xl font-semibold">{m.deviceTitle}</h2>
-        <p className="text-sm text-muted">{m.localOnly}</p>
+        <p className="text-sm text-muted">{user ? m.historyNote : m.localOnly}</p>
       </section>
       <section className="space-y-3">
         <h2 className="font-display text-xl font-semibold">{m.favs}</h2>

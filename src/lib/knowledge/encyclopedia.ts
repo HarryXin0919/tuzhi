@@ -21,10 +21,8 @@ function localizeWikiPhotos(term: WikiPack, lang: Lang, title: string): Photo[] 
     const close = /特写/.test(p.alt) || /特写/.test(p.caption);
     return {
       ...p,
-      alt: close ? `${title} close-up` : `${title} field check`,
-      caption: close
-        ? "A close-up check. Trust your own field."
-        : "What this cell looks like on a sheet. A lab sketch, not your own field.",
+      alt: p.altEn || (close ? `${title} close-up` : `${title} field check`),
+      caption: p.captionEn || p.caption,
     };
   });
 }

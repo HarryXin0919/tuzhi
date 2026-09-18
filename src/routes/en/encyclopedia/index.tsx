@@ -5,7 +5,7 @@ import { WikiList } from "../../encyclopedia/index";
 export const Route = createFileRoute("/en/encyclopedia/")({
   head: () =>
     seo({
-      title: "Lab words | Tuzhi",
+      title: "Lab sheet words | Tuzhi",
       description: HOME_DESC_EN,
       path: "/en/encyclopedia",
       lang: "en",

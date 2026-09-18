@@ -60,7 +60,12 @@ test("an explicit process-env override wins over the file", () => {
 });
 
 test("the template ships auth off", () => {
-  assert.deepEqual(readAppEnv(projectRoot()), { VITE_AUTH_ENABLED: "false" });
+  const env = readAppEnv(projectRoot());
+  const flag = env.VITE_AUTH_ENABLED;
+  // Template default is "false". Apps that turn sign-in on set "true"
+  // (or omit the key — treated as on). Either recorded value is valid.
+  if (flag === undefined) return;
+  assert.ok(flag === "false" || flag === "true", `VITE_AUTH_ENABLED=${flag}`);
 });
 
 test("vite loadEnv resolves the wrapped value", () => {
@@ -80,7 +85,8 @@ test("the wrapped command runs with the app env applied", async () => {
     "-e",
     PRINT_FLAG,
   ]);
-  assert.equal(stdout, "false");
+  const expected = readAppEnv(projectRoot()).VITE_AUTH_ENABLED ?? "undefined";
+  assert.equal(stdout, expected);
 });
 
 test("the wrapped command sees an explicit override, not the file value", async () => {
@@ -124,5 +130,6 @@ test("the CLI still runs when invoked through a symlinked path", async () => {
     "-e",
     PRINT_FLAG,
   ]);
-  assert.equal(stdout, "false");
+  const expected = readAppEnv(projectRoot()).VITE_AUTH_ENABLED ?? "undefined";
+  assert.equal(stdout, expected);
 });

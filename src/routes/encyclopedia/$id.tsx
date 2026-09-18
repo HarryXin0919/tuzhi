@@ -1,6 +1,8 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getTerm, localizeTerm } from "@/lib/knowledge/encyclopedia";
 import { getCard } from "@/lib/knowledge/catalog";
+import { getArticle } from "@/lib/knowledge/search";
+import { localizeArticle } from "@/lib/knowledge/localize";
 import { ArticleCard } from "@/components/ArticleCard";
 import { PhotoGallery } from "@/components/PhotoGallery";
 import { LessonVideo } from "@/components/LessonVideo";
@@ -36,6 +38,11 @@ export function TermPage() {
   const spoken = (copy.spoken?.length ? copy.spoken : [copy.subtitle, copy.appearance, copy.fieldCheck]).filter(
     (s) => !!s && s.trim() && !/translation pending/i.test(s) && (lang !== "en" || !/[\u4e00-\u9fff]/.test(s)),
   );
+  const sheetPhotos = copy.photos.filter((p) => p.role === "sheet" || (p.kind === "lab" && p.role !== "field"));
+  const fieldPhotos = copy.photos.filter((p) => p.role === "field" || p.role === "mechanism");
+  const otherPhotos = copy.photos.filter((p) => !sheetPhotos.includes(p) && !fieldPhotos.includes(p));
+  const sheetShow = sheetPhotos.length ? sheetPhotos : otherPhotos.slice(0, 1);
+  const fieldShow = fieldPhotos.length ? fieldPhotos : otherPhotos.filter((p) => !sheetShow.includes(p));
   const relatedBlock = related.length ? (
     <section className="space-y-3">
       <h2 className="font-display text-2xl font-semibold">{r.toGuides}</h2>
@@ -64,11 +71,19 @@ export function TermPage() {
           </p>
         ) : null}
       </header>
-      <ReadAloud sentences={spoken} title={copy.title} />
+      <ReadAloud sentences={spoken} title={copy.title} slug={term.id} />
       <section className="space-y-3">
         <h2 className="font-display text-2xl font-semibold">{r.sheet}</h2>
-        <p className="rounded-2xl border border-line bg-surface p-4 leading-relaxed">{copy.appearance}</p>
-        {copy.photos?.length ? <PhotoGallery photos={copy.photos} slug={term.id} /> : null}
+        <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 leading-relaxed">
+          {copy.appearance
+            .split(/\n+/)
+            .map((p) => p.trim())
+            .filter(Boolean)
+            .map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+        </div>
+        {sheetShow.length ? <PhotoGallery photos={sheetShow} slug={term.id} /> : null}
       </section>
       <section className="space-y-3">
         <h2 className="font-display text-2xl font-semibold">{r.unit}</h2>
@@ -117,7 +132,32 @@ export function TermPage() {
       </section>
       <section className="space-y-3">
         <h2 className="font-display text-2xl font-semibold">{r.field}</h2>
-        <p className="rounded-2xl border border-line bg-surface p-4 leading-relaxed">{copy.fieldCheck}</p>
+        <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 leading-relaxed">
+          {copy.fieldCheck
+            .split(/\n+/)
+            .map((p) => p.trim())
+            .filter(Boolean)
+            .map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+        </div>
+        {fieldShow.length ? <PhotoGallery photos={fieldShow} slug={term.id} /> : null}
+        {related.length ? (
+          <p className="text-sm leading-relaxed text-muted">
+            {lang === "en" ? "Rates live in the matching field guide: " : "用量去这些农业知识篇，按测土和当地农技站："}
+            {related.map((a, i) => (
+              <span key={a.slug}>
+                {i ? " · " : ""}
+                <LangLink to="/knowledge/$slug" params={{ slug: a.slug }} className="text-forest underline">
+                  {(() => {
+                    const full = getArticle(a.slug);
+                    return full ? localizeArticle(full, lang).title : a.title;
+                  })()}
+                </LangLink>
+              </span>
+            ))}
+          </p>
+        ) : null}
       </section>
       {copy.dontDo?.length ? (
         <section className="space-y-3">

@@ -11,6 +11,8 @@ import { LangLink } from "@/components/LangLink";
 import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
 import { getFavorites, toggleFavorite } from "@/lib/local";
+import { toggleFavoriteCloud } from "@/lib/account/server";
+import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { articleJsonLd, seo } from "@/lib/seo";
 import { withLangPath } from "@/lib/i18n/path";
 
@@ -36,6 +38,40 @@ export const Route = createFileRoute("/knowledge/$slug")({
     return <GuidePage raw={raw} />;
   },
 });
+
+function Prose({ text }: { text: string }) {
+  const parts = text.split(/\n+/).map((s) => s.trim()).filter(Boolean);
+  return (
+    <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 text-base leading-relaxed">
+      {parts.map((p, i) =>
+        p.length < 16 && !/[。．.！？!?]$/.test(p) ? (
+          <h3 key={i} className="font-medium">
+            {p}
+          </h3>
+        ) : (
+          <p key={i}>{p}</p>
+        ),
+      )}
+    </div>
+  );
+}
+
+function ConfuseBody({ text }: { text: string }) {
+  const parts = text.split(/\n+/).map((s) => s.trim()).filter(Boolean);
+  return (
+    <div className="mt-2 space-y-2 text-muted">
+      {parts.map((p, i) =>
+        p.length < 16 && !/[。．.！？!?]$/.test(p) ? (
+          <p key={i} className="font-medium text-ink">
+            {p}
+          </p>
+        ) : (
+          <p key={i}>{p}</p>
+        ),
+      )}
+    </div>
+  );
+}
 
 function Section({ title, id, children }: { title: string; id: string; children: React.ReactNode }) {
   return (
@@ -90,6 +126,7 @@ export function GuidePage({ raw }: { raw: Article }) {
   const related = relatedArticles(raw).map((x) => localizeArticle(x, lang));
   const [favs, setFavs] = useState(() => (typeof window === "undefined" ? [] : getFavorites()));
   const [howto, setHowto] = useState(false);
+  const { user } = useCurrentUserState();
   const doseRef = a.doseRefSlug ? getArticle(a.doseRefSlug) : undefined;
   const speakRaw = lang === "en" ? (a.speakEn ?? []) : (a.speakZh ?? []);
   const howRaw = lang === "en" ? (a.howtoSpeakEn ?? []) : (a.howtoSpeakZh ?? []);
@@ -123,8 +160,10 @@ export function GuidePage({ raw }: { raw: Article }) {
         id: indicatorTermId(raw.indicators[i]?.name || d.name),
         name: d.name,
       }));
-  const fieldPhotos = a.photos.slice(0, 2);
-  const extraPhotos = a.photos.slice(2, 4);
+  const fieldPhotos = a.photos.filter((p) => p.role === "field" || p.role === "sheet" || (!p.role && a.photos.indexOf(p) < 2));
+  const mechanismPhotos = a.photos.filter((p) => p.role === "mechanism");
+  const leftover = a.photos.filter((p) => !fieldPhotos.includes(p) && !mechanismPhotos.includes(p) && p.role !== "contrast-this" && p.role !== "contrast-other" && p.role !== "sheet");
+  const whyPhotos = mechanismPhotos.length ? mechanismPhotos : leftover.slice(0, 2);
   const relatedBlock = related.length ? (
     <section className="space-y-3">
       <h2 className="font-display text-2xl font-semibold">{C.related}</h2>
@@ -175,7 +214,23 @@ export function GuidePage({ raw }: { raw: Article }) {
           <button
             type="button"
             className="inline-flex min-h-10 items-center rounded-lg border border-line bg-surface px-3 text-sm"
-            onClick={() => setFavs(toggleFavorite(raw.slug))}
+            onClick={() => {
+              const next = toggleFavorite(raw.slug);
+              setFavs(next);
+              if (!user) return;
+              void toggleFavoriteCloud({ data: { slug: raw.slug } })
+                .then((r) => {
+                  setFavs(r.favorites);
+                  try {
+                    localStorage.setItem("tuzhi.favorites", JSON.stringify(r.favorites));
+                  } catch {
+                    /* ignore */
+                  }
+                })
+                .catch(() => {
+                  /* local copy already saved */
+                });
+            }}
           >
             {favs.includes(raw.slug) ? C.faved : C.fav}
           </button>
@@ -184,11 +239,7 @@ export function GuidePage({ raw }: { raw: Article }) {
       {howto ? null : (
         <>
           <Section title={C.s1} id="look">
-            {a.phenomenon.appearance ? (
-              <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 text-base leading-relaxed">
-                <p>{a.phenomenon.appearance}</p>
-              </div>
-            ) : null}
+            {a.phenomenon.appearance ? <Prose text={a.phenomenon.appearance} /> : null}
             {fieldPhotos.length ? (
               <>
                 <PhotoGallery photos={fieldPhotos} slug={raw.slug} tall />
@@ -198,8 +249,8 @@ export function GuidePage({ raw }: { raw: Article }) {
           </Section>
           {a.mechanism ? (
             <Section title={C.sMechanism} id="why">
-              <p className="rounded-2xl border border-line bg-surface p-4 leading-relaxed">{a.mechanism}</p>
-              {extraPhotos[0] ? <PhotoGallery photos={extraPhotos.slice(0, 1)} slug={raw.slug} /> : null}
+              <Prose text={a.mechanism} />
+              {whyPhotos.length ? <PhotoGallery photos={whyPhotos} slug={raw.slug} /> : null}
             </Section>
           ) : null}
           {a.confuse.length ? (
@@ -208,7 +259,12 @@ export function GuidePage({ raw }: { raw: Article }) {
                 {a.confuse.map((c, i) => (
                   <li key={`${c.lookalike}-${i}`} className="rounded-xl border border-line bg-surface p-4">
                     <p className="font-medium">{C.like(c.lookalike)}</p>
-                    <p className="mt-1 text-muted">{c.difference}</p>
+                    <ConfuseBody text={c.difference} />
+                    {c.photos?.length ? (
+                      <div className="mt-3">
+                        <PhotoGallery photos={c.photos} slug={raw.slug} />
+                      </div>
+                    ) : null}
                   </li>
                 ))}
               </ul>
@@ -345,7 +401,7 @@ export function GuidePage({ raw }: { raw: Article }) {
             </p>
           </div>
         ) : null}
-        {extraPhotos[1] ? <PhotoGallery photos={extraPhotos.slice(1)} slug={raw.slug} /> : null}
+        {leftover[0] ? <PhotoGallery photos={leftover} slug={raw.slug} /> : null}
         {a.example ? (
           <div className="rounded-2xl border border-line bg-surface p-4">
             <h3 className="mb-2 font-medium">{C.sExample}</h3>

@@ -1,1 +1,0 @@
-import{c as e}from"./useStore-7KrkfnlO.js";import{n as t,t as n}from"./index-C6I8sKzk.js";var r=e(),i=function(){let{raw:e}=n.useLoaderData();return(0,r.jsx)(t,{raw:e})};export{i as component};

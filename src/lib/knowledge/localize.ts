@@ -49,6 +49,11 @@ function confuseEn(g: Overlay, a: Article): Confuse[] {
       lookalike,
       difference,
       photoHint: c.photoHint ? cleanEn(c.photoHint) || undefined : undefined,
+      photos: (c.photos?.length ? c.photos : a.confuse[out.length]?.photos)?.map((p) => ({
+        ...p,
+        alt: cleanEn(p.alt) || p.alt,
+        caption: cleanEn(p.caption) || p.caption,
+      })),
     });
   }
   if (out.length) return out;
@@ -81,8 +86,8 @@ function photosEn(g: Overlay, a: Article, title: string): Photo[] {
     }
     return {
       ...p,
-      alt: cleanEn(g.photos?.[i]?.alt) || title,
-      caption,
+      alt: cleanEn(g.photos?.[i]?.alt) || p.altEn || title,
+      caption: cleanEn(g.photos?.[i]?.caption) || p.captionEn || caption,
     };
   });
 }

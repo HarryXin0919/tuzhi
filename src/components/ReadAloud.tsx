@@ -62,18 +62,22 @@ export function ReadAloud({
 
   const SKIP = /translation pending|^土知$|^Tuzhi$|^李泽宇$|^Li Zeyu$|^Sources$|^依据$/i;
   const STEP_NO = /^\s*\d+\s*[）).、]/;
-  function take(list: string[] | undefined, label: string) {
+  function take(list: string[] | undefined, label: string, spoken: boolean) {
     const prepared = (list ?? [])
-      .map((s) => speakPrepare(s, lang))
+      .map((s) => (spoken ? speakPrepare(s, lang) : s))
       .filter((s) => s.trim() && !SKIP.test(s.trim()));
     const cleaned = lang === "en" ? dropHanLines(prepared, `${slug || title || "read"}:${label}`) : prepared;
     if (label === "full") return cleaned.filter((s) => !STEP_NO.test(s));
     return cleaned;
   }
-  const fullLines = take(sentences, "full");
-  const howLines = take(howSentences, "how");
+  const fullLines = take(sentences, "full", false);
+  const howLines = take(howSentences, "how", false);
+  const spokenFull = take(sentences, "full", true);
+  const spokenHow = take(howSentences, "how", true);
   const lines = howto && howLines.length ? howLines : fullLines;
+  const spokenLines = howto && spokenHow.length ? spokenHow : spokenFull;
   const fileUrl = mp3Path(slug, lang, !!(howto && howLines.length));
+  const [usingBackup, setUsingBackup] = useState(false);
 
   useEffect(() => {
     setRate(readTtsRate());
@@ -91,6 +95,7 @@ export function ReadAloud({
     setIdx(0);
     setProgress(0);
     setHasMp3(false);
+    setUsingBackup(false);
   }, [howto, pathname, lang, fileUrl]);
 
   useEffect(() => {
@@ -193,7 +198,11 @@ export function ReadAloud({
     const tok = beginSpeakSession();
     session.current = tok;
     want.current = true;
-    if (await playFile()) return;
+    if (await playFile()) {
+      setUsingBackup(false);
+      return;
+    }
+    setUsingBackup(true);
     if (!list.length) return;
     await waitForVoices();
     if (!isSpeakSession(tok)) return;
@@ -223,7 +232,8 @@ export function ReadAloud({
         utter(i + 1);
         return;
       }
-      const u = new SpeechSynthesisUtterance(line);
+      const spoken = spokenLines[i] || line;
+      const u = new SpeechSynthesisUtterance(spoken);
       if (voice) u.voice = voice;
       u.lang = langRef.current === "zh" ? "zh-CN" : "en-US";
       u.rate = rateRef.current;
@@ -339,6 +349,9 @@ export function ReadAloud({
       ) : null}
       {mode !== "idle" && lines[idx] ? <p className="rounded-lg bg-surface-2 px-3 py-2 text-base leading-relaxed">{lines[idx]}</p> : null}
       {noVoice ? <p className="rounded-xl bg-surface-2 px-3 py-2 text-sm leading-relaxed text-muted">{t.noZhVoice}</p> : null}
+      {mode !== "idle" && usingBackup && !noVoice ? (
+        <p className="rounded-xl bg-surface-2 px-3 py-2 text-sm leading-relaxed text-muted">{t.fallback}</p>
+      ) : null}
       {lines.length ? (
         <ol data-tts-queue={howto && howLines.length ? "howto" : "full"} data-tts-count={lines.length} className="sr-only">
           {lines.map((line, i) => (

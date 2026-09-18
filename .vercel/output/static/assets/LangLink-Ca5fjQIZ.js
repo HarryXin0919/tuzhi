@@ -1,1 +1,0 @@
-import{a as e,n as t,s as n}from"./messages-YLnHVvxw.js";import{c as r}from"./useStore-7KrkfnlO.js";var i=r();function a(r){let a=t(),{to:o,params:s,search:c,children:l,...u}=r;return(0,i.jsx)(n,{...u,to:e(o,a),params:s,search:c,children:l})}export{a as t};

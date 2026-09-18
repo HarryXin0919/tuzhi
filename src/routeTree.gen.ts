@@ -18,6 +18,7 @@ import { Route as EnRouteImport } from './routes/en'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as MeRouteImport } from './routes/me'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CommunityIndexRouteImport } from './routes/community/index'
@@ -31,6 +32,7 @@ import { Route as EnDiagnoseRouteImport } from './routes/en/diagnose'
 import { Route as EnLoginRouteImport } from './routes/en/login'
 import { Route as EnMeRouteImport } from './routes/en/me'
 import { Route as EnPrivacyRouteImport } from './routes/en/privacy'
+import { Route as EnResetPasswordRouteImport } from './routes/en/reset-password'
 import { Route as EnSearchRouteImport } from './routes/en/search'
 import { Route as EnTermsRouteImport } from './routes/en/terms'
 import { Route as EncyclopediaIndexRouteImport } from './routes/encyclopedia/index'
@@ -89,6 +91,11 @@ const MeRoute = MeRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResetPasswordRoute = ResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SearchRoute = SearchRouteImport.update({
@@ -154,6 +161,11 @@ const EnMeRoute = EnMeRouteImport.update({
 const EnPrivacyRoute = EnPrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => EnRoute,
+} as any)
+const EnResetPasswordRoute = EnResetPasswordRouteImport.update({
+  id: '/reset-password',
+  path: '/reset-password',
   getParentRoute: () => EnRoute,
 } as any)
 const EnSearchRoute = EnSearchRouteImport.update({
@@ -237,6 +249,7 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/search': typeof SearchRoute
   '/terms': typeof TermsRoute
   '/community/$id': typeof CommunityIdRoute
@@ -248,6 +261,7 @@ export interface FileRoutesByFullPath {
   '/en/login': typeof EnLoginRoute
   '/en/me': typeof EnMeRoute
   '/en/privacy': typeof EnPrivacyRoute
+  '/en/reset-password': typeof EnResetPasswordRoute
   '/en/search': typeof EnSearchRoute
   '/en/terms': typeof EnTermsRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
@@ -274,6 +288,7 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/search': typeof SearchRoute
   '/terms': typeof TermsRoute
   '/community/$id': typeof CommunityIdRoute
@@ -285,6 +300,7 @@ export interface FileRoutesByTo {
   '/en/login': typeof EnLoginRoute
   '/en/me': typeof EnMeRoute
   '/en/privacy': typeof EnPrivacyRoute
+  '/en/reset-password': typeof EnResetPasswordRoute
   '/en/search': typeof EnSearchRoute
   '/en/terms': typeof EnTermsRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
@@ -313,6 +329,7 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/me': typeof MeRoute
   '/privacy': typeof PrivacyRoute
+  '/reset-password': typeof ResetPasswordRoute
   '/search': typeof SearchRoute
   '/terms': typeof TermsRoute
   '/community/$id': typeof CommunityIdRoute
@@ -324,6 +341,7 @@ export interface FileRoutesById {
   '/en/login': typeof EnLoginRoute
   '/en/me': typeof EnMeRoute
   '/en/privacy': typeof EnPrivacyRoute
+  '/en/reset-password': typeof EnResetPasswordRoute
   '/en/search': typeof EnSearchRoute
   '/en/terms': typeof EnTermsRoute
   '/encyclopedia/$id': typeof EncyclopediaIdRoute
@@ -353,6 +371,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/me'
     | '/privacy'
+    | '/reset-password'
     | '/search'
     | '/terms'
     | '/community/$id'
@@ -364,6 +383,7 @@ export interface FileRouteTypes {
     | '/en/login'
     | '/en/me'
     | '/en/privacy'
+    | '/en/reset-password'
     | '/en/search'
     | '/en/terms'
     | '/encyclopedia/$id'
@@ -390,6 +410,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/me'
     | '/privacy'
+    | '/reset-password'
     | '/search'
     | '/terms'
     | '/community/$id'
@@ -401,6 +422,7 @@ export interface FileRouteTypes {
     | '/en/login'
     | '/en/me'
     | '/en/privacy'
+    | '/en/reset-password'
     | '/en/search'
     | '/en/terms'
     | '/encyclopedia/$id'
@@ -428,6 +450,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/me'
     | '/privacy'
+    | '/reset-password'
     | '/search'
     | '/terms'
     | '/community/$id'
@@ -439,6 +462,7 @@ export interface FileRouteTypes {
     | '/en/login'
     | '/en/me'
     | '/en/privacy'
+    | '/en/reset-password'
     | '/en/search'
     | '/en/terms'
     | '/encyclopedia/$id'
@@ -467,6 +491,7 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   MeRoute: typeof MeRoute
   PrivacyRoute: typeof PrivacyRoute
+  ResetPasswordRoute: typeof ResetPasswordRoute
   SearchRoute: typeof SearchRoute
   TermsRoute: typeof TermsRoute
   CommunityIdRoute: typeof CommunityIdRoute
@@ -542,6 +567,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reset-password': {
+      id: '/reset-password'
+      path: '/reset-password'
+      fullPath: '/reset-password'
+      preLoaderRoute: typeof ResetPasswordRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/search': {
@@ -633,6 +665,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/en/privacy'
       preLoaderRoute: typeof EnPrivacyRouteImport
+      parentRoute: typeof EnRoute
+    }
+    '/en/reset-password': {
+      id: '/en/reset-password'
+      path: '/reset-password'
+      fullPath: '/en/reset-password'
+      preLoaderRoute: typeof EnResetPasswordRouteImport
       parentRoute: typeof EnRoute
     }
     '/en/search': {
@@ -744,6 +783,7 @@ interface EnRouteChildren {
   EnLoginRoute: typeof EnLoginRoute
   EnMeRoute: typeof EnMeRoute
   EnPrivacyRoute: typeof EnPrivacyRoute
+  EnResetPasswordRoute: typeof EnResetPasswordRoute
   EnSearchRoute: typeof EnSearchRoute
   EnTermsRoute: typeof EnTermsRoute
   EnIndexRoute: typeof EnIndexRoute
@@ -764,6 +804,7 @@ const EnRouteChildren: EnRouteChildren = {
   EnLoginRoute: EnLoginRoute,
   EnMeRoute: EnMeRoute,
   EnPrivacyRoute: EnPrivacyRoute,
+  EnResetPasswordRoute: EnResetPasswordRoute,
   EnSearchRoute: EnSearchRoute,
   EnTermsRoute: EnTermsRoute,
   EnIndexRoute: EnIndexRoute,
@@ -788,6 +829,7 @@ const rootRouteChildren: RootRouteChildren = {
   LoginRoute: LoginRoute,
   MeRoute: MeRoute,
   PrivacyRoute: PrivacyRoute,
+  ResetPasswordRoute: ResetPasswordRoute,
   SearchRoute: SearchRoute,
   TermsRoute: TermsRoute,
   CommunityIdRoute: CommunityIdRoute,

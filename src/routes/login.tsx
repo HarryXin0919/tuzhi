@@ -8,6 +8,7 @@ import { seo } from "@/lib/seo";
 import { useAnyNavigate, useAnySearch } from "@/lib/i18n/route-data";
 import { withLangPath } from "@/lib/i18n/path";
 import { CONTACT_EMAIL } from "@/lib/constants";
+import { requestPasswordReset } from "@/lib/account/server";
 
 type Search = { tab?: "login" | "register"; next?: string };
 
@@ -126,6 +127,7 @@ export function Login() {
         <h1 className="font-display text-3xl font-semibold">{L.title}</h1>
         <p className="text-muted">{L.lead}</p>
         <p className="text-sm text-subtle">{L.rules}</p>
+        <p className="text-sm text-subtle">{L.phoneLimit}</p>
       </header>
       <div className="flex gap-2">
         <button
@@ -209,12 +211,7 @@ export function Login() {
       ) : null}
       {err ? <p className="text-danger">{err}</p> : null}
       {!register ? (
-        <p className="text-sm leading-relaxed text-muted">
-          <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(L.forgot)}`} className="text-forest underline">
-            {L.forgot}
-          </a>{" "}
-          {L.forgotHint}
-        </p>
+        <ForgotBlock />
       ) : (
         <p className="text-sm leading-relaxed text-muted">{L.registered}</p>
       )}
@@ -226,6 +223,70 @@ export function Login() {
       >
         {register ? L.register : L.submit}
       </button>
+    </div>
+  );
+}
+
+function ForgotBlock() {
+  const lang = usePathLang();
+  const L = messages[lang].login;
+  const [open, setOpen] = useState(false);
+  const [mail, setMail] = useState("");
+  const [msg, setMsg] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  async function send() {
+    setMsg("");
+    setBusy(true);
+    try {
+      const res = await requestPasswordReset({ data: { email: mail } });
+      if (res.phoneOnly) {
+        setMsg(L.phoneNoReset);
+      } else {
+        setMsg(L.resetSent);
+        if (res.previewText) setMsg(`${L.resetSent}\n${res.previewText}`);
+      }
+    } catch {
+      setMsg(L.resetSent);
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="space-y-2 text-sm leading-relaxed">
+      <button type="button" className="text-forest underline" onClick={() => setOpen((v) => !v)}>
+        {L.forgot}
+      </button>
+      <p className="text-muted">{L.forgotHint}</p>
+      {open ? (
+        <div className="space-y-2 rounded-xl border border-line bg-surface p-3">
+          <label className="block space-y-1">
+            <span className="text-muted">{L.email}</span>
+            <input
+              type="email"
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
+              className="min-h-11 w-full rounded-lg border border-line bg-surface px-3"
+            />
+          </label>
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void send()}
+            className="flex min-h-11 w-full items-center justify-center rounded-lg bg-forest text-forest-fg disabled:opacity-50"
+          >
+            {L.resetSend}
+          </button>
+          {msg ? <p className="whitespace-pre-wrap text-muted">{msg}</p> : null}
+          <p className="text-subtle">
+            {L.resetBackup}{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-forest underline">
+              {CONTACT_EMAIL}
+            </a>
+          </p>
+        </div>
+      ) : null}
     </div>
   );
 }

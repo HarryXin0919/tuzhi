@@ -5,7 +5,7 @@ import { Diagnose } from "../diagnose";
 export const Route = createFileRoute("/en/diagnose")({
   head: () =>
     seo({
-      title: "Photo check | Tuzhi",
+      title: "Take photos | Tuzhi",
       description: HOME_DESC_EN,
       path: "/en/diagnose",
       lang: "en",

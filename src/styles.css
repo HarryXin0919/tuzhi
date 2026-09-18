@@ -52,6 +52,7 @@
     max-width: 100%;
     height: auto;
   }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -69,5 +70,25 @@
   *, *::before, *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+}
+
+/* Diagnose camera: first paint follows viewport, not JS hydration. */
+.tz-cam-phone,
+.tz-alb-phone,
+.tz-live-phone {
+  display: none;
+}
+.tz-file-desk {
+  display: flex;
+}
+@media (max-width: 899px), (pointer: coarse) {
+  .tz-cam-phone,
+  .tz-alb-phone,
+  .tz-live-phone {
+    display: flex;
+  }
+  .tz-file-desk {
+    display: none;
   }
 }

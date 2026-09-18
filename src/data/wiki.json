@@ -13,26 +13,38 @@
     "photos": [
       {
         "src": "/images/wiki/ph.jpg",
-        "alt": "pH（酸碱度） 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框pH",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写pH。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/ph",
+        "altEn": "Sample lab sheet, ph cell boxed",
+        "captionEn": "Sample sheet with the ph cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/ph-2.jpg",
-        "alt": "pH（酸碱度） 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "偏低 pH 对得上粮田发僵。南非酸性土玉米，类型对照。与酸化主图不是同一张。",
+        "caption": "拍的是地头/剖面对照。用来说明pH能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6265e.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Alandmanson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zea_mays_acid_soil_2017_01_05_6265e.jpg",
+        "altEn": "偏低 pH 对得上粮田发僵。南非酸性土玉米，类型对照。与酸化主图不是同一张。",
+        "captionEn": "偏低 pH 对得上粮田发僵。南非酸性土玉米，类型对照。与酸化主图不是同一张。"
       }
     ],
     "zh": {
       "title": "pH（酸碱度）",
       "subtitle": "pH 说土水有多酸多碱，不是某一种病的名字。",
-      "summary": "pH 说的是土水有多酸多碱，不是某一种病的名字。单子上常写成 pH 或水浸 pH，旁边要看水土比。粮田耕层低于约 5.5，根尖容易褐秃，可以谈农用石灰；六点到七点五多数粮菜比较舒服。茶园大约四点五到六，不能照搬改到中性。这条不给袋数。",
-      "appearance": "单子上可能写 pH、酸碱度、水浸 pH。先看旁边有没有水土比。同一块地，水土比不同，小数点不能硬比。",
+      "summary": "pH 说土水有多酸多碱，不是病名。粮田耕层低于约 5.5 才谈农用石灰；6.0–7.5 多数粮菜舒服；茶园大约 4.5–6.0，不能改到中性。这条不给袋数。",
+      "appearance": "人话\npH 说的是土水有多酸多碱，不是某一种病的名字。\n\n单子上怎么写\n常写成 pH、酸碱度、水浸 pH。先看旁边有没有水土比。1:1、1:2.5、1:5 不能硬比。\n\n单位陷阱\n同一块地换水土比，小数点会动。不要跨实验室死盯一个小数。",
       "conditions": "雨水淋、铵态氮会把数字往下推；石灰性母质会往上推。茶树耐酸，粮菜多数不是。",
       "commonCrops": "粮菜多数看六点到七点五，茶树另算。",
-      "fieldCheck": "粮田根尖褐秃，常对上偏低的 pH；新叶黄、脉还绿，常对上偏高的 pH。茶园不是同一套标准。",
+      "fieldCheck": "地里对得上什么\n偏低：粮田发僵苗、洗出来根尖褐秃。偏高：新叶黄、叶脉还绿。\n\n不要做什么\n不要一低就猛尿素。不要用建筑石灰。不要把茶园改到中性。\n\n该去哪篇看用量\n去酸化、石灰怎么用，按测土和当地农技站。这条不给袋数。",
       "longform": [
-        "pH 说的是土水有多酸多碱，不是某一种病的名字。单子上常写成 pH 或水浸 pH，旁边要看水土比。粮田耕层低于约 5.5，根尖容易褐秃，可以谈农用石灰；六点到七点五多数粮菜比较舒服。茶园大约四点五到六，不能照搬改到中性。这条不给袋数。",
-        "pH 只说土水有多酸多碱，不说缺哪一种肥。粮田和茶园目标不同。改酸改碱都冲着这个数字，用量去农业知识。用量去农业知识，按测土和当地农技站。"
+        "pH 只说土水有多酸多碱，不说缺哪一种肥。粮田耕层低于约 5.5，根尖容易褐秃，可以谈农用石灰。大约 6.0–7.5，多数粮菜比较舒服。高于约 8，铁容易被锁。",
+        "茶园窗口大约 4.5 到 6.0，不能照搬粮田改到中性。用量去农业知识，按测土和当地农技站。"
       ],
       "confuse": [
         {
@@ -46,7 +58,7 @@
           "photoHint": "化验单上的 pH 和地里根尖、新叶放一起看。"
         }
       ],
-      "plainExplain": "pH 只说土水有多酸多碱，不说缺哪一种肥。粮田和茶园目标不同。改酸改碱都冲着这个数字，用量去农业知识。",
+      "plainExplain": "pH 是测量值，不是病名。改酸改碱都冲着这个数字。粮田和茶园目标不同。这条不给袋数。",
       "natural": [
         "雨水淋、铵态氮会把数字往下推；石灰性母质会往上推。茶树耐酸，粮菜多数不是。",
         "雨水淋、铵态氮往下推，石灰性母质往上推。"
@@ -106,26 +118,25 @@
         }
       ],
       "spoken": [
-        "pH 是测量值，不是病名。",
-        "单子上酸碱度、水浸 pH 都是它。",
-        "先看水土比，一比一和二点五不能硬比。",
-        "粮田低于大约五点五，才谈改酸。",
-        "茶园不要按粮田改到中性。",
-        "高于八，新叶黄、脉还绿，铁容易被锁。",
-        "用量去酸化和石灰那两篇。"
+        "pH 说土水有多酸多碱，不是某一种病的名字。",
+        "pH 说的是土水有多酸多碱，不是某一种病的名字。",
+        "常写成 pH、酸碱度、水浸 pH。",
+        "先看旁边有没有水土比。",
+        "1:1、1:2.5、1:5 不能硬比。",
+        "同一块地换水土比，小数点会动。"
       ]
     },
     "en": {
       "title": "pH",
       "subtitle": "pH is a measurement, not a disease.",
-      "summary": "pH says how acid or alkaline the soil water is. It is not the name of a disease. On grain land, root tips go brown below about 5.5 and agricultural lime can be discussed. Most grain and vegetables are comfortable around 6.0–7.5. Tea stays about 4.5–6.0 and must not be pushed to neutral. This page does not hand you a bag count.",
-      "appearance": "The sheet may say pH, acidity, or water pH. Read the soil:water ratio first. Different ratios are not the same number.",
+      "summary": "pH says how acid or alkaline the soil water is. It is not a disease name. On grain land, agricultural lime is only on the table below about 5.5. Most grain and vegetables sit near 6.0–7.5. Tea stays about 4.5–6.0; do not push it to neutral. This page does not hand you a bag count.",
+      "appearance": "Plain speech\npH is how acid or alkaline the soil water is — not the name of a disease.\n\nOn the sheet\nIt may say pH, acidity, or water pH. Read the soil:water ratio first. 1:1, 1:2.5 and 1:5 are not the same number.\n\nUnit trap\nChange the ratio on the same field and the decimal moves. Do not freeze on one decimal across labs.",
       "conditions": "Rain and ammonium-N push it down; lime parent material pushes it up. Tea likes acid; most grain does not.",
       "commonCrops": "Most grain and vegetables sit around 6–7.5; tea uses a different range.",
-      "fieldCheck": "Brown bald root tips often match low pH on grain land; yellow new leaves with green veins often match high pH. Tea uses a different range.",
+      "fieldCheck": "What it matches in the field\nLow: stalled grain, brown root tips. High: newest leaves yellow, veins still green.\n\nDo not\nDo not answer a low number with a urea dump. Do not use builder’s lime. Do not push tea to neutral.\n\nWhere rates live\nAcid soil and How to use lime. Follow a soil test and your local station. No bag count here.",
       "longform": [
-        "pH is a measurement, not a disease. Lime or alkali amendments aim at this number. Grain land and tea have different targets.",
-        "If the number and the field disagree, read the soil:water ratio first. Rates live in the field guide."
+        "pH is a measurement, not a nutrient name. On grain land, root tips brown below about 5.5 and agricultural lime can be discussed. About 6.0–7.5 is comfortable for most grain and vegetables. Above about 8, iron locks.",
+        "Tea should stay near 4.5–6.0. Do not copy a grain-land lime bill onto a tea garden. Rates live in the field guide."
       ],
       "confuse": [
         {
@@ -139,7 +150,7 @@
           "photoHint": "Sheet and plant together."
         }
       ],
-      "plainExplain": "pH is a measurement, not a disease. Lime or alkali amendments aim at this number. Rain and ammonium-N push it down; lime parent material pushes it up. Tea likes acid; most grain does not.",
+      "plainExplain": "pH is a measurement, not a disease. Lime or alkali amendments aim at this number. Grain and tea have different targets. No bag count on this page.",
       "natural": [
         "Rain and ammonium-N push it down; lime parent material pushes it up. Tea likes acid; most grain does not.",
         "Rain and ammonium-N push it down; lime parent material pushes it up. Tea likes acid; most grain does not."
@@ -199,13 +210,12 @@
         }
       ],
       "spoken": [
+        "pH.",
         "pH is a measurement, not a disease.",
-        "Acidity and water pH on the sheet are the same cell.",
-        "Read the soil to water ratio before you compare labs.",
-        "On grain land, lime only below about 5.5.",
-        "Do not push tea to neutral.",
-        "Above about 8, iron often locks.",
-        "Rates live in the acid-soil and lime guides."
+        "Plain speech pH is how acid or alkaline the soil water is — not the name of a disease.",
+        "On the sheet It may say pH, acidity, or water pH.",
+        "Read the soil:water ratio first.",
+        "1:1, 1:2."
       ]
     }
   },
@@ -223,23 +233,35 @@
     "photos": [
       {
         "src": "/images/wiki/om.jpg",
-        "alt": "有机质 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有机质",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有机质。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/om",
+        "altEn": "Sample lab sheet, om cell boxed",
+        "captionEn": "Sample sheet with the om cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/om-2.jpg",
-        "alt": "有机质 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "有机质尚可的耕层土色。类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明有机质能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Soybean_Field_with_Healthy_Soil_(9316804120).jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "USDA NRCS",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soybean_Field_with_Healthy_Soil_(9316804120).jpg",
+        "altEn": "有机质尚可的耕层土色。类型对照。",
+        "captionEn": "有机质尚可的耕层土色。类型对照。"
       }
     ],
     "zh": {
       "title": "有机质",
       "subtitle": "有机质是土壤里有机物质的含量，不是菌剂商品名。",
-      "summary": "有机质是土壤里已经腐解和正在腐解的有机物质含量，能帮忙团粒、保水和缓冲。单子上常写成有机质或有机碳，单位常见克/公斤。低了土更散、肥更留不住，但这一格不是当季开关，要靠还田和腐熟粪几年养。不是某袋菌剂的名字。这条不给袋数。",
-      "appearance": "单子上写有机质、有机碳。先看单位。数字低只说储量薄，不自动等于下一袋肥。",
+      "summary": "有机质是土里的肉，是储量，不是菌剂。低了土色浅、一把就散、肥效短。慢慢培，不要一季翻身。",
+      "appearance": "人话\n有机质是土里已经腐解和正在腐解的有机物质，不是某袋菌剂的名字。\n\n单子上怎么写\n常写成有机质、OM，单位 g/kg 或 %。先看单位。\n\n低中高怎么读\n偏低时常对上浅色散土、肥留不住。具体分级跟当地实验室，不要跨省死套。",
       "conditions": "沙土、裸冬、秸秆全拿走，有机质掉得快。还田是慢功夫。",
       "commonCrops": "粮、菜、果都靠这层有机质。沙土掉得更快。",
-      "fieldCheck": "搓一把土：颜色浅、粉、搓不成团，一场雨肥就飘，常常是有机质低了。颜色深不是化验，但浅了常常肉薄。",
+      "fieldCheck": "地里对得上什么\n土色浅、搓不成团、一场雨肥就没了。\n\n该去哪篇\n去有机质下降、秸秆还田。菌剂不是有机质。",
       "longform": [
         "有机质是土壤里已经腐解和正在腐解的有机物质含量，能帮忙团粒、保水和缓冲。单子上常写成有机质或有机碳，单位常见克/公斤。低了土更散、肥更留不住，但这一格不是当季开关，要靠还田和腐熟粪几年养。不是某袋菌剂的名字。这条不给袋数。",
         "有机质薄，缓冲差、保肥差。要连续几年还田加腐熟粪。菌剂不是这一格的商品名。用量去农业知识，按测土和当地农技站。"
@@ -310,22 +332,22 @@
         }
       ],
       "spoken": [
-        "有机质是土壤里的有机物质含量，不是菌剂商品名。",
-        "百分数和克每千克不要看串。",
-        "浅、粉、一场雨肥就飘，有机质低了。",
-        "还田是年年的慢功夫。",
-        "不要指望菌剂产品一季翻身。",
-        "生粪埋根边会烧苗。"
+        "有机质是土壤里有机物质的含量，不是菌剂商品名。",
+        "有机质是土里已经腐解和正在腐解的有机物质，不是某袋菌剂的名字。",
+        "常写成有机质、OM，单位 g/kg 或 %。",
+        "偏低时常对上浅色散土、肥留不住。",
+        "具体分级跟当地实验室，不要跨省死套。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
       "title": "Organic matter",
       "subtitle": "Organic matter is the soil’s reserve and buffer, not the name of a microbial product.",
-      "summary": "Organic matter is the soil’s reserve and buffer, not the name of a microbial product.",
-      "appearance": "Organic matter or organic carbon. g/kg versus % — 1.2% is not 1.2 g/kg.",
+      "summary": "Organic matter is the soil’s meat — a reserve, not a packet of microbes. Low values match pale soil that will not hold a ball, and fertiliser that does not last. Build it over years.",
+      "appearance": "Plain speech\nOrganic matter is decaying and already-decayed organic material. It is not the name of an inoculant.\n\nOn the sheet\nOM or organic matter, in g/kg or %. Read the unit.\n\nHow to read it\nLow often matches pale, powdery soil that will not hold fertiliser. Use the local lab’s classes.",
       "conditions": "Sand, bare winters and straw hauled off drop it fast. Straw return is slow work.",
       "commonCrops": "Grain, vegetables and fruit all live on this meat. Sand drops it faster.",
-      "fieldCheck": "A pale, dusty handful that will not clod, and fertiliser that vanishes after rain, often means thin organic matter.",
+      "fieldCheck": "What it matches\nPale colour, a handful that falls apart, a feed that vanishes after rain.\n\nWhere to go\nThin organic matter and straw return. Inoculant is not organic matter.",
       "longform": [
         "Organic matter is the soil’s savings, not a microbe bag. Residue return is slow work.",
         "Sandy soils hold less. Fresh manure against the root burns. Rates live in the organic-matter guide."
@@ -396,12 +418,12 @@
         }
       ],
       "spoken": [
-        "Organic matter is the soil’s reserve and buffer.",
-        "It is not the name of a microbial product.",
-        "Do not mix percent with grams per kilogram.",
-        "Pale dusty soil that loses fertiliser after rain is thin.",
-        "Residue return is year-by-year work.",
-        "Fresh manure against the root burns."
+        "Organic matter.",
+        "Organic matter is the soil’s reserve and buffer, not the name of a microbial product.",
+        "Plain speech Organic matter is decaying and already-decayed organic material.",
+        "It is not the name of an inoculant.",
+        "On the sheet OM or organic matter, in g/kg or %.",
+        "Read the unit."
       ]
     }
   },
@@ -419,8 +441,14 @@
     "photos": [
       {
         "src": "/images/wiki/cec.jpg",
-        "alt": "CEC（阳离子交换量） 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框CEC",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写CEC。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/cec",
+        "altEn": "Sample lab sheet, cec cell boxed",
+        "captionEn": "Sample sheet with the cec cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/cec-2.jpg",
@@ -497,13 +525,9 @@
       "aka": "CEC（阳离子交换量）",
       "spoken": [
         "CEC（阳离子交换量）。",
-        "保肥能力弱就少量多次，保肥能力强才一次能多留。",
-        "CEC 低的沙土，肥下去留不住；。",
-        "黏土和有机质高的土一次能多留一点。",
-        "沙土肥下去留不住，黏土能多留一点。",
-        "先认质地，再谈一次倒多少。",
-        "沙土按黏土袋数一次倒全年。",
-        "保肥能力弱还猛灌大水把肥冲走。"
+        "阳离子交换量说土能抓住多少养分，低了肥留不住。",
+        "CEC 低的沙土，肥下去留不住；黏土和有机质高的土一次能多留一点。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -574,10 +598,12 @@
         }
       ],
       "spoken": [
-        "CEC is how many nutrient seats the soil has.",
-        "Low CEC needs smaller, more frequent dressings. High CEC can hold more at once.",
+        "CEC.",
+        "Low CEC needs smaller, more frequent dressings.",
+        "High CEC can hold more at once.",
         "Low-CEC sand will not hold fertiliser.",
-        "Clay and high-organic-matter soils hold a bigger dressing."
+        "Clay and high-OM soils hold more at once.",
+        "Low-CEC sand will not hold fertiliser."
       ]
     }
   },
@@ -595,13 +621,25 @@
     "photos": [
       {
         "src": "/images/wiki/texture.jpg",
-        "alt": "质地 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框质地",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写质地。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/texture",
+        "altEn": "Sample lab sheet, texture cell boxed",
+        "captionEn": "Sample sheet with the texture cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/texture-2.jpg",
-        "alt": "质地 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "土壤结构/质地对照。",
+        "caption": "拍的是地头/剖面对照。用来说明质地能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Struktury_gleby.jpg。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "Wikimedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Struktury_gleby.jpg",
+        "altEn": "土壤结构/质地对照。",
+        "captionEn": "土壤结构/质地对照。"
       }
     ],
     "zh": {
@@ -672,14 +710,9 @@
       ],
       "aka": "质地",
       "spoken": [
-        "质地。",
         "质地是天生的骨架，管理只能改结构。",
         "搓一把：刺手是沙，能搓条是黏，中间是壤。",
-        "质地改不掉。",
-        "搓一把：刺手是沙，能搓条是黏。",
-        "骨架改不掉，别指望一袋肥改质地。",
-        "想用化肥把沙改成壤。",
-        "湿黏土硬旋，越旋越板。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -749,10 +782,12 @@
         }
       ],
       "spoken": [
-        "Texture。",
-        "Texture is the skeleton you were given. Management only changes structure.。",
-        "A handful: grit is sand, a ribbon is clay, in between is loam. Texture does not change.。",
-        "A handful: grit is sand, a ribbon is clay, in between is loam. Texture does not change.。"
+        "Texture.",
+        "Texture is the skeleton you were given.",
+        "Management only changes structure.",
+        "A handful: grit is sand, a ribbon is clay, in between is loam.",
+        "Texture does not change.",
+        "A handful: grit is sand, a ribbon is clay, in between is loam."
       ]
     }
   },
@@ -770,13 +805,25 @@
     "photos": [
       {
         "src": "/images/wiki/aggregate.jpg",
-        "alt": "团粒结构 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框团粒",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写团粒。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/aggregate",
+        "altEn": "Sample lab sheet, aggregate cell boxed",
+        "captionEn": "Sample sheet with the aggregate cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/aggregate-2.jpg",
-        "alt": "团粒结构 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "耕层团粒结构。类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明团粒能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Douglas_County,_SD,_Soil_Structure_on_April_27,_2015_(17207379368).jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "USDA NRCS",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Douglas_County,_SD,_Soil_Structure_on_April_27,_2015_(17207379368).jpg",
+        "altEn": "耕层团粒结构。类型对照。",
+        "captionEn": "耕层团粒结构。类型对照。"
       }
     ],
     "zh": {
@@ -847,14 +894,10 @@
       ],
       "aka": "团粒结构",
       "spoken": [
-        "团粒结构。",
-        "团粒是土的团粒结构，不是化肥能立刻捏出来的。",
+        "团粒是土粒粘结成的小团，化肥不能立刻捏出来。",
         "好土能搓团又易散，里面有孔隙。",
         "面土干了像面粉，湿了像浆。",
-        "好土能搓团又易散。",
-        "干了面、湿了浆，团粒散了，不是质地变了。",
-        "雨打裸地还年年旋碎。",
-        "干了面湿了浆还当缺肥。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -925,10 +968,12 @@
         }
       ],
       "spoken": [
+        "Aggregation.",
         "Crumbs are soil structure.",
         "Fertiliser will not pinch them into being overnight.",
         "Good soil holds and breaks, with pores inside.",
-        "Broken structure is flour when dry, soup when wet."
+        "Broken structure is flour when dry, soup when wet.",
+        "Good soil holds and breaks, with pores inside."
       ]
     }
   },
@@ -946,13 +991,25 @@
     "photos": [
       {
         "src": "/images/wiki/n.jpg",
-        "alt": "氮（N） 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框氮",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写氮。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/n",
+        "altEn": "Sample lab sheet, n cell boxed",
+        "captionEn": "Sample sheet with the n cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/n-2.jpg",
-        "alt": "氮（N） 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "菜豆缺氮：下部老叶匀黄。",
+        "caption": "拍的是地头/剖面对照。用来说明氮能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Rasbak",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+        "altEn": "菜豆缺氮：下部老叶匀黄。",
+        "captionEn": "菜豆缺氮：下部老叶匀黄。"
       }
     ],
     "zh": {
@@ -1023,16 +1080,11 @@
       ],
       "aka": "氮（N）",
       "spoken": [
-        "氮（N）。",
         "氮是长叶子的养分。",
         "词是 N，地里的事看叶位。",
         "缺了下部老叶先匀黄，新叶相对还绿。",
-        "根白才像缺氮。",
         "新叶也黄要想别的。",
-        "下部老叶匀黄、新叶还绿、根白，才像缺氮。",
-        "新叶也黄，换一条路。",
-        "新叶也黄还当缺氮猛追。",
-        "沙土一次倒全年。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -1102,11 +1154,12 @@
         }
       ],
       "spoken": [
-        "Nitrogen (N)。",
-        "Nitrogen builds leaves. The word is N;。",
-        "the field job is leaf position.。",
-        "Too little: old leaves yellow first， new leaves greener. White roots fit N. New-leaf yellow is another road.。",
-        "Too little: old leaves yellow first， new leaves greener. White roots fit N. New-leaf yellow is another road.。"
+        "Nitrogen (N).",
+        "Nitrogen builds leaves.",
+        "The word is N; the field job is leaf position.",
+        "Too little: old leaves yellow first, new leaves greener.",
+        "White roots fit N.",
+        "New-leaf yellow is another road."
       ]
     }
   },
@@ -1124,13 +1177,25 @@
     "photos": [
       {
         "src": "/images/wiki/alkn.jpg",
-        "alt": "碱解氮 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框碱解氮",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写碱解氮。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/alkn",
+        "altEn": "Sample lab sheet, alkn cell boxed",
+        "captionEn": "Sample sheet with the alkn cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/alkn-2.jpg",
-        "alt": "碱解氮 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "花椰菜缺氮黄叶。碱解氮格子的地头对照。",
+        "caption": "拍的是地头/剖面对照。用来说明碱解氮能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Brassica_oleracea_Cauliflower_Bloemkool_stikstofgebrek.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Rasbak",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brassica_oleracea_Cauliflower_Bloemkool_stikstofgebrek.jpg",
+        "altEn": "花椰菜缺氮黄叶。碱解氮格子的地头对照。",
+        "captionEn": "花椰菜缺氮黄叶。碱解氮格子的地头对照。"
       }
     ],
     "zh": {
@@ -1210,12 +1275,11 @@
         }
       ],
       "spoken": [
-        "碱解氮是当季能用的氮，不是全氮。",
-        "两项对着看，才知道缺还是被锁。",
-        "老叶匀黄、新叶还绿，才像缺氮。",
-        "新叶黄脉绿，不要判缺氮。",
-        "按本省分级，这里只是对照。",
-        "用量去缺氮那篇。"
+        "碱解氮说当季能用的那一部分氮，不是处方。",
+        "单子上写碱解氮或水解氮。",
+        "这是当季能用的氮，不是全氮那一格。",
+        "单位常见毫克每千克。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -1296,11 +1360,12 @@
         }
       ],
       "spoken": [
-        "This cell is this season’s nitrogen, not total N.",
-        "Read it next to total N.",
-        "Old leaves yellow, new leaves greener — that is the N look.",
-        "New leaves yellow with green veins is not nitrogen.",
-        "Rates live in the nitrogen guide."
+        "Available N.",
+        "Available nitrogen on the sheet is this season’s supply, not a prescription.",
+        "Alkaline-hydrolysable or available nitrogen.",
+        "This season’s N, not total N.",
+        "Often mg/kg.",
+        "Old leaves evenly yellow, new leaves still greener, roots still white — that is the nitrogen look."
       ]
     }
   },
@@ -1318,13 +1383,25 @@
     "photos": [
       {
         "src": "/images/wiki/p.jpg",
-        "alt": "磷（P） 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框磷",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写磷。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/p",
+        "altEn": "Sample lab sheet, p cell boxed",
+        "captionEn": "Sample sheet with the p cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/p-2.jpg",
-        "alt": "磷（P） 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "缺磷叶色发紫。用来和铝毒根尖分开，不要把紫茎当成酸化根。",
+        "caption": "拍的是地头/剖面对照。用来说明磷能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Niedobór_fosforu,_objawy.JPG。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Mieszkanko",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Niedobór_fosforu,_objawy.JPG",
+        "altEn": "缺磷叶色发紫。用来和铝毒根尖分开，不要把紫茎当成酸化根。",
+        "captionEn": "缺磷叶色发紫。用来和铝毒根尖分开，不要把紫茎当成酸化根。"
       }
     ],
     "zh": {
@@ -1395,15 +1472,9 @@
       ],
       "aka": "磷（P）",
       "spoken": [
-        "磷（P）。",
-        "磷管生根和开花。",
         "词是 P，地里先看紫苗和 pH。",
         "缺了苗紫红发僵、根短少。",
-        "回暖仍不发棵。",
-        "苗紫发僵、根短少。",
-        "回暖还不发棵，先问磷是不是被钉死。",
-        "酸土里猛撒磷粉，根还是摸不着。",
-        "苗紫了只追氮。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -1473,11 +1544,12 @@
         }
       ],
       "spoken": [
-        "Phosphorus (P)。",
-        "Phosphorus is roots and flowering. The word is P;。",
-        "the field job is purple seedlings and pH.。",
-        "Deficiency: purple, stunted seedlings, few roots. Warmth does not restart them.。",
-        "Deficiency: purple, stunted seedlings, few roots. Warmth does not restart them.。"
+        "Phosphorus (P).",
+        "Phosphorus is roots and flowering.",
+        "The word is P; the field job is purple seedlings and pH.",
+        "Deficiency: purple, stunted seedlings, few roots.",
+        "Warmth does not restart them.",
+        "Deficiency: purple, stunted seedlings, few roots."
       ]
     }
   },
@@ -1495,13 +1567,25 @@
     "photos": [
       {
         "src": "/images/wiki/avp.jpg",
-        "alt": "有效磷 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效磷",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效磷。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/avp",
+        "altEn": "Sample lab sheet, avp cell boxed",
+        "captionEn": "Sample sheet with the avp cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/avp-2.jpg",
-        "alt": "有效磷 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "过酸诱发的缺磷紫茎。有效磷格子对得上的地头样子。",
+        "caption": "拍的是地头/剖面对照。用来说明有效磷能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:2005_1214_0928_Hlokozi_-_Acid-induced_P_deficiency.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Alandmanson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:2005_1214_0928_Hlokozi_-_Acid-induced_P_deficiency.jpg",
+        "altEn": "过酸诱发的缺磷紫茎。有效磷格子对得上的地头样子。",
+        "captionEn": "过酸诱发的缺磷紫茎。有效磷格子对得上的地头样子。"
       }
     ],
     "zh": {
@@ -1572,14 +1656,10 @@
       ],
       "aka": "有效磷",
       "spoken": [
-        "有效磷。",
         "有效磷是根能碰到的磷，不是袋子上的纯度。",
         "报告上根能吃到的那部分磷。",
         "全磷高、有效磷低，常见于过酸或石灰性土。",
-        "根能碰到的磷。",
-        "全磷高、这项低，常见于过酸或石灰性土。",
-        "全磷高就不再问有效磷。",
-        "不改 pH 只加磷。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -1649,10 +1729,12 @@
         }
       ],
       "spoken": [
-        "Available P。",
-        "Available P is what the root meets, not the purity on a bag.。",
-        "The P column the root can actually use. High total, low available: acid or lime soils.。",
-        "The P column the root can actually use. High total, low available: acid or lime soils.。"
+        "Available P.",
+        "Available P is what the root meets, not the purity on a bag.",
+        "The P column the root can actually use.",
+        "High total, low available: acid or lime soils.",
+        "The P column the root can actually use.",
+        "High total, low available: acid or lime soils."
       ]
     }
   },
@@ -1670,13 +1752,25 @@
     "photos": [
       {
         "src": "/images/wiki/k.jpg",
-        "alt": "钾（K） 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框钾",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写钾。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/k",
+        "altEn": "Sample lab sheet, k cell boxed",
+        "captionEn": "Sample sheet with the k cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/k-2.jpg",
-        "alt": "钾（K） 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "玉米缺钾老叶焦边。",
+        "caption": "拍的是地头/剖面对照。用来说明钾能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_1_2003-01-13.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Alandmanson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_1_2003-01-13.jpg",
+        "altEn": "玉米缺钾老叶焦边。",
+        "captionEn": "玉米缺钾老叶焦边。"
       }
     ],
     "zh": {
@@ -1747,16 +1841,10 @@
       ],
       "aka": "钾（K）",
       "spoken": [
-        "钾（K）。",
-        "钾管水分和品质。",
         "词是 K，地里先把焦边和白霜分开。",
         "缺了老叶叶缘焦枯像火燎。",
-        "土面不一定白。",
         "盐害也焦边，但常有白霜。",
-        "老叶外边焦，土面不一定白。",
-        "白霜加焦边先想盐。",
-        "见焦边就当盐，土面其实不白。",
-        "秸秆拿走还怪土没钾。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -1826,13 +1914,12 @@
         }
       ],
       "spoken": [
-        "Potassium (K)。",
-        "Potassium runs water use and quality. The word is K;。",
-        "split scorch from white crust first.。",
-        "Deficiency: old-leaf margins scorch like fire. The surface need not be white. Salt scorches too。",
-        " usually with frost.。",
-        "Deficiency: old-leaf margins scorch like fire. The surface need not be white. Salt scorches too。",
-        " usually with frost.。"
+        "Potassium (K).",
+        "Potassium runs water use and quality.",
+        "The word is K; split scorch from white crust first.",
+        "Deficiency: old-leaf margins scorch like fire.",
+        "The surface need not be white.",
+        "Salt scorches too, usually with frost."
       ]
     }
   },
@@ -1850,13 +1937,25 @@
     "photos": [
       {
         "src": "/images/wiki/avk.jpg",
-        "alt": "速效钾 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框速效钾",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写速效钾。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/avk",
+        "altEn": "Sample lab sheet, avk cell boxed",
+        "captionEn": "Sample sheet with the avk cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/avk-2.jpg",
-        "alt": "速效钾 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "玉米缺钾叶缘焦枯特写。",
+        "caption": "拍的是地头/剖面对照。用来说明速效钾能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_2_2003-01-13.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Alandmanson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:K-deficient_maize_on_Cedara_2_2003-01-13.jpg",
+        "altEn": "玉米缺钾叶缘焦枯特写。",
+        "captionEn": "玉米缺钾叶缘焦枯特写。"
       }
     ],
     "zh": {
@@ -1927,15 +2026,9 @@
       ],
       "aka": "速效钾",
       "spoken": [
-        "速效钾。",
         "速效钾是当季钾饭，不是岩石里的钾。",
-        "当季能用的钾。",
         "沙土、高产、拿走秸秆的地容易低。",
-        "当季钾。",
-        "沙土、秸秆拿走容易低。",
-        "焦边也看盐。",
-        "焦边一律补钾，不问盐。",
-        "高产田不还秸秆。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -2005,10 +2098,12 @@
         }
       ],
       "spoken": [
-        "Available K。",
-        "Available K is this this season’s available nitrogen, not potassium in the rock.。",
-        "K the crop can use this season. Sand, high yield, straw removed — often low.。",
-        "K the crop can use this season. Sand, high yield, straw removed — often low.。"
+        "Available K.",
+        "Available K is this this season’s available nitrogen, not potassium in the rock.",
+        "K the crop can use this season.",
+        "Sand, high yield, straw removed — often low.",
+        "K the crop can use this season.",
+        "Sand, high yield, straw removed — often low."
       ]
     }
   },
@@ -2026,13 +2121,25 @@
     "photos": [
       {
         "src": "/images/wiki/ca.jpg",
-        "alt": "交换性钙 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框交换性钙",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写交换性钙。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/ca",
+        "altEn": "Sample lab sheet, ca cell boxed",
+        "captionEn": "Sample sheet with the ca cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/ca-2.jpg",
-        "alt": "交换性钙 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "钙低时常和顶腐/空荚一起认，这张先作叶色线索，花生空荚另见知识篇。",
+        "caption": "拍的是地头/剖面对照。用来说明交换性钙能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Rasbak",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phaseolus_vulgaris_nitrogen_deficiency.jpg",
+        "altEn": "钙低时常和顶腐/空荚一起认，这张先作叶色线索，花生空荚另见知识篇。",
+        "captionEn": "钙低时常和顶腐/空荚一起认，这张先作叶色线索，花生空荚另见知识篇。"
       }
     ],
     "zh": {
@@ -2103,16 +2210,10 @@
       ],
       "aka": "交换性钙",
       "spoken": [
-        "交换性钙。",
-        "交换性钙是土能交出的能交换出来的钙。",
-        "叶面钙只救急。",
+        "交换性钙说土能交出来给根用的钙。",
         "缺钙走顶芽、脐腐、裂果、心叶焦。",
-        "老叶相对还好。",
         "土里有钙也会吃不到。",
-        "顶芽、脐部、心叶先出事，老叶还好。",
-        "水忽干忽湿更明显。",
-        "脐腐了只打药，不问水稳不稳。",
-        "干旱时猛冲铵态氮。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -2182,12 +2283,12 @@
         }
       ],
       "spoken": [
-        "Exchangeable Ca。",
-        "Exchangeable Ca is the brick the soil can hand over. A foliar spray is only a rescue.。",
-        "Ca lack hits the tip， blossom-end rot， split fruit。",
-        " scorched heart leaves. Old leaves stay finer. Soil can have Ca the plant never sees.。",
-        "Ca lack hits the tip， blossom-end rot， split fruit。",
-        " scorched heart leaves. Old leaves stay finer. Soil can have Ca the plant never sees.。"
+        "Exchangeable Ca.",
+        "Exchangeable Ca is the brick the soil can hand over.",
+        "A foliar spray is only a rescue.",
+        "Ca lack hits the tip, blossom-end rot, split fruit, scorched heart leaves.",
+        "Old leaves stay finer.",
+        "Soil can have Ca the plant never sees."
       ]
     }
   },
@@ -2205,23 +2306,35 @@
     "photos": [
       {
         "src": "/images/wiki/al.jpg",
-        "alt": "交换性铝 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框交换性铝",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写交换性铝。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/al",
+        "altEn": "Sample lab sheet, al cell boxed",
+        "captionEn": "Sample sheet with the al cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/al-2.jpg",
-        "alt": "交换性铝 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "铝毒洗根：褐秃根尖。与酸化篇主根图不是同一张。",
+        "caption": "拍的是地头/剖面对照。用来说明交换性铝能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6164.jpg。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "Alandmanson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aluminium_toxocity_maize_roots_2017_01_05_6164.jpg",
+        "altEn": "铝毒洗根：褐秃根尖。与酸化篇主根图不是同一张。",
+        "captionEn": "铝毒洗根：褐秃根尖。与酸化篇主根图不是同一张。"
       }
     ],
     "zh": {
       "title": "交换性铝",
       "subtitle": "交换性铝在强酸土里会伤根尖，治本是改酸。",
-      "summary": "交换性铝说土里活性铝有多少。pH 低了它才活跃，专伤根尖，洗出来褐秃、侧根很少。治本是把耕层 pH 抬过伤根的门槛，粮田大约低于 5.5 才谈改酸，不是再追氮。茶园耐酸，不要用粮田目标去改茶。这条不给袋数。",
-      "appearance": "单子上写交换性铝、活性铝。常和偏低的 pH 一起出现。地里对得上根尖褐秃。",
+      "summary": "交换性铝高，专伤正在伸的根尖。洗出来褐秃、侧根很少，常对上偏低 pH。这条不给袋数。",
+      "appearance": "人话\n交换性铝不是肥料，是会伤根的离子。\n\n单子上怎么写\n常写成交换性铝、Ex-Al，单位 cmol/kg 或 mg/kg。先看单位。",
       "conditions": "南方红黄壤、茶园、连年铵态氮的粮田常见。茶叶耐酸，也不是越酸越好。",
       "commonCrops": "红黄壤、酸茶园、南方粮田先认它。",
-      "fieldCheck": "洗根看尖：褐秃少白尖。pH 低了铝才溶出来伤根。",
+      "fieldCheck": "地里对得上什么\n洗根后根尖褐秃、侧根很少、苗发僵。常和偏低 pH 一起出现。\n\n该去哪篇\n去酸化、铝毒伤根、石灰怎么用。不要先猛尿素。",
       "longform": [
         "交换性铝说土里活性铝有多少。pH 低了它才活跃，专伤根尖，洗出来褐秃、侧根很少。治本是把耕层 pH 抬过伤根的门槛，粮田大约低于 5.5 才谈改酸，不是再追氮。茶园耐酸，不要用粮田目标去改茶。这条不给袋数。",
         "铝伤的是根尖。先改酸让新嘴长出来，再薄肥。不要在秃根上猛尿素。用量去农业知识，按测土和当地农技站。"
@@ -2283,25 +2396,20 @@
       ],
       "aka": "交换性铝",
       "spoken": [
-        "交换性铝。",
-        "交换性铝在强酸土里会伤根尖。",
-        "治本是改酸，不是再追氮。",
-        "pH 低于大约 5.5，铝溶出来伤根尖：褐、秃、少白尖。",
-        "地上才发僵。",
-        "洗根看尖：褐秃少白尖。",
-        "pH 低了铝才溶出来伤根。",
-        "根秃了还猛尿素。",
-        "没测 pH 就按听说撒灰。"
+        "交换性铝在强酸土里会伤根尖，治本是改酸。",
+        "交换性铝不是肥料，是会伤根的离子。",
+        "常写成交换性铝、Ex-Al，单位 cmol/kg 或 mg/kg。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
       "title": "Exchangeable Al",
       "subtitle": "Exchangeable aluminium is the toxic ion in very acid soil. The job is lime and organic matter, not more nitrogen.",
-      "summary": "Below about pH 5.5, aluminium dissolves and injures root tips: brown, bald, few white tips. Then the top stalls. Fix the acid, don’t chase nitrogen.",
-      "appearance": "Below about pH 5.5, aluminium dissolves and injures root tips: brown, bald, few white tips. Then the shoot stalls.",
+      "summary": "High exchangeable aluminium burns growing root tips. Brown, stubby tips with few laterals often match low pH. No bag count here.",
+      "appearance": "Plain speech\nExchangeable aluminium is not a fertiliser. It is an ion that hurts roots.\n\nOn the sheet\nEx-Al or exchangeable Al, in cmol/kg or mg/kg. Read the unit.",
       "conditions": "Southern red-yellow earth, tea, and ammonium-N grain fields show it. Tea likes acid — not ever-more-acid.",
       "commonCrops": "Red-yellow earth, acid tea, southern grain.",
-      "fieldCheck": "Below about pH 5.5, aluminium dissolves and injures root tips: brown, bald, few white tips. Then the top stalls.",
+      "fieldCheck": "What it matches\nWashed roots brown and stubby, few laterals, stalled seedlings. Often with low pH.\n\nWhere to go\nAcid soil, aluminium toxicity, How to use lime. Do not dump urea first.",
       "longform": [
         "Below about pH 5.5, aluminium dissolves and injures root tips: brown, bald, few white tips. Then the top stalls. Southern red-yellow earth, tea, and ammonium-N grain fields show it.",
         "Hunger keeps a root, just thin; aluminium injures the tip. Wash roots before you add fertiliser. The job is lime and organic matter, not more nitrogen. Tea likes acid, not ever-more-acid."
@@ -2362,10 +2470,12 @@
         }
       ],
       "spoken": [
+        "Exchangeable Al.",
         "Exchangeable aluminium is the toxic ion in very acid soil.",
-        "Below about pH 5.5 it dissolves and injures root tips.",
-        "Brown, bald tips with few white points, then the top stalls.",
-        "The job is lime and organic matter, not more nitrogen."
+        "The job is lime and organic matter, not more nitrogen.",
+        "Plain speech Exchangeable aluminium is not a fertiliser.",
+        "It is an ion that hurts roots.",
+        "On the sheet Ex-Al or exchangeable Al, in cmol/kg or mg/kg."
       ]
     }
   },
@@ -2383,13 +2493,25 @@
     "photos": [
       {
         "src": "/images/wiki/zn.jpg",
-        "alt": "有效锌 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效锌",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效锌。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/zn",
+        "altEn": "Sample lab sheet, zn cell boxed",
+        "captionEn": "Sample sheet with the zn cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/zn-2.jpg",
-        "alt": "有效锌 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "玉米缺锌。新叶条纹黄白。",
+        "caption": "拍的是地头/剖面对照。用来说明有效锌能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Zinc-deficient_maize_plants.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "CIMMYT / Wikimedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zinc-deficient_maize_plants.jpg",
+        "altEn": "玉米缺锌。新叶条纹黄白。",
+        "captionEn": "玉米缺锌。新叶条纹黄白。"
       }
     ],
     "zh": {
@@ -2460,14 +2582,10 @@
       ],
       "aka": "有效锌",
       "spoken": [
-        "有效锌。",
         "有效锌是用量很小的门。",
         "土施按年计，不要年年猛倒。",
         "缺锌走新叶：脉间失绿、节间短、小叶簇生，玉米花白苗最典型。",
-        "新叶挤、节间短、玉米花白苗。",
-        "老叶匀黄不是它。",
-        "花白苗当缺氮。",
-        "磷很高还把门堵住。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -2537,12 +2655,12 @@
         }
       ],
       "spoken": [
-        "Available Zn。",
-        "Available Zn is a small door. Soil zinc is measured in years, not every trip.。",
-        "Zn hits new growth: interveinal yellow， short internodes。",
-        " little leaves clustered. Maize white-bud is the type.。",
-        "Zn hits new growth: interveinal yellow， short internodes。",
-        " little leaves clustered. Maize white-bud is the type.。"
+        "Available Zn.",
+        "Available Zn is a small door.",
+        "Soil zinc is measured in years, not every trip.",
+        "Zn hits new growth: interveinal yellow, short internodes, little leaves clustered.",
+        "Maize white-bud is the type.",
+        "Zn hits new growth: interveinal yellow, short internodes, little leaves clustered."
       ]
     }
   },
@@ -2560,13 +2678,25 @@
     "photos": [
       {
         "src": "/images/wiki/b.jpg",
-        "alt": "有效硼 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效硼",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效硼。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/b",
+        "altEn": "Sample lab sheet, b cell boxed",
+        "captionEn": "Sample sheet with the b cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/b-2.jpg",
-        "alt": "有效硼 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "香蕉缺硼叶缘皱缩。类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明有效硼能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Banana_(Musa_sp.)-_Boron_deficiency_and_black_leaf_streak_disease.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Scot Nelson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Banana_(Musa_sp.)-_Boron_deficiency_and_black_leaf_streak_disease.jpg",
+        "altEn": "香蕉缺硼叶缘皱缩。类型对照。",
+        "captionEn": "香蕉缺硼叶缘皱缩。类型对照。"
       }
     ],
     "zh": {
@@ -2637,14 +2767,9 @@
       ],
       "aka": "有效硼",
       "spoken": [
-        "有效硼。",
-        "有效硼窗口很窄。",
         "没有化验不要土里一把倒。",
         "缺硼花而不实、蕾铃掉、茎空心或裂，生长点萎缩。",
-        "花开了不结实、茎空心。",
-        "花期旱和盐也会掉花。",
-        "花而不实就土里一把倒硼。",
-        "缺和毒只隔一层纸还加倍。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -2714,10 +2839,12 @@
         }
       ],
       "spoken": [
-        "Available B。",
-        "Available B is a narrow window. Don’t broadcast it without a test.。",
-        "B lack: bloom without fruit, dropped buds, hollow or split stems, growing point stalled.。",
-        "B lack: bloom without fruit, dropped buds, hollow or split stems, growing point stalled.。"
+        "Available B.",
+        "Available B is a narrow window.",
+        "Don’t broadcast it without a test.",
+        "B lack: bloom without fruit, dropped buds, hollow or split stems, growing point stalled.",
+        "B lack: bloom without fruit, dropped buds, hollow or split stems, growing point stalled.",
+        "This page explains the cell."
       ]
     }
   },
@@ -2735,23 +2862,35 @@
     "photos": [
       {
         "src": "/images/wiki/ec.jpg",
-        "alt": "EC（电导率） 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框EC",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写EC。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/ec",
+        "altEn": "Sample lab sheet, ec cell boxed",
+        "captionEn": "Sample sheet with the ec cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/ec-2.jpg",
-        "alt": "EC（电导率） 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "高盐剖面。电导偏高时地里可能对上的样子，澳大利亚材料。",
+        "caption": "拍的是地头/剖面对照。用来说明EC能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3924_Petrocalcic_Sulfidic_Hypersalic_Hydrosol_soil_profile_in_the_Cooke_Plains_district_of_South_Australia.jpg。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "CSIRO",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_3924_Petrocalcic_Sulfidic_Hypersalic_Hydrosol_soil_profile_in_the_Cooke_Plains_district_of_South_Australia.jpg",
+        "altEn": "高盐剖面。电导偏高时地里可能对上的样子，澳大利亚材料。",
+        "captionEn": "高盐剖面。电导偏高时地里可能对上的样子，澳大利亚材料。"
       }
     ],
     "zh": {
       "title": "EC（电导率）",
       "subtitle": "电导率看土水有多咸，偏高时根吸水费劲。",
-      "summary": "电导率看土水有多咸。偏高时根吸水费劲，不要当成单纯干旱。单子上写 EC 或电导，先看单位是毫西还是微西。水土比不同，数字不能硬比。白霜、滴口白圈、小水浇完更蔫，常常对得上偏高的电导。这条不给袋数。",
-      "appearance": "单子上写 EC、电导率、电导。旁边一定有单位：毫西或微西，看错一位会把淡土当成咸土。",
+      "summary": "EC 说土水有多咸，不是“有肥”。偏高时土面常有白霜、出苗不齐、小水浇完更蔫。这条不给袋数。",
+      "appearance": "人话\n电导率说土水有多咸，不是肥够不够。\n\n单子上怎么写\n常写成 EC、电导率，单位有 mS/cm、dS/m、μS/cm。先看单位，再看水土比。\n\n单位陷阱\nμS/cm 和 mS/cm 差一千倍。不要跨单位硬比。",
       "conditions": "大棚、盐碱地、滴灌过浓，EC 最容易高。降低靠洗盐、控肥。",
       "commonCrops": "大棚、盐碱地、滴灌必看。",
-      "fieldCheck": "土面白霜、滴口一圈、小水浇完更蔫，常常是这个数上去了。盐害看 EC，碱害看 pH 和钠。",
+      "fieldCheck": "地里对得上什么\n土面白霜、出苗不齐、小水浇完更蔫。\n\n该去哪篇\n去盐碱地、洗盐相关篇。没沟不要大水漫灌。",
       "longform": [
         "电导率看土水有多咸。偏高时根吸水费劲，不要当成单纯干旱。单子上写 EC 或电导，先看单位是毫西还是微西。水土比不同，数字不能硬比。白霜、滴口白圈、小水浇完更蔫，常常对得上偏高的电导。这条不给袋数。",
         "电导说土水有多咸，不是缺水。苗期更敏感。降低靠洗盐、控肥、沟要通。用量去农业知识，按测土和当地农技站。"
@@ -2822,22 +2961,22 @@
         }
       ],
       "spoken": [
-        "电导率看土水有多咸，不是旱情。",
-        "先看单位，毫西和微西差一千倍。",
-        "水土比不同，数字不能硬比。",
-        "白霜加浇完更蔫，常常是它上去了。",
-        "盐害看电导，碱害看酸碱和钠。",
-        "不要见白霜就撒石膏。"
+        "电导率看土水有多咸，偏高时根吸水费劲。",
+        "电导率说土水有多咸，不是肥够不够。",
+        "常写成 EC、电导率，单位有 mS/cm、dS/m、μS/cm。",
+        "先看单位，再看水土比。",
+        "μS/cm 和 mS/cm 差一千倍。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
       "title": "EC",
       "subtitle": "EC measures how salty the soil water is.",
-      "summary": "EC measures how salty the soil water is. High EC stresses roots; it is not the same as drought.",
-      "appearance": "The sheet says EC or conductivity. The unit — mS or µS — is the whole story.",
+      "summary": "EC says how salty the soil water is, not how much fertiliser you have. High EC often matches a white crust, patchy emergence and worse wilt after a light watering. No bag count here.",
+      "appearance": "Plain speech\nElectrical conductivity is how salty the soil water is — not whether you fed enough.\n\nOn the sheet\nEC or conductivity, in mS/cm, dS/m or μS/cm. Read the unit and the ratio first.\n\nUnit trap\nμS/cm and mS/cm differ by a thousand. Do not compare across units.",
       "conditions": "Greenhouses, salt country and strong drip push EC up. Lower it by leaching and thinner feeds.",
       "commonCrops": "Greenhouses, salt country, drip lines.",
-      "fieldCheck": "White crust, a ring at the dripper, worse wilt after a light watering — EC often went up. Salt is EC; alkali is pH and sodium.",
+      "fieldCheck": "What it matches\nWhite crust, patchy emergence, worse wilt after a sip of water.\n\nWhere to go\nSaline soil and leaching guides. Do not flood without drains.",
       "longform": [
         "EC says how salty the soil water is, not that the plant is thirsty. Seedlings feel it first.",
         "White crust plus scorched margins: split salt from potassium. Rates live in the saline guides."
@@ -2908,12 +3047,12 @@
         }
       ],
       "spoken": [
+        "EC.",
         "EC measures how salty the soil water is.",
-        "High EC stresses roots; it is not the same as drought.",
-        "Read the unit. mS and µS differ by a thousand.",
-        "Different soil to water ratios are not comparable.",
-        "White crust plus worse wilt after watering often means EC went up.",
-        "Don’t spread gypsum on every white crust."
+        "Plain speech Electrical conductivity is how salty the soil water is — not whether you fed enough.",
+        "On the sheet EC or conductivity, in mS/cm, dS/m or μS/cm.",
+        "Read the unit and the ratio first.",
+        "Unit trap μS/cm and mS/cm differ by a thousand."
       ]
     }
   },
@@ -2931,13 +3070,25 @@
     "photos": [
       {
         "src": "/images/wiki/salt.jpg",
-        "alt": "全盐 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框全盐",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写全盐。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/salt",
+        "altEn": "Sample lab sheet, salt cell boxed",
+        "captionEn": "Sample sheet with the salt cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/salt-2.jpg",
-        "alt": "全盐 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "中国青海茶卡盐湖盐壳。全盐/盐霜土面类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明全盐能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:茶卡盐湖湖面10.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Wikimedia contributor",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:茶卡盐湖湖面10.jpg",
+        "altEn": "中国青海茶卡盐湖盐壳。全盐/盐霜土面类型对照。",
+        "captionEn": "中国青海茶卡盐湖盐壳。全盐/盐霜土面类型对照。"
       }
     ],
     "zh": {
@@ -3008,15 +3159,10 @@
       ],
       "aka": "全盐",
       "spoken": [
-        "全盐。",
-        "全盐是盐的总量。",
         "咸和涩不是一回事。",
         "土里可溶盐一共有多少。",
         "和 EC 一起看盐害。",
-        "可溶盐一共有多少。",
-        "白霜是盐分的线索。",
-        "见白霜一律同一袋。",
-        "没沟还大水漫灌。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -3086,10 +3232,12 @@
         }
       ],
       "spoken": [
-        "Total soluble salt。",
-        "Total salt is the pile. Salty and soapy are different jobs.。",
-        "How much soluble salt is in the soil. Read it with EC.。",
-        "How much soluble salt is in the soil. Read it with EC.。"
+        "Total soluble salt.",
+        "Total salt is the pile.",
+        "Salty and soapy are different jobs.",
+        "How much soluble salt is in the soil.",
+        "Read it with EC.",
+        "How much soluble salt is in the soil."
       ]
     }
   },
@@ -3107,8 +3255,14 @@
     "photos": [
       {
         "src": "/images/wiki/bulk.jpg",
-        "alt": "容重 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框容重",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写容重。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/bulk",
+        "altEn": "Sample lab sheet, bulk cell boxed",
+        "captionEn": "Sample sheet with the bulk cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/bulk-2.jpg",
@@ -3184,15 +3338,11 @@
       ],
       "aka": "容重",
       "spoken": [
-        "容重。",
         "容重是紧不紧的测量。",
         "锄不动要问它，不要先问缺肥。",
         "同样体积的土有多重。",
         "耕层过大说明板结。",
-        "刨个坑看根是直着走还是拐弯。",
-        "这项大了，土往往紧。",
-        "湿土进车把路轧死。",
-        "根拐弯了还当缺肥。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -3263,10 +3413,12 @@
         }
       ],
       "spoken": [
+        "Bulk density.",
         "Bulk density is how tight the soil is.",
         "A hoe that will not enter asks this before hunger.",
-        "High bulk density in the tilled layer means compaction.",
-        "Organic matter lowers it slowly."
+        "How heavy a given volume of soil is.",
+        "High in the tilled layer means compaction.",
+        "How heavy a given volume of soil is."
       ]
     }
   },
@@ -3284,15 +3436,25 @@
     "photos": [
       {
         "src": "/images/wiki/test.jpg",
-        "alt": "中文测土单示意图",
-        "caption": "中文测土单示意图，不是自家地头。",
-        "kind": "diagram"
+        "alt": "化验单示例（示意），红框检测项目",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写检测项目。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/test",
+        "altEn": "Sample lab sheet, test cell boxed",
+        "captionEn": "Sample sheet with the test cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/test-2.jpg",
-        "alt": "中文测土单示意图",
-        "caption": "中文测土单示意图，不是自家地头。",
-        "kind": "diagram"
+        "alt": "实验室测土，不是化验单格子本身。测土报告词条的地头/实验室对照。",
+        "caption": "拍的是地头/剖面对照。用来说明检测项目能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1739_Testing_soil_pH.jpg。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "CSIRO",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_1739_Testing_soil_pH.jpg",
+        "altEn": "实验室测土，不是化验单格子本身。测土报告词条的地头/实验室对照。",
+        "captionEn": "实验室测土，不是化验单格子本身。测土报告词条的地头/实验室对照。"
       }
     ],
     "zh": {
@@ -3363,14 +3525,10 @@
       ],
       "aka": "测土配方",
       "spoken": [
-        "测土配方。",
         "测土配方是方法，不是一张万能处方。",
         "先化验土，再决定施什么、施多少。",
         "取样错了，后面全错。",
-        "多点混合耕作层。",
-        "一个坑、田边、粪堆旁，代表不了这块地。",
-        "田边一个坑就代表整块地。",
-        "单位看错一位还下肥。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -3440,10 +3598,12 @@
         }
       ],
       "spoken": [
-        "Test-based fertiliser。",
-        "Test-based fertiliser is a method, not a universal recipe.。",
-        "Test first, then decide what and how much. Soil taken badly poisons every later decision.。",
-        "Test first, then decide what and how much. Soil taken badly poisons every later decision.。"
+        "Test-based fertiliser.",
+        "Test-based fertiliser is a method, not a universal recipe.",
+        "Test first, then decide what and how much.",
+        "Soil taken badly poisons every later decision.",
+        "Test first, then decide what and how much.",
+        "Soil taken badly poisons every later decision."
       ]
     }
   },
@@ -3461,13 +3621,25 @@
     "photos": [
       {
         "src": "/images/wiki/saline.jpg",
-        "alt": "盐碱 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框盐渍化",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写盐渍化。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/saline",
+        "altEn": "Sample lab sheet, saline cell boxed",
+        "captionEn": "Sample sheet with the saline cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/saline-2.jpg",
-        "alt": "盐碱 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "盐土剖面。奥地利材料，类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明盐渍化能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Solontchak.jpg。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "Hedwig Storch",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Solontchak.jpg",
+        "altEn": "盐土剖面。奥地利材料，类型对照。",
+        "captionEn": "盐土剖面。奥地利材料，类型对照。"
       }
     ],
     "zh": {
@@ -3538,16 +3710,11 @@
       ],
       "aka": "盐碱",
       "spoken": [
-        "盐碱。",
         "盐碱是一类障碍的总名。",
         "具体是盐还是碱，要拆开看。",
-        "盐是咸，碱是涩。",
         "都能让苗出不来、叶焦边。",
         "白霜是盐的场面，肥皂水感是碱的场面。",
-        "盐是咸，碱是涩。",
-        "有白霜先当盐分的线索。",
-        "没沟大水漫灌。",
-        "咸和涩混成一袋。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -3617,14 +3784,12 @@
         }
       ],
       "spoken": [
-        "Saline-alkali。",
-        "Saline-alkali is a family name. Split salt from alkali before you treat.。",
-        "Salt is salty;。",
-        "alkali is soapy. Both stop emergence and scorch margins. White frost is salt;。",
-        "a soapy feel is alkali.。",
-        "Salt is salty;。",
-        "alkali is soapy. Both stop emergence and scorch margins. White frost is salt;。",
-        "a soapy feel is alkali.。"
+        "Saline-alkali.",
+        "Saline-alkali is a family name.",
+        "Split salt from alkali before you treat.",
+        "Salt is salty; alkali is soapy.",
+        "Both stop emergence and scorch margins.",
+        "White frost is salt; a soapy feel is alkali."
       ]
     }
   },
@@ -3642,8 +3807,14 @@
     "photos": [
       {
         "src": "/images/wiki/acid.jpg",
-        "alt": "酸化 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框酸化程度",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写酸化程度。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/acid",
+        "altEn": "Sample lab sheet, acid cell boxed",
+        "captionEn": "Sample sheet with the acid cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/acid-2.jpg",
@@ -3719,15 +3890,10 @@
       ],
       "aka": "酸化",
       "spoken": [
-        "酸化。",
         "酸化是 pH 往下走这件事的名字。",
         "用量看酸化知识条。",
-        "土越种越酸。",
         "根被铝咬，苗发僵，有时浇水冒锈水。",
-        "苗僵、根褐、锈水。",
-        "茶树耐酸，粮田目标不是七。",
-        "粮田石灰抄到茶园。",
-        "根秃时猛氮。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -3797,10 +3963,12 @@
         }
       ],
       "spoken": [
-        "Acidification。",
-        "Acidification is the name of pH walking down. Rates live on the acid handbook page.。",
-        "The soil sours over years. Aluminium injures roots, seedlings stall, water may run rusty.。",
-        "The soil sours over years. Aluminium injures roots, seedlings stall, water may run rusty.。"
+        "Acidification.",
+        "Acidification is the name of pH walking down.",
+        "Rates live on the acid handbook page.",
+        "The soil sours over years.",
+        "Aluminium injures roots, seedlings stall, water may run rusty.",
+        "The soil sours over years."
       ]
     }
   },
@@ -3818,13 +3986,25 @@
     "photos": [
       {
         "src": "/images/wiki/compaction.jpg",
-        "alt": "板结 / 犁底层 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框紧实度",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写紧实度。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/compaction",
+        "altEn": "Sample lab sheet, compaction cell boxed",
+        "captionEn": "Sample sheet with the compaction cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/compaction-2.jpg",
-        "alt": "板结 / 犁底层 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "机械压出的车辙与板结。",
+        "caption": "拍的是地头/剖面对照。用来说明紧实度能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Ernteschäden.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "F. Bucher",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ernteschäden.jpg",
+        "altEn": "机械压出的车辙与板结。",
+        "captionEn": "机械压出的车辙与板结。"
       }
     ],
     "zh": {
@@ -3896,14 +4076,10 @@
       "aka": "板结 / 犁底层",
       "spoken": [
         "板结 / 犁底层。",
-        "板结是路封了。",
         "深松是修路，不是当年的肥。",
         "锄不动、雨后积水、根横走。",
         "旋耕层下面压出的硬盖叫犁底层。",
-        "锄不动、雨后浆、晴天砖、根横走。",
-        "下面发亮硬盖就是犁底层。",
-        "泥里旋一遍当深松。",
-        "年年把生土翻上来。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -3973,10 +4149,12 @@
         }
       ],
       "spoken": [
-        "Compaction / plough pan。",
-        "Compaction is a closed road. Subsoiling is roadwork, not this season’s fertiliser.。",
-        "A hoe that will not enter, ponding, sideways roots. The hard lid under the rotavator layer is a plough pan.。",
-        "A hoe that will not enter, ponding, sideways roots. The hard lid under the rotavator layer is a plough pan.。"
+        "Compaction / plough pan.",
+        "Compaction is a closed road.",
+        "Subsoiling is roadwork, not this season’s fertiliser.",
+        "A hoe that will not enter, ponding, sideways roots.",
+        "The hard lid under the rotavator layer is a plough pan.",
+        "A hoe that will not enter, ponding, sideways roots."
       ]
     }
   },
@@ -3994,8 +4172,14 @@
     "photos": [
       {
         "src": "/images/wiki/mg.jpg",
-        "alt": "交换性镁 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框交换性镁",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写交换性镁。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/mg",
+        "altEn": "Sample lab sheet, mg cell boxed",
+        "captionEn": "Sample sheet with the mg cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/mg-2.jpg",
@@ -4071,15 +4255,10 @@
       ],
       "aka": "交换性镁",
       "spoken": [
-        "交换性镁。",
         "交换性镁是土能交出的镁。",
         "这项是指标，不是叶面肥商品名。",
         "缺镁走老叶：脉间黄、叶脉还绿，从下部开始。",
-        "不要当成缺铁。",
-        "老叶脉间黄、叶脉还绿，从底下往上。",
-        "新叶黄脉绿才像铁。",
-        "老叶脉间黄当成缺铁喷。",
-        "钾太高还把镁挤掉。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -4149,10 +4328,12 @@
         }
       ],
       "spoken": [
-        "Exchangeable Mg。",
-        "Exchangeable Mg is what the soil can hand over. A lab number, not a foliar brand.。",
-        "Mg hits old leaves: yellow between green veins, from the bottom up. That is not iron.。",
-        "Mg hits old leaves: yellow between green veins, from the bottom up. That is not iron.。"
+        "Exchangeable Mg.",
+        "Exchangeable Mg is what the soil can hand over.",
+        "A lab number, not a foliar brand.",
+        "Mg hits old leaves: yellow between green veins, from the bottom up.",
+        "That is not iron.",
+        "Mg hits old leaves: yellow between green veins, from the bottom up."
       ]
     }
   },
@@ -4170,13 +4351,25 @@
     "photos": [
       {
         "src": "/images/wiki/fe.jpg",
-        "alt": "有效铁 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效铁",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效铁。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/fe",
+        "altEn": "Sample lab sheet, fe cell boxed",
+        "captionEn": "Sample sheet with the fe cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/fe-2.jpg",
-        "alt": "有效铁 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "柑橘缺铁：新叶黄、叶脉还绿。",
+        "caption": "拍的是地头/剖面对照。用来说明有效铁能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "INRA / Wikimedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chlorose_ferrique_sur_Citrus_aurantium.jpg",
+        "altEn": "柑橘缺铁：新叶黄、叶脉还绿。",
+        "captionEn": "柑橘缺铁：新叶黄、叶脉还绿。"
       }
     ],
     "zh": {
@@ -4247,15 +4440,10 @@
       ],
       "aka": "有效铁",
       "spoken": [
-        "有效铁。",
         "有效铁是根能吃到的铁。",
         "高 pH 土猛撒硫酸亚铁，当季常常吃不进。",
         "缺铁走新叶：黄、叶脉还绿，顶端更明显。",
-        "老叶相对还绿。",
-        "新叶黄、脉还绿，老叶相对好。",
-        "别一黄就冲氮。",
-        "一黄就冲尿素。",
-        "高 pH 土猛撒硫酸亚铁当季吃不进。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -4325,10 +4513,12 @@
         }
       ],
       "spoken": [
-        "Available Fe。",
-        "Available Fe is iron the root can eat. Dumping ferrous sulphate on high-pH soil often fails this season.。",
-        "Fe hits new leaves: yellow with green veins, worst at the tip. Old leaves stay greener.。",
-        "Fe hits new leaves: yellow with green veins, worst at the tip. Old leaves stay greener.。"
+        "Available Fe.",
+        "Available Fe is iron the root can eat.",
+        "Dumping ferrous sulphate on high-pH soil often fails this season.",
+        "Fe hits new leaves: yellow with green veins, worst at the tip.",
+        "Old leaves stay greener.",
+        "Fe hits new leaves: yellow with green veins, worst at the tip."
       ]
     }
   },
@@ -4346,13 +4536,25 @@
     "photos": [
       {
         "src": "/images/wiki/mn.jpg",
-        "alt": "有效锰 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效锰",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效锰。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/mn",
+        "altEn": "Sample lab sheet, mn cell boxed",
+        "captionEn": "Sample sheet with the mn cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/mn-2.jpg",
-        "alt": "有效锰 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "缺锰脉间黄。类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明有效锰能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Manganese-deficiency-rose.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Wikimedia",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manganese-deficiency-rose.jpg",
+        "altEn": "缺锰脉间黄。类型对照。",
+        "captionEn": "缺锰脉间黄。类型对照。"
       }
     ],
     "zh": {
@@ -4423,15 +4625,10 @@
       ],
       "aka": "有效锰",
       "spoken": [
-        "有效锰。",
         "有效锰是新叶上的锰。",
         "这项是指标，先改极端 pH。",
         "缺锰走新叶脉间失绿，常带褐斑或灰白小点。",
-        "小麦上更常见。",
-        "新叶脉间黄还带褐点。",
-        "缺铁较少这种斑。",
-        "和铁锌混成一瓶猛喷。",
-        "不看 pH 先下锰。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -4501,10 +4698,12 @@
         }
       ],
       "spoken": [
-        "Available Mn。",
-        "Available Mn is manganese on new leaves. A lab number — fix extreme pH first.。",
-        "Mn yellows new leaves between veins, often with brown or grey specks. Wheat shows it clearly.。",
-        "Mn yellows new leaves between veins, often with brown or grey specks. Wheat shows it clearly.。"
+        "Available Mn.",
+        "Available Mn is manganese on new leaves.",
+        "A lab number — fix extreme pH first.",
+        "Mn yellows new leaves between veins, often with brown or grey specks.",
+        "Wheat shows it clearly.",
+        "Mn yellows new leaves between veins, often with brown or grey specks."
       ]
     }
   },
@@ -4522,8 +4721,14 @@
     "photos": [
       {
         "src": "/images/wiki/s.jpg",
-        "alt": "有效硫 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效硫",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效硫。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/s",
+        "altEn": "Sample lab sheet, s cell boxed",
+        "captionEn": "Sample sheet with the s cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/s-2.jpg",
@@ -4599,14 +4804,9 @@
       ],
       "aka": "有效硫",
       "spoken": [
-        "有效硫。",
         "有效硫是当季能用的硫。",
-        "尿素本身不含硫。",
         "缺硫整株偏黄，新叶也黄，和缺氮只黄老叶相反。",
-        "整株偏黄，新叶也黄。",
-        "缺氮是老叶先黄、新叶还绿。",
-        "新叶也黄还当缺氮。",
-        "年年只施一种氮，本身不含硫。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -4676,10 +4876,12 @@
         }
       ],
       "spoken": [
-        "Available S。",
-        "Available S is sulphur the crop can use now. Urea itself has none.。",
-        "S pales the whole plant, including new leaves — the opposite of nitrogen’s old-leaf yellow.。",
-        "S pales the whole plant, including new leaves — the opposite of nitrogen’s old-leaf yellow.。"
+        "Available S.",
+        "Available S is sulphur the crop can use now.",
+        "Urea itself has none.",
+        "S pales the whole plant, including new leaves — the opposite of nitrogen’s old-leaf yellow.",
+        "S pales the whole plant, including new leaves — the opposite of nitrogen’s old-leaf yellow.",
+        "This page explains the cell."
       ]
     }
   },
@@ -4697,13 +4899,25 @@
     "photos": [
       {
         "src": "/images/wiki/cu.jpg",
-        "alt": "有效铜 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效铜",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效铜。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/cu",
+        "altEn": "Sample lab sheet, cu cell boxed",
+        "captionEn": "Sample sheet with the cu cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/cu-2.jpg",
-        "alt": "有效铜 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "叶菜缺铜。类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明有效铜能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Starr-120608-7321-Brassica_rapa-broccoli_rabe_leaf_with_copper_deficiency-Ulupalakua_Ranch-Maui_(24777617959).jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Forest & Kim Starr",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Starr-120608-7321-Brassica_rapa-broccoli_rabe_leaf_with_copper_deficiency-Ulupalakua_Ranch-Maui_(24777617959).jpg",
+        "altEn": "叶菜缺铜。类型对照。",
+        "captionEn": "叶菜缺铜。类型对照。"
       }
     ],
     "zh": {
@@ -4774,15 +4988,10 @@
       ],
       "aka": "有效铜",
       "spoken": [
-        "有效铜。",
         "有效铜是花和穗要用的铜。",
         "没有化验不要土里猛倒。",
         "缺铜叶尖发白卷曲，穗不实、结实差。",
-        "新叶先出事。",
-        "新叶尖发白卷曲，穗结实差。",
-        "没有化验别猛倒。",
-        "没有化验土里猛倒铜。",
-        "穗不实先打杀菌剂。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -4852,12 +5061,12 @@
         }
       ],
       "spoken": [
-        "Available Cu。",
-        "Available Cu is copper for flowers and ears. Don’t dump it without a test.。",
-        "Cu bleaches and curls leaf tips;。",
-        "ears set poorly. New leaves go first.。",
-        "Cu bleaches and curls leaf tips;。",
-        "ears set poorly. New leaves go first.。"
+        "Available Cu.",
+        "Available Cu is copper for flowers and ears.",
+        "Don’t dump it without a test.",
+        "Cu bleaches and curls leaf tips; ears set poorly.",
+        "New leaves go first.",
+        "Cu bleaches and curls leaf tips; ears set poorly."
       ]
     }
   },
@@ -4875,13 +5084,25 @@
     "photos": [
       {
         "src": "/images/wiki/mo.jpg",
-        "alt": "有效钼 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框有效钼",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效钼。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/mo",
+        "altEn": "Sample lab sheet, mo cell boxed",
+        "captionEn": "Sample sheet with the mo cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/mo-2.jpg",
-        "alt": "有效钼 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "钼低在十字花科更明显。此图只作微量元素叶形线索，详见知识篇。",
+        "caption": "拍的是地头/剖面对照。用来说明有效钼能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Banana_(Musa_sp.)-_Boron_deficiency_and_black_leaf_streak_disease.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Scot Nelson",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Banana_(Musa_sp.)-_Boron_deficiency_and_black_leaf_streak_disease.jpg",
+        "altEn": "钼低在十字花科更明显。此图只作微量元素叶形线索，详见知识篇。",
+        "captionEn": "钼低在十字花科更明显。此图只作微量元素叶形线索，详见知识篇。"
       }
     ],
     "zh": {
@@ -4952,15 +5173,9 @@
       ],
       "aka": "有效钼",
       "spoken": [
-        "有效钼。",
         "有效钼是微量中的微量。",
-        "加倍会出事。",
         "缺钼豆科叶片畸形发黄，固氮差、植株瘦。",
-        "新叶皱缩。",
-        "豆叶畸形发皱，根瘤少。",
-        "过酸先问 pH。",
-        "豆叶黄了先猛氮。",
-        "过酸不改，钼进不去。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -5030,14 +5245,12 @@
         }
       ],
       "spoken": [
-        "Available Mo。",
-        "Available Mo is a trace among traces. Doubling hurts.。",
-        "Mo: legume leaves distort and yellow;。",
-        "nodulation poor;。",
-        "plants thin. New leaves crinkle.。",
-        "Mo: legume leaves distort and yellow;。",
-        "nodulation poor;。",
-        "plants thin. New leaves crinkle.。"
+        "Available Mo.",
+        "Available Mo is a trace among traces.",
+        "Doubling hurts.",
+        "Mo: legume leaves distort and yellow; nodulation poor; plants thin.",
+        "New leaves crinkle.",
+        "Mo: legume leaves distort and yellow; nodulation poor; plants thin."
       ]
     }
   },
@@ -5055,13 +5268,25 @@
     "photos": [
       {
         "src": "/images/wiki/porosity.jpg",
-        "alt": "孔隙度 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框孔隙度",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写孔隙度。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/porosity",
+        "altEn": "Sample lab sheet, porosity cell boxed",
+        "captionEn": "Sample sheet with the porosity cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/porosity-2.jpg",
-        "alt": "孔隙度 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "孔隙好的耕层土色。与有机质地头图若撞文件，脚本会改用团粒图。",
+        "caption": "拍的是地头/剖面对照。用来说明孔隙度能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Soybean_Field_with_Healthy_Soil_(9316804120).jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "USDA NRCS",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soybean_Field_with_Healthy_Soil_(9316804120).jpg",
+        "altEn": "孔隙好的耕层土色。与有机质地头图若撞文件，脚本会改用团粒图。",
+        "captionEn": "孔隙好的耕层土色。与有机质地头图若撞文件，脚本会改用团粒图。"
       }
     ],
     "zh": {
@@ -5132,15 +5357,10 @@
       ],
       "aka": "孔隙度",
       "spoken": [
-        "孔隙度。",
-        "孔隙度是通气孔隙。",
-        "改它靠结构，不靠当季氮。",
+        "孔隙度说空气和水能走的空隙占多少。",
         "土里空气和水走的路。",
         "孔隙少，根闷、雨后积水、锄下去发亮。",
-        "路少了根闷、雨后积水。",
-        "压实和湿耕把路封上。",
-        "路封了还当季猛氮。",
-        "湿耕把孔隙压死。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -5210,10 +5430,12 @@
         }
       ],
       "spoken": [
-        "Porosity。",
-        "Porosity is the pore space. You change it with structure, not in-season nitrogen.。",
-        "The roads air and water take. Few pores: roots smother, water ponds, the hoe shines.。",
-        "The roads air and water take. Few pores: roots smother, water ponds, the hoe shines.。"
+        "Porosity.",
+        "Porosity is the pore space.",
+        "You change it with structure, not in-season nitrogen.",
+        "The roads air and water take.",
+        "Few pores: roots smother, water ponds, the hoe shines.",
+        "The roads air and water take."
       ]
     }
   },
@@ -5231,8 +5453,14 @@
     "photos": [
       {
         "src": "/images/wiki/fc.jpg",
-        "alt": "田间持水量 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框田间持水量",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写田间持水量。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/fc",
+        "altEn": "Sample lab sheet, fc cell boxed",
+        "captionEn": "Sample sheet with the fc cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/fc-2.jpg",
@@ -5308,15 +5536,11 @@
       ],
       "aka": "田间持水量",
       "spoken": [
-        "田间持水量。",
         "田间持水量是排干后土还能握住的水。",
-        "浇水浇到过线就是涝。",
+        "浇过了这条线就是涝。",
         "排干重力水之后，土还能握住的水。",
         "沙土握得少，黏土握得多但未必能给根。",
-        "土湿还蔫，先想这条线。",
-        "过了线就是涝，不是旱。",
-        "土湿还蔫当干旱猛灌。",
-        "浇水过线把根闷住。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -5386,12 +5610,12 @@
         }
       ],
       "spoken": [
-        "Field capacity。",
-        "Field capacity is how much water stays after drainage. Irrigating past it waterlogs the root.。",
-        "Water the soil still holds after gravity has drained. Sand holds little;。",
-        "clay holds much but may not give it to the root.。",
-        "Water the soil still holds after gravity has drained. Sand holds little;。",
-        "clay holds much but may not give it to the root.。"
+        "Field capacity.",
+        "Field capacity is how much water stays after drainage.",
+        "Water the soil still holds after gravity has drained.",
+        "Sand holds little; clay holds much but may not give it to the root.",
+        "Water the soil still holds after gravity has drained.",
+        "Sand holds little; clay holds much but may not give it to the root."
       ]
     }
   },
@@ -5409,13 +5633,25 @@
     "photos": [
       {
         "src": "/images/wiki/gley.jpg",
-        "alt": "潜育化 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框潜育",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写潜育。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/gley",
+        "altEn": "Sample lab sheet, gley cell boxed",
+        "captionEn": "Sample sheet with the gley cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/gley-2.jpg",
-        "alt": "潜育化 特写",
-        "caption": "特写对照，请以自家地为准。"
+        "alt": "潜育蓝灰土层。类型对照。",
+        "caption": "拍的是地头/剖面对照。用来说明潜育能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Gleying_in_glacial_till_-_geograph.org.uk_-_351899.jpg。类型：地头实物或实验室对照。",
+        "kind": "stock",
+        "role": "field",
+        "credit": "Richard Webb",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gleying_in_glacial_till_-_geograph.org.uk_-_351899.jpg",
+        "altEn": "潜育蓝灰土层。类型对照。",
+        "captionEn": "潜育蓝灰土层。类型对照。"
       }
     ],
     "zh": {
@@ -5486,15 +5722,10 @@
       ],
       "aka": "潜育化",
       "spoken": [
-        "潜育化。",
         "潜育化是土长期泡在水里变成的脸色。",
-        "先排水，再谈肥。",
         "长期渍水，土发青灰、有锈斑，摸着冷。",
         "水稻上叫冷浸田这一类。",
-        "土发青灰、有锈斑，摸着冷。",
-        "一场雨是涝，这个词是长期湿。",
-        "冷浸田先追肥再排水。",
-        "一场雨和长期湿房间混为一谈。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -5564,10 +5795,12 @@
         }
       ],
       "spoken": [
-        "Gleying。",
-        "Gleying is the complexion of soil that lives underwater. Drain first, then add fertiliser.。",
-        "Long waterlogging: blue-grey soil, rust mottles, cold to the touch. In rice, the cold-soaked fields.。",
-        "Long waterlogging: blue-grey soil, rust mottles, cold to the touch. In rice, the cold-soaked fields.。"
+        "Gleying.",
+        "Gleying is the complexion of soil that lives underwater.",
+        "Drain first, then add fertiliser.",
+        "Long waterlogging: blue-grey soil, rust mottles, cold to the touch.",
+        "In rice, the cold-soaked fields.",
+        "Long waterlogging: blue-grey soil, rust mottles, cold to the touch."
       ]
     }
   },
@@ -5585,8 +5818,14 @@
     "photos": [
       {
         "src": "/images/wiki/replant.jpg",
-        "alt": "连作障碍 田间对照",
-        "caption": "化验单上这一格怎么认。化验单格子示意图，不是自家地头。"
+        "alt": "化验单示例（示意），红框连作风险",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写连作风险。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/replant",
+        "altEn": "Sample lab sheet, replant cell boxed",
+        "captionEn": "Sample sheet with the replant cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/replant-2.jpg",
@@ -5662,15 +5901,11 @@
       ],
       "aka": "连作障碍",
       "spoken": [
-        "连作障碍。",
         "连作障碍是重茬这件事的名字。",
         "菌剂代替不了换科轮作。",
         "同一茬越种越差，点片死棵，邻地轮作的却好。",
         "根上可能有结或褐腐。",
-        "同一茬越种越差，点片死棵，邻地轮作的却好。",
-        "先看根。",
-        "死棵了再买菌剂产品。",
-        "不换科还连种。"
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -5740,12 +5975,12 @@
         }
       ],
       "spoken": [
-        "Replant trouble。",
-        "Replant trouble is the name of growing the same family again. A microbe bag is not a rotation.。",
-        "The same crop gets worse;。",
-        "patch death while a rotated neighbour is fine. Knots or brown rot on roots.。",
-        "The same crop gets worse;。",
-        "patch death while a rotated neighbour is fine. Knots or brown rot on roots.。"
+        "Replant trouble.",
+        "Replant trouble is the name of growing the same family again.",
+        "A microbe bag is not a rotation.",
+        "The same crop gets worse; patch death while a rotated neighbour is fine.",
+        "Knots or brown rot on roots.",
+        "The same crop gets worse; patch death while a rotated neighbour is fine."
       ]
     }
   },
@@ -5760,24 +5995,36 @@
     "group": "离子",
     "photos": [
       {
-        "src": "/images/wiki/salt.jpg",
-        "alt": "交换性钠 对照",
-        "caption": "化验单格子示意图，不是自家地头。这一格看化验单上的钠，不看风景。"
+        "src": "/images/wiki/na.jpg",
+        "alt": "化验单示例（示意），红框交换性钠",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写交换性钠。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/na",
+        "altEn": "Sample lab sheet, na cell boxed",
+        "captionEn": "Sample sheet with the na cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
-        "src": "/images/wiki/salt-2.jpg",
-        "alt": "交换性钠 特写",
-        "caption": "化验单格子示意图，不是自家地头。特写对照，请以自家地为准。"
+        "src": "/images/wiki/na-2.jpg",
+        "alt": "新疆吐鲁番苏打盐土剖面。ISRIC 博物馆对照。",
+        "caption": "拍的是地头/剖面对照。用来说明交换性钠能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:Sodic_Solonchak.JPG。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "Ji-Elle",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sodic_Solonchak.JPG",
+        "altEn": "新疆吐鲁番苏打盐土剖面。ISRIC 博物馆对照。",
+        "captionEn": "新疆吐鲁番苏打盐土剖面。ISRIC 博物馆对照。"
       }
     ],
     "zh": {
       "title": "交换性钠",
       "subtitle": "交换性钠说钠占了多少座位，白霜只是盐分的线索。",
-      "summary": "交换性钠说土里钠离子占了多少交换座位。钠高会把团粒拆散，湿时泥、干时板，这才像碱化。白霜更多是盐分的线索，要和电导一起看。改钠常常要有排水，石膏不是给所有白霜的。这条不给袋数。",
-      "appearance": "单子上写交换性钠、ESP。要和 pH、电导一起读，不要单独看一个格子。",
+      "summary": "交换性钠高，团粒散、湿时泥、干时板。和单纯白霜的盐害要分开。看 ESP / SAR。这条不给袋数。",
+      "appearance": "人话\n交换性钠说的是钠把团粒拆散，不只是嘴里尝到咸。\n\n单子上怎么写\n常写成交换性钠、Ex-Na，再看 ESP 或 SAR。",
       "conditions": "南方红黄壤、茶园、连年铵态氮的粮田常见。茶叶耐酸，也不是越酸越好。",
       "commonCrops": "红黄壤、酸茶园、南方粮田先认它。",
-      "fieldCheck": "土发涩发黏、结构差、不一定有厚白霜。",
+      "fieldCheck": "地里对得上什么\n湿时泥、干时板，和只有白霜的盐斑要分开。\n\n该去哪篇\n去盐碱地、石膏改碱。没沟不要大水漫灌。",
       "longform": [
         "交换性钠说土里钠离子占了多少交换座位。钠高会把团粒拆散，湿时泥、干时板，这才像碱化。白霜更多是盐分的线索，要和电导一起看。改钠常常要有排水，石膏不是给所有白霜的。这条不给袋数。",
         "钠高才是碱化。白霜先当盐分线索。没沟不要大水漫灌，石膏要对得上钠高。用量去农业知识，按测土和当地农技站。"
@@ -5839,11 +6086,10 @@
       ],
       "aka": "交换性钠 / Ex-Na / 钠离子",
       "spoken": [
-        "交换性钠说涩不涩。",
-        "白霜是盐，钠高才是碱。",
-        "要和 CEC 一起看百分比。",
-        "见白霜不要一律石膏。",
-        "用量去盐碱那篇。"
+        "交换性钠说钠占了多少座位，白霜只是盐分的线索。",
+        "交换性钠说的是钠把团粒拆散，不只是嘴里尝到咸。",
+        "常写成交换性钠、Ex-Na，再看 ESP 或 SAR。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ],
       "ratioNote": "要算碱化度，还要 CEC。钠高、CEC 也高，百分比才公平。",
       "readTable": [
@@ -5858,11 +6104,11 @@
     "en": {
       "title": "Exchangeable sodium",
       "subtitle": "Alkali is sodium, not every white crust.",
-      "summary": "Exchangeable sodium is how many seats Na occupies. White crust is salt; high Na is sodicity.",
-      "appearance": "The sheet says exchangeable sodium or Ex-Na, often cmol/kg. Not the same cell as total salt or EC.",
+      "summary": "High exchangeable sodium pulls crumbs apart: mud when wet, a board when dry. Split it from a simple salt crust. Read ESP / SAR. No bag count here.",
+      "appearance": "Plain speech\nExchangeable sodium is about crumbs falling apart, not only a salty taste.\n\nOn the sheet\nEx-Na, then ESP or SAR.",
       "conditions": "Southern red-yellow earth, tea, and ammonium-N grain fields show it. Tea likes acid — not ever-more-acid.",
       "commonCrops": "Red-yellow earth, acid tea, southern grain.",
-      "fieldCheck": "Slick, sticky, poor structure, not always a thick crust — often sodium.",
+      "fieldCheck": "What it matches\nMud when wet, a board when dry — different from a white salt crust alone.\n\nWhere to go\nSaline-sodic guides and gypsum. Do not flood without drains.",
       "longform": [
         "Sodium breaks crumbs. Gypsum is not for every white crust — only when Na is high and calcium is relatively low.",
         "Rates live in the saline-alkali guide."
@@ -5923,10 +6169,12 @@
         }
       ],
       "spoken": [
-        "Exchangeable sodium is the alkali question.",
-        "White crust is salt. High Na is sodicity.",
-        "Read it with CEC.",
-        "Don’t gypsum every white crust."
+        "Exchangeable sodium.",
+        "Alkali is sodium, not every white crust.",
+        "Plain speech Exchangeable sodium is about crumbs falling apart, not only a salty taste.",
+        "On the sheet Ex-Na, then ESP or SAR.",
+        "What it matches Mud when wet, a board when dry — different from a white salt crust alone.",
+        "Where to go Saline-sodic guides and gypsum."
       ],
       "aka": "Ex-Na, exchangeable Na",
       "ratioNote": "ESP needs CEC too. A high Na with a high CEC is a different percentage.",
@@ -5950,14 +6198,26 @@
     "group": "离子",
     "photos": [
       {
-        "src": "/images/wiki/saline.jpg",
-        "alt": "ESP 对照",
-        "caption": "化验单格子示意图，不是自家地头。ESP 是算出来的百分比。"
+        "src": "/images/wiki/esp.jpg",
+        "alt": "化验单示例（示意），红框ESP",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写ESP。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/esp",
+        "altEn": "Sample lab sheet, esp cell boxed",
+        "captionEn": "Sample sheet with the esp cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
-        "src": "/images/wiki/saline-2.jpg",
-        "alt": "ESP 特写",
-        "caption": "化验单格子示意图，不是自家地头。请以自家化验单为准。"
+        "src": "/images/wiki/esp-2.jpg",
+        "alt": "漂白碱化剖面。ESP 地头类型对照，澳大利亚材料。",
+        "caption": "拍的是地头/剖面对照。用来说明ESP能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_2512_Bleachedsodic_Sulfuric_Hypersalic_Hydrosol_soil_profile_near_Gillman_South_Australia.jpg。类型：地头实物或实验室对照。",
+        "kind": "lab",
+        "role": "field",
+        "credit": "CSIRO",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_2512_Bleachedsodic_Sulfuric_Hypersalic_Hydrosol_soil_profile_near_Gillman_South_Australia.jpg",
+        "altEn": "漂白碱化剖面。ESP 地头类型对照，澳大利亚材料。",
+        "captionEn": "漂白碱化剖面。ESP 地头类型对照，澳大利亚材料。"
       }
     ],
     "zh": {
@@ -6029,11 +6289,11 @@
       ],
       "aka": "碱化度 / ESP / SAR / 钠吸附比",
       "spoken": [
-        "ESP 是钠占座位的百分比。",
-        "没有 CEC 就算不出来。",
-        "盐看电导，碱看 ESP。",
-        "结构差比白霜更能对上碱化。",
-        "用量去盐碱那篇。"
+        "ESP / SAR（碱化度）。",
+        "钠占阳离子座位的百分比，不是白霜厚度。",
+        "有的单子直接写 ESP% 或碱化度，有的要你自己用钠和 CEC 去除。",
+        "SAR 多出现在灌溉水化验。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ],
       "ratioNote": "ESP 和 SAR 不能当同一个数抄。没有 CEC，就算不出 ESP。",
       "readTable": [
@@ -6113,10 +6373,12 @@
         }
       ],
       "spoken": [
-        "ESP is sodium’s share of the seats.",
-        "No CEC, no ESP.",
-        "Salt is EC. Alkali is ESP.",
-        "Rates live in the saline guide."
+        "ESP / SAR.",
+        "How many cation seats sodium took — not crust thickness.",
+        "Some sheets print ESP%.",
+        "Others expect you to divide Na by CEC.",
+        "SAR is more common on irrigation-water tests.",
+        "Poor structure, slurry when wet, clods when dry — that matches sodicity better than a white film."
       ],
       "aka": "exchangeable sodium percentage, sodium adsorption ratio",
       "ratioNote": "ESP and SAR are not the same number. No CEC, no ESP.",
@@ -6140,9 +6402,15 @@
     "group": "离子",
     "photos": [
       {
-        "src": "/images/wiki/ec.jpg",
-        "alt": "氯离子 对照",
-        "caption": "化验单格子示意图，不是自家地头。氯看化验单，不看土色。"
+        "src": "/images/wiki/cl.jpg",
+        "alt": "化验单示例（示意），红框氯离子",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写氯离子。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/cl",
+        "altEn": "Sample lab sheet, cl cell boxed",
+        "captionEn": "Sample sheet with the cl cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
         "src": "/images/wiki/ec-2.jpg",
@@ -6219,10 +6487,10 @@
       ],
       "aka": "氯离子 / Cl- / 水溶性氯",
       "spoken": [
-        "氯离子是咸的一种成分。",
         "忌氯作物要单独问这一格。",
-        "叶缘焦先分盐害和缺钾。",
-        "高氯不要用氯化钾补钾。"
+        "单子上写氯离子、Cl⁻、水溶性氯。",
+        "单位常见毫克每千克。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ],
       "ratioNote": "和 EC、全盐一起看咸。高氯不要用氯化钾去补钾。",
       "readTable": [
@@ -6302,10 +6570,12 @@
         }
       ],
       "spoken": [
-        "Chloride is one piece of the salt.",
-        "Sensitive crops ask this cell alone.",
-        "Scorched margins: split salt from potassium.",
-        "Don’t feed KCl when Cl is already high."
+        "Chloride.",
+        "One piece of the salt.",
+        "Chloride-sensitive crops ask this cell on its own.",
+        "The sheet says chloride or Cl-, often mg/kg.",
+        "Scorched margins: ask if the soil is white, and whether a chloride fertiliser went on.",
+        "This page explains the cell."
       ],
       "aka": "Cl-, water-soluble chloride",
       "ratioNote": "Read with EC and total salt. High Cl: do not feed KCl.",
@@ -6329,16 +6599,26 @@
     "group": "养分",
     "photos": [
       {
-        "src": "/images/wiki/test.jpg",
-        "alt": "中文测土单示意图",
-        "caption": "中文测土单示意图，不是自家地头。",
-        "kind": "diagram"
+        "src": "/images/wiki/si.jpg",
+        "alt": "化验单示例（示意），红框有效硅",
+        "caption": "拍的是化验单示意。用来说明单子上怎么写有效硅。土知绘制，不是某实验室真单。类型：化验单示意。",
+        "kind": "lab",
+        "role": "sheet",
+        "credit": "土知绘制",
+        "sourceUrl": "https://tuzhi.asia/encyclopedia/si",
+        "altEn": "Sample lab sheet, si cell boxed",
+        "captionEn": "Sample sheet with the si cell boxed. Diagram, not a real lab report. Do not fertilise from it."
       },
       {
-        "src": "/images/wiki/test-2.jpg",
-        "alt": "中文测土单示意图",
-        "caption": "中文测土单示意图，不是自家地头。",
-        "kind": "diagram"
+        "src": "/images/wiki/si-2.jpg",
+        "alt": "浙江兰溪水田。有效硅常跟水稻叶姿对看。中国地头。",
+        "caption": "拍的是地头/剖面对照。用来说明有效硅能对上地里哪种样子。来源 https://commons.wikimedia.org/wiki/File:201907_Rice_Field_in_Yongchang,_Lanxi.jpg。类型：地头实物或实验室对照。",
+        "kind": "field",
+        "role": "field",
+        "credit": "Zhangzhugang",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:201907_Rice_Field_in_Yongchang,_Lanxi.jpg",
+        "altEn": "浙江兰溪水田。有效硅常跟水稻叶姿对看。中国地头。",
+        "captionEn": "浙江兰溪水田。有效硅常跟水稻叶姿对看。中国地头。"
       }
     ],
     "zh": {
@@ -6419,10 +6699,10 @@
         }
       ],
       "spoken": [
-        "有效硅，水稻更常看。",
-        "全硅和有效硅不是同一格。",
-        "酸土这一格更容易低。",
-        "硅不是包治，先看氮水和根。"
+        "水稻、甘蔗更常看。",
+        "单子上写有效硅或速效硅，单位常见毫克每千克。",
+        "方法写在单子上，跨实验室不要硬比。",
+        "这条只讲化验单上的词，用量去农业知识。"
       ]
     },
     "en": {
@@ -6503,10 +6783,12 @@
         }
       ],
       "spoken": [
-        "Available silicon — rice asks more often.",
-        "Total Si is a different cell.",
-        "Acid soils often test lower.",
-        "Silicon is not a pesticide."
+        "Available silicon.",
+        "Rice and sugarcane ask more often.",
+        "Not a cure-all.",
+        "The sheet says available silicon, often mg/kg.",
+        "Methods differ — don’t mix labs.",
+        "Rice that lodges and stays diseased is when people ask Si."
       ]
     }
   }

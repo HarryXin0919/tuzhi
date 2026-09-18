@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CROPS, FERTS, REGIONS, STAGES } from "@/lib/constants";
 import { runDiagnose, type DiagnoseResult } from "@/lib/diagnose/server";
@@ -13,6 +13,8 @@ import { usePathLang } from "@/lib/i18n/use-path-lang";
 import { messages } from "@/lib/i18n/messages";
 import { lex } from "@/lib/i18n/lexicon";
 import { pushHistory } from "@/lib/local";
+import { saveDiagnoseHistory } from "@/lib/account/server";
+import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { seo } from "@/lib/seo";
 import { downloadShareCard } from "@/components/ShareCard";
 
@@ -55,6 +57,7 @@ export function Diagnose() {
   const lang = usePathLang();
   const t = messages[lang];
   const d = t.diagnose;
+  const { user } = useCurrentUserState();
   const [photos, setPhotos] = useState<Record<Slot, string | null>>({ plant: null, leaf: null, soil: null });
   const [text, setText] = useState("");
   const [crop, setCrop] = useState("");
@@ -71,14 +74,13 @@ export function Diagnose() {
   const [labOm, setLabOm] = useState("");
   const [ocrHint, setOcrHint] = useState("");
   const [consent, setConsent] = useState(false);
-  const [onPhone, setOnPhone] = useState(false);
 
-  useEffect(() => {
-    setOnPhone(window.matchMedia("(pointer: coarse)").matches);
-  }, []);
 
   async function onFile(slot: Slot, f?: File | null) {
-    if (!f) return;
+    if (!f) {
+      setPhotos((p) => ({ ...p, [slot]: null }));
+      return;
+    }
     if (f.size > 8 * 1024 * 1024) {
       setErr(lang === "en" ? "That photo is too large. Keep it under 8 MB." : "这张照片太大了，请控制在 8 MB 以内。");
       return;
@@ -92,7 +94,11 @@ export function Diagnose() {
   }
 
   async function onLabFile(f?: File | null) {
-    if (!f) return;
+    if (!f) {
+      setLabPhoto(null);
+      setOcrHint("");
+      return;
+    }
     if (f.size > 8 * 1024 * 1024) {
       setErr(lang === "en" ? "That photo is too large. Keep it under 8 MB." : "这张照片太大了，请控制在 8 MB 以内。");
       return;
@@ -160,12 +166,20 @@ export function Diagnose() {
         return;
       }
       setResult(res.result);
-      pushHistory({
+      const item = {
         id: String(Date.now()),
         at: new Date().toISOString(),
         title: res.result.title,
         summary: res.result.summary,
-      });
+      };
+      pushHistory(item);
+      if (user) {
+        void saveDiagnoseHistory({
+          data: { id: item.id, title: item.title, summary: item.summary },
+        }).catch(() => {
+          /* local history already saved */
+        });
+      }
     } catch {
       setErr(d.sendFail);
     } finally {
@@ -303,7 +317,7 @@ export function Diagnose() {
                 hint={hint}
                 avoid={avoid}
                 preview={photos[key]}
-                cameraLabel={onPhone ? d.cameraPhone : d.cameraFile}
+                cameraLabel={d.cameraPhone}
                 albumLabel={d.album}
                 shotLabel={shot}
                 avoidLabel={avoidShot}
@@ -325,8 +339,11 @@ export function Diagnose() {
                   hint={d.labHint}
                   avoid={d.labAvoid}
                   preview={labPhoto}
-                  cameraLabel={onPhone ? d.cameraPhone : d.cameraFile}
+                  cameraLabel={d.cameraPhone}
                   albumLabel={d.album}
+                  shotLabel={d.shotLab}
+                  avoidLabel={d.avoidLabShot}
+                  kind="lab"
                   onFile={onLabFile}
                 />
                 {ocrHint ? <p className="text-sm text-forest">{ocrHint}</p> : null}
