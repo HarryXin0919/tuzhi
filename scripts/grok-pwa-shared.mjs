@@ -134,6 +134,8 @@ export function skipPlatformChrome(hostHeader) {
 /** Peel baked platform chrome so a custom-domain HTML document stays first-party. */
 export function stripGrokChrome(html) {
   let s = String(html ?? "");
+  // Rewrite first so og:image survives as https://tuzhi.asia/og.jpg.
+  s = s.replace(/https:\/\/[a-z0-9.-]+\.grok\.me/gi, "https://tuzhi.asia");
   s = s.replace(
     /<script\b[^>]*src=["']https:\/\/grok\.com\/grok-app-builder\/extensions\.js[^>]*>\s*<\/script>/gi,
     "",
@@ -143,13 +145,13 @@ export function stripGrokChrome(html) {
     "",
   );
   s = s.replace(/<link\b[^>]*href=["']\/__grok\/[^"']*["'][^>]*>/gi, "");
-  s = s.replace(
-    /(<head\b[^>]*>)(\s*<meta name="twitter:card"[^>]*>)?(\s*<meta property="og:title"[^>]*>)?(\s*<meta property="og:description"[^>]*>)?(\s*<meta property="og:image"[^>]*grok\.me[^>]*>)(\s*<meta property="og:image:width"[^>]*>)?(\s*<meta property="og:image:height"[^>]*>)?/i,
-    "$1",
-  );
-  s = s.replace(/https:\/\/[a-z0-9.-]+\.grok\.me/gi, "https://tuzhi.asia");
   s = s.replace(/https:\/\/grok\.com\/grok-app-builder\/[^"'>\s]*/gi, "");
   return s;
+}
+
+/** SSR documents already stamped with the public origin — skip even if Host is grok.me. */
+export function isTuzhiFirstPartyDocument(html) {
+  return /https:\/\/(?:www\.)?tuzhi\.asia/i.test(String(html ?? ""));
 }
 
 
@@ -461,7 +463,9 @@ export function normalizeHeadContext(ctx = {}) {
 
 export function injectGrokPwaHead(html, ctx = {}) {
   if (typeof html !== "string") return html;
-  if (skipPlatformChrome(ctx.host)) return stripGrokChrome(html);
+  if (skipPlatformChrome(ctx.host) || isTuzhiFirstPartyDocument(html)) {
+    return stripGrokChrome(html);
+  }
   const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
   const documentTitle = titleFromDocument(html);
   const appName = resolveOgTitle(

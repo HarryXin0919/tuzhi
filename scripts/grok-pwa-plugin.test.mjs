@@ -336,6 +336,27 @@ test("comma-separated forwarded hosts still skip when tuzhi.asia is present", ()
   }
 });
 
+test("canonical tuzhi.asia document strips chrome even when Host is grok.me", () => {
+  const html =
+    '<html><head><title>酸化 · 土知</title><link rel="canonical" href="https://tuzhi.asia/knowledge/suan-hua"><meta property="og:image" content="https://tuzhi.asia/og.jpg"></head></html>';
+  const prev = process.env.VITE_PUBLIC_HOSTNAME;
+  process.env.VITE_PUBLIC_HOSTNAME = "wave-solar-harbor-river.grok.me";
+  try {
+    const out = injectGrokPwaHead(html, {
+      host: "wave-solar-harbor-river.grok.me",
+      projectId: "proj-1",
+    });
+    assert.doesNotMatch(out, /grok\.com/);
+    assert.doesNotMatch(out, /grok-project-id/);
+    assert.doesNotMatch(out, /__grok/);
+    assert.doesNotMatch(out, /wave-solar/);
+    assert.match(out, /https:\/\/tuzhi\.asia\/og\.jpg/);
+  } finally {
+    if (prev === undefined) delete process.env.VITE_PUBLIC_HOSTNAME;
+    else process.env.VITE_PUBLIC_HOSTNAME = prev;
+  }
+});
+
 test("vercel Host without a public hostname emits no og:image", () => {
   const prev = process.env.VITE_PUBLIC_HOSTNAME;
   delete process.env.VITE_PUBLIC_HOSTNAME;
