@@ -49,8 +49,8 @@ function Chip({ active, onClick, children }: { active: boolean; onClick: () => v
       onClick={onClick}
       className={
         active
-          ? "inline-flex min-h-11 items-center rounded-full bg-forest px-4 text-base text-forest-fg"
-          : "inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 text-base text-ink"
+          ? "inline-flex min-h-11 shrink-0 items-center rounded-full bg-forest px-4 text-base text-forest-fg"
+          : "inline-flex min-h-11 shrink-0 items-center rounded-full border border-line bg-surface-2 px-4 text-base text-ink"
       }
     >
       {children}
@@ -106,11 +106,11 @@ export function KnowledgeList() {
   ].filter(Boolean) as { k: "crop" | "region" | "season"; v: string }[];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-7">
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-semibold">{t.title}</h1>
         <p className="text-muted">{t.lead}</p>
-        <LangLink to="/encyclopedia" className="inline-block text-forest">
+        <LangLink to="/encyclopedia" className="inline-block text-forest underline">
           {t.toWiki}
         </LangLink>
       </header>
@@ -118,7 +118,7 @@ export function KnowledgeList() {
         <form
           method="get"
           action={lang === "en" ? "/en/knowledge" : "/knowledge"}
-          className="relative sticky top-16 z-20 bg-bg/95 py-1 backdrop-blur-sm"
+          className="tz-search relative sticky top-16 z-20 bg-bg/95 py-1 backdrop-blur-[2px]"
           onSubmit={(e) => {
             e.preventDefault();
             setSearch({ q: qLive || undefined });
@@ -144,7 +144,7 @@ export function KnowledgeList() {
         </form>
         <section className="space-y-2">
           <h2 className="text-sm font-medium text-muted">{t.byProblem}</h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="tz-chip-row">
             <Chip active={!problemZh} onClick={() => setSearch({ problem: undefined })}>
               {tAll.all}
             </Chip>
@@ -162,12 +162,12 @@ export function KnowledgeList() {
                 {lex(s.v, lang)} ×
               </Chip>
             ))}
-            <button type="button" className="text-sm text-forest underline" onClick={toggleOpen}>
+            <button type="button" className="tz-fold" onClick={toggleOpen}>
               {t.moreFilters}
             </button>
           </div>
         ) : (
-          <button type="button" className="text-sm text-forest underline" onClick={toggleOpen}>
+          <button type="button" className="tz-fold" onClick={toggleOpen}>
             {t.lessFilters}
           </button>
         )}
@@ -175,7 +175,7 @@ export function KnowledgeList() {
           <div className="space-y-3">
             <section className="space-y-2">
               <h2 className="text-sm font-medium text-muted">{t.byCrop}</h2>
-              <div className="flex flex-wrap gap-2">
+              <div className="tz-chip-row">
                 <Chip active={!search.crop} onClick={() => setSearch({ crop: undefined })}>
                   {tAll.all}
                 </Chip>
@@ -188,7 +188,7 @@ export function KnowledgeList() {
             </section>
             <section className="space-y-2">
               <h2 className="text-sm font-medium text-muted">{t.byRegion}</h2>
-              <div className="flex flex-wrap gap-2">
+              <div className="tz-chip-row">
                 <Chip active={!search.region} onClick={() => setSearch({ region: undefined })}>
                   {tAll.all}
                 </Chip>
@@ -202,7 +202,7 @@ export function KnowledgeList() {
             <section className="space-y-2">
               <h2 className="text-sm font-medium text-muted">{t.bySeason}</h2>
               <p className="text-xs text-subtle">{t.seasonNote}</p>
-              <div className="flex flex-wrap gap-2">
+              <div className="tz-chip-row">
                 <Chip active={!search.season} onClick={() => setSearch({ season: undefined })}>
                   {tAll.all}
                 </Chip>
@@ -216,9 +216,9 @@ export function KnowledgeList() {
           </div>
         ) : null}
       </div>
-      <p className="text-sm text-muted">{t.count(shown.length)}</p>
+      <p className="tz-stamp">{t.count(shown.length)}</p>
       <p className="text-sm text-subtle">{t.multiTag}</p>
-      <div className="grid gap-3">
+      <div className="grid gap-3 lg:grid-cols-2">
         {shown.slice(0, limit).map((a) => (
           <ArticleCard key={a.slug} article={a} />
         ))}
@@ -241,7 +241,7 @@ export function KnowledgeList() {
       {limit < shown.length ? (
         <button
           type="button"
-          className="relative z-0 mb-8 flex min-h-12 w-full items-center justify-center rounded-xl border border-line bg-surface text-base"
+          className="relative z-0 mb-8 flex min-h-14 w-full items-center justify-center rounded-xl border border-line bg-surface text-base"
           onClick={() => setLimit((n) => n + PAGE)}
         >
           {t.morePage(Math.min(PAGE, shown.length - limit))}

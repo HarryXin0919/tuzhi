@@ -70,7 +70,7 @@ export function PostPage() {
     <article className="space-y-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <p className="text-sm">
-        <LangLink to="/community" className="text-forest">
+        <LangLink to="/community" className="text-forest underline">
           {r.back}
         </LangLink>
       </p>
@@ -84,13 +84,13 @@ export function PostPage() {
         </p>
       </header>
       <ReadAloud sentences={listen} title={lang === "en" ? post.titleEn || "Q&A" : post.title} />
-      {post.photo ? <img src={post.photo} alt={post.title} className="max-h-80 w-full rounded-2xl object-cover" /> : null}
+      {post.photo ? <img src={post.photo} alt={post.title} className="tz-frame max-h-80 w-full object-cover" /> : null}
       <Bilingual zh={post.body} en={post.bodyEn} />
       <section className="space-y-3">
-        <h2 className="font-display text-xl font-semibold">{r.answers}</h2>
+        <h2 className="tz-chapter font-display text-xl font-semibold">{r.answers}</h2>
         {post.answers.length === 0 ? <p className="text-muted">{r.noAnswers}</p> : null}
         {post.answers.map((a) => (
-          <div key={a.id} className="rounded-2xl border border-line bg-surface p-4">
+          <div key={a.id} className="tz-card p-4">
             <p className="text-sm text-subtle">{displayName(a.author, lang)}</p>
             <Bilingual zh={a.body} en={a.bodyEn} />
           </div>

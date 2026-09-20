@@ -15,7 +15,7 @@ export function LanguageToggle() {
   return (
     <a
       href={href}
-      className="inline-flex min-h-10 items-center rounded-lg border border-line bg-surface px-3 text-sm font-medium text-ink"
+      className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-3 text-sm font-medium text-ink"
       hrefLang={next === "en" ? "en" : "zh-CN"}
       aria-label={t.langSwitchAria}
       onClick={() => setLang(next)}

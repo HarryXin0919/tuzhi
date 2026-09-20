@@ -63,7 +63,7 @@ export function Contact() {
   }
 
   return (
-    <article className="space-y-4">
+    <article className="mx-auto max-w-[46rem] space-y-5">
       <h1 className="font-display text-3xl font-semibold">{c.title}</h1>
       <p className="leading-relaxed">{c.emailFirst}</p>
       <p className="leading-relaxed">
@@ -75,9 +75,9 @@ export function Contact() {
       <p className="leading-relaxed">{c.fieldChannel}</p>
       <p className="leading-relaxed text-muted">{c.notPhone}</p>
       {ok ? (
-        <p className="rounded-2xl border border-line bg-surface p-4">{c.sent}</p>
+        <p className="tz-card p-4">{c.sent}</p>
       ) : (
-        <form onSubmit={(e) => void send(e)} noValidate className="space-y-3 rounded-2xl border border-line bg-surface p-4">
+        <form onSubmit={(e) => void send(e)} noValidate className="tz-card space-y-3 p-4">
           <label className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
             company
             <input tabIndex={-1} autoComplete="off" value={honey} onChange={(e) => setHoney(e.target.value)} />

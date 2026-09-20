@@ -221,7 +221,7 @@ export function VoiceButton({
 
   return (
     <div className="space-y-2">
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="tz-mic">
         <button
           type="button"
           className={
@@ -246,7 +246,7 @@ export function VoiceButton({
       <p className="text-sm text-muted">{d.sttPerm}</p>
       <p className="text-sm text-subtle">{d.sttDialect}</p>
       {interim ? <p className="rounded-xl bg-surface-2 px-3 py-2 text-base">{interim}</p> : null}
-      {hint && hint !== d.sttPerm ? <p className="text-sm text-clay">{hint}</p> : null}
+      {hint && hint !== d.sttPerm ? <p className="tz-miss text-sm">{hint}</p> : null}
     </div>
   );
 }

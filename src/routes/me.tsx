@@ -64,7 +64,7 @@ export function Me() {
       {isPending ? (
         <div className="h-12 rounded-xl bg-surface-2" />
       ) : user ? (
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-surface p-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 tz-card p-4">
           <p className="font-medium">{displayName(user.displayName || user.primaryEmail, lang)}</p>
           <div className="flex items-center gap-3">
             <UserButton />
@@ -74,14 +74,14 @@ export function Me() {
           </div>
         </div>
       ) : (
-        <div className="rounded-2xl border border-line bg-surface p-4">
+        <div className="tz-card p-4">
           <p className="text-muted">{m.guest}</p>
           <LangLink to="/login" className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-forest text-forest-fg">
             {t.nav.login}
           </LangLink>
         </div>
       )}
-      <section className="space-y-3 rounded-2xl border border-line bg-surface p-4">
+      <section className="tz-card space-y-3 p-4">
         <h2 className="font-display text-xl font-semibold">{m.accountTitle}</h2>
         <p className="text-sm text-muted">{user ? m.cloudOn : m.guest}</p>
         {cloudNote ? <p className="text-sm text-subtle">{cloudNote}</p> : null}
@@ -112,7 +112,7 @@ export function Me() {
         ) : (
           <ul className="space-y-3">
             {hist.map((h) => (
-              <li key={h.id} className="rounded-2xl border border-line bg-surface p-4">
+              <li key={h.id} className="tz-card p-4">
                 <p className="font-medium">{h.title}</p>
                 <p className="mt-1 text-sm text-muted">{h.summary}</p>
                 <p className="mt-1 text-sm text-subtle">{h.at.slice(0, 10)}</p>

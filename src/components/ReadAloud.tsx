@@ -285,7 +285,7 @@ export function ReadAloud({
   }
 
   return (
-    <div className="space-y-2 rounded-2xl border border-line bg-surface p-3">
+    <div className="tz-radio space-y-2">
       {fileUrl ? (
         <audio
           ref={audioRef}

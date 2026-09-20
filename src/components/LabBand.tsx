@@ -45,32 +45,32 @@ export function LabBand() {
   }
 
   return (
-    <section className="space-y-3 rounded-2xl border border-line bg-surface p-4">
+    <section className="tz-card space-y-3 p-4">
       <h2 className="font-display text-xl font-semibold">{r.bandTitle}</h2>
       <p className="text-sm text-muted">{r.bandLead}</p>
       <div className="grid gap-2 sm:grid-cols-3">
         <label className="text-sm">
           pH
-          <input value={ph} onChange={(e) => setPh(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-line bg-surface px-2" inputMode="decimal" />
+          <input value={ph} onChange={(e) => setPh(e.target.value)} className="mt-1 min-h-12 w-full border border-line px-2 tabular-nums" inputMode="decimal" />
         </label>
         <label className="text-sm">
           EC
-          <input value={ec} onChange={(e) => setEc(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-line bg-surface px-2" inputMode="decimal" />
+          <input value={ec} onChange={(e) => setEc(e.target.value)} className="mt-1 min-h-12 w-full border border-line px-2 tabular-nums" inputMode="decimal" />
         </label>
         <label className="text-sm">
           {lang === "en" ? "OM g/kg" : "有机质 g/kg"}
-          <input value={om} onChange={(e) => setOm(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-line bg-surface px-2" inputMode="decimal" />
+          <input value={om} onChange={(e) => setOm(e.target.value)} className="mt-1 min-h-12 w-full border border-line px-2 tabular-nums" inputMode="decimal" />
         </label>
       </div>
-      <button type="button" className="inline-flex min-h-11 items-center rounded-xl bg-forest px-4 text-forest-fg" onClick={run}>
+      <button type="button" className="inline-flex min-h-12 items-center rounded-xl bg-forest px-4 text-forest-fg" onClick={run}>
         {r.bandGo}
       </button>
       {out.length === 0 ? <p className="text-sm text-muted">{r.bandNone}</p> : null}
       <ul className="space-y-2">
         {out.map((row) => (
           <li key={row.id} className="flex items-center justify-between rounded-xl bg-surface-2 px-3 py-2">
-            <span>{row.label}</span>
-            <span className="rounded-full bg-forest px-3 py-1 text-sm text-forest-fg">{word(row.band)}</span>
+            <span className="tabular-nums">{row.label}</span>
+            <span className={`tz-band tz-band-${row.band}`}>{word(row.band)}</span>
           </li>
         ))}
       </ul>

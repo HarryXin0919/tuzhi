@@ -30,52 +30,54 @@ export function Home() {
   const hot = hotArticles(6);
   const problems = PROBLEMS.filter((p) => p !== "其他");
   return (
-    <div className="space-y-8">
+    <div className="space-y-10 md:space-y-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd()) }} />
-      <header className="max-w-[45rem] space-y-3">
-        <h1 className="font-display text-3xl font-semibold">{t.name}</h1>
-        <p className="text-lg text-muted">{t.tagline}</p>
-        <p className="leading-relaxed">{t.home.lead}</p>
+      <header className="tz-hero max-w-[46rem] space-y-4">
+        <h1 className="font-display font-semibold">{t.name}</h1>
+        <p className="tz-tagline">{t.tagline}</p>
+        <p className="relative leading-relaxed">{t.home.lead}</p>
         <LangLink
           to="/diagnose"
-          className="flex min-h-14 max-w-md items-center justify-center rounded-xl bg-forest text-lg font-medium text-forest-fg"
+          className="relative flex min-h-14 max-w-xl items-center justify-center rounded-xl bg-forest text-lg font-medium text-forest-fg"
         >
           {t.home.diagnose}
         </LangLink>
-        <form method="get" action={lang === "en" ? "/en/knowledge" : "/knowledge"} className="relative max-w-xl">
+        <form method="get" action={lang === "en" ? "/en/knowledge" : "/knowledge"} className="tz-search relative max-w-xl">
           <Search className="pointer-events-none absolute left-3 top-1/2 size-5 -translate-y-1/2 text-subtle" />
           <input
             name="q"
             placeholder={t.home.searchPh}
             aria-label={t.home.searchAria}
-            className="min-h-12 w-full rounded-xl border border-line bg-surface pl-11 pr-3 text-base"
+            className="min-h-12 w-full border border-line pl-11 pr-3 text-base"
           />
         </form>
       </header>
       <section className="space-y-3">
-        <h2 className="font-display text-xl font-semibold">{t.home.problems}</h2>
-        <div className="flex gap-2 overflow-x-auto pb-1 lg:w-full lg:flex-nowrap lg:justify-between lg:overflow-visible">
+        <h2 className="tz-chapter font-display text-xl font-semibold">{t.home.problems}</h2>
+        <div className="tz-chip-row tz-chip-spread">
           {problems.map((p) => (
             <LangLink
               key={p}
               to="/knowledge"
               search={{ problem: problemQuery(p, lang) }}
-              className="inline-flex min-h-11 shrink-0 items-center rounded-full border border-line bg-surface px-4"
+              data-problem={p}
+              className="inline-flex min-h-11 shrink-0 items-center rounded-full border border-line bg-surface-2 px-4"
             >
+              <span className="tz-dot mr-2" />
               {lex(p, lang)}
             </LangLink>
           ))}
         </div>
         <p className="text-sm text-subtle lg:hidden">{t.home.chipsHint}</p>
       </section>
-      <section className="space-y-3">
+      <section className="space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="font-display text-xl font-semibold">{t.home.hot}</h2>
+          <h2 className="tz-chapter font-display text-xl font-semibold">{t.home.hot}</h2>
           <LangLink to="/knowledge" className="text-forest underline">
             {t.home.more}
           </LangLink>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {hot.map((a) => (
             <ArticleCard key={a.slug} article={a} variant="tile" />
           ))}
@@ -83,7 +85,7 @@ export function Home() {
       </section>
       <section className="space-y-3">
         <div className="flex items-center justify-between">
-          <h2 className="font-display text-xl font-semibold">{t.home.posts}</h2>
+          <h2 className="tz-chapter font-display text-xl font-semibold">{t.home.posts}</h2>
           <LangLink to="/community" className="text-forest underline">
             {t.home.toCommunity}
           </LangLink>
@@ -91,7 +93,13 @@ export function Home() {
         <div className="grid gap-3 lg:grid-cols-2">
           {posts.length ? (
             posts.map((p) => (
-              <LangLink key={p.id} to="/community/$id" params={{ id: p.id }} className="rounded-2xl border border-line bg-surface p-4">
+              <LangLink
+                key={p.id}
+                to="/community/$id"
+                params={{ id: p.id }}
+                data-problem={p.problem}
+                className="tz-card tz-card-bar p-4"
+              >
                 <p className="font-medium">
                   {isSeedPost(p.id) ? <span className="mr-2 text-sm font-medium text-clay">{t.home.seedBadge}</span> : null}
                   {lang === "en" && p.titleEn && !hasHan(p.titleEn) ? p.titleEn : p.title}

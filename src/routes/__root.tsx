@@ -18,7 +18,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#1F6B4A" },
+      { name: "theme-color", content: "#2C5A34" },
     ],
     links: [
       { rel: "icon", href: "/favicon.ico", sizes: "32x32" },

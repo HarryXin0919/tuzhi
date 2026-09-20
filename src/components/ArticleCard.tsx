@@ -24,62 +24,50 @@ export function ArticleCard({ article, variant = "row" }: { article: CardInput; 
   const src = article.photos?.find((p) => p.src && p.src.trim())?.src ?? "";
   const first = article.photos?.find((p) => p.src && p.src.trim());
   const alt = first?.alt && (lang !== "en" || !hasHan(first.alt)) ? first.alt : title;
+  const problem = article.problems[0];
   const thumb =
     src && !/missing/.test(src) ? (
-      <img
-        src={src}
-        alt={alt}
-        className={variant === "tile" ? "aspect-[16/10] w-full bg-surface-2 object-cover" : "h-28 w-28 shrink-0 bg-surface-2 object-cover sm:h-32 sm:w-36"}
-        loading="lazy"
-        width={variant === "tile" ? 640 : 144}
-        height={variant === "tile" ? 400 : 128}
-        onError={(e) => {
-          e.currentTarget.style.display = "none";
-        }}
-      />
+      <span className={variant === "tile" ? "relative block" : "relative block w-32 shrink-0 sm:w-40"}>
+        <img
+          src={src}
+          alt={alt}
+          className={variant === "tile" ? "aspect-[16/10] w-full bg-surface-2 object-cover" : "aspect-[16/10] h-auto w-32 shrink-0 bg-surface-2 object-cover sm:w-40"}
+          loading="lazy"
+          width={variant === "tile" ? 640 : 160}
+          height={variant === "tile" ? 400 : 100}
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
+        {problem ? <span className="tz-pill-corner">{lex(problem, lang)}</span> : null}
+      </span>
     ) : (
       <span
         className={
           variant === "tile"
-            ? "grid aspect-[16/10] w-full place-items-center bg-surface-2 text-sm text-muted"
-            : "grid h-28 w-28 shrink-0 place-items-center bg-surface-2 px-2 text-center text-xs text-muted sm:h-32 sm:w-36"
+            ? "relative grid aspect-[16/10] w-full place-items-center bg-surface-2 text-sm text-muted"
+            : "relative grid aspect-[16/10] w-32 shrink-0 place-items-center bg-surface-2 px-2 text-center text-xs text-muted sm:w-40"
         }
       >
         {lang === "en" ? "Field photo to add" : "待补田间照片"}
+        {problem ? <span className="tz-pill-corner">{lex(problem, lang)}</span> : null}
       </span>
     );
   const body = (
     <span className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 p-3">
-      <span className="block font-display text-[1.05rem] font-semibold leading-snug text-ink">{title}</span>
-      <span className={variant === "tile" ? "block line-clamp-2 text-[0.95rem] leading-relaxed text-muted" : "block line-clamp-2 text-[0.95rem] leading-relaxed text-muted"}>
-        {summary}
-      </span>
-      <span className="flex flex-wrap gap-1">
-        {article.problems.slice(0, 1).map((p) => (
-          <span key={p} className="rounded-full bg-surface-2 px-2 py-0.5 text-xs text-clay">
-            {lex(p, lang)}
-          </span>
-        ))}
-      </span>
+      <span className="block line-clamp-2 font-display text-[1.05rem] font-semibold leading-snug text-ink">{title}</span>
+      <span className="block line-clamp-2 text-[0.95rem] leading-relaxed text-muted">{summary}</span>
     </span>
   );
   return (
     <LangLink
       to="/knowledge/$slug"
       params={{ slug: article.slug }}
-      className={variant === "tile" ? "overflow-hidden rounded-2xl border border-line bg-surface" : "flex overflow-hidden rounded-2xl border border-line bg-surface"}
+      data-problem={problem}
+      className={variant === "tile" ? "tz-card tz-card-bar tz-card-tile block" : "tz-card tz-card-bar tz-card-row"}
     >
-      {variant === "tile" ? (
-        <>
-          {thumb}
-          {body}
-        </>
-      ) : (
-        <>
-          {thumb}
-          {body}
-        </>
-      )}
+      {thumb}
+      {body}
     </LangLink>
   );
 }

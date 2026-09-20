@@ -202,16 +202,16 @@ export function Diagnose() {
     : [];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-7">
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-semibold">{d.title}</h1>
         <p className="text-muted">{d.lead}</p>
       </header>
       {result ? (
-        <section className="space-y-4 rounded-2xl border border-line bg-surface p-4">
+        <section className="tz-card space-y-4 p-4">
           <p className="text-sm text-subtle">{d.result}</p>
           <h2 className="font-display text-2xl font-semibold">{result.title}</h2>
-          <p className="text-lg leading-relaxed">{result.summary}</p>
+          <p className="tz-verdict">{result.summary}</p>
           <ReadAloud sentences={spoken} title={result.title} listenLabel={d.listenConclusion} />
           {result.guesses?.length ? (
             <div className="space-y-2">
@@ -303,7 +303,7 @@ export function Diagnose() {
         </section>
       ) : (
         <>
-          <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4">
             {(
               [
                 ["plant", d.slotPlant, d.hintPlant, d.avoidPlant, d.shotPlant, d.avoidPlantShot],
@@ -326,7 +326,7 @@ export function Diagnose() {
               />
             ))}
           </div>
-          <div className="rounded-2xl border border-line bg-surface p-3">
+          <div className="tz-card p-3">
             <p className="font-medium">{d.labStep}</p>
             <button type="button" className="mt-1 text-forest underline" onClick={() => setLabOpen((v) => !v)}>
               {labOpen ? d.labHide : d.labToggle}
@@ -408,7 +408,7 @@ export function Diagnose() {
           </div>
           {filled < 3
             ? missing.map((m) => (
-                <p key={m} className="text-sm text-clay">
+                <p key={m} className="tz-miss text-sm">
                   {m}
                 </p>
               ))
@@ -423,7 +423,7 @@ export function Diagnose() {
             type="button"
             disabled={busy}
             onClick={send}
-            className="flex min-h-14 w-full items-center justify-center rounded-xl bg-forest text-lg font-medium text-forest-fg disabled:opacity-50"
+            className="tz-sticky-send flex min-h-14 w-full items-center justify-center rounded-xl bg-forest text-lg font-medium text-forest-fg disabled:opacity-50"
           >
             {busy ? d.sending : d.send}
           </button>

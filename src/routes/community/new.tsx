@@ -74,7 +74,7 @@ export function NewPost() {
   }
   if (!user) {
     return (
-      <div className="space-y-4 rounded-2xl border border-line bg-surface p-4">
+      <div className="tz-card space-y-4 p-5">
         <h1 className="font-display text-2xl font-semibold">{r.needLogin}</h1>
         <p className="leading-relaxed text-muted">{r.needLoginLead}</p>
         <LangLink to="/login" search={{ next: withLangPath("/community/new", lang) }} className="flex min-h-12 items-center justify-center rounded-xl bg-forest text-forest-fg">

@@ -32,7 +32,7 @@ export function KnowledgeVideo({ slug, kind = "article" }: { slug: string; kind?
 
   return (
     <section className="space-y-2">
-      <h2 className="font-display text-2xl font-semibold">{t.videos}</h2>
+      <h2 className="tz-chapter font-display text-2xl font-semibold">{t.videos}</h2>
       <div className="aspect-video overflow-hidden rounded-2xl border border-line bg-surface-2">
         <iframe
           key={embed}

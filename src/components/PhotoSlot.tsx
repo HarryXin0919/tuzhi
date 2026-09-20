@@ -146,22 +146,22 @@ export function PhotoSlot({
 
   const shot = SHOTS[kind];
   const btn =
-    "relative inline-flex min-h-12 min-w-[7.5rem] cursor-pointer items-center justify-center overflow-hidden rounded-lg px-3 text-center text-sm";
+    "relative inline-flex min-h-12 min-w-[7.5rem] cursor-pointer items-center justify-center overflow-hidden rounded-xl px-3 text-center text-sm";
 
   return (
-    <div className="rounded-2xl border border-dashed border-line bg-surface p-3">
+    <div className="tz-slot">
       <p className="font-medium">{label}</p>
       <p className="text-sm text-muted">{hint}</p>
       {avoid ? <p className="text-sm text-subtle">{avoid}</p> : null}
       <div className="mt-2 grid grid-cols-2 gap-2">
-        <figure className="overflow-hidden rounded-lg bg-surface-2">
+        <figure className="tz-frame">
           <div className="border-t-4 border-forest">
             <img src={shot.good} alt={shotLabel || ""} className="h-[140px] min-h-[140px] w-full object-cover" width={280} height={140} />
           </div>
           <figcaption className="px-2 py-1 text-xs leading-snug text-muted">{shotLabel}</figcaption>
         </figure>
-        <figure className="overflow-hidden rounded-lg bg-surface-2">
-          <div className="border-t-4 border-danger">
+        <figure className="tz-frame">
+          <div className="border-t-4 border-rust">
             <img src={shot.bad} alt={avoidLabel || ""} className="h-[140px] min-h-[140px] w-full object-cover" width={280} height={140} />
           </div>
           <figcaption className="px-2 py-1 text-xs leading-snug text-muted">{avoidLabel}</figcaption>
@@ -169,7 +169,7 @@ export function PhotoSlot({
       </div>
       {preview ? (
         <div className="relative mt-2">
-          <img src={preview} alt="" className="h-32 w-full rounded-lg object-cover" />
+          <img src={preview} alt="" className="h-32 w-full rounded-xl object-cover" />
           <button
             type="button"
             className="absolute right-2 top-2 inline-flex min-h-11 items-center rounded-full bg-surface px-3 text-sm"
@@ -231,22 +231,22 @@ export function PhotoSlot({
       </div>
       <button
         type="button"
-        className="tz-live-phone mt-2 min-h-12 w-full items-center justify-center rounded-lg border border-line bg-surface text-sm"
+        className="tz-live-phone mt-2 min-h-12 w-full items-center justify-center rounded-xl border border-line bg-surface text-sm"
         onClick={() => void openLive()}
       >
         {d.cameraLive}
       </button>
       {wechat ? <p className="mt-2 text-sm leading-relaxed text-muted">{d.cameraWeChat}</p> : null}
 
-      {denied ? <p className="mt-2 rounded-lg bg-surface-2 px-3 py-2 text-sm leading-relaxed text-muted">{denied}</p> : null}
+      {denied ? <p className="tz-miss mt-2 text-sm leading-relaxed">{denied}</p> : null}
       {live ? (
         <div className="fixed inset-0 z-50 flex flex-col bg-ink/90 p-4">
           <video ref={videoRef} className="min-h-0 flex-1 rounded-xl bg-ink object-cover" playsInline muted autoPlay />
           <div className="mt-3 grid grid-cols-2 gap-2">
-            <button type="button" className="inline-flex min-h-12 items-center justify-center rounded-lg bg-forest text-forest-fg" onClick={() => void shutter()}>
+            <button type="button" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-forest text-forest-fg" onClick={() => void shutter()}>
               {d.cameraShutter}
             </button>
-            <button type="button" className="inline-flex min-h-12 items-center justify-center rounded-lg border border-line bg-surface" onClick={stopLive}>
+            <button type="button" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-line bg-surface" onClick={stopLive}>
               {d.cameraCancel}
             </button>
           </div>

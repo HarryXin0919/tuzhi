@@ -42,10 +42,10 @@ export const Route = createFileRoute("/knowledge/$slug")({
 function Prose({ text }: { text: string }) {
   const parts = text.split(/\n+/).map((s) => s.trim()).filter(Boolean);
   return (
-    <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 text-base leading-relaxed">
+    <div className="tz-card tz-prose space-y-3 p-4">
       {parts.map((p, i) =>
         p.length < 16 && !/[。．.！？!?]$/.test(p) ? (
-          <h3 key={i} className="font-medium">
+          <h3 key={i} className="font-display font-semibold text-ink">
             {p}
           </h3>
         ) : (
@@ -76,7 +76,7 @@ function ConfuseBody({ text }: { text: string }) {
 function Section({ title, id, children }: { title: string; id: string; children: React.ReactNode }) {
   return (
     <section id={id} className="space-y-3">
-      <h2 className="font-display text-2xl font-semibold">{title}</h2>
+      <h2 className="tz-chapter font-display text-2xl font-semibold">{title}</h2>
       {children}
     </section>
   );
@@ -175,7 +175,7 @@ export function GuidePage({ raw }: { raw: Article }) {
     </section>
   ) : null;
   const wikiBlock = wikiRows.length ? (
-    <section className="space-y-2 rounded-2xl border border-line bg-surface p-4">
+    <section className="tz-card space-y-2 p-4">
       <h2 className="font-display text-lg font-semibold">{lang === "en" ? "Lab-sheet words" : "化验词"}</h2>
       <ul className="space-y-1">
         {wikiRows.map((row) => (
@@ -198,17 +198,22 @@ export function GuidePage({ raw }: { raw: Article }) {
           </LangLink>
         </p>
         <h1 className="font-display text-3xl font-semibold leading-tight">{a.title}</h1>
-        <p className="text-lg text-muted">{a.subtitle}</p>
+        <p className="tz-verdict">{a.subtitle}</p>
         <div className="flex flex-wrap gap-2">
           {a.problems.map((p, i) => (
-            <span key={p} className={i === 0 ? "rounded-full bg-surface-2 px-3 py-1 text-sm" : "rounded-full bg-surface-2 px-3 py-1 text-sm opacity-60"}>
+            <span
+              key={p}
+              data-problem={p}
+              className={i === 0 ? "inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-sm" : "inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1 text-sm opacity-60"}
+            >
+              <span className="tz-dot" />
               {p}
             </span>
           ))}
         </div>
         <ReadAloud sentences={speak} howSentences={speakHow} title={a.title} slug={raw.slug} howto={howto} onHowto={setHowto} />
         <div className="flex flex-wrap gap-3">
-          <button type="button" className="text-forest underline" onClick={() => setHowto((v) => !v)}>
+          <button type="button" className="inline-flex min-h-11 items-center rounded-xl border border-line bg-surface px-4 text-sm" onClick={() => setHowto((v) => !v)}>
             {howto ? C.full : C.howto}
           </button>
           <button
@@ -257,7 +262,7 @@ export function GuidePage({ raw }: { raw: Article }) {
             <Section title={C.s2} id="mix">
               <ul className="space-y-3">
                 {a.confuse.map((c, i) => (
-                  <li key={`${c.lookalike}-${i}`} className="rounded-xl border border-line bg-surface p-4">
+                  <li key={`${c.lookalike}-${i}`} className="tz-card p-4">
                     <p className="font-medium">{C.like(c.lookalike)}</p>
                     <ConfuseBody text={c.difference} />
                     {c.photos?.length ? (
@@ -275,7 +280,7 @@ export function GuidePage({ raw }: { raw: Article }) {
       <Section title={C.s5} id="how">
         <ol className="space-y-3">
           {a.solutions.steps.map((step, i) => (
-            <li key={i} className="flex gap-3 rounded-2xl border border-line bg-surface p-4">
+            <li key={i} className="tz-card flex gap-3 p-4">
               <span className="grid size-8 shrink-0 place-items-center rounded-full bg-forest text-sm font-semibold text-forest-fg">
                 {i + 1}
               </span>
@@ -284,7 +289,7 @@ export function GuidePage({ raw }: { raw: Article }) {
           ))}
         </ol>
         {a.dontDo?.length ? (
-          <div className="rounded-2xl border border-line bg-surface p-4">
+          <div className="tz-card p-4">
             <h3 className="mb-2 font-medium">{C.s7}</h3>
             <ul className="list-disc space-y-2 pl-5">
               {a.dontDo.map((d, i) => (
@@ -340,7 +345,7 @@ export function GuidePage({ raw }: { raw: Article }) {
         <p className="text-sm text-muted">{C.doseNote}</p>
         {a.labTable?.length ? (
           <div className="overflow-x-auto rounded-2xl border border-line">
-            <table className="w-full text-left text-sm">
+            <table className="tz-lab-table w-full text-left text-sm">
               <caption className="px-3 py-2 text-left font-medium">{C.labTable}</caption>
               <thead className="bg-surface-2">
                 <tr>
@@ -403,7 +408,7 @@ export function GuidePage({ raw }: { raw: Article }) {
         ) : null}
         {leftover[0] ? <PhotoGallery photos={leftover} slug={raw.slug} /> : null}
         {a.example ? (
-          <div className="rounded-2xl border border-line bg-surface p-4">
+          <div className="tz-card p-4">
             <h3 className="mb-2 font-medium">{C.sExample}</h3>
             <p className="leading-relaxed">{a.example}</p>
           </div>

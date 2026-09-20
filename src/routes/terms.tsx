@@ -17,7 +17,7 @@ export function Terms() {
   const lang = usePathLang();
   const t = messages[lang];
   return (
-    <article className="space-y-4">
+    <article className="mx-auto max-w-[46rem] space-y-6">
       <h1 className="font-display text-3xl font-semibold">{t.terms.title}</h1>
       {t.terms.paragraphs.map((p) => (
         <p key={p.slice(0, 18)} className="leading-relaxed">

@@ -50,20 +50,24 @@ export function PhotoGallery({ photos, slug, tall }: { photos: Photo[]; slug?: s
           <button
             key={p.src}
             type="button"
-            className="overflow-hidden rounded-xl border border-line bg-surface-2"
+            className="tz-frame text-left"
             onClick={() => setOpen(p)}
           >
             <img
               src={p.src}
               alt={p.alt}
-              className={tall ? "h-56 w-full object-cover lg:h-[280px] lg:min-h-[280px]" : "h-56 w-full object-cover"}
+              className={tall ? "h-56 w-full object-cover lg:h-[280px] lg:min-h-[280px]" : "aspect-[16/10] h-auto w-full object-cover"}
               loading="lazy"
               width={400}
               height={tall ? 280 : 224}
             />
             <span className="block p-2 text-left text-sm text-muted">
               {p.caption.replace(/示意图，不能单凭此图下肥。?/g, "").trim()}
-              <span className="mt-1 block text-subtle">{kindNote(p)}</span>
+              {p.kind === "diagram" || /示意图，不能单凭此图下肥/.test(p.caption) ? (
+                <span className="tz-warn">{t.photoKindDiagram}</span>
+              ) : (
+                <span className="mt-1 block text-subtle">{kindNote(p)}</span>
+              )}
               {creditLine(p) ? <span className="mt-1 block text-subtle">{creditLine(p)}</span> : null}
               {p.sourceUrl ? (
                 <a

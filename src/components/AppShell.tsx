@@ -30,7 +30,7 @@ function AuthSlot({ loginLabel }: { loginLabel: string }) {
     return (
       <LangLink
         to="/login"
-        className="inline-flex min-h-10 items-center rounded-lg bg-forest px-4 text-sm font-medium text-forest-fg"
+        className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 text-sm font-medium text-ink"
       >
         {loginLabel}
       </LangLink>
@@ -42,7 +42,7 @@ function AuthSlot({ loginLabel }: { loginLabel: string }) {
   return (
     <LangLink
       to="/login"
-      className="inline-flex min-h-10 items-center rounded-lg bg-forest px-4 text-sm font-medium text-forest-fg"
+      className="inline-flex min-h-11 items-center rounded-full border border-line bg-surface px-4 text-sm font-medium text-ink"
     >
       {loginLabel}
     </LangLink>
@@ -85,12 +85,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       >
         {lang === "en" ? "Skip to content" : "跳到正文"}
       </a>
-      <header className="sticky top-0 z-30 border-b border-line bg-bg/95 backdrop-blur-sm">
-        <div className="mx-auto flex h-16 max-w-[70rem] items-center gap-3 px-4">
+      <header className="sticky top-0 z-30 border-b border-line bg-bg/90 backdrop-blur-[2px]">
+        <div className="mx-auto flex h-[3.75rem] max-w-[70rem] items-center gap-3 px-4 sm:px-5">
           <LangLink to="/" className="flex shrink-0 items-center gap-3">
             <img src="/logo.png" alt={t.name} width={44} height={44} className="size-11 rounded-full" />
             <span className="hidden leading-tight sm:block">
-              <span className="block font-display text-xl font-semibold">{t.name}</span>
+              <span className="block font-display text-xl font-semibold tracking-tight">{t.name}</span>
               <span className="block truncate text-sm text-muted">{t.tagline}</span>
             </span>
           </LangLink>
@@ -101,8 +101,8 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 to={n.to}
                 className={
                   active(n.to)
-                    ? "rounded-lg bg-forest px-3 py-2 text-sm font-medium text-forest-fg"
-                    : "rounded-lg px-3 py-2 text-sm font-medium text-muted hover:bg-surface-2 hover:text-ink"
+                    ? "rounded-full bg-forest px-3.5 py-2 text-sm font-medium text-forest-fg"
+                    : "rounded-full px-3.5 py-2 text-sm text-ink/80 hover:text-ink"
                 }
               >
                 {t.nav[n.key]}
@@ -115,10 +115,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </header>
-      <main id="main-content" className="mx-auto w-full max-w-[70rem] px-4 pb-28 pt-4 md:pb-10">
+      <main id="main-content" className="mx-auto w-full max-w-[70rem] px-4 pb-28 pt-5 sm:px-5 md:pb-10">
         {children}
       </main>
-      <footer className="mx-auto mt-10 max-w-[70rem] border-t border-line px-4 pb-28 pt-6 text-base text-muted md:pb-8">
+      <footer className="mx-auto mt-14 max-w-[70rem] border-t border-line px-4 pb-28 pt-7 text-base text-muted sm:px-5 md:pb-8">
         <p className="font-display text-lg text-ink">
           {t.name} · {t.tagline}
         </p>
@@ -146,20 +146,20 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             {t.footer.contact}
           </LangLink>
         </nav>
-        <p className="mt-3 leading-relaxed">{t.disclaimer}</p>
+        <p className="mt-3 leading-relaxed text-muted">{t.disclaimer}</p>
       </footer>
       <nav
-        className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-sm md:hidden"
+        className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-[2px] md:hidden"
         aria-label={t.nav.home}
       >
-        <ul className="mx-auto grid max-w-lg grid-cols-6">
+        <ul className="mx-auto grid max-w-lg grid-cols-6 px-1">
           {NAV.map((n) => (
             <li key={n.to}>
               <LangLink
                 to={n.to}
                 className={
-                  "flex min-h-16 flex-col items-center justify-center gap-0.5 px-0.5 text-center text-[11px] font-medium leading-tight " +
-                  (active(n.to) ? "text-forest" : "text-muted")
+                  "mx-0.5 flex min-h-16 flex-col items-center justify-center gap-0.5 rounded-lg px-0.5 text-center text-xs font-medium leading-tight " +
+                  (active(n.to) ? "bg-surface-2 text-forest" : "text-ink/60")
                 }
               >
                 <n.Icon className="size-6" strokeWidth={active(n.to) ? 2.4 : 1.8} />

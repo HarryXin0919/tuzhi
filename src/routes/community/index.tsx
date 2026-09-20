@@ -35,17 +35,17 @@ export function Community() {
   const nav = useAnyNavigate();
   const problemZh = parseProblem(search.problem);
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       <header>
         <h1 className="font-display text-3xl font-semibold">{r.title}</h1>
         <p className="mt-1 text-muted">{r.lead}</p>
       </header>
-      <p className="rounded-xl border border-line bg-surface-2 px-4 py-3 text-sm leading-relaxed">{r.seedNote}</p>
-      <div className="flex flex-wrap gap-2">
+      <p className="tz-info text-sm">{r.seedNote}</p>
+      <div className="tz-chip-row">
         <button
           type="button"
           onClick={() => nav({ search: { problem: undefined } })}
-          className={!problemZh ? "rounded-full bg-forest px-4 py-2 text-forest-fg" : "rounded-full border border-line px-4 py-2"}
+          className={!problemZh ? "inline-flex min-h-11 shrink-0 items-center rounded-full bg-forest px-4 text-forest-fg" : "inline-flex min-h-11 shrink-0 items-center rounded-full border border-line bg-surface-2 px-4"}
         >
           {t.all}
         </button>
@@ -54,7 +54,8 @@ export function Community() {
             key={p}
             type="button"
             onClick={() => nav({ search: { problem: problemQuery(p, lang) } })}
-            className={problemZh === p ? "rounded-full bg-forest px-4 py-2 text-forest-fg" : "rounded-full border border-line px-4 py-2"}
+            data-problem={p}
+            className={problemZh === p ? "inline-flex min-h-11 shrink-0 items-center rounded-full bg-forest px-4 text-forest-fg" : "inline-flex min-h-11 shrink-0 items-center rounded-full border border-line bg-surface-2 px-4"}
           >
             {lex(p, lang)}
           </button>
@@ -65,7 +66,7 @@ export function Community() {
       </LangLink>
       <div className="space-y-3">
         {posts.length === 0 ? (
-          <p className="rounded-xl border border-line bg-surface p-6 text-muted">
+          <p className="tz-card p-6 text-muted">
             {r.empty}
             <span className="mt-3 flex gap-3">
               <LangLink to="/diagnose" className="text-forest underline">
@@ -78,7 +79,7 @@ export function Community() {
           </p>
         ) : (
           posts.map((p) => (
-            <LangLink key={p.id} to="/community/$id" params={{ id: p.id }} className="block rounded-2xl border border-line bg-surface p-4">
+            <LangLink key={p.id} to="/community/$id" params={{ id: p.id }} data-problem={p.problem} className="tz-card tz-card-bar block p-4">
               <p className="font-medium">
                 {isSeedPost(p.id) ? <span className="mr-2 text-sm font-medium text-clay">{r.seedBadge}</span> : null}
                 {lang === "en" && p.titleEn && !/[\u4e00-\u9fff]/.test(p.titleEn) ? p.titleEn : p.title}

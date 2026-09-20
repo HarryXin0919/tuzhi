@@ -30,7 +30,7 @@ export function WikiList() {
   })).filter((g) => g.terms.length > 0);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-7">
       <header>
         <h1 className="font-display text-3xl font-semibold">{r.title}</h1>
         <p className="mt-2 text-muted">{r.lead}</p>
@@ -40,7 +40,7 @@ export function WikiList() {
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder={r.ph}
-        className="min-h-12 w-full rounded-xl border border-line bg-surface px-4"
+        className="min-h-12 w-full border border-line px-4"
       />
       {groups.length === 0 ? (
         <p className="rounded-xl border border-line bg-surface p-6 text-muted">
@@ -57,7 +57,7 @@ export function WikiList() {
       ) : (
         groups.map((g) => (
           <section key={g.id} className="space-y-3">
-            <h2 className="font-display text-xl font-semibold">{lang === "en" ? g.titleEn : g.title}</h2>
+            <h2 className="tz-chapter font-display text-xl font-semibold">{lang === "en" ? g.titleEn : g.title}</h2>
             {g.terms.map((term) => {
               if (!term) return null;
               const copy = localizeTerm(term, lang);
@@ -66,7 +66,7 @@ export function WikiList() {
                   key={term.id}
                   to="/encyclopedia/$id"
                   params={{ id: term.id }}
-                  className="block scroll-mt-24 rounded-2xl border border-line bg-surface p-4"
+                  className="tz-card block scroll-mt-24 p-4"
                 >
                   <h3 className="text-lg font-medium">{copy.title}</h3>
                   {copy.aka ? (

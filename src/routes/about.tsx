@@ -19,15 +19,15 @@ export function About() {
   const lang = usePathLang();
   const t = messages[lang];
   return (
-    <article className="space-y-4">
+    <article className="mx-auto max-w-[46rem] space-y-6">
       <h1 className="font-display text-3xl font-semibold">{t.about.title}</h1>
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
         <img
           src="/images/about/li-zeyu.jpg"
           alt={t.about.photoAlt}
           width={896}
           height={1070}
-          className="w-full max-w-[28rem] rounded-2xl border border-line object-contain"
+          className="tz-frame w-full max-w-[28rem] object-contain"
         />
         <div className="space-y-3">
           <p className="text-lg font-medium leading-relaxed">{t.about.producer}</p>

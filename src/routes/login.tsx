@@ -129,13 +129,13 @@ export function Login() {
         <p className="text-sm text-subtle">{L.rules}</p>
         <p className="text-sm text-subtle">{L.phoneLimit}</p>
       </header>
-      <div className="flex gap-2">
+      <div className="tz-segment">
         <button
           type="button"
           className={
             !register
-              ? "flex-1 rounded-full bg-forest px-4 py-2 text-forest-fg"
-              : "flex-1 rounded-full border border-line px-4 py-2"
+              ? "flex-1 rounded-lg bg-forest px-4 py-2.5 text-forest-fg"
+              : "flex-1 rounded-lg px-4 py-2.5 text-ink/80"
           }
           onClick={() => navigate({ search: { next: search.next } })}
         >
@@ -145,8 +145,8 @@ export function Login() {
           type="button"
           className={
             register
-              ? "flex-1 rounded-full bg-forest px-4 py-2 text-forest-fg"
-              : "flex-1 rounded-full border border-line px-4 py-2"
+              ? "flex-1 rounded-lg bg-forest px-4 py-2.5 text-forest-fg"
+              : "flex-1 rounded-lg px-4 py-2.5 text-ink/80"
           }
           onClick={() => navigate({ search: { tab: "register", next: search.next } })}
         >

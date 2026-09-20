@@ -45,7 +45,7 @@ export function TermPage() {
   const fieldShow = fieldPhotos.length ? fieldPhotos : otherPhotos.filter((p) => !sheetShow.includes(p));
   const relatedBlock = related.length ? (
     <section className="space-y-3">
-      <h2 className="font-display text-2xl font-semibold">{r.toGuides}</h2>
+      <h2 className="tz-chapter font-display text-2xl font-semibold">{r.toGuides}</h2>
       <p className="text-sm text-muted">{r.toGuidesLead}</p>
       <div className="grid gap-3">
         {related.map((a) => (
@@ -63,7 +63,7 @@ export function TermPage() {
       </p>
       <header className="space-y-2">
         <h1 className="font-display text-3xl font-semibold">{copy.title}</h1>
-        <p className="text-lg text-muted">{copy.subtitle}</p>
+        <p className="tz-verdict">{copy.subtitle}</p>
         {copy.aka ? (
           <p className="text-sm text-subtle">
             {r.aka}
@@ -73,8 +73,8 @@ export function TermPage() {
       </header>
       <ReadAloud sentences={spoken} title={copy.title} slug={term.id} />
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold">{r.sheet}</h2>
-        <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 leading-relaxed">
+        <h2 className="tz-chapter font-display text-2xl font-semibold">{r.sheet}</h2>
+        <div className="tz-card tz-prose space-y-3 p-4">
           {copy.appearance
             .split(/\n+/)
             .map((p) => p.trim())
@@ -86,18 +86,18 @@ export function TermPage() {
         {sheetShow.length ? <PhotoGallery photos={sheetShow} slug={term.id} /> : null}
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold">{r.unit}</h2>
-        <p className="rounded-2xl border border-line bg-surface p-4 leading-relaxed">{copy.unit}</p>
+        <h2 className="tz-chapter font-display text-2xl font-semibold">{r.unit}</h2>
+        <p className="tz-card p-4 leading-relaxed">{copy.unit}</p>
         {copy.ratioNote ? (
-          <p className="rounded-2xl border border-line bg-surface p-4 leading-relaxed">
+          <p className="tz-card p-4 leading-relaxed">
             <span className="font-medium">{r.ratio} · </span>
             {copy.ratioNote}
           </p>
         ) : null}
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold">{r.read}</h2>
-        <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 leading-relaxed">
+        <h2 className="tz-chapter font-display text-2xl font-semibold">{r.read}</h2>
+        <div className="tz-card tz-prose space-y-3 p-4">
           {(copy.longform?.length ? copy.longform : [copy.summary]).map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -105,7 +105,7 @@ export function TermPage() {
         </div>
         {copy.readTable?.length ? (
           <div className="overflow-x-auto rounded-2xl border border-line">
-            <table className="w-full min-w-[32rem] text-left text-sm">
+            <table className="tz-lab-table w-full min-w-[32rem] text-left text-sm">
               <caption className="px-3 py-2 text-left font-medium">{r.readTable}</caption>
               <thead className="bg-surface-2">
                 <tr>
@@ -131,8 +131,8 @@ export function TermPage() {
         ) : null}
       </section>
       <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold">{r.field}</h2>
-        <div className="space-y-3 rounded-2xl border border-line bg-surface p-4 leading-relaxed">
+        <h2 className="tz-chapter font-display text-2xl font-semibold">{r.field}</h2>
+        <div className="tz-card tz-prose space-y-3 p-4">
           {copy.fieldCheck
             .split(/\n+/)
             .map((p) => p.trim())
@@ -161,7 +161,7 @@ export function TermPage() {
       </section>
       {copy.dontDo?.length ? (
         <section className="space-y-3">
-          <h2 className="font-display text-2xl font-semibold">{r.dont}</h2>
+          <h2 className="tz-chapter font-display text-2xl font-semibold">{r.dont}</h2>
           <ul className="list-disc space-y-2 rounded-2xl border border-line bg-surface p-4 pl-8">
             {copy.dontDo.map((x, i) => (
               <li key={i}>{x}</li>
