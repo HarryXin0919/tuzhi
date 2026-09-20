@@ -3,28 +3,21 @@
  * global h3 middleware because vite.config.ts sets `serverDir: "./server"` —
  * without that option Nitro v3 never scans this directory.
  *
- * - `?install=1&platform=ios` on a document path → the Home Screen tutorial,
- *   bundled into the server build via `?raw` (the public/ directory is CDN
- *   static output on Vercel and not readable from the function).
- * - `/__grok/manifest.webmanifest` → per-app-named manifest (kept out of
- *   public/ so this dynamic response is the only one).
- * - Other HTML documents → stream-inject PWA + OG head tags at `</head>`.
- *   OG identity is baked via `virtual:grok-og-identity` at `vite build`
- *   (this function cannot read `src/lib/og/site.json` or `public/og.jpg`).
- *   This must be a middleware transforming `next()`: h3 discards the `response`
- *   runtime hook's return value, and `render:html` does not exist in Nitro v3.
+ * tuzhi.asia is first-party: HTML documents are passed through (no Grok
+ * inject). Manifest + iOS install tutorial stay for grok.me / ?install=1.
+ * 00- / zz- middleware peel leftover chrome if this file is restored to
+ * stock inject by the platform build.
  */
 import installPageTemplate from "../../scripts/install-page.html?raw";
-import { grokOgIdentity } from "virtual:grok-og-identity";
 import {
   acceptsHtml,
-  createHeadInjector,
   isDocumentPath,
   isInstallQuery,
   renderInstallPageHtml,
   renderWebManifest,
   skipPlatformChrome,
 } from "../../scripts/grok-pwa-shared.mjs";
+import { isHtmlDocumentResponse, stripHeadStreaming } from "../tuzhi-html";
 
 interface GrokPwaEvent {
   url: URL;
@@ -43,41 +36,6 @@ function requestHost(event: GrokPwaEvent): string {
   const candidates = hostCandidates(event);
   if (candidates.some((h) => skipPlatformChrome(h))) return "tuzhi.asia";
   return candidates[0] ?? event.url.host;
-}
-
-/** tuzhi.asia is first-party: never wrap production HTML in Grok chrome. */
-function injectHostFor(event: GrokPwaEvent): string {
-  const host = requestHost(event);
-  if (skipPlatformChrome(host) || skipPlatformChrome(hostCandidates(event).join(","))) {
-    return "tuzhi.asia";
-  }
-  // Published custom domain can arrive as grok.me / vercel.app in forwarded
-  // headers. This app's public identity is tuzhi.asia — strip anyway.
-  return "tuzhi.asia";
-}
-
-function injectHeadStreaming(response: Response, host: string): Response {
-  const injector = createHeadInjector({
-    host,
-    site: grokOgIdentity.site,
-  });
-  const transformed = response.body!.pipeThrough(
-    new TransformStream<Uint8Array, Uint8Array>({
-      transform(chunk, controller) {
-        for (const out of injector.push(chunk)) controller.enqueue(out);
-      },
-      flush(controller) {
-        for (const out of injector.flush()) controller.enqueue(out);
-      },
-    }),
-  );
-  const headers = new Headers(response.headers);
-  headers.delete("content-length");
-  return new Response(transformed, {
-    status: response.status,
-    statusText: response.statusText,
-    headers,
-  });
 }
 
 export default async function grokPwaMiddleware(
@@ -119,13 +77,10 @@ export default async function grokPwaMiddleware(
   if (!isDocumentPath(path)) return next();
 
   const result = await next();
-  if (
-    result instanceof Response &&
-    result.body &&
-    String(result.headers.get("content-type") ?? "").includes("text/html") &&
-    !result.headers.get("content-encoding")
-  ) {
-    return injectHeadStreaming(result, injectHostFor(event));
+  if (isHtmlDocumentResponse(result)) {
+    // Never inject Grok chrome into app documents. Peel leftovers from a
+    // restored stock injector or a baked HTML shell.
+    return stripHeadStreaming(result, path);
   }
   return result;
 }
